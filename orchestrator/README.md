@@ -2,7 +2,7 @@
 
 Minimal Python runner that executes the documented workflows from [/prompts/workflows/](../prompts/workflows/) against the documented samples in [/samples/](../samples/).
 
-**Status:** Milestone 1 implemented — Scene Director runs end-to-end against `samples/mvp-scene-01` using the real Anthropic API. Multi-agent DAG (Milestone 2+) is still under construction. See [the implementation plan](../docs/implementation/python-orchestrator-plan.md) for milestone breakdown.
+**Status:** Milestone 1 implemented — Scene Director runs end-to-end against `samples/mvp-scene-01` in **Manual Agent Mode** (no API key required). The Anthropic API path is also wired but optional. Multi-agent DAG (Milestone 2+) is under construction. See [the implementation plan](../docs/implementation/python-orchestrator-plan.md).
 
 ## Quickstart
 
@@ -14,34 +14,60 @@ source .venv/bin/activate                # on Windows: .venv\Scripts\activate
 # 2. Install
 pip install -e ".[dev]"
 
-# 3. Configure
-cp .env.example .env
-# Edit .env to add your ANTHROPIC_API_KEY.
+# 3. (Manual mode — no setup needed; skip .env unless you also want API mode)
 
 # 4. Sanity-check the layout
 python -m orchestrator inspect-sample --sample samples/mvp-scene-01
 
 # 5. Run unit tests (no API key required)
 pytest -ra
-
-# 6. ⭐ Milestone 1: run the Scene Director agent end-to-end
-python -m orchestrator run-agent scene-director --sample samples/mvp-scene-01
-
-# 7. Run the integration test (LLM call; auto-skipped if no API key)
-pytest orchestrator/tests/test_scene_director_integration.py -ra -s
-
-# 8. (Milestone 2+) — full workflow, not yet stable
-python -m orchestrator run scene-generation --sample samples/mvp-scene-01 --dry-run
 ```
 
-### What Milestone 1 produces
+## ⭐ Manual Agent Mode — no API required (default)
 
-A successful `run-agent scene-director` writes the following under
-`samples/mvp-scene-01/generated/` (all gitignored):
+The recommended workflow if you have Claude available in your IDE (VSCode/Cursor extension, or any LLM chat). **No `ANTHROPIC_API_KEY` needed.**
+
+```bash
+# Phase 1 — hydrate the prompt and write it to disk
+python -m orchestrator prepare-agent scene-director --sample samples/mvp-scene-01
+
+# → writes samples/mvp-scene-01/generated/manual/scene-director-prompt.md
+# → open that file, copy the block under "--- BEGIN PROMPT ---"
+# → paste into the Claude extension in your IDE
+# → save Claude's full response to:
+#   samples/mvp-scene-01/generated/manual/scene-director-output.yaml (or .md)
+
+# Phase 2 — validate the output, write canonical artifact
+python -m orchestrator validate-agent-output scene-director \
+  --sample samples/mvp-scene-01 \
+  --input samples/mvp-scene-01/generated/manual/scene-director-output.yaml
+```
+
+On validation success the canonical artifact lands at `samples/mvp-scene-01/generated/01-scene-blueprint.yaml`. On failure the orchestrator prints a structured list of missing/empty fields; edit the output or re-prompt Claude and re-run.
+
+See **[docs/implementation/manual-agent-workflow.md](../docs/implementation/manual-agent-workflow.md)** for the full step-by-step including how to use it with the Claude extension in VSCode/Cursor.
+
+## API Agent Mode (optional)
+
+If you have an Anthropic API key and want the orchestrator to call Claude directly:
+
+```bash
+# Configure
+cp .env.example .env
+# Edit .env to add your ANTHROPIC_API_KEY.
+
+# Run
+python -m orchestrator run-agent scene-director --sample samples/mvp-scene-01
+
+# Or run the integration test (auto-skips if no API key)
+pytest orchestrator/tests/test_scene_director_integration.py -ra -s
+```
+
+A successful API-mode run writes:
 
 ```
 samples/mvp-scene-01/generated/
-├── 01-scene-blueprint.yaml             ← canonical generated output
+├── 01-scene-blueprint.yaml             ← canonical generated output (same path as manual)
 └── debug/
     ├── hydrated-prompt.md              ← system + user prompts sent to Claude
     ├── raw-scene-director-response.md  ← exact Claude response (incl. retry, if any)
@@ -49,17 +75,22 @@ samples/mvp-scene-01/generated/
     └── extracted-yaml.yaml             ← the parsed YAML, prior to schema validation
 ```
 
-These artifacts make it possible to fully reconstruct what was asked and what
-was returned, run-over-run, without re-calling the API.
-
-Full multi-agent runs (Milestone 2+) write to
-`orchestrator/runs/<workflow-id>__<sample-name>__<timestamp>/` instead.
+API mode is appropriate for batch validation, CI, and reproducibility audits. For everyday authoring, prefer manual mode.
 
 ## CLI reference
 
 ```
-python -m orchestrator run-agent scene-director --sample <path>      # Milestone 1
-python -m orchestrator run <workflow> --sample <path> [--dry-run]    # Milestone 2+
+# Manual mode (no API key)
+python -m orchestrator prepare-agent scene-director --sample <path>
+python -m orchestrator validate-agent-output scene-director --sample <path> --input <path>
+
+# API mode (requires ANTHROPIC_API_KEY)
+python -m orchestrator run-agent scene-director --sample <path>
+
+# Full workflow (Milestone 2+, not yet stable)
+python -m orchestrator run scene-generation --sample <path> [--dry-run]
+
+# Utilities
 python -m orchestrator list-workflows
 python -m orchestrator inspect-sample --sample <path>
 ```
@@ -126,10 +157,12 @@ Tests are deliberately minimal at MVP:
 | `test_bundle.py` | Bundle assembly from a real sample; missing input raises | no |
 | `test_prompt_render.py` | Jinja2 user-prompt hydration; YAML extraction from agent responses | no |
 | `test_dag_order.py` | Topological order; cycle detection; dry-run; hard_reject halts | no |
+| `test_scene_director_manual.py` | `prepare-agent` writes prompt; `validate-agent-output` accept/reject paths | no |
 | `test_scene_director_integration.py` | Pure validator logic (always) + end-to-end LLM call (skip-without-key) | partial |
 
-Unit tests have no network dependencies. The integration test auto-skips when
-`ANTHROPIC_API_KEY` is unset, so CI without secrets stays green.
+Unit tests have no network dependencies. The single LLM-touching test in
+`test_scene_director_integration.py` auto-skips when `ANTHROPIC_API_KEY` is
+unset, so CI without secrets stays green.
 
 ## Milestone 1 — Scene Director end-to-end (current state)
 

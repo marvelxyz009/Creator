@@ -1,17 +1,28 @@
 """Command-line interface for the orchestrator.
 
-Usage:
-    python -m orchestrator run <workflow> --sample <path>
-    python -m orchestrator run-agent <agent-id> --sample <path>
-    python -m orchestrator inspect-sample --sample <path>
-    python -m orchestrator list-workflows
+Two operational modes:
 
-Examples:
-    # Milestone 1 — single-agent end-to-end (scene-director only):
-    python -m orchestrator run-agent scene-director --sample samples/mvp-scene-01
+  Manual Agent Mode (default; NO API key required) ─ recommended
+      python -m orchestrator prepare-agent scene-director --sample <path>
+      python -m orchestrator validate-agent-output scene-director \\
+          --sample <path> --input <path-to-claude-output>
 
-    # Milestone 2+ — full workflow (under construction):
-    python -m orchestrator run scene-generation --sample samples/mvp-scene-01
+  API Agent Mode (optional; requires ANTHROPIC_API_KEY)
+      python -m orchestrator run-agent scene-director --sample <path>
+
+Utility commands:
+      python -m orchestrator inspect-sample --sample <path>
+      python -m orchestrator list-workflows
+
+Example — Manual mode end-to-end with the MVP sample:
+
+      python -m orchestrator prepare-agent scene-director --sample samples/mvp-scene-01
+      # → writes samples/mvp-scene-01/generated/manual/scene-director-prompt.md
+      # → paste prompt into Claude extension; save Claude's reply to
+      #   samples/mvp-scene-01/generated/manual/scene-director-output.yaml
+      python -m orchestrator validate-agent-output scene-director \\
+          --sample samples/mvp-scene-01 \\
+          --input samples/mvp-scene-01/generated/manual/scene-director-output.yaml
 """
 
 from __future__ import annotations
@@ -79,10 +90,52 @@ def build_parser() -> argparse.ArgumentParser:
     )
     inspect.add_argument("--sample", type=Path, required=True)
 
-    # `run-agent` subcommand (single-agent end-to-end; Milestone 1)
+    # `prepare-agent` subcommand (Manual Agent Mode, phase 1; no API key)
+    prepare = subparsers.add_parser(
+        "prepare-agent",
+        help=(
+            "Manual mode: hydrate an agent's prompt and write it to disk for "
+            "the human to paste into Claude (no API call)."
+        ),
+    )
+    prepare.add_argument(
+        "agent_id",
+        choices=["scene-director"],
+        help="Which agent. Milestone 1: scene-director only.",
+    )
+    prepare.add_argument("--sample", type=Path, required=True, help="Sample directory.")
+
+    # `validate-agent-output` subcommand (Manual Agent Mode, phase 2; no API key)
+    validate = subparsers.add_parser(
+        "validate-agent-output",
+        help=(
+            "Manual mode: validate the agent output a human pasted in, extract "
+            "YAML, and write the canonical artifact on success (no API call)."
+        ),
+    )
+    validate.add_argument(
+        "agent_id",
+        choices=["scene-director"],
+        help="Which agent. Milestone 1: scene-director only.",
+    )
+    validate.add_argument("--sample", type=Path, required=True, help="Sample directory.")
+    validate.add_argument(
+        "--input",
+        type=Path,
+        required=True,
+        help=(
+            "Path to the file containing the agent's output. Accepts .yaml or .md. "
+            "If .md, the validator extracts the YAML from a fenced ```yaml ... ``` block."
+        ),
+    )
+
+    # `run-agent` subcommand (API Agent Mode; requires ANTHROPIC_API_KEY)
     run_agent = subparsers.add_parser(
         "run-agent",
-        help="Run a single agent end-to-end. Useful for debugging a specific agent.",
+        help=(
+            "API mode (optional): call Anthropic and run a single agent "
+            "end-to-end. Requires ANTHROPIC_API_KEY."
+        ),
     )
     run_agent.add_argument(
         "agent_id",
@@ -145,11 +198,12 @@ def cmd_inspect_sample(args: argparse.Namespace, config: Config) -> int:
 
 
 def cmd_run_agent(args: argparse.Namespace, config: Config) -> int:
-    """Run a single agent end-to-end (Milestone 1: scene-director only)."""
+    """API mode: run a single agent against the live Anthropic API."""
     if not config.has_api_key:
         logger.error(
             "ANTHROPIC_API_KEY is not set or malformed. "
-            "Copy .env.example to .env and fill it in."
+            "Copy .env.example to .env and fill it in — or use Manual Agent Mode "
+            "instead: `python -m orchestrator prepare-agent scene-director ...`"
         )
         return 2
 
@@ -161,6 +215,42 @@ def cmd_run_agent(args: argparse.Namespace, config: Config) -> int:
 
         result = run_scene_director(sample_dir=args.sample.resolve(), config=config)
         print_summary(result, repo_root=config.repo_root)
+        return 0 if result.ok else 1
+
+    logger.error("Unknown agent: %s", args.agent_id)
+    return 2
+
+
+def cmd_prepare_agent(args: argparse.Namespace, config: Config) -> int:
+    """Manual mode phase 1: hydrate prompt + write to disk. No API call."""
+    if args.agent_id == "scene-director":
+        from orchestrator.workflows.scene_director_manual import (
+            prepare_scene_director,
+            print_prepare_summary,
+        )
+
+        result = prepare_scene_director(sample_dir=args.sample.resolve(), config=config)
+        print_prepare_summary(result, repo_root=config.repo_root)
+        return 0 if result.ok else 1
+
+    logger.error("Unknown agent: %s", args.agent_id)
+    return 2
+
+
+def cmd_validate_agent_output(args: argparse.Namespace, config: Config) -> int:
+    """Manual mode phase 2: validate the agent's output the human pasted in."""
+    if args.agent_id == "scene-director":
+        from orchestrator.workflows.scene_director_manual import (
+            print_validate_summary,
+            validate_scene_director_output,
+        )
+
+        result = validate_scene_director_output(
+            sample_dir=args.sample.resolve(),
+            input_path=args.input.resolve(),
+            config=config,
+        )
+        print_validate_summary(result, repo_root=config.repo_root)
         return 0 if result.ok else 1
 
     logger.error("Unknown agent: %s", args.agent_id)
@@ -182,6 +272,10 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_inspect_sample(args, config)
     if args.command == "run-agent":
         return cmd_run_agent(args, config)
+    if args.command == "prepare-agent":
+        return cmd_prepare_agent(args, config)
+    if args.command == "validate-agent-output":
+        return cmd_validate_agent_output(args, config)
 
     parser.print_help()
     return 2
