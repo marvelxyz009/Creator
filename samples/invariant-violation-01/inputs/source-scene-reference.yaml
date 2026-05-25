@@ -1,0 +1,61 @@
+source_scene_reference:
+  blueprint_path: samples/mvp-scene-01/outputs/01-scene-blueprint.yaml
+  invariants_path: samples/cross-cultural-scene-01/invariants/shared-invariants.yaml
+
+  # The invariants the cultural-adapter must preserve. Reproduced here so this
+  # sample is self-contained.
+  invariants_summary:
+    theme:
+      core_question: "If a feeling outlives the memory that caused it, whose feeling is it?"
+    plot_beat:
+      intended_turn_type: knowledge
+
+    required_to_happen:
+      - "Mira approaches Tomas about the edit (mechanism unspecified — any directness gradient permitted)"
+      - "Tomas's qualified confirmation arrives — Mira gains the knowledge that he 'set aside' a portion of her record"
+      - "A symbol-A in 'introduced' state transforms to 'transformed' state via a domestic-object manipulation"
+      - "A symbol-B is introduced and fires by Mira's body-knowledge at scene close"
+      - "Scene ends on gesture (Mira restores symbol-B to prior position) + departure without farewell"
+
+  required_residue_writes:
+    - "rel:mira-tomas.tension := higher (≥ 0.90)"
+    - "symbol-A.state := transformed"
+    - "symbol-B.state := introduced + body-fire"
+    - "new edge: KNOWS { subject: char:mira, object: symbol-B, level: body_only }"
+    - "new edge: KNOWS { subject: char:tomas, object: 'mira-retained-body-knowledge', level: full }"
+    - "debt:0001.pressure := higher"
+    - "new node: debt:0002 (Mira to self)"
+
+  the_test:
+    purpose: |
+      The high-restraint scholarly profile (inputs/target-culture-profile.yaml) is
+      designed to be UNABLE to serve these invariants. Specifically:
+
+      1. accusation_staging: refused — Mira cannot ask the question that elicits
+         the qualified confirmation. With confrontation_default: refused as well,
+         and silence/refusal as the ONLY emotional channels, there is no legible
+         mechanism by which Tomas's confirmation could arrive in this register.
+
+      2. symbolism_preferences.available_loads: [document_only] — symbol-A
+         (domestic object with use-wear) and symbol-B (handheld lighter)
+         cannot be drawn from a document-only palette. No legal swap exists.
+
+      3. body_somatic forbidden across all emotions — the body-knowledge
+         firing of the lighter cannot be rendered under this profile;
+         body_somatic is the channel that delivers the scene's climactic
+         realization.
+
+      4. silence is the only legible apology — but apology in this scene
+         is not the issue; the issue is that no INFORMATION can be
+         exchanged under this profile, including the qualified
+         confirmation that the invariant requires.
+
+    expected_behavior:
+      cultural_adapter_returns: status: escalate
+      compatibility_check_must_show:
+        symbol_palette_resolvable: false
+        turn_type_compatible: false   # knowledge turn requires an information delivery the profile forbids
+      orchestrator_routing:
+        - "the orchestrator must NOT silently mutate the invariant"
+        - "the orchestrator must NOT downgrade the turn to a less-information-bearing turn type"
+        - "the orchestrator must surface the conflict to the editor with structured paths"

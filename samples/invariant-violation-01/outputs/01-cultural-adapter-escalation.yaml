@@ -1,0 +1,121 @@
+agent: cultural-adapter
+agent_version: 1.0.0
+run_id: invariant-violation-01-adapter
+status: escalate
+
+# This is the GOOD failure path. The adapter detects that the target culture
+# profile cannot serve the scene's structural invariants and emits a structured
+# escalate report. It does NOT mutate the invariant, downgrade the turn, or
+# improvise a workaround.
+
+escalation:
+  source_blueprint_ref: samples/mvp-scene-01/outputs/01-scene-blueprint.yaml
+  target_culture: culture:high-restraint-scholarly
+  target_literary_style: null     # no literary-style doc; profile is experimental
+
+  compatibility_check:
+    theme_compatible: true                           # the question can be held under any register
+    contradictions_compatible: true                  # contradictions are structural and survive
+    turn_type_compatible: false                      # ← failure
+    symbol_palette_resolvable: false                 # ← failure
+    notes:
+      - "knowledge turn requires a qualified confirmation to be delivered to Mira; under this profile no information of that kind can be exchanged"
+      - "symbol-A (domestic object with use-wear) has no equivalent in a document-only palette"
+      - "symbol-B (handheld lighter fired by body-knowledge) cannot be rendered: body_somatic is forbidden across all emotions in this profile"
+
+  invariant_violations_detected:
+    - id: iv1
+      invariant: "plot_beat.intended_turn_type = knowledge (qualified confirmation must arrive)"
+      friction:
+        culture_field: conflict_style.accusation_staging
+        culture_value: refused
+        consequence: "no legible mechanism exists by which Mira can elicit, or Tomas can deliver, the qualified confirmation"
+      severity: hard
+      attempted_workaround: "considered routing the confirmation through document examination (a permitted channel) — failed: the qualified confirmation is a personal admission, not a document property"
+
+    - id: iv2
+      invariant: "symbol-A.state := transformed via domestic-object manipulation"
+      friction:
+        culture_field: symbolism_preferences.available_loads
+        culture_value: [document_only]
+        consequence: "no symbol from the source palette has a target-palette equivalent; document-only does not admit use-wear-domestic objects"
+      severity: hard
+      attempted_workaround: "considered swapping symbol-A for a document-with-annotation; rejected — the arc-role 'realigned mid-line by POV' requires a physically manipulable object whose alignment carries weight; annotations on documents do not hold this role"
+
+    - id: iv3
+      invariant: "symbol-B (lighter) fires by Mira's body-knowledge — the scene's structural climax"
+      friction:
+        culture_field: emotional_expression.*.forbidden_channels (body_somatic forbidden across all emotions)
+        culture_value: body_somatic forbidden universally
+        consequence: "the body-knowledge firing IS body_somatic; the entire scene-close mechanism is unavailable"
+      severity: hard
+      attempted_workaround: "considered re-routing the body-knowledge as document-discovery (Mira finds a record of having seen the lighter); rejected — this REVERSES the invariant. The point of the body-knowledge is that the archive contains NO record. Producing a record violates the invariant Mira does not know event content."
+
+    - id: iv4
+      invariant: "Tomas's qualified confirmation arrives — Mira gains knowledge"
+      friction:
+        culture_field: communication_style.directness (refused across all contexts)
+        culture_value: refused
+        consequence: "with only refusal and structured silence available, Mira gains no information; the knowledge-turn cannot fire"
+      severity: hard
+      attempted_workaround: "considered staging the entire scene as mutual structured silence — fails the invariant: scene must produce a knowledge delta to Mira"
+
+  partial_adaptations_considered_and_rejected:
+    - option: "downgrade turn type from knowledge to symbol-fire only (silent recognition without confirmation)"
+      rejected_because: "the invariant explicitly names knowledge turn type; downgrading is silent mutation, which the adapter is forbidden to perform"
+    - option: "remove symbol-B (the lighter) from the scene"
+      rejected_because: "symbol-B is invariant; removing it removes the structural climax"
+    - option: "swap to document-palette symbols throughout"
+      rejected_because: "no document object holds the body-knowledge arc-role; the swap fails the arc-role preservation rule CA1"
+    - option: "stage scene without dialogue (mutual silence)"
+      rejected_because: "qualified confirmation must arrive; mutual silence delivers nothing"
+
+  authoritative_finding:
+    can_this_scene_be_regenerated_under_this_profile: false
+    structural_reason: "the profile's forbidden-channel set is the complement of the channels the scene requires"
+    nature_of_problem: profile_scene_incompatibility   # not a profile bug; not a scene bug; the pair is incompatible
+
+  preserved_invariants_unmodified:
+    # The adapter declares it has NOT modified any of these. Orchestrator must verify.
+    - theme.core_question
+    - plot_beat.intended_turn_type (knowledge)
+    - character.contradictions (both)
+    - all required_residue_writes
+    - asymmetric_knowledge edges
+    - "Mira does not produce the leaked entry"
+    - "scene ends on gesture + departure without farewell"
+
+  no_partial_output_emitted: true
+  no_blueprint_adapted: true
+  reason: |
+    "The adapter emits NO adapted blueprint. Emitting a partial blueprint
+    under an incompatible profile would risk a downstream agent accepting it.
+    The pipeline is halted at this stage."
+
+  recommendations_for_orchestrator:
+    - path_A:
+        label: "Reject the pairing — do not regenerate this scene under this profile"
+        action: "the editor accepts that culture:high-restraint-scholarly is incompatible with this scene; the work has no sibling under this profile"
+        cost: "one fewer sibling canon for this scene"
+        invariant_integrity: preserved
+    - path_B:
+        label: "Modify the culture profile"
+        action: "the editor relaxes one or more of: conflict_style.accusation_staging, communication_style.directness, body_somatic forbidden, symbolism_preferences.available_loads"
+        cost: "the profile becomes less restrictive; subsequent scenes also reflect this loosening"
+        invariant_integrity: preserved
+    - path_C:
+        label: "Re-open Plot Engineer to design a different scene that this profile CAN serve"
+        action: "the orchestrator requests a sibling scene (different plot beat) that exercises a knowledge-adjacent turn this profile can support — e.g. a document-only scene in which Mira reads a redacted form and Tomas is structurally absent"
+        cost: "the sibling tree for this profile diverges from the others starting at this scene"
+        invariant_integrity: preserved (different sibling, not mutated invariants)
+    - path_D:
+        label: "Editor explicitly authorizes downgrade"
+        action: "if the editor declares that under this profile the knowledge turn is downgraded to symbol-fire, the orchestrator records this as an EDITORIAL OVERRIDE and the adapter retries with the downgrade explicitly granted"
+        cost: "this sibling diverges from the invariant set; flagged for editor review on canonization"
+        invariant_integrity: declared_divergence (not silent mutation)
+
+  notes_for_orchestrator:
+    - "this escalation is the framework working correctly; not a failure of the framework"
+    - "DO NOT auto-select a path; surface all four to the editor and require explicit selection"
+    - "if path D is selected, all downstream agents must be informed via a `editorial_override_active` flag in their bundles"
+    - "if path C is selected, the new plot beat must be approved by Theme Analyst (must still touch a theme beat)"

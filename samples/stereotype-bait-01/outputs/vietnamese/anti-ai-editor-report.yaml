@@ -1,0 +1,69 @@
+agent: anti-ai-editor
+agent_version: 1.0.0
+run_id: stereotype-bait-01-vn-anti-ai
+status: hard_reject
+
+smell_report:
+  draft_ref: samples/stereotype-bait-01/inputs/bait-drafts/vietnamese-bait-draft.md
+  draft_version: bait-v1
+  pinned_banished_lexicon_extension: samples/cross-cultural-scene-01/runs/vietnamese-literary/language-style.yaml.banished_phrases
+
+  hard_smells:
+    - { id: s1, category: A1, cited_at: "para 4", offending_text: "She felt a mix of love and resentment wash over her",
+        diagnostic: "direct emotion-naming (A1) + conjoined-abstraction (C1) + 'wash over' (A3-adjacent metaphor)" }
+    - { id: s2, category: A1, cited_at: "para 7", offending_text: "She felt the centuries pressing down on her",
+        diagnostic: "direct emotion-naming + grandiose-ahistorical-image" }
+    - { id: s3, category: F1, cited_at: "para 8 (closing)", offending_text: "Above her, the old country sky.",
+        diagnostic: "scene closes on decorative cultural-marker rather than functional gesture; also banished phrase 'old country'" }
+    - { id: s4, category: D2, cited_at: "para 6", offending_text: "He told her the old proverb. It was long and beautiful and explained everything.",
+        diagnostic: "narration summarizing the meaning of a delivered speech (D2-adjacent) + R5 violation (mystery > exposition reversed) + the wisdom-figure dispensation pattern" }
+    - { id: s5, category: B3, cited_at: "para 6", offending_text: "in our culture, we do not speak of such things directly",
+        diagnostic: "antagonist-explains-his-own-cultural-restraint (meta-B3); also cultural-exposition-to-reader" }
+    - { id: s6, category: C2, cited_at: "para 7", offending_text: "She thought of her ancestors, and her ancestors' ancestors",
+        diagnostic: "tricolon-by-recursion as emotional shorthand; abstraction substituted for specificity" }
+
+  soft_smells:
+    - { id: s_s1, category: D1, cited_at: "para 7", offending_text: "The buffalo lowed in the distance. A monk in saffron robes walked past the clinic window. Somewhere, an ancestor was burning incense.",
+        diagnostic: "three stereotype tells stacked in three sentences — soft as smell (the structural problem is the iconography itself, flagged by validator)" }
+
+  banished_phrase_hits:
+    - { phrase: "the old country",   cited_at: "para 5, 8" }
+    - { phrase: "ancient",           cited_at: "para 1, 3" }
+    - { phrase: "eternal",           cited_at: "para 8" }
+    - { phrase: "a mix of",          cited_at: "para 4" }
+
+  voice_drift:
+    - { speaker: char:mira,
+        drift_direction: "Mira's signature 'refuses to name the feeling' violated by 'She felt a mix of love and resentment'; her code-switching is framed as a diaspora-girl trait (ethnic essentialism)",
+        cited_at: "para 4, 5" }
+    - { speaker: char:tomas,
+        drift_direction: "Tomas's signature 'qualified admission; never delivers monologue' violated by the delivered proverb in para 6; his 'My child' address-mode is incoherent with the established 'em/anh' register",
+        cited_at: "para 6" }
+
+  fact_preservation_check:
+    note: "the bait does NOT preserve canonical facts"
+    pinned_facts_violations:
+      - "no leaked archive entry present"
+      - "qualified confirmation arrives as a proverb, not as 'set aside / partly / within reason'"
+      - "no symbol-A (cracked-thing) appears"
+      - "no symbol-B (lighter) appears at all"
+      - "Mira does not light anything; the body-knowledge climax is missing"
+      - "scene closing on lighter-set-back-exactly is replaced by 'walked out into the eternal rice paddies'"
+    severity: hard
+
+  summary:
+    hard_smell_count: 6 (this validator's domain only)
+    soft_smell_count: 1
+    banished_phrase_hit_count: 4
+    voice_drift_count: 2
+    fact_preservation: failed (5/5 canonical facts violated)
+    recommended_route: hard_reject (do NOT attempt humanization)
+
+  recommendation:
+    do_not_humanize: true
+    reason: |
+      "The VN bait is structurally even further from canon than the JP bait. The scene
+      as written contains almost none of the invariant residue. Humanizing this would
+      produce a slightly-less-clichéd version of the wrong scene. Reject and regenerate
+      the scene through the proper cultural pipeline."
+    escalate_to: cultural-adapter + cultural-dialogue-specialist + scene-director

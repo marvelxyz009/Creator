@@ -1,0 +1,123 @@
+agent: cultural-dialogue-specialist
+agent_version: 1.0.0
+run_id: stereotype-bait-01-vn-cultural-dialogue
+status: hard_reject
+mode: audit
+
+dialogue_audit:
+  draft_ref: samples/stereotype-bait-01/inputs/bait-drafts/vietnamese-bait-draft.md
+  culture_profile_ref: samples/cross-cultural-scene-01/runs/vietnamese-literary/culture-profile.yaml
+
+  cultural_compliance_check:
+    no_taboo_directly_named: false
+    address_forms_consistent_with_profile: false
+    silence_usage_within_budget: false
+    directness_gradient_honored: false
+    no_cultural_exposition_to_reader: false
+    no_stereotype_iconography: false
+    apology_legible_under_profile: false
+
+  address_form_violations:
+    - cited_at: "para 3"
+      quote: "Cô đến rồi"
+      issue: "Tomas addresses Mira as 'cô' — the 'cô' kinship register implies he is younger or significantly junior to her. Their established relationship (intimates, age peers) does not authorize this token."
+      severity: hard
+    - cited_at: "para 3"
+      quote: "Em uống cà phê không, cô?"
+      issue: "Using both 'em' (younger) and 'cô' (aunt/older-respect) to address the same person in the same sentence is kinship-grammar incoherent — both cannot be true simultaneously."
+      severity: hard
+    - cited_at: "para 5"
+      quote: "'Anh ơi,' she said" + Tomas response "'My child,' he said"
+      issue: "Mira's 'anh' (older male) addressing Tomas IS coherent; Tomas's response 'My child' (English; child-register) contradicts the kinship asymmetry — if she is 'em' to him then he is 'anh' to her, but calling her 'my child' overrides this into a parental-elder register that doesn't fit either character's age or established relationship."
+      severity: hard
+    - cited_at: "throughout"
+      issue: "no address-form drop occurs at the turn beat; the profile pins register_shift_significance: high and the adapted blueprint required a drop — neither is present"
+      severity: hard
+
+  taboo_violations:
+    - taboo: "naming a parent's mistake to their face" (not applicable here — no parent present)
+      violation: n/a
+    - taboo: "stating one's own feeling in dialogue (between adults)"
+      violation:
+        cited_at: "para 5"
+        quote: "She always lapsed into a mix of Vietnamese and English when she was emotional" (narration)
+        narrative_diagnosis: "narration names the feeling category — not dialogue, but the cultural-narrative-layer's emotion-channel rules apply"
+      severity: hard
+    - taboo: "naming the edit directly"
+      violation:
+        cited_at: "para 5"
+        quote: "anh đã sửa ký ức của em rồi phải không. Memory of me. You edited it. Anh đã sửa."
+      severity: hard
+      diagnostic: "Mira names the edit explicitly THREE times in one paragraph; the profile pins this as refused; the adapted blueprint required third-party routing"
+
+  silence_budget_violation:
+    profile_silence_count_target: 3
+    draft_silence_count: 0
+    severity: hard
+
+  directness_gradient_violation:
+    profile_default: implied (under_pressure: implied via third-party routing)
+    draft_observed: direct (accusation delivered explicitly + repeated)
+    severity: hard
+
+  cultural_exposition_to_reader:
+    - cited_at: "para 2"
+      quote: "the áo dài is not just a dress, my child, it is the soul of our people"
+      severity: hard
+      diagnostic: "grandmother's voice DELIVERS a cultural lecture to the reader through Mira's memory; forbidden by both the cultural-dialogue contract and R5 (mystery > exposition)"
+    - cited_at: "para 3"
+      quote: "in the lyrical, sing-song way the Vietnamese have of speaking"
+      severity: hard
+      diagnostic: "narration ethnically describes the manner of speech; ethnic-essentialism cultural exposition"
+    - cited_at: "para 5"
+      quote: "the way diaspora girls do, caught between the old country and the new"
+      severity: hard
+      diagnostic: "narration explains the character's code-switching as a diaspora-trope; cultural exposition + diasporic-nostalgia register intrusion"
+    - cited_at: "para 6"
+      quote: "in our culture, we do not speak of such things directly. The lotus grows in the mud..."
+      severity: hard
+      diagnostic: "Tomas delivers a cultural lecture in dialogue + a fabricated proverb"
+
+  apology_shape_violation:
+    profile_legible_shapes: [gesture, burden_acceptance, structured_silence, qualified_admission]
+    draft_apology_shape: "delivered proverb that 'explained everything'"
+    severity: hard
+    diagnostic: "a delivered proverb is not a legible apology shape under this profile — it is the wisdom-figure dispensation trope which is explicitly forbidden"
+
+  third_party_routing_check:
+    profile_requires_for_charged_topics: true
+    draft_uses_third_party_routing: false
+    diagnostic: "the adapted blueprint required routing the accusation through Tomas's mother (the bowl) and late father (the lighter); neither character's family is meaningfully present in the bait draft (his late grandfather is mentioned only as a wisdom-source, not as structural pressure)"
+    severity: hard
+
+  forbidden_iconography_present: true
+  # Detailed enumeration in outputs/vietnamese/language-style-validator-report.yaml
+
+  ethnic_essentialism_in_narration:
+    - "para 4: 'as her people had felt these things for a thousand years'"
+    - "para 4: 'the blood of dragons, her father had said, ran in their veins'"
+    - "para 5: 'the way diaspora girls do'"
+    severity: hard
+    diagnostic: "the profile's anti_stereotype_notes explicitly list 'do not invoke Eastern wisdom' and 'diaspora register differs substantially from in-country register' — both violated"
+
+  voice_signature_compliance:
+    char:mira: fail
+    char:tomas: fail
+
+  summary:
+    hard_violation_count: 14
+    soft_violation_count: 0
+    cultural_compliance_check_passed: 0 of 7
+    recommended_route: hard_reject_and_escalate
+    sibling_canonization_blocked: true
+
+  recommendation:
+    do_not_attempt_repair: true
+    reason: |
+      "the draft does not engage the framework's cultural pipeline. It is a checklist of
+      Vietnamese stereotype tells dressed in the character names from the source scene.
+      The kinship-grammar incoherence is a particularly clear signal that the cultural
+      profile was not consulted — the address-form rules are the most load-bearing
+      structural element of this profile, and they are mishandled at line one of dialogue."
+    escalate_to: [cultural-adapter, cultural-dialogue-specialist (in generation mode), scene-director]
+    pipeline_audit_request: "verify whether this draft was produced by the framework or by a bypass; the surface profile suggests a bypass"

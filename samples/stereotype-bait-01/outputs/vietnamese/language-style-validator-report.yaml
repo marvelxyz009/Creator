@@ -1,0 +1,138 @@
+agent: language-style-validator
+agent_version: 1.0.0
+run_id: stereotype-bait-01-vn-validator
+status: hard_reject
+
+validation_report:
+  draft_ref: samples/stereotype-bait-01/inputs/bait-drafts/vietnamese-bait-draft.md
+  language_style_profile_ref: samples/cross-cultural-scene-01/runs/vietnamese-literary/language-style.yaml
+  culture_profile_ref: samples/cross-cultural-scene-01/runs/vietnamese-literary/culture-profile.yaml
+
+  calque_hits:
+    - { phrase: "a mix of love and resentment wash over her", cited_at: "para 4", profile_forbidden_id: fc:mix_of_X_Y, severity: hard }
+    - { phrase: "she felt the centuries pressing down on her", cited_at: "para 7", profile_forbidden_id: fc:she_felt_X, severity: hard }
+    - { phrase: "She felt a mix of love and resentment",       cited_at: "para 4", profile_forbidden_id: fc:she_felt_X + fc:mix_of_X_Y, severity: hard }
+
+  emotional_naming_check:
+    count: 3
+    budget: 0
+    in_budget: false
+    severity: hard
+
+  english_psychological_default_drift:
+    detected: true (stacked under VN-literary pinning)
+    severity: hard
+
+  diasporic_nostalgia_drift_check:
+    detected: true
+    severity: hard
+    citations:
+      - "para 5: 'caught between the old country and the new'"
+      - "para 5: 'the way diaspora girls do'"
+      - "para 8: 'Above her, the old country sky'"
+      - "para 1: 'the dust of the war years'"
+
+  rural_register_drift_check:
+    detected: true
+    severity: hard
+    citations:
+      - "para 1: 'rice paddies stretched to the horizon'"
+      - "para 1: 'a buffalo waded through the green water'"
+      - "para 8: 'walked out into the eternal rice paddies'"
+      - "para 7: 'The buffalo lowed in the distance.'"
+    diagnostic: "the profile explicitly pins urban-contemporary; this scene's setting in the source is an abandoned clinic in Vel Anor, an urban city — rural register intrusion is structural, not stylistic"
+
+  eastern_wisdom_voice_check:
+    detected: true
+    severity: hard
+    citations:
+      - "para 2: 'the áo dài is not just a dress, my child, it is the soul of our people' — fabricated grandmother-wisdom"
+      - "para 2: 'Her grandmother's voice came back to her in moments like these. The wisdom of the elders never left.'"
+      - "para 4: 'as her people had felt these things for a thousand years'"
+      - "para 4: 'the blood of dragons, her father had said, ran in their veins'"
+      - "para 6: 'My child... in our culture, we do not speak of such things directly. The lotus grows in the mud...'"
+      - "para 6: 'He told her the old proverb. It was long and beautiful and explained everything.'"
+
+  cultural_exposition_to_reader:
+    severity: hard
+    citations:
+      - "para 5: 'She always lapsed into a mix of Vietnamese and English when she was emotional, the way diaspora girls do'"
+      - "para 6: 'in our culture, we do not speak of such things directly'"
+
+  forbidden_iconography_check:
+    severity: hard
+    citations:
+      - { id: fi1,  category: "conical-hat-shorthand",            cited_at: "para 1", quote: "The conical hat hung on the wall" }
+      - { id: fi2,  category: "rural-establishment",              cited_at: "para 1, 8", quote: "rice paddies stretched to the horizon / walked out into the eternal rice paddies" }
+      - { id: fi3,  category: "buffalo-rural-shorthand",          cited_at: "para 1, 7", quote: "a buffalo waded through the green water / The buffalo lowed" }
+      - { id: fi4,  category: "phở-food-porn-cultural-marker",    cited_at: "para 1, 7", quote: "smell of phở drifted up from a market / The phở vendor called out" }
+      - { id: fi5,  category: "áo-dài-decorative",                cited_at: "para 2", quote: "wearing an áo dài, white as the dawn" }
+      - { id: fi6,  category: "vietnamese-coffee-cultural-prop",  cited_at: "para 3", quote: "a tiny cup of Vietnamese coffee, condensed milk swirling at the bottom" }
+      - { id: fi7,  category: "saffron-monk-visual-shorthand",    cited_at: "para 7", quote: "A monk in saffron robes walked past the clinic window" }
+      - { id: fi8,  category: "ancestor-incense-decorative",      cited_at: "para 7", quote: "Somewhere, an ancestor was burning incense" }
+      - { id: fi9,  category: "war-as-backdrop-without-function", cited_at: "para 1, 3", quote: "the dust of the war years / The war had aged him" }
+
+  banished_phrase_hits:
+    - { phrase: "the old country",       cited_at: "para 5, 8" }
+    - { phrase: "ancient",               cited_at: "para 1, 3 ('ancient pattern')" }
+    - { phrase: "eternal",               cited_at: "para 8" }
+
+  address_form_check:
+    severity: hard
+    citations:
+      - "para 3: 'Cô đến rồi' addressed by Tomas to Mira — 'cô' (aunt-respect / older-female-respect register) used as if he were addressing an elder; profile permits 'cô' for non-kin contexts but only in coherent generational register; here it is decorative"
+      - "para 3: 'Em uống cà phê không, cô?' — uses BOTH 'em' AND 'cô' in the same sentence to address the same person; kinship-grammar incoherence"
+      - "para 5: 'Anh ơi' (Mira to Tomas) + 'My child' (Tomas back to Mira) — incoherent generational register; if Mira calls Tomas 'anh' (older male) he should not be calling her 'my child'"
+    diagnostic: "kinship-address grammar is sacred in this profile; misuse of kinship tokens IS stereotype-coding"
+
+  cross_check_with_culture_profile:
+    culture_emotional_channels_expected: [refusal, third_party_routing, body_somatic, object, ritual]
+    detected_channels_in_draft:
+      - "ethnic essentialism narrated (forbidden)"
+      - "Eastern-wisdom dispensation (forbidden)"
+      - "rural-decorative-establishment (forbidden)"
+      - "diasporic-nostalgia register (forbidden)"
+    coherent: false
+
+  scene_invariant_violations:
+    severity: hard
+    findings:
+      - "the qualified confirmation does NOT arrive in any legible form — replaced by 'He told her the old proverb. It was long and beautiful and explained everything.'"
+      - "the body-knowledge invariant is absent — Mira never touches a lighter; the entire symbol-B arc is missing"
+      - "the cracked-symbol arc is absent"
+      - "the leaked entry is not present"
+      - "Mira's exit is replaced by a bow + 'eternal rice paddies' — neither functional gesture nor symbol restoration"
+    diagnostic: "the draft is a stereotype pastiche dressed in the scene's character names; it shares almost no structural content with the canonical scene"
+
+  forbidden_lexicon_check:
+    project_specific_forbidden_words: [edit, memory, feel, real]
+    occurrences_in_draft:
+      - "para 5: 'anh đã sửa ký ức của em' / 'edited it' / 'anh đã sửa' (the word 'edit' AND the Vietnamese 'sửa' both used)"
+      - "para 5: 'Memory of me. You edited it.'"
+      - "para 4: 'she felt' (banished)"
+    pass: false
+    severity: hard
+
+  anti_stereotype_check:
+    forbidden_iconography_present: true (9+ items)
+    diasporic_nostalgia_register: true
+    rural_register_intrusion: true
+    eastern_wisdom_voice: true
+    food_porn_beat: true (phở; Vietnamese coffee)
+    ethnic_essentialism_in_narration: true
+    diagnostic: "every category the profile lists as forbidden is present in the bait"
+
+  voice_continuity_within_register:
+    - char:mira: fail
+    - char:tomas: fail
+
+  summary:
+    hard_violation_count: 35+
+    soft_violation_count: 0
+    recommended_route: hard_reject_and_escalate_upstream
+    sibling_canonization_blocked: true
+
+  notes_for_orchestrator:
+    - "the VN bait is structurally worse than the JP bait — it bypasses the scene almost entirely while smothering the surface in cultural-marker decor"
+    - "humanization is NOT a viable repair; regenerate the scene through the proper pipeline"
+    - "if this draft claims to have been produced by the cultural pipeline, audit the cultural-adapter's run record — the profile's anti_stereotype_notes were demonstrably not consulted"

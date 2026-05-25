@@ -1,0 +1,102 @@
+agent: anti-ai-editor
+agent_version: 1.0.0
+run_id: stereotype-bait-01-jp-anti-ai
+status: hard_reject
+
+# The Anti-AI Editor runs INDEPENDENTLY of the Language Style Validator
+# (adversarial isolation). It catches its own set of smells that overlap with
+# but are distinct from the validator's findings. Below is what THIS validator
+# is responsible for — generic AI smells. Cultural stereotype findings belong
+# to the language-style-validator-report.yaml.
+
+smell_report:
+  draft_ref: samples/stereotype-bait-01/inputs/bait-drafts/japanese-bait-draft.md
+  draft_version: bait-v1
+  pinned_banished_lexicon_extension: samples/cross-cultural-scene-01/runs/japanese-literary/language-style.yaml.banished_phrases
+
+  hard_smells:
+    - id: s1
+      category: A1
+      cited_at: "para 4"
+      offending_text: "She felt a wave of emotion — anger and longing"
+      diagnostic: "direct emotion-naming (A1) + 'wave of' metaphor (A3-adjacent) + conjoined abstraction (C1)"
+    - id: s2
+      category: C1
+      cited_at: "para 4"
+      offending_text: "a mix of love and resentment wash over her"  # also flagged in VN bait — same pattern repeated
+      diagnostic: "'a mix of X and Y' conjoined-abstraction; banished construction"
+      note: "this line appears in the VN bait but is referenced here for cross-bait consistency check; not present in JP draft"
+    - id: s3
+      category: A3
+      cited_at: "para 6"
+      offending_text: "She felt her heart sink"
+      diagnostic: "chest/heart metaphor for feeling (A3)"
+    - id: s4
+      category: F1
+      cited_at: "para 7 (closing)"
+      offending_text: "The cherry blossoms, the cherry blossoms, the cherry blossoms."
+      diagnostic: "closing on environmental repetition rather than functional gesture (F2-adjacent — closes on reflection-as-decoration)"
+    - id: s5
+      category: D2
+      cited_at: "para 5"
+      offending_text: "He sighed in the manner of a sensei addressing an over-eager pupil."
+      diagnostic: "tag summarizing meaning (D2) PLUS stereotype voice — both flagged"
+    - id: s6
+      category: C5
+      cited_at: "para 1"
+      offending_text: "There was a wabi-sabi about the room — that beautiful melancholy of imperfect things"
+      diagnostic: "explanatory simile/gloss in narration; the gloss explains the term rather than letting the image do the work"
+
+  soft_smells:
+    - id: s_s1
+      category: F2
+      cited_at: "para 6 (final sentences)"
+      offending_text: "The flame held a moment, golden against the rice paper screens."
+      diagnostic: "reflective-decorative paragraph ending; combined with the rice-paper screens iconography flag this becomes hard, but as a structural beat alone it is soft"
+
+  banished_phrase_hits:
+    # The Anti-AI Editor consults the language-style profile's banished_phrases list,
+    # which for Japanese-literary-rendered-in-english includes 'wabi-sabi' and 'mono no aware'.
+    - { phrase: "wabi-sabi",       cited_at: "para 1" }
+    - { phrase: "mono no aware",   cited_at: "para 4" }
+    - { phrase: "the old country", cited_at: "para 6" }
+
+  voice_drift:
+    - speaker: char:mira
+      drift_direction: "Mira's voice signature forbids 'her naming the feeling she has for Tomas'; the bait has her feeling 'anger and longing' explicitly and in compound — and frames it as 'in the Japanese way of feeling both at once', adding ethnic essentialism to the voice violation"
+      cited_at: "para 4"
+    - speaker: char:tomas
+      drift_direction: "Tomas's signature forbids monologue and self-aware contradiction-articulation; he delivers a proverb in para 5 and explicitly says 'I am a very Japanese man'"
+      cited_at: "para 5"
+
+  median_band_runs:
+    - paragraph: "para 1"
+      sentence_lengths: [22, 24, 21, 20]
+      diagnostic: "four consecutive medium-band sentences; profile's median_band_warning_threshold = 2"
+
+  fact_preservation_check:
+    note: "the bait has NOT preserved canonical facts — it has REPLACED them"
+    pinned_facts_violations:
+      - "the leaked archive entry is not present in the scene at all"
+      - "Tomas's qualified confirmation ('set aside / partly / within reason') is replaced by a proverb"
+      - "the body-knowledge of the lighter is recoded as a generic cultural gesture — destroys the invariant"
+      - "scene closing on lighter-set-back-exactly is replaced by 'I will go to the temple' and decorative cherry blossoms"
+
+  summary:
+    hard_smell_count: 6 (within this validator's domain)
+    soft_smell_count: 1
+    banished_phrase_hit_count: 3
+    voice_drift_count: 2
+    fact_preservation: failed
+    recommended_route: hard_reject (do NOT attempt humanization)
+
+  recommendation:
+    do_not_humanize: true
+    reason: |
+      "Humanization is a SURFACE pass — it perturbs realization while preserving facts.
+      This draft has invariant violations (body-knowledge replaced; canonical facts
+      replaced) plus stereotype iconography plus voice-signature violations. The
+      defect is structural and upstream. The Anti-AI Editor declines to humanize
+      a draft whose underlying scene is not the scene it claims to be."
+    escalate_to: cultural-adapter + scene-director
+    audit_request: "verify the upstream pipeline was actually traversed for this draft; the surface tells suggest the cultural layer was bypassed entirely"

@@ -1,0 +1,105 @@
+culture_profile:
+  id: culture:high-restraint-scholarly
+  label: "High-restraint scholarly register (hypothetical)"
+  literary_style_doc_ref: null   # no existing literary-styles doc; this profile is constructed
+                                 # for the deliberate purpose of exercising the escalate path
+  version: 0.0.1-experimental
+
+  # This profile is INTENTIONALLY designed such that the scene MVP's required
+  # turn type (knowledge — qualified confirmation via direct or even indirect
+  # accusation) CANNOT be served. The Cultural Adapter must detect this and
+  # ESCALATE, not silently mutate the invariant.
+
+  communication_style:
+    directness:
+      default: refused
+      under_pressure: refused
+      with_intimates: refused
+      with_strangers: refused
+    register_shift_significance: low
+    apology_legible_shapes:
+      - structured_silence
+      # NOTE: only structured silence is a legible apology under this profile.
+      # All other apology shapes — gestural, qualified, verbalized — are forbidden.
+
+  emotional_expression:
+    grief:
+      primary_channels: [silence, refusal]
+      forbidden_channels: [dialogue_direct, dialogue_displaced, object, environment, ritual,
+                           third_party_routing, body_somatic, introspection]
+      anti_stereotype_note: "grief is only silence and refusal under this profile; all other channels forbidden"
+    anger:
+      primary_channels: [refusal]
+      forbidden_channels: [silence, object, environment, dialogue_direct, dialogue_displaced,
+                           introspection, ritual, third_party_routing, body_somatic]
+      anti_stereotype_note: "anger may only appear as refusal; everything else forbidden"
+    love:
+      primary_channels: [refusal]
+      forbidden_channels: [<all others>]
+      anti_stereotype_note: "love may only appear as refusal; structurally severe"
+    # other emotions: all single-channel-refusal
+
+  social_hierarchy:
+    address_form_system: status
+    common_forms: ["Doctor", "Editor", "Citizen"]
+    shift_significance: { intimate_to_distant: low, formal_to_familiar: low }
+    elder_authority_default: implicit
+    interruption_norms:
+      allowed_in: []     # interruption forbidden in all contexts
+      forbidden_in: [all]
+
+  conflict_style:
+    confrontation_default: refused
+    accusation_staging: refused     # ← the structural problem: no legible way to accuse
+    resolution_arc_typical: unresolved
+    public_vs_private_weight: "neither permits accusation"
+
+  silence_usage:
+    weight: 0.95
+    occupied_vs_empty: empty
+    silence_as_apology_legible: true
+    silence_as_refusal_legible: true
+
+  symbolism_preferences:
+    palette_source: null
+    available_loads: [document_only]
+    forbidden_clichés: [<all other categories>]
+    extensions: []
+    # ← the structural problem: a symbol arc that needs a domestic object
+    # to transform CANNOT be served under a document-only palette
+
+  taboo_topics:
+    - topic: "any direct or implied accusation"
+      directness_allowed: refused
+      authorized_substitutes: [structured_silence]
+    - topic: "any reference to past intimate event between speakers"
+      directness_allowed: refused
+      authorized_substitutes: [structured_silence]
+    - topic: "naming another person's actions critically"
+      directness_allowed: refused
+      authorized_substitutes: [structured_silence]
+
+  relationship_dynamics:
+    intergenerational_pressure: low
+    debt_inheritance_register: absent
+    chosen_family_legibility: absent
+    romantic_dialogue_default: absent
+
+  narrative_rhythm:
+    beat_ordering: spiral
+    scene_anchor_typical: "document examination"
+    closing_default: silence
+
+  philosophical_tendencies:
+    self_model: bounded
+    time_model: linear
+    meaning_default: refused
+
+  anti_stereotype_notes:
+    - "this is a constructed test profile; it does not describe any real literary tradition"
+    - "the profile is intentionally over-constrained to demonstrate the escalate path"
+
+  forbidden_iconography:
+    - "domestic objects with use-wear (forbidden palette)"
+    - "weather as emotional channel"
+    - "any third-party routing"

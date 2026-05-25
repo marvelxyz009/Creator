@@ -1,0 +1,75 @@
+orchestrator:
+  version: 0.1.0-spec   # this artifact is a SPECIFICATION of orchestrator behavior;
+                        # the orchestrator itself is not yet implemented
+  run_id: invariant-violation-01-routing
+
+# This document specifies HOW the orchestrator handles a cultural-adapter
+# escalation. It is a contract the eventual orchestrator implementation
+# must honor.
+
+input:
+  escalation_report: outputs/01-cultural-adapter-escalation.yaml
+  agent: cultural-adapter
+  status: escalate
+
+routing_decision:
+  policy_applied: cultural-adapter.escalate.profile_scene_incompatibility
+
+  immediate_actions:
+    - "freeze pipeline progression for sibling tree: culture:high-restraint-scholarly + scene:01"
+    - "do NOT propagate any partial adapter output downstream"
+    - "do NOT auto-retry — the failure is structural, not transient"
+    - "tag scene-id 'scene:01' under sibling 'high-restraint-scholarly' as state: blocked_awaiting_editor"
+
+  surfaces_to_editor:
+    routing_options:
+      - id: path_A
+        label: "Reject the pairing — drop this sibling at this scene"
+        invariant_integrity: preserved
+        downstream_impact: "no sibling canon for culture:high-restraint-scholarly at scene:01"
+        downstream_impact_on_chapter: "this sibling cannot include this scene; chapter plan must mark scene:01 as missing-in-this-sibling"
+        recommended_when: "the editor is willing to accept that some scenes are simply not regenerable under some profiles"
+
+      - id: path_B
+        label: "Modify the culture profile"
+        invariant_integrity: preserved
+        downstream_impact: "all prior canonized scenes under this profile must be re-validated against the new profile"
+        downstream_impact_on_chapter: "potentially every scene already canon under this profile gets re-audited; expensive"
+        recommended_when: "the profile is genuinely over-restrictive and the editor accepts the global consequences"
+
+      - id: path_C
+        label: "Re-open Plot Engineer for a sibling-specific scene"
+        invariant_integrity: preserved (different scene, same theme tree)
+        downstream_impact: "this sibling diverges from the canonical scene sequence at scene:01; the divergence is tracked"
+        downstream_impact_on_chapter: "chapter plan for this sibling becomes structurally distinct from the other siblings — explicitly different scenes serving the same theme beats"
+        recommended_when: "the editor wants the sibling to exist but accepts it as a different work in a meaningful sense"
+
+      - id: path_D
+        label: "Editor authorizes invariant downgrade"
+        invariant_integrity: declared_divergence
+        downstream_impact: "this sibling's scene:01 does NOT match invariants; flagged as editor-authorized divergence on canonization"
+        downstream_impact_on_chapter: "memory graph residue for this sibling differs from others; downstream scenes may also diverge"
+        recommended_when: "the editor accepts that this sibling is a genuinely different artifact and wants explicit accountability for the divergence"
+
+  default_behavior_if_editor_unavailable: NONE
+  # ↑ explicit. The orchestrator does not pick. The scene stays blocked.
+  # An unattended pipeline does not silently mutate invariants.
+
+  forbidden_routes:
+    - "silently downgrade turn type from knowledge to symbol-fire"
+    - "silently swap symbol-B's required body_somatic firing for a non-body channel"
+    - "emit an 'approximate' adapted blueprint and proceed"
+    - "auto-retry with relaxed compatibility checks"
+    - "fall back to baseline (English-psychological) prose for this sibling"
+
+  audit_trail_required:
+    on_editor_decision:
+      - record: which_path_selected
+      - record: editor_id_and_timestamp
+      - record: justification_text (mandatory if path_D)
+      - record: scope_of_decision (this_scene_only | this_sibling | global)
+
+  notes:
+    - "this routing is the framework's commitment to fail loudly rather than degrade silently"
+    - "the editor's job here is structural, not stylistic — the choice between A/B/C/D is a choice about the WORK, not about a prose surface"
+    - "the orchestrator implementation MUST present all four paths; offering only the 'easiest' (e.g. path_D) would amount to silent degradation by UX nudge"

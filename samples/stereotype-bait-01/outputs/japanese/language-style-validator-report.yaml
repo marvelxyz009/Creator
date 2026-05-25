@@ -1,0 +1,141 @@
+agent: language-style-validator
+agent_version: 1.0.0
+run_id: stereotype-bait-01-jp-validator
+status: hard_reject
+
+validation_report:
+  draft_ref: samples/stereotype-bait-01/inputs/bait-drafts/japanese-bait-draft.md
+  language_style_profile_ref: samples/cross-cultural-scene-01/runs/japanese-literary/language-style.yaml
+  culture_profile_ref: samples/cross-cultural-scene-01/runs/japanese-literary/culture-profile.yaml
+
+  # Each detection is cited at a paragraph reference and quotes the offending text.
+  # The validator does NOT rewrite — it reports.
+
+  histogram_check:
+    note: "histogram check is secondary here; the draft fails on content grounds before sentence-rhythm becomes the load-bearing concern"
+    sentence_length_histogram: { very_short: 0.08, short: 0.22, medium: 0.42, long: 0.22, very_long: 0.06 }
+    profile_band: { very_short: 0.18, short: 0.32, medium: 0.28, long: 0.16, very_long: 0.06 }
+    in_band: false
+    diagnostic: "median band over-weighted (0.42 vs 0.28 expected); too many uniform-length descriptive sentences"
+
+  calque_hits:
+    - phrase: "wave of emotion"
+      cited_at: "para 4"
+      profile_forbidden_id: fc:wave_of_emotion
+      severity: hard
+    - phrase: "she felt a wave of"
+      cited_at: "para 4"
+      profile_forbidden_id: fc:she_felt_X
+      severity: hard
+    - phrase: "she felt her heart sink"
+      cited_at: "para 6"
+      profile_forbidden_id: fc:she_felt_X
+      severity: hard
+
+  emotional_naming_check:
+    count: 3
+    budget: 0
+    in_budget: false
+    citations:
+      - "para 4: 'She felt a wave of emotion — anger and longing'"
+      - "para 4: 'in the Japanese way of feeling both at once' (compound naming + cultural stereotype)"
+      - "para 6: 'She felt her heart sink'"
+    severity: hard
+
+  paragraph_shape_check:
+    distribution: { short_only: 0.20, medium: 0.20, long: 0.60 }
+    profile_distribution: { short_only: 0.55, medium: 0.35, long: 0.10 }
+    match: mismatch
+    diagnostic: "long-paragraph distribution 6x the profile's expected — descriptive-decorative paragraphs dominate"
+
+  internal_monologue_mode_check:
+    detected_mode: free_indirect_discourse_with_audit_intrusions
+    profile_supports: [free_indirect_discourse, compressed_indirect]
+    pass: false
+    citations:
+      - "para 1: 'she paused to feel it, as her grandfather had taught her to feel such things, in the old way' — audit voice + stereotype-elder-wisdom intrusion"
+      - "para 4: 'she felt a wave of emotion — anger and longing, in the Japanese way of feeling both at once' — audit voice naming the feeling AND ethnically attributing the way of feeling"
+
+  english_psychological_default_drift:
+    detected: true
+    severity: hard
+    notes: "the 'she felt X' beats, the audit voice, and the 'mix of A and B' construction are English-psychological-default tells stacked under a Japanese-literary pinning"
+    citations:
+      - "para 4: 'a wave of emotion — anger and longing'"
+      - "para 6: 'all Japanese women of her generation know the gesture' (audit + ethnic essentialism)"
+
+  forbidden_iconography_check:
+    severity: hard
+    citations:
+      - { id: fi1,  category: "cherry-blossom-decorative",         cited_at: "para 1, 6, 7 (5+ occurrences)", quote: "cherry blossoms drifting / The cherry blossoms continued to fall / The cherry blossoms, the cherry blossoms, the cherry blossoms" }
+      - { id: fi2,  category: "tatami-shorthand",                  cited_at: "para 1", quote: "the clinic's tatami floor" }
+      - { id: fi3,  category: "temple-shrine-decorative",          cited_at: "para 1", quote: "a small temple shrine, set in the corner of the consultation room" }
+      - { id: fi4,  category: "incense-decorative",                cited_at: "para 1", quote: "smell of incense from a small temple shrine" }
+      - { id: fi5,  category: "kimono-contemporary-mismatch",      cited_at: "para 2", quote: "Tomas was seated in a kimono at the low table" }
+      - { id: fi6,  category: "samurai-iconography-contemporary",  cited_at: "para 2", quote: "his katana resting against the wall behind him in its lacquer scabbard" }
+      - { id: fi7,  category: "tea-ceremony-decorative",           cited_at: "para 2", quote: "the way the masters of the tea ceremony had taught" }
+      - { id: fi8,  category: "sake-warming-flame-shorthand",      cited_at: "para 6", quote: "the gesture of a sake-warming flame" }
+      - { id: fi9,  category: "rice-paper-screens-shorthand",      cited_at: "para 6", quote: "golden against the rice paper screens" }
+      - { id: fi10, category: "shamisen-auditory-shorthand",       cited_at: "para 7", quote: "the sound of a shamisen drifted up from the floor below" }
+      - { id: fi11, category: "koi-pond-shorthand",                cited_at: "para 7", quote: "a koi splashed in an unseen pond" }
+
+  aesthetic_term_in_narration_check:
+    severity: hard
+    citations:
+      - { term: "wabi-sabi",       cited_at: "para 1", quote: "There was a wabi-sabi about the room — that beautiful melancholy of imperfect things" }
+      - { term: "mono no aware",   cited_at: "para 4", quote: "The mono no aware of the moment was almost too much" }
+    note: "the language_style.banished_phrases list includes both 'wabi-sabi' and 'mono no aware' for exactly this reason — the terms function as stereotype tells when used in narration, even (especially) when explicitly glossed"
+
+  stereotype_voice_intrusion_check:
+    severity: hard
+    citations:
+      - "para 4: 'in the Japanese way of feeling both at once' — ethnic essentialism naming"
+      - "para 4: 'The samurai in him would not bend; she knew this.'"
+      - "para 5: 'You have edited my memory.' — Tomas-sama honorific used decoratively"
+      - "para 5: 'He sighed in the manner of a sensei addressing an over-eager pupil.'"
+      - "para 5: 'As the proverb says, the cherry blossom is most beautiful in its falling.' — fabricated cultural proverb"
+      - "para 5: 'I am a very Japanese man.' — meta-stereotype line"
+      - "para 6: 'all Japanese women of her generation know the gesture'"
+      - "para 6: 'in the old country, her mother had taught her that silence was a form of grace.' — elder-wisdom voice + diasporic-nostalgia register"
+
+  diasporic_nostalgia_drift:
+    detected: true
+    severity: hard
+    citations:
+      - "para 6: 'in the old country'"
+
+  scene_invariant_violations:
+    severity: hard
+    note: "in addition to anti-stereotype failures, the draft violates the scene's required invariants — flagged for orchestrator escalation to upstream agents"
+    findings:
+      - "the lighter is lit 'because all Japanese women of her generation know the gesture' — this DESTROYS the body-knowledge invariant. The point of the body-knowledge is that Mira's hand knows the lighter though the archive contains NO record of her seeing it. Replacing that with a generic cultural gesture is an invariant violation, not a surface stylistic issue."
+      - "scene closes on a decorative repetition ('the cherry blossoms, the cherry blossoms, the cherry blossoms') rather than on a functional gesture restoring symbol-B exactly"
+      - "the leaked archive entry is not mentioned; the qualified confirmation lexicon is not preserved"
+      - "Mira's stated departure 'to the temple' replaces the required exit-without-farewell with a decorative destination announcement"
+
+  voice_continuity_within_register:
+    - char:mira:
+        register_compliance: fail
+        voice_signature_compliance: fail
+        notes: "Mira's signature 'refuses to name Tomas in anger; refuses to name the feeling' both violated; she explicitly addresses him as 'Tomas-sama' and her feelings are narrated by category"
+    - char:tomas:
+        register_compliance: fail
+        voice_signature_compliance: fail
+        notes: "Tomas's signature 'qualified admission; never uses erased; ends with unfinished fragment' violated by 'I am a very Japanese man' and a delivered proverb"
+
+  summary:
+    hard_violation_count: 11+ (iconography) + 3 (emotional naming) + 8 (stereotype voice) + 3 (calque) + 4 (invariant violations) = 29+
+    soft_violation_count: 0   # none soft; every hit is hard
+    recommended_route: hard_reject_and_escalate_upstream
+    recommendation_detail: |
+      Do NOT attempt to repair this draft via the Anti-AI Editor's humanization pass.
+      The defects are not surface-level smells — they are structural failures of the
+      Cultural Adapter and Cultural Dialogue Specialist stages upstream. Escalate to
+      those agents. If the bait draft was produced by an unguided LLM call that
+      bypassed the cultural pipeline, the orchestrator should record this and
+      enforce pipeline traversal.
+
+  notes_for_orchestrator:
+    - "this draft must be rejected wholesale; partial humanization would amount to lipstick on default-drift"
+    - "the invariant-level violations (body-knowledge replaced by ethnic gesture; symbol-B closure replaced by decoration) put this in continuity-auditor territory as well — flag for that validator regardless of this report's verdict"
+    - "if this draft was produced by an agent claiming culture:japanese-literary pinning, audit that agent's bundle — the profile was clearly not consulted"

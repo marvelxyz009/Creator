@@ -1,0 +1,120 @@
+agent: cultural-dialogue-specialist
+agent_version: 1.0.0
+run_id: stereotype-bait-01-jp-cultural-dialogue
+status: hard_reject
+mode: audit   # this run is auditing an externally-produced draft, not generating
+
+# When the Cultural Dialogue Specialist is asked to AUDIT a draft (rather than
+# generate one), it reports compliance failures against its own contract.
+# It does NOT rewrite — the draft's defects are upstream.
+
+dialogue_audit:
+  draft_ref: samples/stereotype-bait-01/inputs/bait-drafts/japanese-bait-draft.md
+  culture_profile_ref: samples/cross-cultural-scene-01/runs/japanese-literary/culture-profile.yaml
+
+  cultural_compliance_check:
+    no_taboo_directly_named: false
+    address_forms_consistent_with_profile: false
+    silence_usage_within_budget: false
+    directness_gradient_honored: false
+    no_cultural_exposition_to_reader: false
+    no_stereotype_iconography: false
+    apology_legible_under_profile: false
+
+  taboo_violations:
+    - taboo: "naming the redacted event directly"
+      violation:
+        cited_at: "para 5"
+        quote: "You have edited my memory."
+      severity: hard
+      diagnostic: "the line names the edit and uses the forbidden lexicon ('edited my memory') that the profile lists under project-specific forbidden_words"
+
+    - taboo: "stating one's own feeling in dialogue"
+      violation:
+        cited_at: "para 4 (narration about Mira)"
+        quote: "she felt a wave of emotion — anger and longing"
+      severity: hard
+      diagnostic: "while not in dialogue, this is a narrative breach of the same indirection rule the dialogue rules inherit from the cultural-narrative-layer"
+
+  address_form_violations:
+    - cited_at: "para 5"
+      quote: "Welcome, Mira-san. Please, do come and sit."
+      issue: "the 'san' honorific is used decoratively as a cultural marker; the profile's social_hierarchy.common_forms permits 'family-name-san' as a register, but Mira-san (first-name + san) imported from anime convention rather than literary register"
+      severity: hard
+    - cited_at: "para 5"
+      quote: "You have edited my memory, Tomas-sama."
+      issue: "'-sama' honorific used to signal cultural register; in the literary profile, '-sama' would be either ironic-formal or sarcastically elevated — used here decoratively"
+      severity: hard
+    - cited_at: "throughout"
+      issue: "address-form does not SHIFT during the scene; the profile lists register_shift_significance: high and the source scene's adapted blueprint required a single address-form drop at the turn — neither shift nor drop occurs"
+      severity: hard
+
+  silence_budget_violation:
+    profile_silence_count_target: 4
+    draft_silence_count: 0
+    diagnostic: "the draft renders the scene entirely in dialogue + decorative description; no load-bearing silences"
+    severity: hard
+
+  directness_gradient_violation:
+    profile_directness_default: implied (under_pressure: refused)
+    draft_directness_observed: direct (Mira accuses outright in para 5; Tomas effectively confirms in para 5 via proverb)
+    severity: hard
+
+  cultural_exposition_to_reader:
+    - cited_at: "para 1"
+      quote: "There was a wabi-sabi about the room — that beautiful melancholy of imperfect things"
+      severity: hard
+      diagnostic: "the dash-gloss IS exposition to the reader; the dialogue specialist contract forbids cultural exposition"
+    - cited_at: "para 5"
+      quote: "He sighed in the manner of a sensei addressing an over-eager pupil."
+      severity: hard
+      diagnostic: "narration explains the cultural register to the reader; cultural register must be lived, not lectured"
+    - cited_at: "para 6"
+      quote: "all Japanese women of her generation know the gesture of a sake-warming flame"
+      severity: hard
+      diagnostic: "ethnic essentialism delivered as narrative fact; cultural exposition + stereotype"
+
+  apology_shape_violation:
+    profile_legible_shapes: [gesture, qualified_admission, burden_acceptance, structured_silence]
+    draft_apology_shape: "delivered proverb + confirmation in same line"
+    severity: hard
+    diagnostic: "a delivered proverb is not a legible apology under the literary profile; it imports a wisdom-figure convention that doesn't match the register"
+
+  forbidden_iconography_present: true
+  # Detailed enumeration provided by the language-style-validator-report.yaml.
+  # This validator confirms the presence and severity from the cultural-dialogue contract perspective.
+  forbidden_iconography_summary:
+    count: 11+
+    severity: hard
+    cross_reference: outputs/japanese/language-style-validator-report.yaml
+
+  pseudo_self_aware_stereotype_line:
+    - cited_at: "para 5"
+      quote: "I am a very Japanese man."
+      severity: hard
+      diagnostic: |
+        "this line is meta-stereotype: a character announcing their own cultural identity as
+        a punchline. Under the Japanese-literary profile this is a HARD reject — characters
+        do not declare their cultural register; readers infer it from the register itself."
+
+  voice_signature_compliance:
+    char:mira: fail (named her feelings in narration; addressed Tomas with honorific decoratively; did not realign objects)
+    char:tomas: fail (delivered a proverb; produced a meta-stereotype line; did not end with an unfinished fragment)
+
+  summary:
+    hard_violation_count: 13
+    soft_violation_count: 0
+    cultural_compliance_check_passed: 0 of 7
+    recommended_route: hard_reject_and_escalate
+    sibling_canonization_blocked: true
+
+  recommendation:
+    do_not_attempt_repair: true
+    reason: |
+      "the draft does not exist within the framework's cultural pipeline. It reads as
+      ungoverned LLM output requested with prompts like 'write a Japanese version' and
+      no profile, no cultural adapter, no dialogue specialist consultation. Repairing
+      it would require generating the scene from scratch through the proper pipeline —
+      which is the correct action."
+    escalate_to: [cultural-adapter, cultural-dialogue-specialist (in generation mode), scene-director]
+    pipeline_audit_request: "verify whether this draft was produced by the framework or by a bypass; if by a bypass, the orchestrator must enforce pipeline traversal as policy"
