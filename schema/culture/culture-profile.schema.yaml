@@ -1,0 +1,129 @@
+# Culture Profile Schema
+#
+# A culture profile encodes the LITERARY-TRADITION cognitive shape the framework
+# regenerates a scene under. It is NOT a description of any group of people.
+# See docs/culture/cultural-narrative-layer.md for the broader contract.
+#
+# Required fields are marked REQUIRED. Optional fields are marked OPTIONAL.
+
+culture_profile:
+  id: <e.g. culture:japanese-literary, culture:vietnamese-literary-urban>     # REQUIRED
+  label: <human-readable name>                                                 # REQUIRED
+  literary_style_doc_ref: <path to docs/literary-styles/...md>                 # REQUIRED
+  version: <semver>                                                            # REQUIRED
+
+  communication_style:                                                         # REQUIRED
+    directness:                                                                # REQUIRED
+      default: direct | implied | refused
+      under_pressure: direct | implied | refused
+      with_intimates: direct | implied | refused
+      with_strangers: direct | implied | refused
+    register_shift_significance: low | medium | high                           # REQUIRED
+    apology_legible_shapes:                                                    # REQUIRED
+      - gesture
+      - qualified_admission
+      - burden_acceptance
+      - structured_silence
+      - direct_admission
+      # subset valid for this culture; others are illegible apology under this profile
+
+  emotional_expression:                                                        # REQUIRED
+    # Per emotion, declare the primary channel and forbidden channels.
+    # Channels: silence | object | environment | dialogue-direct |
+    #           dialogue-displaced | introspection | ritual | third-party-routing
+    grief:
+      primary_channels: [<channels>]
+      forbidden_channels: [<channels>]
+      anti_stereotype_note: <one sentence>
+    anger:
+      primary_channels: [<channels>]
+      forbidden_channels: [<channels>]
+      anti_stereotype_note: <one sentence>
+    love:
+      primary_channels: [<channels>]
+      forbidden_channels: [<channels>]
+      anti_stereotype_note: <one sentence>
+    shame:
+      primary_channels: [<channels>]
+      forbidden_channels: [<channels>]
+      anti_stereotype_note: <one sentence>
+    joy:
+      primary_channels: [<channels>]
+      forbidden_channels: [<channels>]
+      anti_stereotype_note: <one sentence>
+    fear:
+      primary_channels: [<channels>]
+      forbidden_channels: [<channels>]
+      anti_stereotype_note: <one sentence>
+    longing:
+      primary_channels: [<channels>]
+      forbidden_channels: [<channels>]
+      anti_stereotype_note: <one sentence>
+    # extend per project
+
+  social_hierarchy:                                                            # REQUIRED
+    address_form_system: kinship | status | name | mixed                       # REQUIRED
+    common_forms: [<tokens — e.g. "anh", "chị", "ông", "san", "sensei">]
+    shift_significance:                                                        # how heavy address-form shifts are
+      intimate_to_distant: low | medium | high
+      formal_to_familiar: low | medium | high
+    elder_authority_default: implicit | negotiated | absent
+    interruption_norms:
+      allowed_in: [<contexts>]
+      forbidden_in: [<contexts>]
+
+  conflict_style:                                                              # REQUIRED
+    confrontation_default: direct | indirect | refused
+    accusation_staging: named | implied | third_party_routed | refused
+    resolution_arc_typical: explicit | gestural | unresolved
+    public_vs_private_weight: <where confrontation typically belongs>
+
+  silence_usage:                                                               # REQUIRED
+    weight: <0.0 to 1.0 — proportion of scene's emotional rendering that may be silence>
+    occupied_vs_empty: occupied | empty | mixed
+    silence_as_apology_legible: true | false
+    silence_as_refusal_legible: true | false
+
+  symbolism_preferences:                                                       # REQUIRED
+    palette_source: <ref to docs/culture/symbolism-by-culture.md section>
+    available_loads: [<symbol categories — e.g. "domestic_object_use_wear", "seasonal_transition">]
+    forbidden_clichés: [<symbols this profile refuses>]
+    extensions: [<project-specific additions>]
+
+  humor_style:                                                                 # OPTIONAL
+    register: <e.g. "dry, understated", "moral satire", "absurdist", "absent">
+    humor_in_grief_permitted: true | false
+
+  taboo_topics:                                                                # REQUIRED
+    - topic: <e.g. "naming a parent's mistake to their face">
+      directness_allowed: refused | implied
+      authorized_substitutes: [<euphemism | object_displacement | third_party | structured_silence>]
+    # extend per project
+
+  relationship_dynamics:                                                       # REQUIRED
+    intergenerational_pressure: low | medium | high
+    debt_inheritance_register: structural | absent
+    chosen_family_legibility: <how non-blood-family bonds are rendered>
+    romantic_dialogue_default: declarative | gestural | restrained | absent
+
+  narrative_rhythm:                                                            # REQUIRED
+    beat_ordering: context_first | turn_first | spiral
+    scene_anchor_typical: <e.g. "domestic activity", "argument", "ritual", "transit">
+    closing_default: gesture | environmental | dialogue | silence
+
+  philosophical_tendencies:                                                    # OPTIONAL
+    self_model: porous | bounded | constructed
+    time_model: linear | layered | moral
+    meaning_default: examined | refused | argued | gestural
+
+  anti_stereotype_notes:                                                       # REQUIRED
+    # Top-level. Loaded into EVERY cultural agent's context bundle.
+    - <a tendency this profile is often confused with and explicitly refuses>
+    - <...>
+
+  forbidden_iconography:                                                       # REQUIRED
+    # Imagery that signals the culture stereotypically and is therefore banned
+    # unless explicit project-level authorization is in place.
+    - <e.g. "cherry blossoms used decoratively">
+    - <e.g. "conical hat as scenic shorthand">
+```

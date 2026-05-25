@@ -1,0 +1,108 @@
+# Language Style Schema
+#
+# Encodes the SENTENCE-LEVEL conventions of a language tradition: rhythm,
+# density, paragraph shape, tag economy, internal monologue mode, pacing.
+#
+# Coupled to but separable from culture-profile.schema.yaml.
+# See docs/language/language-narrative-system.md.
+
+language_style:
+  id: <e.g. lang:vietnamese-literary-contemporary, lang:english-psychological>  # REQUIRED
+  label: <human-readable name>                                                   # REQUIRED
+  literary_style_doc_ref: <path to docs/literary-styles/...md>                   # REQUIRED
+  base_language: <e.g. "vi", "ja", "en", "ru" — ISO 639 code or descriptive>     # REQUIRED
+  version: <semver>                                                              # REQUIRED
+
+  sentence_density:                                                              # REQUIRED
+    distribution:                                                                # at-rest histogram
+      very_short: <fraction>      # under 6 words/tokens
+      short:      <fraction>      # 6-12
+      medium:     <fraction>      # 12-22
+      long:       <fraction>      # 22-40
+      very_long:  <fraction>      # 40+
+    under_pressure:                                                              # how distribution shifts under tension
+      shortens: true | false
+      fragments_allowed: true | false
+      long_burst_allowed: true | false
+    median_band_warning_threshold: <int — consecutive sentences in median band before flag>
+
+  prose_rhythm:                                                                  # REQUIRED
+    breath_placement: front | end | mid | variable
+    paragraph_shape:
+      short_only_distribution:  <fraction>     # paragraphs of 1-3 sentences
+      medium_distribution:      <fraction>     # 4-8
+      long_distribution:        <fraction>     # 9+
+      single_block_permitted:   true | false
+    tidal_allowed: true | false                # alternating short-short-short-long under emotional accretion
+    rhythm_under_tension: <e.g. "compresses", "expands", "fragments">
+
+  dialogue_directness:                                                           # REQUIRED
+    # NOTE: language-level dialogue conventions. The CULTURE profile's
+    # communication_style.directness governs the cognitive directness.
+    # This field governs the LANGUAGE-LEVEL conventions (tag forms,
+    # interruption rendering, line-break conventions).
+    line_break_convention: per_speaker | flowing | mixed
+    tag_position_default: before | after | embedded
+    interruption_rendering: em_dash | ellipsis | line_break | new_paragraph
+
+  emotional_indirection:                                                         # REQUIRED
+    direct_naming_budget: <int>     # max direct emotion namings in narration per ~1000 words
+    misnamed_self_permitted: true | false   # POV may misname their own feeling
+    in_dialogue_budget: <int>       # max direct namings in dialogue per ~1000 words
+
+  environmental_storytelling:                                                    # REQUIRED
+    weight: <0.0 to 1.0>            # how much of emotional rendering goes through setting/weather/object
+    weather_as_metaphor_permitted: true | false   # if true, with what self-consciousness
+    season_as_structural: true | false
+
+  internal_monologue_style:                                                      # REQUIRED
+    supported_modes:
+      - stream_of_consciousness: allowed | forbidden | preferred
+      - free_indirect_discourse: allowed | forbidden | preferred
+      - compressed_indirect:     allowed | forbidden | preferred
+      - direct_interior_speech:  allowed | forbidden | preferred
+    POV_audit_voice_permitted: true | false      # the introspective audit beat
+    second_person_internal_permitted: true | false
+
+  pacing_pattern:                                                                # REQUIRED
+    scene_to_story_time_default: real_time | compression | tidal
+    long_scene_tolerance: low | medium | high
+    summary_narration_permitted: true | false    # narrator editorializing across time
+    flashback_mediation: direct_scene | narrated_gloss | gestural
+
+  dialogue_tag_economy:                                                          # REQUIRED
+    style: tag_heavy | tag_light | action_beat_replacement
+    tag_meaning_summarization_forbidden: true | false   # e.g. "she said, trying to be brave"
+    minimal_set: [<allowed tags — e.g. "said", "asked">]
+
+  forbidden_constructions:                                                       # REQUIRED
+    # Calque / awkward-translation tells. Even if generated directly,
+    # these signal English-default leakage and are flagged.
+    - id: fc:in_that_moment
+      pattern: "in that moment"
+      reason: "English-default temporal hedge"
+    - id: fc:wave_of_emotion
+      pattern: "wave of <emotion>"
+      reason: "English-default emotion metaphor"
+    # extend per profile
+
+  voice_continuity_tests:                                                        # OPTIONAL
+    # Heuristic tests the validator can apply to detect translated-feeling prose.
+    - id: vct:native_idiom_density
+      description: "fraction of idiomatic / register-bound expressions"
+      profile_expected_range: [<low>, <high>]
+    - id: vct:syntactic_naturalness
+      description: "syntactic patterns common in source-tradition prose"
+      sample_patterns: [<patterns>]
+
+  banished_phrases:                                                              # REQUIRED
+    # Language-profile-specific extension of the global anti-ai banished list.
+    # The anti-ai-editor will subtract irrelevant phrases and add these.
+    - <phrase>
+    - <...>
+
+  notes:                                                                         # OPTIONAL
+    coupling_recommendations:                                                    # which culture profiles this language style commonly pairs with
+      - culture_id: <ref>
+        notes: <one sentence>
+    cross_register_warnings: [<things to watch for when mixing with other profiles>]

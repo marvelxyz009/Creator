@@ -1,0 +1,103 @@
+# Emotional Expression Schema
+#
+# Encodes how a given emotion is RENDERED CHANNEL-WISE under a culture profile.
+# This schema is what the emotional-expression-matrix is structured by, and
+# what the Cultural Adapter consults when re-deriving emotional_shift.mechanism.
+#
+# See docs/culture/emotional-expression-matrix.md for the populated reference.
+
+emotional_expression:
+  culture_profile_ref: <id of the culture profile this expression set belongs to>  # REQUIRED
+  version: <semver>                                                                 # REQUIRED
+
+  # Channel enumeration — these are the renderable channels available
+  # to the framework. A culture profile picks PRIMARY and FORBIDDEN
+  # channels per emotion.
+  channels_glossary:
+    silence: <character does not speak / scene refuses to render in speech>
+    object: <emotion projected onto a domestic object>
+    environment: <emotion projected onto setting, weather, season, light>
+    dialogue_direct: <emotion named in dialogue by the character feeling it>
+    dialogue_displaced: <emotion expressed by speaking to or about a third party>
+    introspection: <emotion examined inside POV interior monologue>
+    ritual: <emotion carried through routine action — meal, altar, repetitive task>
+    third_party_routing: <emotion addressed via a proxy person, often a child or elder>
+    body_somatic: <emotion rendered as breath, temperature, posture, tic — without naming>
+    refusal: <the absence or refusal to perform a usual action carries the emotion>
+
+  emotions:
+    grief:                                                                          # REQUIRED
+      primary_channels: [<channels from glossary>]
+      forbidden_channels: [<channels from glossary>]
+      typical_arc_shape: <one sentence — how grief tends to unfold over scenes in this profile>
+      object_load_examples: [<symbol categories from culture profile palette>]
+      anti_stereotype_note: <one sentence>
+
+    anger:                                                                          # REQUIRED
+      primary_channels: [<channels>]
+      forbidden_channels: [<channels>]
+      typical_arc_shape: <one sentence>
+      object_load_examples: [<categories>]
+      anti_stereotype_note: <one sentence>
+
+    love:                                                                           # REQUIRED
+      primary_channels: [<channels>]
+      forbidden_channels: [<channels>]
+      typical_arc_shape: <one sentence>
+      object_load_examples: [<categories>]
+      anti_stereotype_note: <one sentence>
+
+    shame:                                                                          # REQUIRED
+      primary_channels: [<channels>]
+      forbidden_channels: [<channels>]
+      typical_arc_shape: <one sentence>
+      object_load_examples: [<categories>]
+      anti_stereotype_note: <one sentence>
+
+    joy:                                                                            # REQUIRED
+      primary_channels: [<channels>]
+      forbidden_channels: [<channels>]
+      typical_arc_shape: <one sentence>
+      object_load_examples: [<categories>]
+      anti_stereotype_note: <one sentence>
+
+    fear:                                                                           # REQUIRED
+      primary_channels: [<channels>]
+      forbidden_channels: [<channels>]
+      typical_arc_shape: <one sentence>
+      object_load_examples: [<categories>]
+      anti_stereotype_note: <one sentence>
+
+    longing:                                                                        # REQUIRED
+      primary_channels: [<channels>]
+      forbidden_channels: [<channels>]
+      typical_arc_shape: <one sentence>
+      object_load_examples: [<categories>]
+      anti_stereotype_note: <one sentence>
+
+  # Cross-emotion modulation: how channels combine when emotions co-occur.
+  # Example: under Japanese-literary, grief+longing typically stack on
+  # environment + body_somatic with refusal as connective.
+  combinations:                                                                     # OPTIONAL
+    - emotions: [grief, longing]
+      stacked_channels: [<channels>]
+      connective: <e.g. refusal, ritual>
+      example_arc_one_sentence: <one sentence>
+
+    - emotions: [anger, shame]
+      stacked_channels: [<channels>]
+      connective: <...>
+      example_arc_one_sentence: <...>
+
+  # Validation rules that an agent or validator can run against a draft.
+  validation_rules:
+    - id: ee:budget_for_direct_naming
+      description: "direct naming of any listed emotion in narration counts toward language_style.emotional_indirection.direct_naming_budget"
+    - id: ee:forbidden_channel_violation
+      description: "any rendering of an emotion through a forbidden channel is a hard reject"
+    - id: ee:primary_channel_under_use
+      description: "if NO primary channel for the emotion is used in a scene that carries the emotion, the rendering is suspect — flag as soft"
+
+  notes:                                                                            # OPTIONAL
+    extension_policy: "projects may extend with project-specific emotions; new emotions inherit the schema shape"
+    coupling_with_language: "channel weights interact with language_style.environmental_storytelling.weight — keep them consistent"
