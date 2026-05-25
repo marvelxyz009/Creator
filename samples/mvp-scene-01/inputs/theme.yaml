@@ -1,0 +1,71 @@
+agent: theme-analyst
+agent_version: 1.0.0
+run_id: mvp-scene-01-theme
+status: ok
+
+theme:
+  id: theme:primary
+  title: "Memory does not only preserve a person; it can deform them."
+
+  core_question: "If a feeling outlives the memory that caused it, whose feeling is it?"
+
+  oppositions:
+    - id: opp:1
+      a: "to be protected from the truth"
+      b: "to own one's own grief"
+      stakes: "the protected self may be a stranger to the grieving self"
+    - id: opp:2
+      a: "love as continuity of memory"
+      b: "love as the residue that survives erasure"
+      stakes: "if the residue counts, then erasure is not theft; if it doesn't, then nothing of love survives a wipe"
+
+  beats:
+    - id: beat:t1
+      statement: "Care that withholds truth is indistinguishable, from the outside, from manipulation."
+      test_question: "After this scene, has the reader's certainty about whether Tomas's act was kindness — advanced, complicated, or inverted?"
+      expected_modes_distribution:
+        advance: 0.2
+        complicate: 0.6
+        invert: 0.2
+
+    - id: beat:t2
+      statement: "What we feel without knowing why is data we are not allowed to trust."
+      test_question: "After this scene, has Mira treated a feeling she cannot source as evidence, or as noise?"
+      expected_modes_distribution:
+        advance: 0.3
+        complicate: 0.5
+        invert: 0.2
+
+    - id: beat:t3
+      statement: "The body remembers what the archive cannot reach."
+      test_question: "Did the scene close on a body-knowledge that contradicts the archive's record?"
+      expected_modes_distribution:
+        advance: 0.5
+        complicate: 0.3
+        invert: 0.2
+
+  forbidden_resolutions:
+    - "Mira accepts Tomas's reasoning"
+    - "Mira rejects Tomas outright"
+    - "either character delivers a speech about what memory means"
+    - "the erasure is revealed to be benign / malicious in a single beat"
+    - "a single restored memory resolves the question"
+
+  symbols:
+    - id: sym:cracked-glass
+      provisional_arc: "introduced as background detail → transformed as Mira realigns the shards → resolved or betrayed at scene close"
+      binds_to_beats: [beat:t1, beat:t2]
+      forbidden_uses:
+        - "narration calling it 'a symbol of her fractured memory'"
+        - "Mira looking at it and thinking about what it represents"
+
+    - id: sym:old-lighter
+      provisional_arc: "appears in Tomas's hand → seen but not named by Mira → fired by Mira's body-knowledge at scene close"
+      binds_to_beats: [beat:t2, beat:t3]
+      forbidden_uses:
+        - "any character naming the lighter as significant"
+        - "dialogue referring to a past moment in which Mira saw it"
+
+  voice_of_theme:
+    register: "domestic-technical: archive terms used like kitchen terms; emotion never named in narration"
+    forbidden_words: ["memory" (as abstract noun in narration), "identity", "self", "soul", "true love", "real", "fake"]

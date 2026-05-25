@@ -1,0 +1,36 @@
+agent: plot-engineer
+agent_version: 1.0.0
+run_id: mvp-scene-01-plotbeat
+status: ok
+
+plot_beat:
+  id: beat:p07
+  function: complication
+  touches_theme_beats: [beat:t1, beat:t2, beat:t3]
+  theme_mode: complicate
+
+  participating_characters: [char:mira, char:tomas]
+  pov_default: char:mira
+
+  intended_turn_type: knowledge
+
+  symbol_activity:
+    - id: sym:cracked-glass
+      op: transform
+    - id: sym:old-lighter
+      op: introduce
+
+  knowledge_delta:
+    character_gains:
+      - who: char:mira
+        gains: "non-archival knowledge — her body recognizes Tomas's lighter, though her records contain no instance of seeing it"
+      - who: char:tomas
+        gains: "the awareness that Mira's body retains what his edit removed"
+    reader_gains: "ambiguity reinforced — the body-knowledge could be preserved love or unsmooth residue; both readings remain live"
+
+  intended_tension_after: 0.92
+
+  notes_for_scene_director:
+    - "this is a complication beat, not a reveal beat — the redacted content is not delivered"
+    - "the lighter must enter the scene before Mira accuses Tomas, so that when she fires it the reader cannot tell whether the recognition is preserved or planted"
+    - "no character may state the theme; the body-knowledge must do all the work at scene close"

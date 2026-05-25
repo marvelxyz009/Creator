@@ -1,0 +1,150 @@
+agent: scene-director
+agent_version: 1.0.0
+run_id: mvp-scene-01-blueprint
+inputs_hash: <inputs/* hash>
+generated_at: 2026-05-25T00:00:00Z
+status: ok
+
+scene_blueprint:
+  scene_id: scene:01
+  act: 2
+  fulfills_plot_beat: beat:p07
+
+  participants: [char:mira, char:tomas]
+  pov: char:mira
+  location: loc:abandoned-clinic
+  time: "early evening; the wave-on-stone is below the room; the fluorescent flickers"
+
+  purpose:
+    one_sentence: "Mira arrives to confront Tomas about the edit; the scene complicates rather than resolves by letting her body recognize an object her records say she has never seen."
+    theme_touch:
+      - beat: beat:t1
+        mode: complicate
+      - beat: beat:t2
+        mode: complicate
+      - beat: beat:t3
+        mode: advance
+
+  goal:
+    who: char:mira
+    what: "to confirm the edit and decide what her grief is — without giving Tomas the leaked archive entry"
+
+  opposition:
+    source: char:tomas
+    form: "calibrated calm; deflection by qualifier; refusal to name the redacted event"
+
+  stakes:
+    if_won: "she keeps possession of the leaked entry and walks out with the question intact"
+    if_lost: "she hands him the entry and lets him narrate her grief for her"
+
+  conflict_type: epistemic
+
+  emotional_shift:
+    pov_entry_state: "armored, procedural, controlled"
+    pov_exit_state: "intact in posture; undermined in certainty; carrying a body-knowledge she cannot file"
+    mechanism: "she lights his lighter on the first try, with the wrong-handed motion he uses — and neither of them comments"
+
+  character_actions:
+    - who: char:mira
+      action_intent: "to extract confirmation without offering evidence"
+      visible_behavior: "remains standing; realigns three objects on the consultation desk before speaking"
+      hidden_behavior: "keeps the leaked entry folded inside her coat pocket; does not produce it"
+    - who: char:tomas
+      action_intent: "to keep the redacted content unspoken while not lying outright"
+      visible_behavior: "seated; turns a small lighter once in his hand and sets it on the desk's edge; later straightens the angle of a stapler she has moved"
+      hidden_behavior: "registers, without acknowledging, that the room temperature has dropped — she is colder than her speech says"
+
+  dialogue_intent:
+    overall_register: "domestic-technical; archive vocabulary used like household terms"
+    line_count_target: "approximately 18-24 exchanges, including silences"
+    forbidden_dialogue_moves:
+      - "no philosophical monologue from either character"
+      - "no apology from Tomas accepted on first offer"
+      - "no accusation by Mira using the word 'erased'"
+      - "no use of 'I' followed by an emotion noun ('I am angry', 'I am hurt')"
+
+  turn:
+    type: knowledge
+    description: "Mira's body recognizes the lighter's mechanism though her archive contains no record of her seeing it — a knowledge the room cannot file."
+
+  revealed_information:
+    - what: "Tomas confirms he 'set aside' a part of her record"
+      to: char:mira
+      cost: "the confirmation is delivered in the same sentence as a qualifier that prevents her from acting on it"
+    - what: "body-knowledge of the lighter mechanism"
+      to: char:mira
+      cost: "the cost is the destabilizing of her own certainty about what was preserved versus planted"
+    - what: "Tomas understands, by scene's end, that her body retains what his edit removed"
+      to: char:tomas
+      cost: "he loses the belief that the edit was clean"
+
+  hidden_information:
+    - what: "the content of event:the-redacted-event"
+      withheld_from: [char:mira, reader]
+      pressure_after: "the question of what was edited becomes the engine of the next scene"
+    - what: "Mira's possession of the leaked archive entry"
+      withheld_from: [char:tomas]
+      pressure_after: "she holds an instrument she did not use; she will have to decide why"
+
+  symbolism_used:
+    - id: sym:cracked-glass
+      op: transform
+      manifestation: "the consultation desk has a glass insert that was cracked years ago; Mira fits two shards back into alignment in the middle of her line; neither character names this"
+    - id: sym:old-lighter
+      op: introduce
+      manifestation: "Tomas turns it once in his hand, sets it on the desk's edge; Mira picks it up at scene close and lights it correctly without thinking"
+
+  residue:
+    graph_writes:
+      - "rel:mira-tomas.tension := 0.92"
+      - "sym:cracked-glass.state := transformed"
+      - "sym:old-lighter.state := introduced"
+      - "sym:old-lighter.appearances_count := 1"
+      - "new edge: KNOWS { subject: char:mira, object: sym:old-lighter, level: body_only }"
+      - "new edge: KNOWS { subject: char:tomas, object: 'mira-retained-body-knowledge', level: full }"
+      - "debt:0001.pressure := higher (qualified confirmation deepens, does not pay)"
+      - "new node: debt:0002 { owed_by: char:mira (to self), content: 'decide whether body-knowledge counts as evidence', due_by: unresolved }"
+    knowledge_deltas:
+      - who: char:mira
+        now_knows: "Tomas 'set aside' part of her record (qualified confirmation)"
+      - who: char:mira
+        now_knows: "her hand knows the lighter (body-knowledge, unfiled)"
+      - who: char:tomas
+        now_knows: "the edit did not clear the body"
+
+  ending_hook:
+    type: gesture
+    description: "Mira lights Tomas's lighter on the first try, with the wrong-handed motion he uses; the small flame between them; neither speaks; she does not look at him as she sets it back on the desk, exactly where he had it, before walking out."
+
+  prose_constraints:
+    forbidden:
+      - "any line stating Mira feels something"
+      - "any line stating Tomas feels something"
+      - "the word 'erased' from any mouth or narration"
+      - "more than five consecutive lines without a physical action beat"
+      - "any line that summarizes the relationship to date"
+      - "interior monologue beginning with 'she realized' or 'she understood'"
+      - "ending the scene on a question"
+    required:
+      - "render Mira's escalating pressure entirely through object realignment"
+      - "Tomas's lines must shorten across the scene; the last is a fragment"
+      - "the lighter must enter the scene at least three exchanges before Mira touches it"
+      - "the cracked-glass shards must be referenced without being named as a symbol"
+      - "scene closes on a physical action with no following sentence of reflection"
+
+  micro_beats:
+    - "arrival — the door's lock has not been replaced; Mira pushes it"
+    - "Tomas seated; the lighter is already in his hand"
+    - "Mira's first line — procedural, sharp; she does not sit"
+    - "Tomas's first deflection — qualified"
+    - "Mira realigns the stapler"
+    - "the qualified confirmation — Tomas: 'I set aside a portion. Partly.'"
+    - "Mira fits the cracked-glass shards into alignment mid-line"
+    - "Tomas straightens the stapler she moved"
+    - "Mira's near-accusation — refused, replaced with a shorter question"
+    - "silence — wave-on-stone audible"
+    - "Mira picks up the lighter"
+    - "Mira lights it correctly, wrong-handed; small flame"
+    - "she sets it back exactly where it was"
+    - "Tomas's fragment line — too late to call her back"
+    - "Mira leaves; he does not move"

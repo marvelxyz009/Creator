@@ -1,0 +1,75 @@
+agent: character-psychologist
+agent_version: 1.0.0
+run_id: mvp-scene-01-mira
+status: ok
+
+character:
+  id: char:mira
+  name: Mira Halren
+  role: protagonist
+  archetype_seed: "the investigator who cannot trust the case file"
+
+  contradictions:
+    - id: c1
+      forces:
+        a: "needs the archive's record to know who she is"
+        b: "suspects the record has been edited and cannot be trusted"
+      pressure: high
+      bound_to_opposition: opp:1
+      resolution_due_by: unresolved
+
+    - id: c2
+      forces:
+        a: "wants the feeling she still carries for Tomas to be real"
+        b: "fears the feeling is the residue the editor failed to smooth"
+      pressure: high
+      bound_to_opposition: opp:2
+      resolution_due_by: unresolved
+
+  drives:
+    surface: "to confirm whether Tomas edited her memory"
+    buried: "to be granted permission to keep feeling what she feels, regardless of the record"
+
+  wound:
+    origin: "she carries a blank zone — a grief without a sourceable cause — that she has not named to anyone"
+    current_pressure: high
+    visible_to: [char:tomas]
+
+  voice_signature:
+    sentence_length_distribution: "short when in control; very short under pressure; a single long sentence when she is lying about what she has decided"
+    lexical_register: "archive-trained, clinical; uses procedural verbs ('confirm', 'flag', 'log') in personal contexts"
+    what_they_notice:
+      - "objects out of alignment"
+      - "the temperature of small surfaces"
+      - "hands at rest"
+      - "the absence of paperwork that should be present"
+    what_they_refuse_to_name:
+      - "Tomas by first name when she is angry"
+      - "the feeling itself — she will name its symptoms, never the feeling"
+      - "the word 'us'"
+    rhythmic_tells:
+      - "ends a statement as a question when conceding ground"
+      - "realigns objects on a surface before answering a hard question"
+
+  knowledge_set:
+    knows:
+      - "event:edit-disclosure (she has obtained a leaked Archive entry showing Tomas's editor ID on her record)"
+      - "sym:cracked-glass (it was in her apartment before this scene)"
+    hidden_from:
+      - "char:tomas: that she has the leaked Archive entry"
+
+  relations:
+    - with: char:tomas
+      type: "unresolved closeness + active suspicion"
+      tension: 0.85
+      unresolved_beats: ["confront-the-edit", "name-what-they-were"]
+
+  contradiction_tests:
+    - "When given the chance to demand the full truth, she must hesitate — she does not want certain answers."
+    - "Her body must betray a knowledge her mind does not credit."
+
+  forbidden:
+    - "any internal monologue summarizing her psychology"
+    - "her naming the feeling she has for Tomas in dialogue or narration"
+    - "her crying"
+    - "any thought beginning with 'she realized that...'"

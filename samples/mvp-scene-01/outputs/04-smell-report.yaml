@@ -1,0 +1,111 @@
+agent: anti-ai-editor
+agent_version: 1.0.0
+run_id: mvp-scene-01-smell-report
+inputs_hash: <draft v1 + blueprint + voice signatures>
+generated_at: 2026-05-25T00:00:00Z
+status: soft_reject
+notes: "Draft is structurally sound; multiple surface-level smells require humanization before canon."
+
+smell_report:
+  draft_ref: outputs/03-dialogue-draft.md
+  draft_version: v1
+
+  hard_smells:
+    - id: s1
+      category: A1
+      cited_at: "para 1"
+      offending_text: "a mix of cold and stillness she had not prepared for"
+      diagnostic: "'a mix of X and Y' construction — Category C1; conjoined abstraction substituted for a specific perception"
+
+    - id: s2
+      category: A1
+      cited_at: "para 3"
+      offending_text: "Mira felt a wave of unease move through her chest"
+      diagnostic: "direct emotion-naming + chest-metaphor stack — A1 + A3 combined; Mira's voice_signature forbids her naming what she feels"
+
+    - id: s3
+      category: A1
+      cited_at: "mid-scene"
+      offending_text: "She felt anger rise in her, sharp and sudden"
+      diagnostic: "direct emotion-naming (A1); also violates char:mira.forbidden['her naming the feeling she has for Tomas in dialogue or narration'] generalized to all feelings in narration"
+
+    - id: s4
+      category: C4
+      cited_at: "para 3"
+      offending_text: "For a moment, neither of them spoke"
+      diagnostic: "'for a moment' — hedging temporal qualifier; Category C4"
+
+    - id: s5
+      category: A2
+      cited_at: "Tomas dialogue"
+      offending_text: "He smiled, sadly"
+      diagnostic: "adverbial emotion telegraphing (A2); also Tomas does not 'smile sadly' anywhere in his voice_signature"
+
+    - id: s6
+      category: C4
+      cited_at: "Tomas response"
+      offending_text: "He looked at her for a long moment"
+      diagnostic: "second hedging temporal qualifier; the scene already uses 'for a moment' once — repeat is structural laziness"
+
+  soft_smells:
+    - id: s_s1
+      category: D2
+      cited_at: "Mira's last line of the long paragraph"
+      offending_text: "'I have been carrying a grief I cannot source, Tomas. For three years. I have been waking at four in the morning with a feeling that has no file attached to it. Do you know what that is like?'"
+      diagnostic: "monologue length 4 sentences + ends on a rhetorical question; partially violates blueprint forbidden 'no philosophical monologue' — borderline; also ends a unit on a question (F1-adjacent)"
+
+    - id: s_s2
+      category: F2
+      cited_at: "para 1"
+      offending_text: "the way someone turns a coin to decide which side they had meant"
+      diagnostic: "explanatory simile (C5) used as reflective framing — image is competent but generic; consider replacing with a POV-specific observation"
+
+    - id: s_s3
+      category: D2
+      cited_at: "throughout"
+      offending_text: "frequent use of 'she said' / 'he said' without action beats"
+      diagnostic: "tag economy is fine but several lines could be carried by an action beat instead, per voice_signature.what_they_notice"
+
+  banished_phrase_hits:
+    - phrase: "a mix of"
+      cited_at: "para 1"
+    - phrase: "for a moment"
+      cited_at: "para 3"
+    - phrase: "for a long moment"
+      cited_at: "mid-scene"
+
+  voice_drift:
+    - speaker: char:mira
+      drift_direction: "Mira narrates her own feelings in the prose voice — her signature forbids this; her POV must register symptoms, never name the feeling"
+      cited_at: "s2, s3"
+    - speaker: char:tomas
+      drift_direction: "the 'he smiled, sadly' beat puts an emotion-tell on Tomas his signature does not authorize; his tells are object-fixing and qualifiers, not facial expressions narrated by the POV"
+      cited_at: "s5"
+
+  median_band_runs:
+    - paragraph: "the long Mira-monologue paragraph"
+      sentence_lengths: [16, 8, 19, 7]
+      diagnostic: "rhythm is acceptable here, but the monologue's content (s_s1) is the bigger issue"
+
+  structural_tells:
+    - id: f1_check
+      finding: "scene closes on a physical action (lighter set back), not on a question — passes F1"
+    - id: f2_check
+      finding: "scene closes without a reflection paragraph — passes F2"
+
+  fact_preservation_check:
+    note: "no canonical facts altered in this draft; all changes downstream must preserve them"
+    pinned_facts:
+      - "Mira does NOT produce the leaked archive entry"
+      - "Tomas's qualified confirmation uses 'set aside' and 'partly' / 'within reason'"
+      - "the lighter enters before Mira touches it"
+      - "Mira lights it correctly without prior archival memory"
+      - "scene ends on her setting the lighter back exactly as it was, and walking out"
+
+  summary:
+    hard_smell_count: 6
+    soft_smell_count: 3
+    banished_phrase_hit_count: 3
+    voice_drift_count: 2
+    recommended_route: humanize_in_place
+    expected_net_reduction_tokens: "≥ 40"

@@ -1,0 +1,77 @@
+graph_excerpt:
+  snapshot_at: "pre-scene-01"
+  scope: "nodes and edges relevant to the upcoming scene only"
+
+  nodes:
+    characters:
+      - id: char:mira
+        current_location: "in transit to loc:abandoned-clinic"
+        current_state: "armored; carrying a printed copy of the leaked archive entry"
+      - id: char:tomas
+        current_location: loc:abandoned-clinic
+        current_state: "waiting; arrived early; folded coat on a chair"
+
+    locations:
+      - id: loc:abandoned-clinic
+        state: "unstaffed since the Cognitive Collapse Year; power intermittent; one functioning reading terminal"
+
+    events:
+      - id: event:the-redacted-event
+        when: "approximately three years before scene"
+        who_present: [char:mira, char:tomas]
+        who_knows_full: [char:tomas]
+        who_knows_partial: []
+        who_knows_nothing: [char:mira]
+        status: redacted_in_archive
+
+      - id: event:edit-disclosure
+        when: "five days before scene"
+        who_knows: [char:mira]
+        hidden_from: [char:tomas]
+        content: "Mira obtained a leaked archive entry showing Tomas's editor ID against her record"
+
+    symbols:
+      - id: sym:cracked-glass
+        state: introduced
+        last_appearance: "Mira's apartment kitchen, two scenes ago (off-screen for this sample — referenced only)"
+        appearances_count: 1
+        bound_to_beats: [beat:t1, beat:t2]
+        notes: "a glass tabletop she cracked when she first opened the leaked entry; she has been realigning the shards since"
+
+      - id: sym:old-lighter
+        state: not_yet_introduced
+        last_appearance: null
+        appearances_count: 0
+        bound_to_beats: [beat:t2, beat:t3]
+        notes: "the lighter exists in canon as Tomas's possession; has never appeared on-screen; Mira has no archival record of having seen it"
+
+    debts:
+      - id: debt:0001
+        owed_by: char:tomas
+        owed_to: char:mira
+        content: "the truth of event:the-redacted-event"
+        created_at: "implied, before story start"
+        pressure: high
+        due_by: unresolved
+
+  edges:
+    KNOWS:
+      - { subject: char:mira, object: event:edit-disclosure, level: full }
+      - { subject: char:mira, object: event:the-redacted-event, level: none }
+      - { subject: char:tomas, object: event:the-redacted-event, level: full }
+      - { subject: char:tomas, object: event:edit-disclosure, level: none }
+      - { subject: reader, object: event:edit-disclosure, level: full }
+      - { subject: reader, object: event:the-redacted-event, level: none }
+
+    PRESENT_AT:
+      - { subject: char:mira, object: event:the-redacted-event }
+      - { subject: char:tomas, object: event:the-redacted-event }
+
+    OWES:
+      - { from: char:tomas, to: char:mira, debt: debt:0001 }
+
+    SYMBOLIZES:
+      - { symbol: sym:cracked-glass, theme_beat: beat:t1 }
+      - { symbol: sym:cracked-glass, theme_beat: beat:t2 }
+      - { symbol: sym:old-lighter, theme_beat: beat:t2 }
+      - { symbol: sym:old-lighter, theme_beat: beat:t3 }

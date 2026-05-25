@@ -1,0 +1,121 @@
+agent: continuity-auditor
+agent_version: 1.0.0
+run_id: mvp-scene-01-continuity
+inputs_hash: <revised draft v1 + memory graph snapshot + blueprint>
+generated_at: 2026-05-25T00:00:00Z
+status: ok
+
+audit_report:
+  draft_ref: outputs/05-revised-draft.md
+  graph_snapshot_at: "pre-scene-01"
+  scene_id: scene:01
+
+  hard_violations: []
+  soft_violations: []
+
+  knowledge_asymmetry_check:
+    - character: char:mira
+      knows_in_draft:
+        - "event:edit-disclosure (full, retained from before scene)"
+        - "Tomas 'set aside' a portion (qualified confirmation, new this scene)"
+        - "body-knowledge of the lighter mechanism (new this scene, unfiled)"
+        - "event:the-redacted-event (still: level none — content NOT revealed in draft)"
+      knows_in_graph_before_scene:
+        - "event:edit-disclosure (full)"
+        - "event:the-redacted-event (level: none)"
+      delta: "ok — gains are exactly those the blueprint's knowledge_delta authorized; no character knows-too-much violation"
+
+    - character: char:tomas
+      knows_in_draft:
+        - "event:the-redacted-event (full, unchanged from pre-scene)"
+        - "event:edit-disclosure (level: none — draft preserves this asymmetry; Mira does NOT produce the leaked entry)"
+        - "Mira retained body-knowledge of the lighter (new this scene)"
+      knows_in_graph_before_scene:
+        - "event:the-redacted-event (full)"
+        - "event:edit-disclosure (level: none)"
+      delta: "ok — Tomas does not learn about the leaked entry; asymmetry preserved as required"
+
+    - character: reader
+      knows_in_draft:
+        - "event:edit-disclosure (full)"
+        - "Tomas's qualified confirmation"
+        - "Mira's body-knowledge"
+        - "event:the-redacted-event (level: none — content NOT delivered)"
+      delta: "ok — reader gains ambiguity, not the redacted content; honors plot_beat.notes_for_scene_director ('not a reveal beat')"
+
+  symbol_state_check:
+    - symbol: sym:cracked-glass
+      state_in_draft: transformed
+      state_in_graph_before: introduced
+      verdict: ok
+      manifestation_check: "shards realigned mid-line; never named as a symbol — passes forbidden_uses"
+
+    - symbol: sym:old-lighter
+      state_in_draft: introduced (and fired-by-body-knowledge in same scene by blueprint design)
+      state_in_graph_before: not_yet_introduced
+      verdict: ok
+      manifestation_check: "lighter appears in Tomas's hand at scene open; no character names it as significant; Mira fires it at scene close — passes forbidden_uses"
+
+  open_debts_status:
+    - debt: debt:0001
+      expected_pressure: higher_after_qualified_confirmation
+      addressed_in_draft: yes (Tomas's 'set aside / partly / within reason')
+      pressure_in_draft: higher (the debt is acknowledged but not paid; the qualifier blocks closure)
+      verdict: ok
+
+    - debt: debt:0002 (newly created this scene)
+      expected_pressure: present (Mira owes herself a decision on whether body-knowledge counts as evidence)
+      addressed_in_draft: yes (created by the lighter-firing beat)
+      verdict: ok — new debt node properly seeded by residue
+
+  time_location_check:
+    - scene_location: loc:abandoned-clinic
+      consistency_with_graph: ok
+      notes: "rule r3 honored — clinic is read-only; no edit occurs in scene"
+    - scene_time: "early evening"
+      consistency_with_graph: ok
+
+  forbidden_content_check:
+    - check: "world rules r1, r2, r3 not explained in dialogue/narration"
+      finding: passed
+    - check: "redacted event content (event:the-redacted-event) not delivered"
+      finding: passed
+    - check: "consent history (unk:consent-history) not resolved"
+      finding: passed (Mira asks 'Did you ask' — receives qualified non-answer; question stays open)
+    - check: "no character delivers a thesis about memory"
+      finding: passed
+    - check: "no character names the cracked-glass or lighter as a symbol"
+      finding: passed
+
+  residue_writes_verification:
+    declared_in_blueprint:
+      - "rel:mira-tomas.tension := 0.92"
+      - "sym:cracked-glass.state := transformed"
+      - "sym:old-lighter.state := introduced"
+      - "sym:old-lighter.appearances_count := 1"
+      - "new edge: KNOWS { subject: char:mira, object: sym:old-lighter, level: body_only }"
+      - "new edge: KNOWS { subject: char:tomas, object: 'mira-retained-body-knowledge', level: full }"
+      - "debt:0001.pressure := higher"
+      - "new node: debt:0002"
+    rendered_in_draft:
+      - "tension shift: rendered through shortening dialogue, Tomas's last unfinished fragment, Mira's exit without farewell"
+      - "cracked-glass transform: rendered (shards realigned)"
+      - "lighter introduced + body-fire: rendered"
+      - "Mira's body-knowledge KNOWS edge: rendered (the thumb-on-wheel beat)"
+      - "Tomas's awareness KNOWS edge: rendered (he does not answer the final question; his silence concedes it)"
+      - "debt:0001 pressure raised: rendered via qualified confirmation that refuses closure"
+      - "debt:0002 seeded: rendered (Mira sets the lighter down 'exactly' as it was — she has not yet decided)"
+    verdict: all_residue_writes_supported_by_draft
+
+  summary:
+    hard_violation_count: 0
+    soft_violation_count: 0
+    recommended_route: accept_canonize
+
+  canonization_authorized: true
+
+  notes_for_orchestrator:
+    - "commit residue writes to memory graph"
+    - "sym:cracked-glass now at 'transformed' — schedule resolve|betray within next 2 scenes"
+    - "sym:old-lighter rest for ≥ 2 scenes before next op (per symbol-tracker recommendation)"
+    - "debt:0002 should pressure subsequent scenes — Mira must, at some point, act or refuse to act on body-knowledge"

@@ -1,0 +1,76 @@
+agent: lore-architect
+agent_version: 1.0.0
+run_id: mvp-scene-01-world
+status: ok
+
+world:
+  id: world:vel-anor
+  name: "Vel Anor"
+  premise: "A coastal administrative city where the state runs a public Memory Archive that records, edits, and restores citizens' memory after cognitive disasters."
+
+  logic:
+    rules:
+      - id: r1
+        rule: "A licensed editor may redact a memory only with the subject's consent — but consent itself can be redacted."
+        consequence_if_broken: "Unauthorized edits leave a 'blank zone' — an emotional residue without a sourceable cause."
+        pressures_theme_beats: [beat:t1, beat:t2]
+      - id: r2
+        rule: "Edits are reversible only within forty days; after that, the archive overwrites the redacted region with a smoothed null."
+        consequence_if_broken: "Beyond the window, the original memory is gone; only the body's response to its stimulus remains."
+        pressures_theme_beats: [beat:t2, beat:t3]
+      - id: r3
+        rule: "Memory Clinics outside the central Archive lost certification after the Cognitive Collapse Year; they remain physically intact but unstaffed."
+        consequence_if_broken: "An off-grid clinic can still read, but cannot edit — a place to confront a record without changing it."
+        pressures_theme_beats: [beat:t1]
+
+  locations:
+    - id: loc:abandoned-clinic
+      function: "private space to read an old record without state oversight — a place where consequences cannot be smoothed"
+      mood_default: "cold cabinet light, salt-corroded fixtures, dust"
+      symbolic_load: high
+      bound_to_themes: [beat:t1, beat:t2, beat:t3]
+
+    - id: loc:central-archive
+      function: "off-screen presence; the institution whose authority this scene exists outside of"
+      mood_default: "white, sterile (referenced only)"
+      symbolic_load: medium
+      bound_to_themes: [beat:t1]
+
+  social_layer:
+    factions:
+      - id: f:archive-editors
+        role: "licensed memory editors employed by the state"
+        pressure_on_protagonist: "Tomas was one; his license expired; he edited Mira off the record"
+        internal_contradiction: "trained to preserve; routinely required to erase"
+
+      - id: f:blank-zone-survivors
+        role: "informal support group of people who carry unsourced emotional residue"
+        pressure_on_protagonist: "Mira has not joined them; she suspects she belongs"
+        internal_contradiction: "they trust their feelings precisely because they cannot trust their memories"
+
+  texture:
+    sensory_palette:
+      sight: ["salt-bleached wood", "fluorescent flicker", "old chrome instruments", "the orange of a small flame"]
+      sound: ["wave on stone", "the hum of a dead refrigeration unit", "a lighter's flint"]
+      smell: ["damp insulation", "old lavender disinfectant", "lighter fluid"]
+      touch: ["the grit of a tabletop", "the give of cracked glass under a fingertip"]
+      taste: ["rare — used only at peak moments"]
+    forbidden_textures:
+      - "cyberpunk-noir gloss"
+      - "techno-thriller exposition"
+      - "magical-realist warmth"
+      - "MFA-workshop neutrality"
+
+  constraints_on_story:
+    - "any scene at an abandoned clinic must engage rule r3 — the inability to edit, only to read"
+    - "no scene may explain rule r1, r2, or r3 in dialogue or narration; rules are felt as constraints, not stated"
+
+  unknowns:
+    - id: unk:why-tomas-edited
+      what_is_unknown: "the precise event Tomas redacted from Mira's record"
+      reserved_until: "out of scope for this single scene; do not resolve"
+      do_not_resolve_in: "this scene"
+    - id: unk:consent-history
+      what_is_unknown: "whether Mira originally consented to the edit"
+      reserved_until: "out of scope for this single scene"
+      do_not_resolve_in: "this scene"

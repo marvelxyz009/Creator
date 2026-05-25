@@ -1,0 +1,69 @@
+agent: symbolism-tracker
+agent_version: 1.0.0
+run_id: mvp-scene-01-symbol-audit
+inputs_hash: <blueprint + graph excerpt hash>
+generated_at: 2026-05-25T00:00:00Z
+status: ok
+
+audit:
+  scene_id: scene:01
+
+  symbols_touched:
+    - id: sym:cracked-glass
+      requested_op: transform
+      current_state: introduced
+      legality: legal
+      verdict: accepted
+      diagnostic: "transition introduced → transformed is legal; manifestation (shards realigned mid-line, never named) honors R6 and the symbol's forbidden_uses"
+
+    - id: sym:old-lighter
+      requested_op: introduce
+      current_state: not_yet_introduced
+      legality: legal
+      verdict: accepted
+      diagnostic: "first canonical appearance; staged early in scene, fired late via body-knowledge — honors the provisional_arc"
+
+  decorative_use_flags: []
+
+  dangling_symbols: []
+    # sym:cracked-glass would be flagged if this scene did not advance its arc; it does (introduced → transformed).
+    # sym:old-lighter is freshly introduced; not yet eligible for dangling.
+
+  over_recurrence_flags: []
+
+  arc_progression_check:
+    - id: sym:cracked-glass
+      arc_target: "introduced → transformed → resolved | betrayed"
+      now_at: transformed
+      next_legal_ops: [resolve, betray]
+      schedule_pressure: "resolution or betrayal due before chapter close; flag if next 2 scenes do not advance"
+    - id: sym:old-lighter
+      arc_target: "introduce → seen-but-not-named → fired-by-body-knowledge"
+      now_at: introduced+fired_by_body_knowledge (compressed into single scene by design)
+      next_legal_ops: [transform, resolve, betray]
+      schedule_pressure: "having compressed introduction and body-fire into one scene, the next op must be deliberate — risk of over-recurrence if it appears in the immediately next scene"
+
+  forbidden_uses_check:
+    - id: sym:cracked-glass
+      forbidden: ["narration calling it a symbol", "Mira looking at it and thinking about what it represents"]
+      blueprint_compliance: passed
+      notes: "manifestation field specifies neither character names it; Mira's action with the shards is mid-line, not contemplative"
+    - id: sym:old-lighter
+      forbidden: ["any character naming the lighter as significant", "dialogue referring to a past moment in which Mira saw it"]
+      blueprint_compliance: passed
+      notes: "no scheduled dialogue line refers to a past sighting; the ending hook is gestural"
+
+  cross_symbol_pressure:
+    - note: "both symbols active in one scene; the blueprint stages them sequentially (glass mid-scene, lighter at close) rather than concurrently — acceptable"
+    - note: "risk: if a future scene loads three symbols at once, dilution will be flagged"
+
+  recommendations_for_orchestrator:
+    - "schedule sym:cracked-glass next op (resolve | betray) within next 2 scenes; otherwise dangling pressure rises"
+    - "rest sym:old-lighter for at least 2 scenes before its next op"
+    - "do not introduce a third symbol in the immediately following scene"
+
+  summary:
+    status: ok
+    hard_violation_count: 0
+    soft_violation_count: 0
+    recommended_route: proceed_to_dialogue_specialist

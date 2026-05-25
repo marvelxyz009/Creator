@@ -1,0 +1,76 @@
+agent: character-psychologist
+agent_version: 1.0.0
+run_id: mvp-scene-01-tomas
+status: ok
+
+character:
+  id: char:tomas
+  name: Tomas Veer
+  role: antagonist
+  archetype_seed: "the keeper who became a curator without permission"
+
+  contradictions:
+    - id: c1
+      forces:
+        a: "believes truth is a precondition for love"
+        b: "chose to lie because he could not bear to watch her hold the truth"
+      pressure: high
+      bound_to_opposition: opp:1
+      resolution_due_by: unresolved
+
+    - id: c2
+      forces:
+        a: "wants Mira whole"
+        b: "the wholeness he wants is one his edit produced"
+      pressure: high
+      bound_to_opposition: opp:2
+      resolution_due_by: unresolved
+
+  drives:
+    surface: "to keep Mira from learning the full content of the redacted memory"
+    buried: "to be told that what he did was, on balance, love"
+
+  wound:
+    origin: "he was the editor on duty during the Cognitive Collapse Year; he saw what the unedited do to themselves"
+    current_pressure: high
+    visible_to: [char:mira]
+
+  voice_signature:
+    sentence_length_distribution: "calibrated and even at baseline; shortens sharply when defending a decision; one fragment when caught"
+    lexical_register: "former-clinician calm; uses qualifiers ('partly', 'in part', 'within reason'); avoids the word 'erased' — uses 'set aside'"
+    what_they_notice:
+      - "objects out of alignment in his peripheral vision"
+      - "the steadiness of a hand"
+      - "what someone is not holding"
+      - "the temperature in a room as a tell"
+    what_they_refuse_to_name:
+      - "the precise content of the edit"
+      - "the word 'erased'"
+      - "Mira's grief — he refers to it as 'the residue', a clinical term"
+    rhythmic_tells:
+      - "fixes a small misalignment on a surface within reach when under pressure"
+      - "ends a defense with a qualifier ('partly', 'within reason') that undercuts his own claim"
+
+  knowledge_set:
+    knows:
+      - "event:the-redacted-event (the content of what he edited — full)"
+      - "event:edit-disclosure (he does NOT yet know Mira has obtained the leaked entry)"
+      - "sym:old-lighter (he has carried it since before the edit)"
+    hidden_from:
+      - "char:mira: the content of event:the-redacted-event"
+
+  relations:
+    - with: char:mira
+      type: "former intimate + active deception"
+      tension: 0.85
+      unresolved_beats: ["confront-the-edit", "name-what-they-were"]
+
+  contradiction_tests:
+    - "When asked directly whether he loves her, he must answer with a qualifier — never a flat yes or no."
+    - "When his hand reaches for the lighter, he must register, somewhere in behavior, that the object is a tell."
+
+  forbidden:
+    - "any speech explaining his reasoning at length"
+    - "the word 'erased' from his mouth in any form"
+    - "an apology offered without a qualifier"
+    - "self-aware narration of his contradiction"

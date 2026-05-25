@@ -1,0 +1,53 @@
+agent: vision-keeper
+agent_version: 1.0.0
+run_id: mvp-scene-01-vision
+status: ok
+
+vision:
+  one_sentence: "A woman in a city that edits memory tries to learn whether the love she still feels was left behind on purpose."
+
+  emotional_intent:
+    primary: "the ache of not trusting one's own grief"
+    secondary:
+      - "the slow nausea of recognizing an absence"
+      - "tenderness held under suspicion"
+
+  intellectual_intent:
+    question_the_work_lives_inside: "If a feeling outlives the memory that caused it, whose feeling is it?"
+    refusal_to_answer_cheaply: "The work will not say whether erasure was kindness or theft; it stages the irreducibility."
+
+  register:
+    tonal: "spare, materially specific, allergic to abstraction; cold surfaces, warm small objects"
+    formal_or_vernacular: "lightly elevated near-future vernacular; technical terms used like household words"
+    pacing_default: "measured; long beats around small physical actions"
+
+  scope:
+    intended_length: short_story
+    structural_shape: "single confrontation scene with one POV; two characters; one room"
+    time_span: "a single evening, perhaps ninety minutes"
+
+  refusals:
+    - "no exposition dump explaining how the Memory Archive works"
+    - "no character delivers a thesis about memory or identity"
+    - "no reconciliation; no clean accusation; no clean denial"
+    - "no flashback prose — recovered memory is gestural, never rendered as a scene"
+
+  anchoring_references:
+    - title_or_id: "ref:tarkovsky-solaris"
+      what_we_admire_structurally: "love rendered as the residue of an absent person, not the presence"
+      what_we_will_not_imitate: "the philosophical voice-over register"
+    - title_or_id: "ref:ishiguro-never-let-me-go"
+      what_we_admire_structurally: "withheld worldbuilding delivered through minor domestic gestures"
+      what_we_will_not_imitate: "the retrospective narration frame"
+
+  forbidden_textures:
+    - "cyberpunk-noir gloss"
+    - "tech-thriller info-dump"
+    - "MFA-workshop neutral interior monologue"
+    - "high-literary aphorism"
+
+  success_criteria:
+    - "the reader cannot tell whether Mira's feeling for Tomas was preserved, restored, or planted"
+    - "no sentence states what Mira feels; the reader infers from a single physical action"
+    - "the cracked-glass and lighter symbols each appear and shift state without being named in narration as symbols"
+    - "the scene's final image is a gesture, not a sentence of reflection"
