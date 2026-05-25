@@ -2,11 +2,15 @@
 
 Usage:
     python -m orchestrator run <workflow> --sample <path>
+    python -m orchestrator run-agent <agent-id> --sample <path>
+    python -m orchestrator inspect-sample --sample <path>
+    python -m orchestrator list-workflows
 
-Currently supported workflows:
-    scene-generation    — run the scene-generation-workflow end-to-end
+Examples:
+    # Milestone 1 — single-agent end-to-end (scene-director only):
+    python -m orchestrator run-agent scene-director --sample samples/mvp-scene-01
 
-Example:
+    # Milestone 2+ — full workflow (under construction):
     python -m orchestrator run scene-generation --sample samples/mvp-scene-01
 """
 
@@ -75,6 +79,23 @@ def build_parser() -> argparse.ArgumentParser:
     )
     inspect.add_argument("--sample", type=Path, required=True)
 
+    # `run-agent` subcommand (single-agent end-to-end; Milestone 1)
+    run_agent = subparsers.add_parser(
+        "run-agent",
+        help="Run a single agent end-to-end. Useful for debugging a specific agent.",
+    )
+    run_agent.add_argument(
+        "agent_id",
+        choices=["scene-director"],
+        help="Which single agent to run. Milestone 1: scene-director only.",
+    )
+    run_agent.add_argument(
+        "--sample",
+        type=Path,
+        required=True,
+        help="Path to a sample directory.",
+    )
+
     return parser
 
 
@@ -123,6 +144,29 @@ def cmd_inspect_sample(args: argparse.Namespace, config: Config) -> int:
     return inspect_sample(args.sample.resolve())
 
 
+def cmd_run_agent(args: argparse.Namespace, config: Config) -> int:
+    """Run a single agent end-to-end (Milestone 1: scene-director only)."""
+    if not config.has_api_key:
+        logger.error(
+            "ANTHROPIC_API_KEY is not set or malformed. "
+            "Copy .env.example to .env and fill it in."
+        )
+        return 2
+
+    if args.agent_id == "scene-director":
+        from orchestrator.workflows.scene_director_only import (
+            print_summary,
+            run_scene_director,
+        )
+
+        result = run_scene_director(sample_dir=args.sample.resolve(), config=config)
+        print_summary(result, repo_root=config.repo_root)
+        return 0 if result.ok else 1
+
+    logger.error("Unknown agent: %s", args.agent_id)
+    return 2
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
@@ -136,6 +180,8 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_list_workflows(args, config)
     if args.command == "inspect-sample":
         return cmd_inspect_sample(args, config)
+    if args.command == "run-agent":
+        return cmd_run_agent(args, config)
 
     parser.print_help()
     return 2
