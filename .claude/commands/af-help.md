@@ -8,10 +8,14 @@ Print the following help message to the user as a fenced markdown block, then as
 AetherForge Creator Framework — Slash Commands
 
   ▸ NEW USER? Start here:
-  /af-start              — describe your story idea; AI asks guided questions
-                           (multiple choice), generates input files, runs the
-                           full 5-agent pipeline, and presents the finished
-                           scene. The one-command path from idea to story.
+  /af-start              — describe your story idea; AI asks ONLY about
+                           what's missing (no cap on questions), then
+                           generates input files, runs the 5-agent
+                           pipeline, and presents the finished scene.
+
+                           For zero/few questions: fill in the IDEA BRIEF
+                           template at docs/idea-brief-template.md first
+                           and paste it as your reply.
 
   ▸ PROJECT MANAGEMENT:
   /af-projects           — list every project under samples/; star marks the

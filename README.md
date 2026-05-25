@@ -56,13 +56,16 @@ In a Claude Code chat session opened in this repo:
 ```
 
 Claude will:
-1. Ask you to paste your story idea (1-5 sentences — anything you have).
-2. Ask ~8 guided questions with **multiple-choice answers** (A / B / C / D / "tell me yours").
-3. Auto-generate all the input YAML files into `samples/<your-project>/inputs/`.
-4. Run the full 5-agent pipeline automatically.
-5. Print the finished scene to you.
+1. Ask you to paste your story idea — **free-form** (1-5 sentences) OR a filled-in **IDEA BRIEF** ([template](docs/idea-brief-template.md)).
+2. Check your input against a fixed REQUIRED checklist (20 fields covering theme, characters, scene, world, symbol, ending).
+3. Ask **only about what's missing** — one question at a time, multiple-choice (A/B/C/D + "tell me yours"). No cap on questions. If you filled the brief completely, AI may ask **zero**.
+4. Auto-generate all 7 input YAML files into `samples/<your-project>/inputs/`.
+5. Run the full 5-agent pipeline automatically.
+6. Print the finished scene to you.
 
 You read the story at the end. No YAML editing, no per-agent copy-paste, no API key. One command, then a conversation.
+
+> **Tip:** fill in [`docs/idea-brief-template.md`](docs/idea-brief-template.md) before pasting — the more fields you fill, the fewer questions AI asks.
 
 ### Alternatives
 
