@@ -157,7 +157,35 @@ def build_parser() -> argparse.ArgumentParser:
         ),
     )
     create_scene.add_argument(
-        "--sample", type=Path, required=True, help="Sample directory."
+        "--sample", type=Path, required=False, help="Sample directory. Defaults to active project."
+    )
+
+    # ─── Project management (active focus + listing + readable summary) ──
+    focus = subparsers.add_parser(
+        "focus",
+        help="Set the active project. Subsequent commands default to it when --sample is omitted.",
+    )
+    focus.add_argument("sample", type=Path, help="Sample directory to focus.")
+
+    subparsers.add_parser(
+        "current",
+        help="Show the currently focused project (active sample) and its status.",
+    )
+
+    subparsers.add_parser(
+        "list-projects",
+        help="List all projects under samples/ with their canonization status.",
+    )
+
+    summary = subparsers.add_parser(
+        "summary",
+        help="(Re)build PROJECT.md — human-readable summary of a sample.",
+    )
+    summary.add_argument(
+        "--sample",
+        type=Path,
+        required=False,
+        help="Sample directory. Defaults to the active project.",
     )
 
     # `run-agent` subcommand (API Agent Mode; requires ANTHROPIC_API_KEY)
@@ -259,11 +287,17 @@ def cmd_prepare_agent(args: argparse.Namespace, config: Config) -> int:
         print_prepare_summary,
     )
 
+    sample = _resolve_sample(args, config)
+    if sample is None:
+        logger.error(
+            "No sample specified and no active project. "
+            "Pass --sample or run `python -m orchestrator focus <sample>` first."
+        )
+        return 2
+
     try:
         result = prepare_agent_prompt(
-            agent_id=args.agent_id,
-            sample_dir=args.sample.resolve(),
-            config=config,
+            agent_id=args.agent_id, sample_dir=sample, config=config
         )
     except FileNotFoundError as exc:
         logger.error("%s", exc)
@@ -278,32 +312,157 @@ def cmd_prepare_agent(args: argparse.Namespace, config: Config) -> int:
 
 def cmd_validate_agent_output(args: argparse.Namespace, config: Config) -> int:
     """Manual mode phase 2: validate the agent's output the human pasted in."""
+    from orchestrator.core.project import write_project_summary
     from orchestrator.workflows.manual_mode import (
         print_validate_summary,
         validate_agent_output,
     )
 
+    sample = _resolve_sample(args, config)
+    if sample is None:
+        logger.error(
+            "No sample specified and no active project. "
+            "Pass --sample or run `python -m orchestrator focus <sample>` first."
+        )
+        return 2
+
     result = validate_agent_output(
         agent_id=args.agent_id,
-        sample_dir=args.sample.resolve(),
+        sample_dir=sample,
         input_path=args.input.resolve(),
         config=config,
     )
     print_validate_summary(result, repo_root=config.repo_root)
+
+    # On a successful canonization, refresh PROJECT.md so the human-readable
+    # summary picks up the new artifact (or the new prose, if this was anti-ai-editor).
+    if result.ok:
+        try:
+            write_project_summary(sample, config.repo_root)
+        except Exception:
+            logger.debug("Could not refresh PROJECT.md", exc_info=True)
+
     return 0 if result.ok else 1
+
+
+def _resolve_sample(args: argparse.Namespace, config: Config) -> Path | None:
+    """Pick sample from --sample arg, else active project, else None."""
+    from orchestrator.core.project import get_active_sample
+
+    if getattr(args, "sample", None) is not None:
+        return args.sample.resolve()
+    active = get_active_sample(config.repo_root)
+    if active is not None:
+        logger.info("Using active project: %s", active.relative_to(config.repo_root))
+        return active
+    return None
 
 
 def cmd_create_scene(args: argparse.Namespace, config: Config) -> int:
     """Manual mode end-to-end: walk through all 5 agents interactively."""
+    from orchestrator.core.project import write_project_summary
     from orchestrator.workflows.manual_workflow_runner import (
         run_scene_generation_manual,
     )
 
-    result = run_scene_generation_manual(
-        sample_dir=args.sample.resolve(),
-        config=config,
-    )
+    sample = _resolve_sample(args, config)
+    if sample is None:
+        logger.error(
+            "No sample specified and no active project. "
+            "Pass --sample or run `python -m orchestrator focus <sample>` first."
+        )
+        return 2
+
+    result = run_scene_generation_manual(sample_dir=sample, config=config)
+
+    # Rebuild PROJECT.md whether or not all 5 agents succeeded — partial progress
+    # is still useful for the author to see what's been done.
+    try:
+        summary_path = write_project_summary(sample, config.repo_root)
+        print(f"\n  Project summary updated: {summary_path.relative_to(config.repo_root)}")
+    except Exception:
+        logger.exception("Failed to update PROJECT.md")
+
     return 0 if result.ok else 1
+
+
+def cmd_focus(args: argparse.Namespace, config: Config) -> int:
+    from orchestrator.core.project import set_active_sample, write_project_summary
+
+    sample = args.sample.resolve()
+    if not sample.exists():
+        logger.error("Sample directory does not exist: %s", sample)
+        return 1
+    if not sample.is_dir():
+        logger.error("Sample path is not a directory: %s", sample)
+        return 1
+    set_active_sample(config.repo_root, sample)
+    print(f"✓ Active project: {sample.relative_to(config.repo_root).as_posix()}")
+    # Refresh PROJECT.md so the file is current when the user focuses.
+    try:
+        write_project_summary(sample, config.repo_root)
+    except Exception:
+        logger.debug("Could not refresh PROJECT.md on focus", exc_info=True)
+    return 0
+
+
+def cmd_current(args: argparse.Namespace, config: Config) -> int:
+    from orchestrator.core.project import _inspect_sample, get_active_sample
+
+    active = get_active_sample(config.repo_root)
+    if active is None:
+        print("No active project set.")
+        print("  → Use `python -m orchestrator focus <sample>` to set one.")
+        print("  → Or `python -m orchestrator list-projects` to see options.")
+        return 1
+    info = _inspect_sample(active, active)
+    print(f"Active project : {active.relative_to(config.repo_root).as_posix()}")
+    print(f"Status         : {info.status_label}")
+    if info.canonized_agents:
+        print("Canonized      :")
+        for a in info.canonized_agents:
+            print(f"  ✓ {a}")
+    if info.has_prose:
+        print(f"\nProse (story)  : {(active / 'generated' / '05-revised-draft.md').relative_to(config.repo_root).as_posix()}")
+    project_md = active / "PROJECT.md"
+    if project_md.exists():
+        print(f"Summary        : {project_md.relative_to(config.repo_root).as_posix()}")
+    return 0
+
+
+def cmd_list_projects(args: argparse.Namespace, config: Config) -> int:
+    from orchestrator.core.project import list_projects
+
+    projects = list_projects(config.repo_root)
+    if not projects:
+        print("No projects found under samples/")
+        return 1
+
+    print(f"{'':2} {'Name':35} {'Status':25} Prose?")
+    print("─" * 75)
+    for p in projects:
+        marker = "★" if p.is_active else " "
+        prose = "✓" if p.has_prose else "·"
+        print(f"{marker:2} {p.name:35} {p.status_label:25} {prose}")
+    print()
+    print("★ = active project")
+    print("Switch with: python -m orchestrator focus <name>")
+    return 0
+
+
+def cmd_summary(args: argparse.Namespace, config: Config) -> int:
+    from orchestrator.core.project import write_project_summary
+
+    sample = _resolve_sample(args, config)
+    if sample is None:
+        logger.error(
+            "No sample specified and no active project. "
+            "Pass --sample or run `python -m orchestrator focus <sample>` first."
+        )
+        return 2
+    path = write_project_summary(sample, config.repo_root)
+    print(f"✓ Wrote {path.relative_to(config.repo_root).as_posix()}")
+    return 0
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -327,6 +486,14 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_validate_agent_output(args, config)
     if args.command == "create-scene":
         return cmd_create_scene(args, config)
+    if args.command == "focus":
+        return cmd_focus(args, config)
+    if args.command == "current":
+        return cmd_current(args, config)
+    if args.command == "list-projects":
+        return cmd_list_projects(args, config)
+    if args.command == "summary":
+        return cmd_summary(args, config)
 
     parser.print_help()
     return 2

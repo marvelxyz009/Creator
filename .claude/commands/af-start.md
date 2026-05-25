@@ -134,9 +134,17 @@ Agents in order: `scene-director` → `symbolism-tracker` → `dialogue-speciali
 
 Honor every agent's contract verbatim. Do NOT skip the validate step.
 
-## Phase 5 — Present the story
+## Phase 5 — Focus the new project (writes PROJECT.md)
 
-When all 5 agents succeed:
+Before showing the prose, set the new project as the active focus:
+```
+python -m orchestrator focus samples/<slug>
+```
+This auto-writes `samples/<slug>/PROJECT.md` — the human-readable summary the author returns to whenever they want to remember what the story is, who's in it, and where things are saved.
+
+## Phase 6 — Present the story
+
+When all 5 agents succeed AND focus is set:
 
 1. READ `samples/<slug>/generated/05-revised-draft.md`
 2. Print to the user, prefixed by a header:
@@ -145,11 +153,13 @@ When all 5 agents succeed:
    Your scene — samples/<slug>/generated/05-revised-draft.md
    ═══════════════════════════════════════════════════════════════
    ```
-3. List the canonical artifacts that were written (under `samples/<slug>/generated/`).
+3. Tell the user the **project is now active**, and:
+   - The plain-language summary is at `samples/<slug>/PROJECT.md` (revisit with `/af-current`)
+   - All canonical artifacts are under `samples/<slug>/generated/`
 4. Offer 3 follow-ups:
-   - Regenerate just the prose pass (`/af-agent anti-ai-editor`)
-   - Tighten a different agent's output (`/af-agent <id>`)
-   - Start a new scene with the same characters (next plot beat)
+   - **Polish the prose** — `/af-revise` (re-runs anti-ai-editor on this project)
+   - **Tighten a different agent's output** — `/af-agent <id>`
+   - **Switch to another project** — `/af-projects` to see all, `/af-focus <name>` to switch
 
 ## Defaults if user is sparse
 

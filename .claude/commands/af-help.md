@@ -13,13 +13,20 @@ AetherForge Creator Framework — Slash Commands
                            full 5-agent pipeline, and presents the finished
                            scene. The one-command path from idea to story.
 
-  ▸ HAVE EXISTING INPUTS?
-  /af-create-scene       — generate a scene end-to-end against a sample whose
-                           inputs/ directory is already populated (walks
-                           through all 5 agents non-interactively)
+  ▸ PROJECT MANAGEMENT:
+  /af-projects           — list every project under samples/; star marks the
+                           active one; shows status per project
+  /af-current            — show the active project + completion status +
+                           the PROJECT.md summary in plain language
+  /af-focus <name>       — set the active project. Other commands default to
+                           it when you don't pass --sample.
 
-  ▸ FINE-GRAINED CONTROL:
-  /af-agent <agent-id>   — run a single agent through chat
+  ▸ GENERATE OR EDIT:
+  /af-create-scene       — run the 5-agent pipeline on the active project
+                           (or specify --sample)
+  /af-revise             — re-polish the prose of the active project
+                           (re-runs anti-ai-editor + continuity-auditor)
+  /af-agent <agent-id>   — run a single agent
                            agent-id ∈ {scene-director, symbolism-tracker,
                            dialogue-specialist, anti-ai-editor,
                            continuity-auditor}
@@ -27,25 +34,32 @@ AetherForge Creator Framework — Slash Commands
   ▸ UTILITIES:
   /af-help               — show this help (you are here)
   /af-setup              — one-shot install: venv, dependencies, .env
-  /af-status             — show generation status of a sample
-                           (which agents have canonical artifacts written)
+  /af-status             — show generation status for the active project
 
 CLI equivalents (work in any shell after `make setup` or `python scripts/setup.py`):
 
-  python -m orchestrator create-scene --sample <sample-path>
-  python -m orchestrator prepare-agent <agent> --sample <path>
-  python -m orchestrator validate-agent-output <agent> --sample <path> --input <path>
-  python -m orchestrator inspect-sample --sample <path>
+  python -m orchestrator focus <sample>           # set active project
+  python -m orchestrator current                  # show active project
+  python -m orchestrator list-projects            # list all projects
+  python -m orchestrator summary [--sample <p>]   # rebuild PROJECT.md
+  python -m orchestrator create-scene [--sample <p>]
+  python -m orchestrator prepare-agent <agent> [--sample <p>]
+  python -m orchestrator validate-agent-output <agent> [--sample <p>] --input <p>
+  python -m orchestrator inspect-sample --sample <p>
 
-What the framework does:
-  Generates literary narrative scenes through a 5-agent pipeline. Each agent
-  reads structured inputs, produces structured YAML output, and validates
-  against schemas. The final output (under
-  samples/<sample>/generated/05-revised-draft.md) is the prose — the story.
+What gets saved where:
+  Each project lives at samples/<name>/. Inside it:
+    inputs/                  — your structured premise (read-only at run time)
+    generated/05-revised-draft.md   — ★ THE STORY (prose) ★
+    generated/01..06-*.yaml  — canonical agent artifacts
+    generated/manual/        — hydrated prompts + your saved replies
+    PROJECT.md               — plain-language summary auto-maintained by the
+                               orchestrator (read this to remember what you've
+                               written, who's in it, and what's next)
 
-  Manual mode (slash commands and CLI both) requires no API key. The
-  orchestrator hydrates prompts, you (or Claude in chat) act as the agent,
-  the orchestrator validates the output.
+Manual mode (slash commands + CLI both) requires no API key. The orchestrator
+hydrates prompts; you (or Claude in chat) act as the agent; the orchestrator
+validates the output and refreshes PROJECT.md on success.
 
 Recommended first run:
   /af-start

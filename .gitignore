@@ -45,3 +45,6 @@ samples/*/generated/
 
 # Memory graph working files (canonical graph is committed separately when intentional)
 *.graph.working.json
+
+# Per-contributor active-project state (set via `orchestrator focus`)
+.aetherforge/
