@@ -35,7 +35,17 @@ import logging
 import sys
 from pathlib import Path
 
-from orchestrator.core.config import Config, load_config
+# Ensure stdout/stderr accept UTF-8 so unicode glyphs (✓ ✗ → · ⚠) print on
+# Windows consoles whose default codepage is cp1252. Best-effort; on terminals
+# that already accept UTF-8 this is a no-op. Must run BEFORE the first print.
+for _stream in (sys.stdout, sys.stderr):
+    if hasattr(_stream, "reconfigure"):
+        try:
+            _stream.reconfigure(encoding="utf-8", errors="backslashreplace")
+        except Exception:
+            pass
+
+from orchestrator.core.config import Config, load_config  # noqa: E402
 
 logger = logging.getLogger(__name__)
 

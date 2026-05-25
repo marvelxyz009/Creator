@@ -68,4 +68,6 @@ theme:
 
   voice_of_theme:
     register: "domestic-technical: archive terms used like kitchen terms; emotion never named in narration"
-    forbidden_words: ["memory" (as abstract noun in narration), "identity", "self", "soul", "true love", "real", "fake"]
+    forbidden_words: ["memory", "identity", "self", "soul", "true love", "real", "fake"]
+    forbidden_words_notes:
+      memory: "forbidden as abstract noun in narration; the concrete sense (a record, a file) is permitted"

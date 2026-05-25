@@ -28,6 +28,16 @@ import sys
 import venv
 from pathlib import Path
 
+# Ensure stdout accepts UTF-8 so unicode glyphs print on Windows consoles
+# whose default codepage is cp1252. Best-effort; no-op on terminals that
+# already accept UTF-8.
+for _stream in (sys.stdout, sys.stderr):
+    if hasattr(_stream, "reconfigure"):
+        try:
+            _stream.reconfigure(encoding="utf-8", errors="backslashreplace")
+        except Exception:
+            pass
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 VENV_DIR = REPO_ROOT / ".venv"
 MIN_PYTHON = (3, 11)
