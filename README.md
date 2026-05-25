@@ -47,19 +47,38 @@ It's idempotent — safe to re-run.
 source .venv/bin/activate
 ```
 
-### Generate your first scene
+### Generate your first story (recommended)
 
-**Option A — CLI:**
+In a Claude Code chat session opened in this repo:
+
+```
+/af-start
+```
+
+Claude will:
+1. Ask you to paste your story idea (1-5 sentences — anything you have).
+2. Ask ~8 guided questions with **multiple-choice answers** (A / B / C / D / "tell me yours").
+3. Auto-generate all the input YAML files into `samples/<your-project>/inputs/`.
+4. Run the full 5-agent pipeline automatically.
+5. Print the finished scene to you.
+
+You read the story at the end. No YAML editing, no per-agent copy-paste, no API key. One command, then a conversation.
+
+### Alternatives
+
+**Run the canonical MVP sample** (inputs already prepared, just to see the pipeline work):
 ```bash
 python -m orchestrator create-scene --sample samples/mvp-scene-01
 ```
+Or in chat: `/af-create-scene`
 
-**Option B — Slash command in Claude Code chat:**
+**Per-agent control** (after a project's inputs already exist):
 ```
-/af-create-scene
+/af-agent scene-director
+/af-agent anti-ai-editor
 ```
 
-Either way, the final prose lands in `samples/mvp-scene-01/generated/05-revised-draft.md`.
+All paths produce the same final artifact: `samples/<project>/generated/05-revised-draft.md` — the prose.
 
 ---
 
@@ -69,11 +88,12 @@ When you open this repo in a Claude Code chat session, these slash commands beco
 
 | Command | What it does |
 |---|---|
-| **`/af-help`** | List slash commands + CLI equivalents |
-| **`/af-setup`** | Run the one-shot installer (`python scripts/setup.py`) |
-| **`/af-create-scene`** | Walk Claude through all 5 agents end-to-end. Final prose written automatically. |
-| **`/af-agent <id>`** | Run a single agent in chat (e.g. `/af-agent scene-director`) |
-| **`/af-status`** | Show what's already been generated for a sample |
+| **`/af-start`** | ⭐ **New user? Start here.** Paste idea → answer Q&A → get story. |
+| `/af-create-scene` | Run the 5-agent pipeline on a sample whose `inputs/` already exists |
+| `/af-agent <id>` | Run a single agent (e.g. `/af-agent anti-ai-editor`) |
+| `/af-help` | List slash commands + CLI equivalents |
+| `/af-setup` | Run the one-shot installer (`python scripts/setup.py`) |
+| `/af-status` | Show what's already been generated for a sample |
 
 The slash commands use Claude to act AS the agents — the Python orchestrator hydrates prompts and validates outputs, Claude does the LLM work in the chat session. **No API key needed.**
 
