@@ -1,0 +1,88 @@
+agent: language-style-validator
+agent_version: 1.0.0
+run_id: cross-cultural-japanese-validation
+status: ok
+
+validation_report:
+  draft_ref: samples/cross-cultural-scene-01/runs/japanese-literary/rhythm-rendered-prose.md
+  language_style_profile_ref: samples/cross-cultural-scene-01/runs/japanese-literary/language-style.yaml
+  culture_profile_ref: samples/cross-cultural-scene-01/runs/japanese-literary/culture-profile.yaml
+
+  histogram_check:
+    sentence_length_histogram: { very_short: 0.19, short: 0.33, medium: 0.27, long: 0.15, very_long: 0.06 }
+    profile_band: { very_short: 0.18, short: 0.32, medium: 0.28, long: 0.16, very_long: 0.06 }
+    in_band: true
+    out_of_band_paragraphs: []
+
+  calque_hits: []           # no forbidden_constructions detected
+
+  emotional_naming_check:
+    count: 0
+    budget: 0
+    in_budget: true
+    citations: []
+
+  paragraph_shape_check:
+    distribution: { short_only: 0.58, medium: 0.32, long: 0.10 }
+    profile_distribution: { short_only: 0.55, medium: 0.35, long: 0.10 }
+    match: pass
+    diagnostic: null
+
+  dialogue_tag_economy_check:
+    tag_density: 0.42     # tags per dialogue line
+    profile_expected: 0.40-0.50 (tag_light)
+    match: pass
+
+  internal_monologue_mode_check:
+    detected_mode: compressed_indirect
+    profile_supports: [free_indirect_discourse, compressed_indirect]
+    pass: true
+
+  pacing_check:
+    detected_pattern: real_time
+    profile_expected: real_time
+    pass: true
+
+  english_psychological_default_drift:
+    detected: false
+    citations: []
+    severity: n/a
+    notes: "no audit-voice intrusions; no 'she felt X' beats; no 'mix of X and Y' constructions; no rhetorical questions in narration"
+
+  cross_check_with_culture_profile:
+    culture_emotional_channels_expected: [silence, environment, object, body_somatic, refusal]
+    detected_channels_in_draft:
+      - silence (4 load-bearing breaks)
+      - environment (rain, the seaward window, lamp light, the corridor's silence)
+      - object (teacup turn, lighter placement, second cup uncollected)
+      - body_somatic (cold under her hand, thumb to wheel, closing fingers on the flame)
+      - refusal (declining to sit, declining the cup, not looking at him, no farewell)
+    coherent: true
+    notes: "the draft renders emotional weight through exactly the channels the profile authorizes for anger / shame / longing — no forbidden_channels invoked"
+
+  forbidden_lexicon_check:
+    project_specific_forbidden_words: [edit, memory, feel, real]
+    occurrences_in_draft: 0
+    pass: true
+
+  anti_stereotype_check:
+    forbidden_iconography_present: false
+    notes:
+      - "no cherry blossoms, no tatami, no temple imagery, no kimono"
+      - "no 'wabi-sabi' or 'mono no aware' anywhere in narration"
+      - "no anime-coded silences ('the camera holds')"
+      - "rain present but does as work as the chipped teacup — not used as scenic decoration"
+      - "the seaward window is functional (carries the silence between speech beats); not a postcard image"
+
+  voice_continuity_within_register:
+    - char:mira: pass
+    - char:tomas: pass
+
+  summary:
+    hard_violation_count: 0
+    soft_violation_count: 0
+    recommended_route: accept
+
+  notes_for_orchestrator:
+    - "draft passes the Language Style Validator; recommend running Anti-AI Editor (base) and Continuity Auditor next"
+    - "the lack of any audit-voice beat is itself a successful signal — this is precisely the failure mode this profile most often suffers"

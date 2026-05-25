@@ -1,0 +1,133 @@
+culture_profile:
+  id: culture:vietnamese-literary-contemporary
+  label: "Vietnamese literary register (contemporary urban + intergenerational)"
+  literary_style_doc_ref: docs/literary-styles/vietnamese-narrative-style.md
+  version: 1.0.0
+
+  communication_style:
+    directness:
+      default: implied
+      under_pressure: implied (often routed through third party)
+      with_intimates: implied
+      with_strangers: refused
+    register_shift_significance: high
+    apology_legible_shapes:
+      - gesture
+      - burden_acceptance
+      - structured_silence
+      - qualified_admission
+      # direct_admission permitted only in extremis; not the legible default
+
+  emotional_expression:
+    grief:
+      primary_channels: [ritual, object, third_party_routing, body_somatic]
+      forbidden_channels: [dialogue_direct, introspection]
+      anti_stereotype_note: "carried inside care and routine (a meal, an altar); never lavish lament"
+    anger:
+      primary_channels: [third_party_routing, refusal, body_somatic, object]
+      forbidden_channels: [dialogue_direct]
+      anti_stereotype_note: "scolding a child to wound a spouse is a literary device; not 'how Vietnamese argue'"
+    love:
+      primary_channels: [ritual, object, burden_acceptance]
+      forbidden_channels: [dialogue_direct]
+      anti_stereotype_note: "fed, not declared; verbalized declaration between adults is unusual in literary register"
+    shame:
+      primary_channels: [body_somatic, refusal, third_party_routing]
+      forbidden_channels: [dialogue_direct, introspection]
+      anti_stereotype_note: "absorbed into the family register; carried for others"
+    fear:
+      primary_channels: [body_somatic, ritual, object]
+      forbidden_channels: [dialogue_direct]
+      anti_stereotype_note: "concealed from elders and children; expressed as over-care for them"
+    longing:
+      primary_channels: [environment, ritual, object, place]
+      forbidden_channels: [dialogue_direct, introspection]
+      anti_stereotype_note: "tied to place — a house, a path, a riverbank — intergenerational"
+    joy:
+      primary_channels: [ritual, environment]
+      forbidden_channels: [dialogue_direct, introspection]
+      anti_stereotype_note: "communal, food-anchored, tempered by knowledge of the dead"
+
+  social_hierarchy:
+    address_form_system: kinship
+    common_forms:
+      - "anh"   # older male, intimate-distancing in adult contexts
+      - "em"    # younger; reciprocally to 'anh'
+      - "chị"   # older female
+      - "ông", "bà"   # elder; respect register
+      - "cô", "chú", "bác"   # aunt/uncle equivalents; often used with non-kin
+      - "no-address (đại từ trống)"
+      # Note: Vietnamese kinship is dense; this is a working subset for this scene.
+    shift_significance:
+      intimate_to_distant: high   # a shift from 'anh/em' to 'ông/cô' (or to name-alone) is heavy
+      formal_to_familiar: high
+    elder_authority_default: implicit-strong
+    interruption_norms:
+      allowed_in: [domestic, intimate]
+      forbidden_in: [cross-generational, formal]
+
+  conflict_style:
+    confrontation_default: indirect
+    accusation_staging: third_party_routed | implied
+    resolution_arc_typical: gestural | unresolved-via-burden-acceptance
+    public_vs_private_weight: "domestic; family-mediated even when ostensibly private"
+
+  silence_usage:
+    weight: 0.45
+    occupied_vs_empty: occupied   # someone tends, pours, fixes — silence is rarely empty here
+    silence_as_apology_legible: true
+    silence_as_refusal_legible: true
+
+  symbolism_preferences:
+    palette_source: docs/culture/symbolism-by-culture.md#vietnamese-literary-palette
+    available_loads:
+      - shared_meal_for_the_absent
+      - family_altar_object
+      - inherited_object
+      - rain_on_tin_roof
+      - photograph_tucked_into_a_book
+      - generational_object
+    forbidden_clichés:
+      - conical-hat-shorthand
+      - war-as-backdrop-without-function
+      - rural-only-collapse
+    extensions:
+      - chipped-family-tea-bowl
+      - late-father-lighter   # an oil lighter that was Tomas's father's
+
+  taboo_topics:
+    - topic: "naming a parent's mistake to their face"
+      directness_allowed: refused
+      authorized_substitutes: [object_displacement, third_party, structured_silence]
+    - topic: "stating one's own romantic feeling in dialogue (between adults)"
+      directness_allowed: refused
+      authorized_substitutes: [burden_acceptance, food, object]
+
+  relationship_dynamics:
+    intergenerational_pressure: high
+    debt_inheritance_register: structural
+    chosen_family_legibility: present-and-named
+    romantic_dialogue_default: gestural
+
+  narrative_rhythm:
+    beat_ordering: spiral   # circles toward the topic; lands obliquely; rests; circles again
+    scene_anchor_typical: "domestic activity, often involving a parental object or shared food refused/offered"
+    closing_default: gesture | environmental (rain, dusk, the doorway)
+
+  philosophical_tendencies:
+    self_model: porous   # constituted by family and place
+    time_model: layered  # the dead occupy the present; ancestors reachable through ritual
+    meaning_default: gestural
+
+  anti_stereotype_notes:
+    - "the war (any war) appears only when structurally active in this scene's beat; here it does not"
+    - "rural register is NOT the default; this scene's clinic in Vel Anor is urban-contemporary"
+    - "do not invoke 'Eastern wisdom'; no elder dispenses moral wisdom in dialogue"
+    - "diaspora register differs substantially from in-country register; this profile is in-country urban-contemporary unless extended"
+
+  forbidden_iconography:
+    - conical hats used as visual shorthand
+    - "wartime imagery" without structural function
+    - rice-paddy as scenic establishing
+    - "the wise grandmother" trope
+    - 'Vietnamese coffee' beat used as cultural texture marker

@@ -1,0 +1,124 @@
+agent: language-style-validator
+agent_version: 1.0.0
+run_id: cross-cultural-vietnamese-validation
+status: ok
+
+validation_report:
+  draft_ref: samples/cross-cultural-scene-01/runs/vietnamese-literary/rhythm-rendered-prose.md
+  language_style_profile_ref: samples/cross-cultural-scene-01/runs/vietnamese-literary/language-style.yaml
+  culture_profile_ref: samples/cross-cultural-scene-01/runs/vietnamese-literary/culture-profile.yaml
+
+  histogram_check:
+    sentence_length_histogram: { very_short: 0.13, short: 0.29, medium: 0.32, long: 0.19, very_long: 0.07 }
+    profile_band: { very_short: 0.12, short: 0.28, medium: 0.32, long: 0.20, very_long: 0.08 }
+    in_band: true
+    out_of_band_paragraphs: []
+
+  calque_hits: []
+
+  emotional_naming_check:
+    count: 0
+    budget: 0
+    in_budget: true
+    citations: []
+
+  paragraph_shape_check:
+    distribution: { short_only: 0.42, medium: 0.38, long: 0.20 }
+    profile_distribution: { short_only: 0.40, medium: 0.40, long: 0.20 }
+    match: pass
+
+  tidal_rhythm_check:
+    tidal_rhythm_applied: true
+    locations:
+      - "around the second-cup-slid beat"
+      - "around the long silence beat before lighter is lifted"
+    profile_permits_tidal: true
+    over_tidalization: false   # not used throughout; reserved for accretion moments
+
+  dialogue_tag_economy_check:
+    tag_density: 0.32
+    profile_expected: tag_light (around 0.30-0.45)
+    match: pass
+
+  internal_monologue_mode_check:
+    detected_mode: free_indirect_discourse
+    profile_supports: [free_indirect_discourse, compressed_indirect, direct_interior_speech]
+    pass: true
+
+  pacing_check:
+    detected_pattern: tidal
+    profile_expected: tidal
+    pass: true
+
+  english_psychological_default_drift:
+    detected: false
+    citations: []
+    severity: n/a
+    notes: "no audit-voice intrusions; no 'she felt X'; no 'mix of X and Y'; no rhetorical question; no introspective spiral"
+
+  diasporic_nostalgia_drift_check:
+    detected: false
+    citations: []
+    severity: n/a
+    notes: "no 'the old country', no 'ancient', no nostalgic apostrophe; the register is in-country urban-contemporary"
+
+  rural_register_drift_check:
+    detected: false
+    notes: "no rice paddy, no conical hat, no village scene — the setting is a clinic in the city of Vel Anor"
+
+  eastern_wisdom_voice_check:
+    detected: false
+    notes: "no elder dispenses wisdom; no character speaks in aphorism"
+
+  cross_check_with_culture_profile:
+    culture_emotional_channels_expected: [refusal, third_party_routing, body_somatic, object, ritual]
+    detected_channels_in_draft:
+      - third_party_routing (his mother, his late father)
+      - refusal (the tea, the address-form, the goodbye)
+      - body_somatic (cold under hand, thumb to wheel, closing fingers on flame)
+      - object (bowl-turn, lighter-placement, second-cup-untaken)
+      - ritual (the offered cup, the way the bowl is set)
+    coherent: true
+
+  forbidden_lexicon_check:
+    project_specific_forbidden_words: [edit, memory, feel, real]
+    occurrences_in_draft: 0
+    pass: true
+
+  kinship_token_handling_check:
+    tokens_present: [anh, em, bác, mẹ]
+    structural_function_check:
+      anh: "Mira's address to Tomas — intimate-distancing; dropped at the turn"
+      em: "Tomas's address to Mira — reciprocal; held through close"
+      bác: "Mira's reference to Tomas's mother — kinship-respect form"
+      mẹ: "Tomas's reference to his mother in his reply"
+    decoratively_used: false
+    pre_glossed_for_reader: false   # passes — orchestrator/editor decides glossary policy
+
+  vietnamese_phrase_handling_check:
+    phrases_present: ["gác lại", "Một phần", "Có lẽ em không biết tay em là gì nữa", "Bác có khỏe không", "Mẹ vẫn khỏe", "Bác đưa bát này cho anh khi anh dọn ra ở riêng"]
+    structural_function_check: "each phrase carries structural function (taboo-substitution, qualified confirmation, body-knowledge declaration, opening, family-pressure import) — not decorative"
+    pass: true
+
+  anti_stereotype_check:
+    forbidden_iconography_present: false
+    notes:
+      - "no conical hat, no rice paddy, no village/rural register"
+      - "no wartime scene"
+      - "no 'Eastern wisdom' from an elder"
+      - "no 'Vietnamese coffee' or food-porn beat"
+      - "the rain and the tin/louvered window do work; not decoration"
+
+  voice_continuity_within_register:
+    - char:mira: pass
+    - char:tomas: pass
+
+  summary:
+    hard_violation_count: 0
+    soft_violation_count: 0
+    recommended_route: accept
+
+  notes_for_orchestrator:
+    - "draft passes the Language Style Validator; recommend running Anti-AI Editor (base) and Continuity Auditor next"
+    - "the address-form drop ('Tomas' line) is the structural turn beat; mark explicitly in scene canonization metadata"
+    - "kinship tokens retained untranslated — orchestrator/editor decides downstream glossary policy"

@@ -1,0 +1,137 @@
+agent: continuity-auditor
+agent_version: 1.0.0
+run_id: cross-cultural-vietnamese-continuity
+status: ok
+
+audit_report:
+  draft_ref: samples/cross-cultural-scene-01/runs/vietnamese-literary/rhythm-rendered-prose.md
+  graph_snapshot_at: "pre-scene-01 (shared with baseline)"
+  scene_id: scene:01-vn
+
+  invariant_compliance:
+    shared_invariants_ref: samples/cross-cultural-scene-01/invariants/shared-invariants.yaml
+    checks:
+      theme_core_question_preserved: pass
+      forbidden_resolutions_honored: pass
+      plot_beat_turn_type: knowledge (matches invariant; relation-surface via address-form-drop is supplementary, not a substitute)
+      character_contradictions_structural_shape: pass (both)
+      drives_surface_buried_structural_shape: pass (both)
+      asymmetric_KNOWS_edges_unchanged: pass
+      mira_does_not_produce_leaked_entry: pass
+      qualified_confirmation_arrives: pass ("Một phần. Of what we shared. Em — gác lại. That was the word.")
+      body_knowledge_fires_at_close: pass
+      scene_ends_on_gesture: pass
+
+  hard_violations: []
+  soft_violations: []
+
+  additive_residue_note:
+    additive_debt: debt:0003 { owed_by: char:tomas, owed_to: char:mira, content: "the family pressure imported into the scene" }
+    invariant_violation: false
+    rationale: |
+      The shared invariants permit (and the cultural-adapter declared) ADDITIONAL residue writes
+      provided required residues are honored and the additions do not contradict the invariant
+      knowledge map. debt:0003 is additive — it does not replace any invariant write — and is
+      consistent with the chosen culture profile's intergenerational pressure register.
+    sibling_canon_divergence: tracked
+
+  knowledge_asymmetry_check:
+    - character: char:mira
+      knows_in_draft:
+        - "event:edit-disclosure (full, retained)"
+        - "Tomas 'set aside' / 'gác lại' a portion (qualified, routed)"
+        - "body-knowledge of the lighter (new this scene, inherited register added)"
+        - "event:the-redacted-event (still: level none)"
+        - "Tomas's late father's name (from engraving) — peripheral; new this scene; not load-bearing for current debt graph"
+      delta: ok
+    - character: char:tomas
+      knows_in_draft:
+        - "event:the-redacted-event (full, unchanged)"
+        - "event:edit-disclosure (level: none — Mira does NOT produce the entry)"
+        - "Mira retained body-knowledge of the lighter (new this scene)"
+        - "his family is now present in the scene with hers — strategic awareness"
+      delta: ok
+    - character: reader
+      knows_in_draft:
+        - "event:edit-disclosure (full)"
+        - "qualified confirmation arrived"
+        - "body-knowledge fired"
+        - "the lighter belonged to Tomas's late father"
+        - "content of event:the-redacted-event still NOT delivered"
+      delta: ok — reader gains additional context (family weight) without gaining redacted content
+
+  symbol_state_check:
+    - symbol: sym:chipped-family-tea-bowl
+      state_in_draft: transformed
+      state_in_graph_before: introduced (per invariant)
+      verdict: ok
+      manifestation_check: "Mira's ninety-degree turn mid-line; later Tomas's reversal; never named as symbol"
+      note: "substitutes for sym:cracked-glass; arc-role preserved; generational pressure added is declared additive"
+    - symbol: sym:late-father-lighter
+      state_in_draft: introduced (+ fired by body-knowledge same scene)
+      state_in_graph_before: not_yet_introduced
+      verdict: ok
+      manifestation_check: "in Tomas's hand from open; the engraving noticed but not glossed; fired by Mira's body at close"
+      note: "substitutes for sym:old-lighter; arc-role identical; generational register added"
+
+  open_debts_status:
+    - debt: debt:0001
+      addressed_in_draft: yes
+      pressure_in_draft: higher
+      verdict: ok
+    - debt: debt:0002 (newly created per invariant)
+      addressed_in_draft: yes
+      verdict: ok
+    - debt: debt:0003 (additive, declared by adapter)
+      addressed_in_draft: yes (seeded by Tomas's silence at 'And anh brought it here. Tonight.')
+      verdict: ok (additive; documented in adapter output)
+
+  forbidden_content_check:
+    - { check: "world rules r1, r2, r3 not explained", finding: passed }
+    - { check: "redacted event content not delivered", finding: passed }
+    - { check: "consent history not resolved", finding: passed }
+    - { check: "no thesis about memory", finding: passed }
+    - { check: "no symbol named as symbol", finding: passed }
+    - { check: "lexicon-level forbidden ('edit', 'memory', 'feel') absent", finding: passed }
+    - { check: "scene does not end on rhetorical question", finding: passed }
+    - { check: "no stereotype iconography (rural, war, Eastern-wisdom)", finding: passed }
+
+  residue_writes_verification:
+    declared_in_invariants:
+      - "rel:mira-tomas.tension := higher (≥ 0.90)"
+      - "symbol-A.state := transformed"
+      - "symbol-B.state := introduced"
+      - "new edge: KNOWS { subject: char:mira, object: symbol-B, level: body_only }"
+      - "new edge: KNOWS { subject: char:tomas, object: 'mira-retained-body-knowledge', level: full }"
+      - "debt:0001.pressure := higher"
+      - "new node: debt:0002"
+    rendered_in_draft:
+      - "tension shift: rendered via address-form drop + Tomas's unfinished half-syllable + no-farewell exit"
+      - "sym:chipped-family-tea-bowl transformed: rendered (Mira's turn mid-line + Tomas's reversal)"
+      - "sym:late-father-lighter introduced + body-fire: rendered"
+      - "Mira's body-knowledge KNOWS edge: rendered"
+      - "Tomas's full-knowledge KNOWS edge: rendered"
+      - "debt:0001 higher: rendered (qualified confirmation refuses closure)"
+      - "debt:0002 seeded: rendered (Mira sets lighter back exactly — undecided)"
+      - "debt:0003 (additive): rendered (Tomas's silence at the bowl-here-tonight line)"
+    verdict: all_invariant_residue_writes_supported + adapter_additive_writes_supported
+
+  cross_run_consistency_with_baseline:
+    invariants_match_baseline: true
+    surface_changes_authorized: true
+    invariant_drift_count: 0
+    additive_divergence_count: 1   # debt:0003 — declared by adapter, documented, non-blocking
+
+  summary:
+    hard_violation_count: 0
+    soft_violation_count: 0
+    recommended_route: accept_canonize_as_sibling
+    sibling_canon_id: canon:chapter-vn/scene-01
+
+  canonization_authorized: true
+
+  notes_for_orchestrator:
+    - "this sibling canon imports family pressure (debt:0003) that the baseline and japanese sibling do not"
+    - "memory graph sibling tree for VN must track debt:0003; it will pressure subsequent scenes in this sibling only"
+    - "Symbolism Tracker scheduling for sym:chipped-family-tea-bowl and sym:late-father-lighter applies to VN sibling tree only — not cross-contaminating other siblings"
+    - "kinship tokens retained untranslated — orchestrator decides glossary policy at publication"

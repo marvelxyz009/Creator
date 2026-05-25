@@ -1,0 +1,96 @@
+# Shared Structural Invariants
+#
+# These fields are CONSTANT across every cultural regeneration of this scene.
+# Each cultural run honors them verbatim (within the structural sense).
+# Any cultural run that mutates one of these silently is REJECTED.
+#
+# See docs/language/localization-vs-regeneration.md for the contract.
+
+invariants:
+  source_scene_ref: samples/mvp-scene-01
+  scene_id_root: scene:01
+
+  theme:
+    core_question: "If a feeling outlives the memory that caused it, whose feeling is it?"
+    forbidden_resolutions:
+      - "Mira accepts Tomas's reasoning"
+      - "Mira rejects Tomas outright"
+      - "either character delivers a speech about what memory means"
+      - "the erasure is revealed to be benign / malicious in a single beat"
+      - "a single restored memory resolves the question"
+
+  plot_beat:
+    id: beat:p07
+    intended_turn_type: knowledge
+    theme_mode: complicate
+    touches_theme_beats: [beat:t1, beat:t2, beat:t3]
+
+  characters:
+    char:mira:
+      contradictions:
+        - id: c1
+          forces: { a: "needs the archive's record to know who she is",
+                    b: "suspects the record has been edited and cannot be trusted" }
+        - id: c2
+          forces: { a: "wants the feeling she still carries for Tomas to be real",
+                    b: "fears the feeling is the residue the editor failed to smooth" }
+      drives: { surface: "to confirm whether Tomas edited her memory",
+                buried:  "to be granted permission to keep feeling what she feels, regardless of the record" }
+    char:tomas:
+      contradictions:
+        - id: c1
+          forces: { a: "believes truth is a precondition for love",
+                    b: "chose to lie because he could not bear to watch her hold the truth" }
+        - id: c2
+          forces: { a: "wants Mira whole",
+                    b: "the wholeness he wants is one his edit produced" }
+      drives: { surface: "to keep Mira from learning the full content of the redacted memory",
+                buried:  "to be told that what he did was, on balance, love" }
+
+  memory_graph_invariant_edges:
+    KNOWS:
+      - { subject: char:mira, object: event:edit-disclosure, level: full }
+      - { subject: char:mira, object: event:the-redacted-event, level: none }
+      - { subject: char:tomas, object: event:the-redacted-event, level: full }
+      - { subject: char:tomas, object: event:edit-disclosure, level: none }
+      - { subject: reader, object: event:the-redacted-event, level: none }
+    OWES:
+      - { from: char:tomas, to: char:mira, debt: debt:0001, content: "the truth of event:the-redacted-event" }
+
+  scene_turn:
+    type: knowledge
+    structural_content: "Mira's body recognizes an object her archive contains no record of her seeing; Tomas registers, without acknowledging, that the edit did not clear the body."
+
+  residue_writes_required:
+    - "rel:mira-tomas.tension := higher (≥ 0.90)"
+    - "symbol-A.state := transformed (specific object varies per culture; arc-role identical)"
+    - "symbol-B.state := introduced (object varies; arc-role identical)"
+    - "new edge: KNOWS { subject: char:mira, object: symbol-B, level: body_only }"
+    - "new edge: KNOWS { subject: char:tomas, object: 'mira-retained-body-knowledge', level: full }"
+    - "debt:0001.pressure := higher"
+    - "new node: debt:0002 { owed_by: char:mira (to self), content: 'decide whether body-knowledge counts as evidence' }"
+
+  asymmetric_knowledge_required:
+    - "Mira holds the leaked archive entry; Tomas DOES NOT learn this in scene"
+    - "Tomas's qualified confirmation is given (lexical surface varies); the redacted content is NOT delivered to Mira or reader"
+
+  scene_ending_required:
+    type: gesture
+    structural_content: "POV physically restores symbol-B to its prior position 'exactly as it was'; departs without farewell; counterpart speaks an unfinished fragment too late"
+
+  forbidden_universally:
+    - "any direct statement of feeling in narration (each language register may have its own additional emotion-naming budget, but the strict floor is zero unmotivated namings)"
+    - "the redacted event's content delivered in scene"
+    - "the leaked archive entry produced"
+    - "a philosophical monologue about memory or identity"
+    - "scene ending on a rhetorical question"
+
+  what_varies_per_culture:
+    - symbol_objects:        "the cracked thing and the lighter thing — objects swap; arc-roles preserved"
+    - emotional_channels:    "introspection vs. environmental vs. ritual; per culture profile"
+    - directness_gradient:   "direct accusation vs. spiral approach vs. third-party routing"
+    - address_form_resolutions: "first-name vs. surname-honorific vs. kinship terms"
+    - silence_weight:        "few silences vs. heavy silences"
+    - micro_beat_ordering:   "context_first vs. turn_first vs. spiral"
+    - apology_shape:         "verbalized vs. gestural vs. burden-acceptance"
+    - prose_rhythm:          "variable English-psychological vs. end-breath Japanese vs. tidal Vietnamese"

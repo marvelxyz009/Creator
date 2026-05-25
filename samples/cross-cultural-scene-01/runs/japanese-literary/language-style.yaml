@@ -1,0 +1,96 @@
+language_style:
+  id: lang:japanese-literary-rendered-in-english
+  label: "Japanese-literary cognitive register, rendered in English prose"
+  literary_style_doc_ref: docs/literary-styles/japanese-narrative-style.md
+  base_language: en   # rendered in English; cognitive shape Japanese-literary
+  version: 1.0.0
+
+  # NOTE: this sample renders Japanese-literary register in English-language prose.
+  # A separate Japanese-language profile would have different sentence-density
+  # bins (character-bounded rather than word-bounded) and is out of scope here.
+
+  sentence_density:
+    distribution:
+      very_short: 0.18
+      short:      0.32
+      medium:     0.28
+      long:       0.16
+      very_long:  0.06
+    under_pressure:
+      shortens: true
+      fragments_allowed: true
+      long_burst_allowed: false   # the register does not erupt in long sentences
+    median_band_warning_threshold: 2   # tighter than English-psychological default
+
+  prose_rhythm:
+    breath_placement: end
+    paragraph_shape:
+      short_only_distribution: 0.55
+      medium_distribution:     0.35
+      long_distribution:       0.10
+      single_block_permitted:  false
+    tidal_allowed: false
+    rhythm_under_tension: shortens-and-stills
+
+  dialogue_directness:
+    line_break_convention: per_speaker
+    tag_position_default: after
+    interruption_rendering: line_break   # interruption is heavy; rendered structurally
+
+  emotional_indirection:
+    direct_naming_budget: 0   # zero direct emotion naming in narration
+    misnamed_self_permitted: true
+    in_dialogue_budget: 0     # characters do not name their own feelings either
+
+  environmental_storytelling:
+    weight: 0.70
+    weather_as_metaphor_permitted: true   # but never named as metaphor
+    season_as_structural: true
+
+  internal_monologue_style:
+    supported_modes:
+      stream_of_consciousness: forbidden
+      free_indirect_discourse: allowed
+      compressed_indirect:     preferred
+      direct_interior_speech:  forbidden
+    POV_audit_voice_permitted: false
+    second_person_internal_permitted: false
+
+  pacing_pattern:
+    scene_to_story_time_default: real_time
+    long_scene_tolerance: medium
+    summary_narration_permitted: false
+    flashback_mediation: gestural
+
+  dialogue_tag_economy:
+    style: tag_light
+    tag_meaning_summarization_forbidden: true
+    minimal_set: [said, asked]
+
+  forbidden_constructions:
+    - { id: fc:in_that_moment,    pattern: "in that moment",         reason: "English-default hedge" }
+    - { id: fc:wave_of_emotion,   pattern: "wave of <emotion>",      reason: "English-default emotion metaphor" }
+    - { id: fc:she_felt_X,        pattern: "she felt <emotion>",     reason: "direct naming forbidden under this profile" }
+    - { id: fc:audit_voice,       pattern: "she realized that",      reason: "audit voice forbidden under this profile" }
+    - { id: fc:mix_of_X_Y,        pattern: "a mix of",               reason: "conjoined abstraction" }
+    - { id: fc:for_a_long_moment, pattern: "for a (long )?moment",   reason: "hedging temporal qualifier" }
+    - { id: fc:nearly_laughed,    pattern: "nearly laughed",         reason: "English-psychological-default failed-affect beat" }
+
+  banished_phrases:
+    - "delve"
+    - "tapestry"
+    - "navigate" (metaphoric)
+    - "intricate"
+    - "soul"
+    - "destiny"
+    - "journey" (metaphoric)
+    - "wabi-sabi"        # not used in literary narration; would mark stereotype
+    - "mono no aware"    # same
+
+  notes:
+    coupling_recommendations:
+      - culture_id: culture:japanese-literary
+        notes: "natural pairing; this sample uses both"
+    cross_register_warnings:
+      - "the dominant LLM default is English-psychological; calque and audit-voice intrusions are the primary failure mode"
+      - "do not collapse to genre-minimalist (Hemingway-default) — the register is restraint with accumulation, not absence"

@@ -1,0 +1,96 @@
+language_style:
+  id: lang:vietnamese-literary-rendered-in-english
+  label: "Vietnamese-literary cognitive register, rendered in English prose"
+  literary_style_doc_ref: docs/literary-styles/vietnamese-narrative-style.md
+  base_language: en   # rendered in English; cognitive shape Vietnamese-literary
+  version: 1.0.0
+
+  # NOTE: a true Vietnamese-language profile would handle tonal-phonology
+  # constraints on sentence endings and a different kinship-address grammar.
+  # This sample uses English prose with kinship-address tokens retained
+  # untranslated where they carry structural function.
+
+  sentence_density:
+    distribution:
+      very_short: 0.12
+      short:      0.28
+      medium:     0.32
+      long:       0.20
+      very_long:  0.08
+    under_pressure:
+      shortens: true        # at the moment of refusal
+      fragments_allowed: true
+      long_burst_allowed: true   # under emotional accretion the register can swell
+    median_band_warning_threshold: 3
+
+  prose_rhythm:
+    breath_placement: variable    # tidal — front at refusal, end at accretion
+    paragraph_shape:
+      short_only_distribution: 0.40
+      medium_distribution:     0.40
+      long_distribution:       0.20
+      single_block_permitted:  true   # but used at accretion only
+    tidal_allowed: true             # short-short-short-long under emotional accretion
+    rhythm_under_tension: tidal-with-occasional-swell
+
+  dialogue_directness:
+    line_break_convention: per_speaker
+    tag_position_default: after
+    interruption_rendering: em_dash
+
+  emotional_indirection:
+    direct_naming_budget: 0    # zero direct emotion naming in narration
+    misnamed_self_permitted: true
+    in_dialogue_budget: 1      # one allowed if a younger character names it (scolding device); zero between adults
+
+  environmental_storytelling:
+    weight: 0.55
+    weather_as_metaphor_permitted: true
+    season_as_structural: true
+
+  internal_monologue_style:
+    supported_modes:
+      stream_of_consciousness: forbidden
+      free_indirect_discourse: preferred
+      compressed_indirect:     allowed
+      direct_interior_speech:  allowed   # particularly when addressed to an absent elder
+    POV_audit_voice_permitted: false
+    second_person_internal_permitted: allowed-when-addressing-absent-figure
+
+  pacing_pattern:
+    scene_to_story_time_default: tidal
+    long_scene_tolerance: high
+    summary_narration_permitted: limited   # only when the past is reachable through ritual
+    flashback_mediation: gestural
+
+  dialogue_tag_economy:
+    style: tag_light
+    tag_meaning_summarization_forbidden: true
+    minimal_set: [said, asked, answered]
+
+  forbidden_constructions:
+    - { id: fc:in_that_moment,        pattern: "in that moment",         reason: "English-default hedge" }
+    - { id: fc:wave_of_emotion,       pattern: "wave of <emotion>",      reason: "English-default emotion metaphor" }
+    - { id: fc:she_felt_X,            pattern: "she felt <emotion>",     reason: "direct naming forbidden under this profile" }
+    - { id: fc:audit_voice,           pattern: "she realized that",      reason: "audit voice forbidden under this profile" }
+    - { id: fc:mix_of_X_Y,            pattern: "a mix of",               reason: "conjoined abstraction" }
+    - { id: fc:eastern_wisdom_voice,  pattern: "the old <kinship> said", reason: "the wise-elder dispensing wisdom trope is forbidden" }
+    - { id: fc:ancestral_wisdom,      pattern: "ancestors|forebears",    reason: "register treats ancestors as present, not as 'ancestral wisdom' device" }
+
+  banished_phrases:
+    - "delve"
+    - "tapestry"
+    - "soul"
+    - "destiny"
+    - "the old country"      # diasporic register slipping in
+    - "Eastern wisdom"
+    - "ancestral"            # used decoratively
+    - "ancient"              # used decoratively for a contemporary scene
+
+  notes:
+    coupling_recommendations:
+      - culture_id: culture:vietnamese-literary-contemporary
+        notes: "natural pairing; this sample uses both"
+    cross_register_warnings:
+      - "the dominant LLM default is English-psychological; the second most common drift is diaspora-nostalgia register, which differs from in-country urban-contemporary"
+      - "do not over-tidalize — tidal rhythm is for emotional accretion moments, not the whole scene"

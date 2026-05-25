@@ -1,0 +1,242 @@
+agent: cultural-adapter
+agent_version: 1.0.0
+run_id: cross-cultural-japanese-blueprint
+status: ok
+
+adaptation:
+  source_blueprint_ref: samples/mvp-scene-01/outputs/01-scene-blueprint.yaml
+  target_culture: culture:japanese-literary
+  target_literary_style: docs/literary-styles/japanese-narrative-style.md
+
+  compatibility_check:
+    theme_compatible: true
+    contradictions_compatible: true
+    turn_type_compatible: true
+    symbol_palette_resolvable: true
+    notes:
+      - "direct accusation in source is not legible under this profile; staged as procedural spiral instead — invariant 'qualified confirmation' still arrives, only its delivery shifts"
+      - "the source's 'cracked glass set into desk' has a target equivalent: a chipped-rim teacup left on the consultation desk"
+
+  preserved_invariants:
+    - theme.core_question
+    - theme.forbidden_resolutions
+    - plot_beat.intended_turn_type (knowledge)
+    - scene.turn.structural_content
+    - residue.graph_writes (all 7)
+    - asymmetric_knowledge edges (KNOWS map intact)
+    - character.contradictions (structural shape both characters)
+    - character.drives.{surface, buried} (vocabulary may shift; structure intact)
+    - Mira does NOT produce the leaked archive entry
+    - Tomas's qualified confirmation arrives (lexical surface shifts)
+    - Mira's body-knowledge of the lighter fires at scene close
+    - scene ends on gesture; no rhetorical question
+
+  symbol_swaps:
+    - source_id: sym:cracked-glass
+      source_object: "glass insert in the desktop, with two shards drifted out of alignment"
+      target_object: "a chipped-rim teacup left on the consultation desk; the chip is on the side facing away from Mira when she enters"
+      arc_role_preserved: "small domestic damage with use-wear, realigned mid-line; returning evidence of body-knowledge"
+      target_palette_source: docs/culture/symbolism-by-culture.md#japanese-literary-palette → domestic_object_use_wear
+      symbolism_tracker_check_required: true
+    - source_id: sym:old-lighter
+      source_object: "small brass lighter, turned once in Tomas's hand"
+      target_object: "an old oil-pocket lighter — chrome worn to brass at the base — set against the rim of the teacup"
+      arc_role_preserved: "introduced as object handled by Tomas; fired by Mira's body-knowledge at scene close"
+      target_palette_source: docs/culture/symbolism-by-culture.md#japanese-literary-palette → domestic_object_use_wear
+      symbolism_tracker_check_required: true
+
+  emotional_rendering_changes:
+    - emotion: "anger" (Mira's, throughout)
+      source_channel: "introspection + object-anchored (close-third audit)"
+      target_channel: "body_somatic + object + refusal (no naming; precision of small actions; refusal to sit, refusal of offered tea)"
+      rationale: "Japanese-literary anger surfaces as held precision and departure; the audit-voice is forbidden under this profile"
+    - emotion: "shame" (Tomas's, throughout)
+      source_channel: "qualified verbal admission (verbalized hedge)"
+      target_channel: "body_somatic + silence + gesture (the lighter's slow turn; an answer to a different question)"
+      rationale: "the apology shape under this profile is gestural or structured silence — qualified admission still permitted but never standalone"
+    - emotion: "longing" (Mira's, peripheral)
+      source_channel: "introspection of feelings as residue"
+      target_channel: "environment + object — the leftover air of the room; the teacup as proxy"
+      rationale: "longing under this profile is the leftover trace, never narrated directly"
+
+  dialogue_directness_resolution:
+    - exchange_label: "ex_first_line"
+      source_directness: direct      # source: "You knew I'd come tonight."
+      target_directness: implied     # target: a procedural opening about whether the appointment-time still holds
+      address_form_resolution:
+        - speaker: char:mira
+          addressee: char:tomas
+          form: "no-address"         # she does not name him; this is the dominant choice throughout
+        - speaker: char:tomas
+          addressee: char:mira
+          form: "no-address" (default) → "name alone, no honorific" at the turn
+    - exchange_label: "ex_accusation_core"
+      source_directness: direct      # source: "You weren't licensed for me."
+      target_directness: implied     # target: arrives as a question whose form contains the accusation
+      mechanism: "asking what 'set aside' would mean on a form she has not been allowed to see"
+    - exchange_label: "ex_apology"
+      source_directness: qualified_admission verbalized
+      target_directness: gestural + half-qualified  # the apology arrives as the lighter placed at the teacup's rim, with one half-sentence
+
+  silence_weight_changes:
+    source_silence_count: 1 (briefly)
+    target_silence_count: 4 (load-bearing)
+    rationale: "profile silence_usage.weight = 0.55; silences carry intent in this register"
+
+  micro_beat_reordering:
+    source_order: [arrival, accusation_direct, qualified_confirmation, glass_realignment, near_accusation, silence, lighter_fired, exit]
+    target_order: [arrival, procedural_opening_about_appointment_time, the_teacup_chip_noticed_not_named, qualified_answer_to_unasked_question, the_offered_tea_refused, the_real_question_arriving_indirectly, half_apology_as_lighter_placed, silence_one_beat_too_long, lighter_fired_by_body_knowledge, exit_on_replaced_object]
+    rationale: "profile narrative_rhythm.beat_ordering = context_first — the accusation enters via context"
+
+  taboo_substitutions:
+    - source_directly_named: "you edited my memory"
+      target_substitute: "object_displacement + time-reference-only — Mira asks what was on the form she has not been allowed to see; never says 'edited'"
+      placement: mid-scene
+    - source_directly_named: "I am angry"  # implicit in source narration
+      target_substitute: "structured_silence + body_somatic (the hand placed on the desk, not lifted)"
+      placement: throughout
+
+  adapted_scene_blueprint:
+    regenerated_from: samples/mvp-scene-01/outputs/01-scene-blueprint.yaml
+    scene_id: scene:01-jp
+    act: 2
+    fulfills_plot_beat: beat:p07
+    participants: [char:mira, char:tomas]
+    pov: char:mira
+    location: loc:abandoned-clinic
+    time: "early evening, early autumn; rain on the seaward window"
+
+    purpose:
+      one_sentence: "Under restraint and indirection, Mira approaches the question of the edit through procedural openings; the accusation arrives by implication; the body-knowledge of the lighter fires at close."
+      theme_touch:
+        - { beat: beat:t1, mode: complicate }
+        - { beat: beat:t2, mode: complicate }
+        - { beat: beat:t3, mode: advance }
+
+    goal:
+      who: char:mira
+      what: "to confirm what was set aside without saying the word; to leave with the question intact"
+
+    opposition:
+      source: char:tomas
+      form: "calibrated stillness; offering tea; answering questions she has not asked"
+
+    stakes:
+      if_won: "she walks out carrying the leaked entry and the question; the lighter answered something she will not name"
+      if_lost: "she sits down, accepts the tea, and lets him narrate her grief for her"
+
+    conflict_type: epistemic
+
+    emotional_shift:
+      pov_entry_state: "armored; correct posture; declining to sit"
+      pov_exit_state: "posture intact; certainty undermined; carrying a body-knowledge with no file"
+      mechanism: "she lights his lighter on the first try, with the wrong-handed motion he uses; she does not look at him; the rain on the seaward window does the rest"
+
+    character_actions:
+      - who: char:mira
+        action_intent: "to approach the question by means of a question that contains it"
+        visible_behavior: "stands; declines the offered cup; turns the teacup ninety degrees so the chip faces her; does not produce the leaked entry"
+        hidden_behavior: "keeps the entry folded inside her coat pocket"
+      - who: char:tomas
+        action_intent: "to answer a different question than the one being implied"
+        visible_behavior: "seated; the lighter against the teacup's rim; pours a second cup for her that she does not accept; later straightens the teacup's chip away from her again"
+        hidden_behavior: "registers, without acknowledging, the temperature in the room and the line of her hand on the desk"
+
+    dialogue_intent:
+      overall_register: "procedural-domestic; archive vocabulary used in low register; no abstract nouns"
+      line_count_target: "approximately 12-16 exchanges including silences"
+      forbidden_dialogue_moves:
+        - "Mira using Tomas's name in the accusation"
+        - "Tomas using 'erased' in any form (already a character forbidden)"
+        - "any line that contains the word 'edit', 'memory', 'feel', or 'real'"
+        - "Tomas verbalizing the full apology without gesture"
+        - "a raised voice anywhere"
+
+    turn:
+      type: knowledge
+      description: "Mira's body recognizes the lighter's mechanism; Tomas registers it; neither names it. The room holds."
+
+    revealed_information:
+      - { what: "Tomas 'set aside' a portion of her record", to: char:mira,
+          cost: "delivered as an answer to a question she has not asked; the implication is the confirmation; she cannot act on it" }
+      - { what: "body-knowledge of the lighter mechanism", to: char:mira,
+          cost: "destabilizes her certainty about preservation vs. residue" }
+      - { what: "Tomas understands the edit did not clear the body", to: char:tomas,
+          cost: "his stillness deepens; the lighter is no longer his alone" }
+
+    hidden_information:
+      - { what: "content of event:the-redacted-event", withheld_from: [char:mira, reader],
+          pressure_after: "engine of the next scene" }
+      - { what: "Mira's possession of the leaked archive entry", withheld_from: [char:tomas],
+          pressure_after: "she carries an instrument she did not use; the decision arrives later" }
+
+    symbolism_used:
+      - { id: sym:chipped-teacup, op: transform,
+          manifestation: "she turns the cup ninety degrees so the chip faces her, mid-line; the gesture is not commented" }
+      - { id: sym:old-pocket-lighter, op: introduce,
+          manifestation: "set against the teacup's rim; turned once by Tomas; later fired by Mira's body" }
+
+    residue:
+      graph_writes:
+        - "rel:mira-tomas.tension := 0.92"
+        - "sym:chipped-teacup.state := transformed"
+        - "sym:old-pocket-lighter.state := introduced"
+        - "sym:old-pocket-lighter.appearances_count := 1"
+        - "new edge: KNOWS { subject: char:mira, object: sym:old-pocket-lighter, level: body_only }"
+        - "new edge: KNOWS { subject: char:tomas, object: 'mira-retained-body-knowledge', level: full }"
+        - "debt:0001.pressure := higher"
+        - "new node: debt:0002 { owed_by: char:mira (to self), content: 'decide whether body-knowledge counts as evidence' }"
+      knowledge_deltas:
+        - { who: char:mira, now_knows: "Tomas 'set aside' a portion (qualified, implied)" }
+        - { who: char:mira, now_knows: "her hand knows the lighter (body-knowledge, unfiled)" }
+        - { who: char:tomas, now_knows: "the edit did not clear the body" }
+
+    ending_hook:
+      type: gesture
+      description: "Mira lights the lighter on the first try, wrong-handed as he does; the small flame between them; the rain audible against the window; she sets the lighter back exactly against the teacup's rim, the angle exactly as he had it; she crosses to the door without looking at him; behind her, an unfinished syllable; she steps into the corridor."
+
+    prose_constraints:
+      forbidden:
+        - "any direct emotion-naming in narration (budget = 0)"
+        - "the audit voice ('she realized', 'she understood')"
+        - "any line containing 'edit', 'memory', 'feel', or 'real'"
+        - "more than 3 consecutive sentences in the medium band"
+        - "interior summary of the relationship"
+        - "rhetorical questions in narration or dialogue"
+      required:
+        - "render Mira's pressure through micro-gestures with the teacup (turn, decline, the placement of her hand at rest)"
+        - "Tomas's lines shorten across scene; last line is an unfinished syllable"
+        - "season and weather present at exactly two beats — opening and turn — never decorative"
+        - "the lighter must appear within the first quarter of the scene; Mira touches it only at scene close"
+        - "scene closes on gesture; no following sentence of reflection"
+
+    micro_beats:
+      - "arrival — the corridor's smell of damp insulation; the lock turns with the wrong sound"
+      - "Tomas seated at the consultation desk; the teacup, the lighter against its rim, a second cup poured"
+      - "Mira's first line — about the appointment time; she does not sit; she does not take the cup"
+      - "Tomas's first reply — calibrated, brief"
+      - "the chipped rim noticed — Mira turns the cup ninety degrees so the chip faces her; neither comments"
+      - "Mira's question — about what would be on the form she has not been allowed to see"
+      - "Tomas's answer — to a different question (the appointment-time question, re-answered)"
+      - "silence one"
+      - "Mira's real question, indirect — 'set aside' arrives in his answer; not from her mouth"
+      - "Tomas straightens the teacup back so the chip faces away from her"
+      - "silence two — load-bearing"
+      - "Mira lifts the lighter; thumb to the wheel from the side; index on the worn base"
+      - "the flame on the first try"
+      - "Mira sets the lighter back exactly against the teacup's rim, exactly the angle he had it"
+      - "Tomas's unfinished syllable"
+      - "Mira crosses to the door; the rain"
+
+  notes_for_dialogue_specialist:
+    - "address-forms: 'no-address' as dominant; a single Tomas line uses 'Mira' (name alone, no honorific) at the turn"
+    - "Tomas's signature 'partly' / 'within reason' qualifier preserved but delivered as answer to wrong question"
+    - "Mira does not say 'edited' or 'memory' — substitutes are 'set aside' (Tomas's term) and 'the form' (her substitute)"
+    - "silence count target = 4"
+    - "the apology arrives gesturally — the lighter placed at the teacup's rim — not verbalized"
+
+  notes_for_prose_rhythm_agent:
+    - "end-breath: paragraphs close on a short period — often a single environmental detail"
+    - "median-band runs of 3+ sentences must break"
+    - "environmental_storytelling.weight = 0.70 — most emotional weight goes through rain, lamp-light, the seaward window"
+    - "no audit voice; free-indirect-discourse permitted; compressed indirect preferred"

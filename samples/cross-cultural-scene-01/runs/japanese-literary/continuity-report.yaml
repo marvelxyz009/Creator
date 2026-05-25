@@ -1,0 +1,118 @@
+agent: continuity-auditor
+agent_version: 1.0.0
+run_id: cross-cultural-japanese-continuity
+status: ok
+
+audit_report:
+  draft_ref: samples/cross-cultural-scene-01/runs/japanese-literary/rhythm-rendered-prose.md
+  graph_snapshot_at: "pre-scene-01 (shared with baseline)"
+  scene_id: scene:01-jp
+
+  invariant_compliance:
+    shared_invariants_ref: samples/cross-cultural-scene-01/invariants/shared-invariants.yaml
+    checks:
+      theme_core_question_preserved: pass
+      forbidden_resolutions_honored: pass
+      plot_beat_turn_type: knowledge (matches invariant)
+      character_contradictions_structural_shape: pass (both)
+      drives_surface_buried_structural_shape: pass (both)
+      asymmetric_KNOWS_edges_unchanged: pass
+      mira_does_not_produce_leaked_entry: pass
+      qualified_confirmation_arrives: pass ("A portion. Of what we shared. I set it aside.")
+      body_knowledge_fires_at_close: pass
+      scene_ends_on_gesture: pass
+
+  hard_violations: []
+  soft_violations: []
+
+  knowledge_asymmetry_check:
+    - character: char:mira
+      knows_in_draft:
+        - "event:edit-disclosure (full, retained from before scene)"
+        - "Tomas 'set aside' a portion (qualified, implied confirmation; surface lexical shift from baseline preserved structurally)"
+        - "body-knowledge of the lighter mechanism (new this scene, unfiled)"
+        - "event:the-redacted-event (still: level none)"
+      delta: ok
+    - character: char:tomas
+      knows_in_draft:
+        - "event:the-redacted-event (full, unchanged)"
+        - "event:edit-disclosure (level: none — Mira does NOT produce the entry)"
+        - "Mira retained body-knowledge of the lighter (new this scene)"
+      delta: ok
+    - character: reader
+      knows_in_draft:
+        - "event:edit-disclosure (full)"
+        - "qualified confirmation arrived"
+        - "body-knowledge fired"
+        - "content of event:the-redacted-event still NOT delivered"
+      delta: ok — reader gains ambiguity, not content
+
+  symbol_state_check:
+    - symbol: sym:chipped-teacup
+      state_in_draft: transformed
+      state_in_graph_before: introduced (per invariant: symbol-A.state := transformed is required)
+      verdict: ok
+      manifestation_check: "turn ninety degrees mid-line; not named as symbol; passes forbidden_uses"
+      note: "this symbol substitutes for sym:cracked-glass in the baseline; arc-role preserved (cultural-adapter swap)"
+    - symbol: sym:old-pocket-lighter
+      state_in_draft: introduced (and fired-by-body-knowledge in same scene)
+      state_in_graph_before: not_yet_introduced
+      verdict: ok
+      manifestation_check: "set against teacup rim; never named as symbol; fired by body without prior archival memory"
+      note: "this symbol substitutes for sym:old-lighter (brass) in the baseline; arc-role identical"
+
+  open_debts_status:
+    - debt: debt:0001
+      expected_pressure: higher_after_qualified_confirmation
+      addressed_in_draft: yes (qualified confirmation delivered as answer-to-different-question)
+      pressure_in_draft: higher
+      verdict: ok
+    - debt: debt:0002 (newly created this scene per invariant)
+      addressed_in_draft: yes (seeded by the lighter-firing + Mira's "Then I do not know what my hand is")
+      verdict: ok
+
+  forbidden_content_check:
+    - { check: "world rules r1, r2, r3 not explained", finding: passed }
+    - { check: "redacted event content not delivered", finding: passed }
+    - { check: "consent history not resolved", finding: passed }
+    - { check: "no thesis about memory", finding: passed }
+    - { check: "no symbol named as symbol", finding: passed }
+    - { check: "lexicon-level forbidden ('edit', 'memory', 'feel', 'real') absent", finding: passed }
+    - { check: "scene does not end on rhetorical question", finding: passed }
+
+  residue_writes_verification:
+    declared_in_invariants:
+      - "rel:mira-tomas.tension := higher (≥ 0.90)"
+      - "symbol-A.state := transformed"
+      - "symbol-B.state := introduced"
+      - "new edge: KNOWS { subject: char:mira, object: symbol-B, level: body_only }"
+      - "new edge: KNOWS { subject: char:tomas, object: 'mira-retained-body-knowledge', level: full }"
+      - "debt:0001.pressure := higher"
+      - "new node: debt:0002"
+    rendered_in_draft:
+      - "tension shift: rendered through Mira's no-farewell exit + Tomas's unfinished syllable"
+      - "sym:chipped-teacup transformed: rendered (ninety-degree turn)"
+      - "sym:old-pocket-lighter introduced + body-fire: rendered"
+      - "Mira's body-knowledge KNOWS edge: rendered (thumb-from-side beat)"
+      - "Tomas's full-knowledge KNOWS edge: rendered (his stillness after the firing; 'No.')"
+      - "debt:0001 pressure: rendered (qualified confirmation refuses closure)"
+      - "debt:0002 seeded: rendered (Mira sets lighter back exactly — undecided)"
+    verdict: all_residue_writes_supported
+
+  cross_run_consistency_with_baseline:
+    invariants_match_baseline: true
+    surface_changes_authorized: true
+    invariant_drift_count: 0
+
+  summary:
+    hard_violation_count: 0
+    soft_violation_count: 0
+    recommended_route: accept_canonize_as_sibling
+    sibling_canon_id: canon:chapter-jp/scene-01
+
+  canonization_authorized: true
+
+  notes_for_orchestrator:
+    - "this is a sibling canon to the English-psychological baseline; both occupy the same scene-id-root with culture-suffix"
+    - "memory graph receives sibling residue writes under the sibling canon namespace"
+    - "Symbolism Tracker should schedule sym:chipped-teacup next op (resolve|betray) within the Japanese sibling's next 2 scenes; same scheduling logic as the baseline, applied to the sibling tree"

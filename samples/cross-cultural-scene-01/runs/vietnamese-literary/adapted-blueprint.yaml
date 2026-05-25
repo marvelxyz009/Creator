@@ -1,0 +1,259 @@
+agent: cultural-adapter
+agent_version: 1.0.0
+run_id: cross-cultural-vietnamese-blueprint
+status: ok
+
+adaptation:
+  source_blueprint_ref: samples/mvp-scene-01/outputs/01-scene-blueprint.yaml
+  target_culture: culture:vietnamese-literary-contemporary
+  target_literary_style: docs/literary-styles/vietnamese-narrative-style.md
+
+  compatibility_check:
+    theme_compatible: true
+    contradictions_compatible: true
+    turn_type_compatible: true
+    symbol_palette_resolvable: true
+    notes:
+      - "direct accusation must route through third party (Tomas's late father, who left the lighter); the qualified confirmation still arrives"
+      - "the 'cracked glass' source object maps to a chipped family tea bowl Tomas brought from home; this also imports a generational pressure"
+      - "the 'old lighter' source object maps to Tomas's late father's oil lighter — its body-knowledge thus carries inherited weight"
+
+  preserved_invariants:
+    - theme.core_question
+    - theme.forbidden_resolutions
+    - plot_beat.intended_turn_type (knowledge)
+    - scene.turn.structural_content
+    - residue.graph_writes (all 7)
+    - asymmetric_knowledge edges
+    - character.contradictions
+    - character.drives.{surface, buried}
+    - Mira does NOT produce the leaked archive entry
+    - Tomas's qualified confirmation arrives (lexical surface shifts; routed)
+    - Mira's body-knowledge of the lighter fires at scene close
+    - scene ends on gesture; no rhetorical question
+
+  symbol_swaps:
+    - source_id: sym:cracked-glass
+      source_object: "glass insert in the desktop"
+      target_object: "a chipped family tea bowl Tomas has set on the desk — from his mother's set, given to him when he moved out"
+      arc_role_preserved: "small domestic damage with use-wear; realigned mid-line; returning evidence of body-knowledge"
+      target_palette_source: docs/culture/symbolism-by-culture.md#vietnamese-literary-palette → inherited_object
+      generational_pressure_added: yes (the mother's set, the absent mother)
+      symbolism_tracker_check_required: true
+    - source_id: sym:old-lighter
+      source_object: "small brass lighter"
+      target_object: "Tomas's late father's oil lighter — a battered Zippo-style with the engraving worn"
+      arc_role_preserved: "introduced as object handled by Tomas; fired by Mira's body-knowledge at scene close"
+      target_palette_source: docs/culture/symbolism-by-culture.md#vietnamese-literary-palette → generational_object
+      generational_pressure_added: yes (the late father)
+      symbolism_tracker_check_required: true
+
+  emotional_rendering_changes:
+    - emotion: "anger" (Mira's)
+      source_channel: "introspection + object-anchored"
+      target_channel: "refusal + third_party_routing + body_somatic — refusing the tea Tomas pours; mentioning his mother to wound him; her hand placed on the desk and not lifted"
+      rationale: "under this profile, anger between intimates routes through a third party or through refusal of offered care"
+    - emotion: "shame" (Tomas's)
+      source_channel: "qualified verbal admission"
+      target_channel: "burden_acceptance + structured_silence + object — he does not defend, he straightens the tea bowl back; he accepts the implication routed through his mother"
+      rationale: "legible apology shape under this profile is gestural / burden-acceptance, not verbalized"
+    - emotion: "longing" (Mira's, peripheral)
+      source_channel: "introspection"
+      target_channel: "environment + place — the rain outside the clinic, but more so the way the room reminds her of a kitchen she does not remember being in"
+      rationale: "longing under this profile is place-bound and intergenerational"
+
+  dialogue_directness_resolution:
+    - exchange_label: "ex_first_line"
+      source_directness: direct
+      target_directness: implied (asks after his mother)
+      address_form_resolution:
+        - speaker: char:mira → char:tomas
+          form: "anh"   # older male, intimate-distancing under tension; she does not use his name
+        - speaker: char:tomas → char:mira
+          form: "em"    # reciprocally to anh; intimate-but-asymmetric
+    - exchange_label: "ex_accusation_core"
+      source_directness: direct
+      target_directness: third_party_routed
+      mechanism: "Mira mentions the tea bowl is from his mother's set; the accusation lands by implication that he is here, doing this, with his mother's bowl on the desk"
+    - exchange_label: "ex_apology"
+      source_directness: qualified verbal admission
+      target_directness: burden_acceptance + half-spoken
+      mechanism: "Tomas does not deny; he straightens the bowl; he says 'em' (instead of any reply) and lets the address-form carry the apology"
+    - exchange_label: "ex_address_shift_as_turn"
+      source_directness: n/a
+      target_directness: register-shift-as-turn
+      mechanism: "in her last full line, Mira drops 'anh' — addresses him with no kinship term; this is the heaviest line in the scene"
+      maps_to_invariant_turn_type: relation+knowledge (relation surface, knowledge underneath)
+
+  silence_weight_changes:
+    source_silence_count: 1
+    target_silence_count: 3
+    rationale: "profile silence_usage.weight = 0.45; silences are OCCUPIED (someone pours, fixes, straightens) — not empty"
+
+  micro_beat_reordering:
+    source_order: [arrival, accusation_direct, qualified_confirmation, glass_realignment, near_accusation, silence, lighter_fired, exit]
+    target_order: [arrival, the_bowl_recognized, ask_after_his_mother, tea_poured_for_her, she_refuses_the_tea, the_bowl_mentioned_as_his_mothers, qualified_confirmation_routed, the_late_fathers_lighter_noticed, address_form_dropped, silence_one_beat_too_long, lighter_fired_by_body_knowledge, exit_on_replaced_object]
+    rationale: "profile narrative_rhythm.beat_ordering = spiral; the topic is approached through family, then through object, then through address-form, then through body"
+
+  taboo_substitutions:
+    - source_directly_named: "you edited my memory"
+      target_substitute: "object_displacement + third_party — 'Bác đưa bát này cho anh khi anh dọn ra ở riêng' (his mother gave him this bowl when he moved out); the accusation arrives through whose bowl it is, here, doing this"
+      placement: mid-scene
+    - source_directly_named: "I am angry"
+      target_substitute: "refusal of tea + the address-form drop + the placement of hand on desk"
+      placement: throughout
+    - source_directly_named: "I still feel something for you"
+      target_substitute: "burden_acceptance — Mira's body-knowledge of his father's lighter; this is the closest the scene comes to a declaration"
+      placement: scene-close
+
+  address_form_full_resolution:
+    notes:
+      - "kinship-address tokens are RETAINED untranslated where structurally load-bearing (anh, em, bác). They are not translated to English equivalents because the equivalents do not exist; their structural function is preserved."
+      - "non-Vietnamese readers may need a glossary; this is a project-editor decision, not a dialogue-specialist decision."
+
+  adapted_scene_blueprint:
+    regenerated_from: samples/mvp-scene-01/outputs/01-scene-blueprint.yaml
+    scene_id: scene:01-vn
+    act: 2
+    fulfills_plot_beat: beat:p07
+    participants: [char:mira, char:tomas]
+    pov: char:mira
+    location: loc:abandoned-clinic
+    time: "early evening; rain at the louvered window; the room smells of damp wood and old lavender disinfectant"
+
+    purpose:
+      one_sentence: "Through tea offered and refused, his mother's bowl, his father's lighter, and a dropped address-form, Mira and Tomas approach the edit by spiral; the body-knowledge of the lighter fires at close, inherited."
+      theme_touch:
+        - { beat: beat:t1, mode: complicate }
+        - { beat: beat:t2, mode: complicate }
+        - { beat: beat:t3, mode: advance }
+
+    goal:
+      who: char:mira
+      what: "to extract the confirmation by routing through his family; to leave without naming what she has come to name"
+
+    opposition:
+      source: char:tomas
+      form: "the offered cup; the bowl re-straightened; the family that he cannot un-bring into the room"
+
+    stakes:
+      if_won: "she keeps the leaked entry and walks out carrying the question and the family pressure"
+      if_lost: "she sits, takes the tea, and the family pressure narrates her grief for her"
+
+    conflict_type: epistemic (routed through generational)
+
+    emotional_shift:
+      pov_entry_state: "armored; correct posture; declining tea"
+      pov_exit_state: "posture intact; certainty undermined; carrying body-knowledge of a man's late father's lighter she has no archive record of touching"
+      mechanism: "she lights his father's lighter on the first try, with the wrong-handed motion he uses (and that his father, the engraving suggests, used); she drops the address-form; the rain on the window does the rest"
+
+    character_actions:
+      - who: char:mira
+        action_intent: "to approach the edit through family; to refuse care"
+        visible_behavior: "stands; refuses tea; turns the tea bowl so the chip faces her; mentions his mother gave it to him; drops 'anh'"
+        hidden_behavior: "keeps the leaked entry in her coat pocket; does not produce it"
+      - who: char:tomas
+        action_intent: "to absorb without naming; to keep the family present without weaponizing it"
+        visible_behavior: "pours the second cup; straightens the bowl back; the lighter in his hand from the start; later sets it down"
+        hidden_behavior: "registers the address-form drop without flinching"
+
+    dialogue_intent:
+      overall_register: "domestic-procedural with kinship-address density"
+      line_count_target: "approximately 14-18 exchanges including silences"
+      forbidden_dialogue_moves:
+        - "naming the edit directly"
+        - "naming a feeling between adults"
+        - "any line containing the word 'edit', 'memory', or 'feel'"
+        - "Tomas defending his mother against any of Mira's implications"
+        - "any 'Eastern wisdom' from absent elders"
+        - "rural register intrusions (this is urban)"
+
+    turn:
+      type: knowledge (with relation-surface — the address-form drop)
+      description: "Mira's body recognizes the lighter's mechanism; she drops the kinship-address; Tomas registers both; the room holds."
+
+    revealed_information:
+      - { what: "Tomas 'set aside' a portion", to: char:mira,
+          cost: "delivered through what he does not refuse — the implication of his mother's bowl, of his late father's lighter; the implication is the confirmation" }
+      - { what: "body-knowledge of the lighter mechanism", to: char:mira,
+          cost: "destabilizes her certainty + adds inheritance pressure" }
+      - { what: "Tomas understands the edit did not clear the body", to: char:tomas,
+          cost: "his family is now in the room with hers; he cannot unbring them" }
+
+    hidden_information:
+      - { what: "content of event:the-redacted-event", withheld_from: [char:mira, reader] }
+      - { what: "Mira's possession of the leaked archive entry", withheld_from: [char:tomas] }
+
+    symbolism_used:
+      - { id: sym:chipped-family-tea-bowl, op: transform,
+          manifestation: "she turns the bowl so the chip faces her, mid-line; later he turns it back" }
+      - { id: sym:late-father-lighter, op: introduce,
+          manifestation: "in Tomas's hand from the start; he sets it down; she lifts it at scene close" }
+
+    residue:
+      graph_writes:
+        - "rel:mira-tomas.tension := 0.93"
+        - "sym:chipped-family-tea-bowl.state := transformed"
+        - "sym:late-father-lighter.state := introduced"
+        - "sym:late-father-lighter.appearances_count := 1"
+        - "new edge: KNOWS { subject: char:mira, object: sym:late-father-lighter, level: body_only }"
+        - "new edge: KNOWS { subject: char:tomas, object: 'mira-retained-body-knowledge', level: full }"
+        - "debt:0001.pressure := higher"
+        - "new node: debt:0002 { owed_by: char:mira (to self), content: 'decide whether body-knowledge counts as evidence' }"
+        - "new node: debt:0003 { owed_by: char:tomas, owed_to: char:mira, content: 'the family pressure he has just imported into the scene' }"
+      knowledge_deltas:
+        - { who: char:mira, now_knows: "Tomas 'set aside' a portion (routed through family object refusal)" }
+        - { who: char:mira, now_knows: "her hand knows the lighter (body-knowledge, inherited)" }
+        - { who: char:tomas, now_knows: "the edit did not clear the body; the family is in the room" }
+
+    ending_hook:
+      type: gesture
+      description: "Mira lights the lighter on the first try; the small flame between them; the rain on the louvered window; she sets the lighter back exactly against the tea bowl's rim, the angle as he had it; she does not say goodbye; behind her, a half-syllable that might be 'em' and might be a name."
+
+    prose_constraints:
+      forbidden:
+        - "any direct emotion-naming in narration (budget = 0)"
+        - "the audit voice"
+        - "rural register"
+        - "wartime register"
+        - "diasporic-nostalgia register"
+        - "Eastern wisdom voice"
+        - "any kinship-token used decoratively"
+        - "translating kinship-tokens to English equivalents (anh ≠ 'brother'; em ≠ 'younger one')"
+        - "scene ending on rhetorical question"
+      required:
+        - "render Mira's pressure through tea-refused and bowl-turn"
+        - "address-form drop must occur at the turn beat"
+        - "the late father's lighter must be introduced before the bowl is named as his mother's"
+        - "scene closes on gesture + a half-syllable that is structurally ambiguous (address-token or name)"
+
+    micro_beats:
+      - "arrival — the lock turns wrong; rain at the louvered window"
+      - "Tomas at the desk; the chipped tea bowl, the lighter beside it; a second cup poured"
+      - "Mira's first line — asking after his mother"
+      - "Tomas's reply — calibrated; 'em, mẹ vẫn khỏe'"
+      - "Mira refuses the tea, sets the bowl turned so the chip faces her"
+      - "Mira's first routed line — 'Bác đưa bát này cho anh khi anh dọn ra ở riêng' (your mother gave you this when you moved out)"
+      - "Tomas's silence one"
+      - "his qualified reply about 'một phần' (a portion) — routed as answer to a different question"
+      - "the late father's lighter mentioned — Tomas does not deny"
+      - "he straightens the bowl back; chip faces away from her"
+      - "silence two — occupied (he sets the lighter down deliberately)"
+      - "Mira drops 'anh' — addresses him without a kinship form"
+      - "silence three — long"
+      - "Mira lifts the lighter; thumb to wheel from the side; she lights it"
+      - "she sets it back exactly against the bowl's rim"
+      - "Tomas's half-syllable — 'em', or her name; unclear by design"
+      - "she crosses to the door; the rain on the louvers"
+
+  notes_for_dialogue_specialist:
+    - "kinship-address tokens (anh, em, bác) retained untranslated where load-bearing"
+    - "scene must contain at least one short Vietnamese-language phrase from Tomas (e.g. 'mẹ vẫn khỏe' — my mother is well) to ground the register; not decoratively, but functionally as the line"
+    - "the address-form drop is THE turn beat — flag for prose-rhythm-agent"
+    - "no 'translation in brackets' for kinship tokens or short Vietnamese phrases; readers either know or learn from context"
+
+  notes_for_prose_rhythm_agent:
+    - "tidal rhythm permitted at the bowl-mention beat (short-short-short-long)"
+    - "rain on the louvered window present at exactly three beats — opening, turn, close"
+    - "the address-form drop must be its own line, paragraph-isolated"
+    - "the half-syllable at close must be the literal final word of the scene; nothing follows"

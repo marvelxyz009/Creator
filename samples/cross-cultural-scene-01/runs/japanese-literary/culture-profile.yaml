@@ -1,0 +1,122 @@
+culture_profile:
+  id: culture:japanese-literary
+  label: "Japanese literary register (Kawabata/Kawakami-lineage)"
+  literary_style_doc_ref: docs/literary-styles/japanese-narrative-style.md
+  version: 1.0.0
+
+  communication_style:
+    directness:
+      default: implied
+      under_pressure: refused
+      with_intimates: implied
+      with_strangers: refused
+    register_shift_significance: high
+    apology_legible_shapes:
+      - gesture
+      - qualified_admission
+      - burden_acceptance
+      - structured_silence
+
+  emotional_expression:
+    grief:
+      primary_channels: [silence, environment, object, body_somatic]
+      forbidden_channels: [dialogue_direct, introspection]
+      anti_stereotype_note: "the leftover air of a person is the channel; do not invoke 'mono no aware' in narration"
+    anger:
+      primary_channels: [silence, body_somatic, refusal, object]
+      forbidden_channels: [dialogue_direct, introspection]
+      anti_stereotype_note: "anger surfaces as small precision and departure; not raised voice"
+    love:
+      primary_channels: [object, ritual, refusal, environment]
+      forbidden_channels: [dialogue_direct]
+      anti_stereotype_note: "restraint, not absence; what is brought, prepared, remembered"
+    shame:
+      primary_channels: [body_somatic, silence, refusal]
+      forbidden_channels: [dialogue_direct, introspection]
+      anti_stereotype_note: "the body smaller; unwitnessed by the other"
+    fear:
+      primary_channels: [body_somatic, environment, object]
+      forbidden_channels: [dialogue_direct]
+      anti_stereotype_note: "temperature, hands, wrongness of small things — not narrated as fear"
+    longing:
+      primary_channels: [environment, object, silence]
+      forbidden_channels: [dialogue_direct, introspection]
+      anti_stereotype_note: "the leftover trace; the empty room"
+    joy:
+      primary_channels: [environment, object]
+      forbidden_channels: [dialogue_direct, introspection]
+      anti_stereotype_note: "minor and weather-bound; held against a coming loss"
+
+  social_hierarchy:
+    address_form_system: status
+    common_forms: ["<family-name>-san", "<family-name> alone (intimate or pointed)", "no-address"]
+    shift_significance:
+      intimate_to_distant: high
+      formal_to_familiar: high
+    elder_authority_default: implicit
+    interruption_norms:
+      allowed_in: [moments-of-extremis]
+      forbidden_in: [most contexts; including this scene's confrontation]
+
+  conflict_style:
+    confrontation_default: indirect
+    accusation_staging: implied
+    resolution_arc_typical: gestural
+    public_vs_private_weight: "private; this scene's clinic is private"
+
+  silence_usage:
+    weight: 0.55
+    occupied_vs_empty: empty
+    silence_as_apology_legible: true
+    silence_as_refusal_legible: true
+
+  symbolism_preferences:
+    palette_source: docs/culture/symbolism-by-culture.md#japanese-literary-palette
+    available_loads:
+      - domestic_object_use_wear
+      - seasonal_transition
+      - empty_room_leftover_air
+      - water_margin
+      - light_quality
+    forbidden_clichés:
+      - cherry-blossom-decorative
+      - samurai-iconography
+      - zen-object-shorthand
+    extensions:
+      - chipped-teacup-or-vessel    # arc-role: small domestic damage as returning evidence
+
+  taboo_topics:
+    - topic: "naming the redacted event directly"
+      directness_allowed: refused
+      authorized_substitutes: [structured_silence, object_displacement, time-reference-only]
+    - topic: "stating one's own feeling in dialogue"
+      directness_allowed: refused
+      authorized_substitutes: [body_somatic, object, structured_silence]
+
+  relationship_dynamics:
+    intergenerational_pressure: medium
+    debt_inheritance_register: structural
+    chosen_family_legibility: gestural
+    romantic_dialogue_default: gestural
+
+  narrative_rhythm:
+    beat_ordering: context_first
+    scene_anchor_typical: domestic activity (here: arriving, waiting, the lighter held)
+    closing_default: gesture
+
+  philosophical_tendencies:
+    self_model: porous
+    time_model: layered
+    meaning_default: gestural
+
+  anti_stereotype_notes:
+    - "this profile is engineered for emotional delivery through accumulation; flatness or 'minimalism' is failure"
+    - "do not invoke 'wabi-sabi', 'mono no aware', or any aesthetic term in narration"
+    - "no temples, kimono, tatami imagery unless functionally required by scene"
+    - "modern Japanese-literary register is heavily contemporary-domestic; not period-pastiche"
+
+  forbidden_iconography:
+    - cherry blossoms used as scenic dressing
+    - tatami / shoji / temple imagery as cultural shorthand
+    - any imported 'samurai' or 'geisha' visual register
+    - anime-coded silences ('the camera holds on her face')
