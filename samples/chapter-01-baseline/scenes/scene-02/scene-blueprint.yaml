@@ -1,0 +1,113 @@
+agent: scene-director
+agent_version: 1.0.0
+run_id: chapter-01-scene-02-blueprint
+status: ok
+
+scene_blueprint:
+  scene_id: scene:02
+  act: 2
+  chapter: 01
+  position_in_chapter: mid-complication
+  fulfills_plot_beat: beat:p08
+
+  participants: [char:mira]
+  pov: char:mira
+  location: loc:miras-apartment-kitchen
+  time: "the same night; late, the harbor has gone quiet; the cracked glass tabletop catches the kitchen lamp"
+
+  purpose:
+    one_sentence: "Mira returns to the cracked glass tabletop where she first opened the leaked entry, nearly files an Archive complaint within the forty-day window, refuses to file, and instead contacts the blank-zone-survivors — a structural counter-move."
+    theme_touch:
+      - { beat: beat:t1, mode: complicate }    # care that withholds truth vs. manipulation — Mira complicates by acting against the Archive's process
+      - { beat: beat:t2, mode: complicate }    # feeling-without-source as evidence — Mira nearly treats body-knowledge as evidence, then chooses a different evidentiary frame
+      - { beat: beat:t3, mode: advance }       # the body remembers — extended via the cracked glass
+
+  goal:
+    who: char:mira
+    what: "to decide what to do with the body-knowledge by morning"
+
+  opposition:
+    source: structural
+    form: "the forty-day deadline (rule r2); the unfilled complaint form on the table; her own training as someone who files"
+
+  stakes:
+    if_won: "she walks the body-knowledge out of the archive's instruments and into a counter-instrument"
+    if_lost: "she files; the Archive opens an audit on Tomas; the edit becomes a procedural matter she no longer controls"
+
+  conflict_type: epistemic + procedural (internal)
+
+  emotional_shift:
+    pov_entry_state: "armored still; functional; carrying the leaked entry in her coat pocket; the coat still on"
+    pov_exit_state: "coat off; entry folded into a different book than the one she had been keeping it in; one message sent that she cannot recall"
+    mechanism: "she sits with the cracked glass for a long stretch; she fits the last shard; the glass holds; the form is not signed; the message to a survivor is sent before she has decided to send it"
+
+  character_actions:
+    - who: char:mira
+      action_intent: "to file the formal complaint within the window"
+      visible_behavior: "produces the form; the entry; the kettle on; sits at the cracked glass tabletop; the form remains unsigned; she fits the last shard of the cracked glass back; she does not sign"
+      hidden_behavior: "the body-knowledge of the lighter is present in her hand even while her hand is empty; she does not look at her hand once"
+
+  turn:
+    type: debt
+    description: "Mira retires debt:0002 by choosing — body-knowledge counts, but not as Archive evidence. She converts the self-debt into a counter-move: contacting the survivors. The decision is the residue."
+
+  revealed_information:
+    - { what: "the forty-day window is structurally named (rule r2 functionally present, not lectured)", to: reader, cost: "the reader now holds a clock the characters do not name" }
+    - { what: "Mira has a leaked entry physical artifact she has carried since before scene 01", to: reader, cost: "the reader sees her relocate it — a small structural commitment" }
+
+  hidden_information:
+    - { what: "what Mira will tell the survivor", withheld_from: [reader], pressure_after: "drives scene 03 indirectly — Tomas will learn of the contact, not the content" }
+    - { what: "content of event:the-redacted-event", withheld_from: [char:mira, reader] }
+
+  symbolism_used:
+    - id: sym:cracked-glass
+      op: resolve              # final state in the chapter's symbol rhythm
+      manifestation: "she fits the last shard; the glass is now whole; the chip on the rim that she had not noticed before is the only remaining mark"
+    - id: sym:archive-complaint-form
+      op: introduce
+      manifestation: "the form is on the table from the open; remains unsigned at scene close; she does not crumple it, does not file it — leaves it"
+
+  residue:
+    graph_writes:
+      - "sym:cracked-glass.state := resolved"
+      - "sym:archive-complaint-form.state := introduced (unused)"
+      - "debt:0002.status := retired-by-counter-move (Mira's self-debt resolves into a structural action)"
+      - "new edge: KNOWS { subject: char:survivor-contact, object: 'mira-exists-and-has-reached-out', level: full }"
+      - "new node: rel:mira-survivors { type: 'tentative; instrumental on both sides', tension: 0.6 }"
+      - "rel:mira-tomas.tension := 0.92 (unchanged this scene — Tomas absent)"
+
+  ending_hook:
+    type: object
+    description: "the unsigned form on the table; the kettle gone cold; the cracked glass whole now except for a chip on the rim she had not previously noticed; her coat folded on the chair, not on a hook."
+
+  prose_constraints:
+    forbidden:
+      - "any direct statement of feeling"
+      - "any sentence beginning with 'she realized' or 'she understood'"
+      - "the word 'edit', 'erased', 'memory' in narration"
+      - "Tomas's name in narration (Mira's signature refuses it in pressure)"
+      - "the survivor's name or appearance — the contact is text-only, the survivor unseen"
+      - "any explanation of rule r2 (the forty-day window) in narration or as a quoted form-line"
+      - "a sentence of reflection after the closing image"
+    required:
+      - "Mira's signature 'realigns objects before answering a hard question' manifests on the cracked glass — the same signature from scene 01, different object"
+      - "the lighter is NOT present in this scene (rest per symbolism-tracker recommendation) but Mira's hand-knowledge of it is present as a felt absence"
+      - "the forty-day window is felt structurally (the form has a printed deadline; Mira reads it without comment) but not narrated"
+      - "scene ends on the unsigned form + the rim chip; no following sentence"
+
+  micro_beats:
+    - "arrival home — the coat still on; the entry in the pocket"
+    - "the form on the table from the open; she sits without removing the coat"
+    - "the kettle on; she reads the form's printed deadline without reaction"
+    - "she opens the entry next to the form; reads it again"
+    - "the first shard out of alignment; she does not fix it"
+    - "the kettle clicks off; she does not get up"
+    - "her hand on the table — empty — closes briefly the way it would close on the lighter"
+    - "she does not look at her hand"
+    - "she fits the first shard; the second; the third"
+    - "the last shard — the cracked glass is whole again except a chip on the rim"
+    - "she opens a different book — not the one she had been keeping the entry in"
+    - "the entry folded inside the different book"
+    - "the message composed and sent — to a contact the reader does not name"
+    - "she takes the coat off; folds it on the chair"
+    - "the form remains where it was — unsigned"

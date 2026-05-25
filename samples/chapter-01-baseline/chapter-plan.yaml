@@ -1,0 +1,109 @@
+chapter_plan:
+  id: chapter:01
+  title: "Forty Days"           # references world.yaml rule r2: edits are reversible only within 40 days
+  position: act-2.chapter-01
+  culture_profile_pinned: culture:english-psychological-contemporary
+  language_style_pinned: lang:english-psychological-literary
+
+  plot_beats_covered: [beat:p07, beat:p08, beat:p09]
+
+  scene_sequence:
+    - scene_id: scene:01
+      plot_beat: beat:p07
+      pov: char:mira
+      function_in_chapter: opening-disturbance
+      canonical_source: samples/mvp-scene-01
+      summary: "Mira confronts Tomas in the abandoned clinic; qualified confirmation arrives; body-knowledge fires at close"
+
+    - scene_id: scene:02
+      plot_beat: beat:p08
+      pov: char:mira
+      function_in_chapter: mid-complication
+      summary: "Mira alone at her apartment; the forty-day window is named; she nearly files; she does not; she contacts the blank-zone-survivors instead"
+
+    - scene_id: scene:03
+      plot_beat: beat:p09
+      pov: char:tomas       # POV shift; first time the reader sits inside Tomas
+      function_in_chapter: end-turn
+      summary: "Tomas learns Mira has contacted the survivors; the forty-day window pressures; he chooses inaction, but the inaction is itself a decision"
+
+  pov_rhythm: [char:mira, char:mira, char:tomas]
+  # Two scenes inside Mira before the chapter pivots to Tomas. The single POV shift
+  # at scene 03 is the structural pivot — the reader gains Tomas's interior precisely
+  # at the moment he registers the forty-day clock.
+
+  tension_shape: "rising-from-scene-01-residue → relief-of-aloneness → spike-at-decision → quiet-residue-into-POV-shift"
+
+  internal_arc_check:
+    has_opening_disturbance: yes (scene:01 — the confrontation)
+    has_mid_complication: yes (scene:02 — the decision Mira does not make)
+    has_end_turn: yes (scene:03 — the decision Tomas makes by not making it)
+
+  symbol_rhythm:
+    - symbol: sym:cracked-glass
+      touches:
+        - { scene: scene:01, op: transform }
+        - { scene: scene:02, op: resolve }     # advancing arc per symbolism-tracker recommendation
+        - { scene: scene:03, op: null }        # rests
+      arc_complete_in_chapter: true
+    - symbol: sym:old-lighter
+      touches:
+        - { scene: scene:01, op: introduce + body-fire }
+        - { scene: scene:02, op: null }        # rests per recommendation
+        - { scene: scene:03, op: null }        # rests further; Tomas may notice it in his pocket but not handle it deliberately
+      arc_complete_in_chapter: false           # carried into next chapter
+    - symbol: sym:archive-complaint-form
+      touches:
+        - { scene: scene:02, op: introduce }
+        - { scene: scene:03, op: null }
+      provisional_arc: "introduced as instrument never used → transformed (signed but not sent) or betrayed (filled in someone else's name) in later chapters"
+      arc_complete_in_chapter: false           # carried forward
+
+  debt_pressure_arc:
+    - debt: debt:0001         # Tomas owes Mira the truth
+      pressure_in_each_scene: [0.85, 0.85, 0.95]
+      rationale: "scene 01 raised it to 0.85 (qualified confirmation refuses closure); scene 02 holds (no new pressure); scene 03 spikes (Tomas has learned the body-knowledge defeated his edit AND the survivors are now involved)"
+    - debt: debt:0002         # Mira to self: decide if body-knowledge counts
+      pressure_in_each_scene: [0.7, 0.95, 0.95]
+      rationale: "seeded in 01; spikes in 02 as Mira nearly files and does not; holds in 03 because POV shifts"
+    - debt: debt:0004         # Tomas to self (NEW this chapter): act within forty-day window or let it close
+      pressure_in_each_scene: [null, null, 0.95]
+      rationale: "introduced in scene 03 as a counter-debt to debt:0001 — by not acting, Tomas redoubles the original debt"
+
+  forbidden_within_chapter:
+    - "no scene ends on dialogue resolution"
+    - "no scene resolves debt:0001 (carried forward beyond this chapter)"
+    - "the content of event:the-redacted-event is NOT delivered in this chapter"
+    - "Mira does NOT see Tomas physically in scenes 02 or 03"
+    - "Tomas does NOT see Mira physically in scenes 02 or 03"
+    - "the leaked archive entry remains in Mira's possession, never produced to Tomas, throughout this chapter"
+    - "the forty-day window is NAMED structurally (rule r2 is felt, not lectured) — no character explains world rules"
+    - "no chapter-level epigraph; no chapter title delivered to the reader inside the prose"
+
+  POV_audit_per_character:
+    char:mira:
+      scenes_appearing: [scene:01, scene:02]
+      voice_continuity_test: "her signature 'realigns objects before answering a hard question' must manifest in BOTH scenes — but differently (clinic glass in 01; her own kitchen in 02). Same signature, different objects."
+      what_she_refuses_to_name_continuity: "she does not name the feeling, the edit, or Tomas's first name in moments of pressure — across both scenes"
+    char:tomas:
+      scenes_appearing: [scene:01, scene:03]
+      voice_continuity_test: "his signature 'fixes a small misalignment when under pressure' and 'ends with a qualifier or unfinished fragment' must manifest in BOTH scenes. The POV shift in 03 lets the reader see WHY he fixes things — not just THAT he does."
+      what_he_refuses_to_name_continuity: "he never uses the word 'erased' across both scenes"
+
+  chapter_audit_targets:
+    theme_arc_modes_distribution:
+      target: { advance: 0.20, complicate: 0.60, invert: 0.20 }
+      rationale: "complication-heavy chapter; one invert beat acceptable"
+    voice_continuity_per_POV:
+      tolerance: tight   # POV is one of the two; drift detection sensitive
+    symbol_rhythm:
+      target: "sym:cracked-glass resolves; sym:old-lighter rests; one new symbol introduced for next chapter; no over-recurrence"
+    debt_pressure_curve:
+      target: "monotonic-with-relief; debt:0001 spikes at end-turn; debt:0002 spikes at mid-complication; new debt:0004 seeded at end-turn"
+    anti_ai_second_pass:
+      target: "cross-scene voice consistency; no metaphor/image reused across scenes without structural function"
+
+  notes_for_orchestrator:
+    - "the POV shift at scene:03 is the chapter's structural pivot — flag explicitly during canonization"
+    - "debt:0004 is a counter-debt to debt:0001 — the symbolism of an unredeemable forty-day deadline drives subsequent chapters"
+    - "the archive-complaint-form symbol is introduced but UNUSED in this chapter — its arc opens here, completes later"

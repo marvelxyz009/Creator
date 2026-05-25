@@ -1,0 +1,109 @@
+agent: anti-ai-editor
+agent_version: 1.0.0
+mode: chapter_second_pass
+run_id: chapter-01-audit-anti-ai-chapter-pass
+status: ok_with_one_soft_finding
+
+# The chapter-level Anti-AI pass looks for smells that cannot be detected
+# scene-by-scene: cross-scene metaphor repetition, register drift across
+# POVs, repeated images doing decorative work, voice-signature collisions
+# between characters across scenes.
+
+audit: cross_scene_anti_ai_pass
+
+inputs:
+  scene_prose:
+    - samples/mvp-scene-01/outputs/05-revised-draft.md
+    - samples/chapter-01-baseline/scenes/scene-02/final-prose.md
+    - samples/chapter-01-baseline/scenes/scene-03/final-prose.md
+  voice_signatures:
+    - samples/mvp-scene-01/inputs/characters/mira.yaml
+    - samples/mvp-scene-01/inputs/characters/tomas.yaml
+
+cross_scene_checks:
+
+  - check: metaphor_repetition_across_scenes
+    finding: pass
+    diagnostic: |
+      "no metaphor is reused across scenes. The cracked glass is the same object in
+      scenes 01 and 02 but it is the object itself, not a metaphor. The lighter is
+      the same object across all three scenes but its handling differs structurally
+      (body-fire vs. felt-absence vs. peripheral-presence)."
+
+  - check: image_decorative_reuse
+    finding: pass
+    diagnostic: "no image repeats across scenes without earning its repetition."
+
+  - check: rhythm_drift_per_POV
+    finding: pass
+    diagnostic: |
+      "Mira's prose rhythm in scenes 01 and 02 falls in the same sentence-length
+      distribution band; histograms align. Tomas's interior in scene 03 has a slightly
+      tighter distribution than his dialogue in scene 01, which is structurally correct
+      for an interior register vs. a dialogue register; not drift."
+
+  - check: voice_signature_collision_across_POVs
+    finding: pass
+    diagnostic: "no Mira-line could be swapped with a Tomas-line without registering wrong. POVs distinct."
+
+  - check: median_band_run_across_chapter
+    finding: pass
+    diagnostic: "no scene-level median-band runs exceeded; cross-scene, the variation in rhythm is preserved by the POV shift"
+
+  - check: emotion_naming_budget_across_chapter
+    chapter_budget: 0 (per language style profile)
+    chapter_count: 0
+    finding: pass
+
+  - check: banished_lexicon_across_chapter
+    chapter_count: 0 (no banished phrases in any scene's final prose)
+    finding: pass
+
+  - check: structural_tells_across_scenes
+    findings:
+      - scene_01_close: gesture (lighter set back) — pass
+      - scene_02_close: object (form on table) — pass
+      - scene_03_close: object (lighter on sill) — pass
+      - no scene closes on rhetorical question
+      - no scene closes on a reflection paragraph
+      - distinct close-types across scenes (gesture / object / object); not identical
+    soft_finding:
+      id: ss1
+      observation: "all three scenes close on small physical objects (lighter, form, lighter). The chapter-close pattern is consistent — and one could argue too consistent."
+      severity: soft (acceptable; the consistency is structural — the chapter is ABOUT small objects standing in for things characters cannot say — so the closing pattern is doing thematic work)
+      recommendation: "chapter 02 should NOT close on a small-object gesture; vary close type to avoid the pattern becoming a tic"
+
+  - check: chapter_close_image_distinctiveness
+    scene_01: "the lighter set back exactly against the teacup's rim; Mira walks out"
+    scene_02: "the unsigned form on the table; the rim chip; coat folded on a chair"
+    scene_03: "the lighter on the windowsill; Tomas walks away"
+    finding: pass — each close is materially different even though all use small objects
+
+  - check: cross_POV_visibility_of_voice_tells
+    finding: pass + strengthening
+    diagnostic: |
+      "Tomas's 'fixes misalignments under pressure' tell appears in both his dialogue (scene 01) and his interior (scene 03). In scene 01 Mira's POV registers him fixing things ('You can't help it. You see something off and you fix it.'). In scene 03 the reader sees him doing it from inside, with the count. The cross-scene render of this signature LANDS more strongly because of the POV shift, not less. This is the chapter's most efficient cross-scene structural choice."
+
+  - check: anti_ai_drift_at_POV_shift
+    finding: pass
+    diagnostic: |
+      "POV shifts to a new character are a common LLM failure mode (the new POV imports
+      English-psychological-default audit-voice tells). Tomas's interior in scene 03 was
+      audited for: audit voice ('he realized'); generic introspective spiral; named
+      feelings; mirror-reveals-self beat. None present. The interior preserves his
+      established register from dialogue."
+
+fact_preservation_across_chapter:
+  - "Mira does NOT produce the leaked entry across all three scenes": pass
+  - "Tomas does NOT learn Mira holds the leaked entry across all three scenes": pass
+  - "content of event:the-redacted-event NOT delivered to Mira or reader across all three scenes": pass
+  - "world rules r1, r2, r3 NOT explained in narration across all three scenes": pass
+  - "forty-day window felt structurally, never narrated as a rule": pass (date stamps appear; the rule does not)
+
+summary:
+  status: ok
+  hard_findings: 0
+  soft_findings: 1 (closing-object-pattern; non-blocking; flagged for chapter 02 planning)
+  recommendations:
+    - "chapter 02 should vary scene-close types — at least one non-object close (environmental, dialogue fragment, silence)"
+  canonization_blocker: no

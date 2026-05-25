@@ -1,0 +1,93 @@
+agent: continuity-auditor
+agent_version: 1.0.0
+mode: chapter_audit
+run_id: chapter-01-audit-debt-pressure
+status: ok
+
+audit: debt_pressure_curve_across_chapter
+
+inputs:
+  chapter_plan: samples/chapter-01-baseline/chapter-plan.yaml
+  scene_continuity_reports: [as above]
+
+debts_tracked:
+
+  - debt: debt:0001
+    description: "Tomas owes Mira the truth of event:the-redacted-event"
+    chapter_plan_expected_curve: [0.85, 0.85, 0.95]
+    chapter_observed_curve: [0.85, 0.85, 0.95]
+    match: pass
+    rationale:
+      scene_01: "qualified confirmation refuses closure — pressure raised to 0.85"
+      scene_02: "Tomas absent; debt held; not paid, not deepened"
+      scene_03: "Tomas's non-action redoubles the debt; rises to 0.95"
+    addressed_in_chapter: pressured, never paid
+    carried_forward: yes
+    verdict: well_executed
+
+  - debt: debt:0002
+    description: "Mira owes herself: decide whether body-knowledge counts as evidence"
+    chapter_plan_expected_curve: [0.70, 0.95, 0.95]
+    chapter_observed_curve: [0.70, retired_by_counter_move, n/a]
+    match: pass (retired-by-counter-move is the equivalent of a structural resolution that doesn't answer the underlying question)
+    rationale:
+      scene_01: "seeded at 0.70 when Mira sets the lighter back exactly — undecided"
+      scene_02: "spikes through the decision-not-to-file; retires by counter-move (the message to the survivor)"
+      scene_03: "n/a — debt retired; Mira absent"
+    addressed_in_chapter: yes, by retirement
+    note: "the debt's retirement does NOT answer the core question. It converts a personal epistemic question into a structural action; the question of what the body-knowledge IS remains open."
+    verdict: well_executed; arc complete within chapter; underlying question carries forward
+
+  - debt: debt:0004
+    description: "Tomas owes himself: act within the forty-day window or let it close"
+    chapter_plan_expected_curve: [n/a, n/a, 0.95]
+    chapter_observed_curve: [n/a, n/a, 0.95]
+    match: pass
+    rationale:
+      scene_03: "seeded by the unfinished third clause — the not-acting that becomes a structural debt"
+    addressed_in_chapter: introduced, not paid
+    carried_forward: yes — with TIME PRESSURE (day 1 of 40 at chapter close)
+    verdict: well_executed
+
+curve_shape_analysis:
+  scene_01_total_active_debt_pressure: 0.85 + 0.70 = 1.55
+  scene_02_total_active_debt_pressure: 0.85 + 0.95 = 1.80 (peak)
+  scene_03_total_active_debt_pressure: 0.95 + 0.95 = 1.90 (sustained peak with debt:0002 retired and debt:0004 introduced)
+
+  shape: "rising-with-debt-substitution"
+  diagnostic: |
+    "the chapter's debt-pressure curve rises monotonically across scenes, but the
+    composition of the pressure changes. Scene 01 has Tomas's debt + Mira's self-debt.
+    Scene 02 retires Mira's self-debt and the structural pressure shifts entirely
+    to the relational debt + Mira's counter-move (the survivor contact). Scene 03
+    re-balances: Tomas's relational debt rises, and his own self-debt is newly
+    introduced — the chapter ends with TWO debts on Tomas and zero active personal
+    debts on Mira, even though Mira is the protagonist. This is a structural inversion
+    delivered via debt accounting, parallel to the theme-arc invert at beat:t1."
+
+cross_audit_consistency:
+  with_3a_theme_arc:
+    note: "the debt inversion at chapter close matches the theme inversion at scene 03 — both pivots happen in the POV-shift scene; the chapter's structural moves are coherent across audits"
+  with_3b_voice_continuity:
+    note: "debt:0004 is seeded via Tomas's unfinished third clause, which is also his voice signature — the structural and the voice are doing the same work at the same beat"
+
+monotonic_ascent_check:
+  observed: monotonic_with_substitution
+  is_pure_monotonic_rise: no
+  diagnostic: "pure monotonic-rise debt curves exhaust the reader. The chapter's curve rises overall but reshuffles its composition, which provides relief without losing pressure"
+
+relief_points:
+  scene_02_mid: "kettle clicks off; she does not get up — the chapter's quietest beat; immediately followed by the decision sequence which respikes"
+  scene_03_mid: "Tomas notices the count (four after, two before) — a beat of self-recognition that does not relieve pressure but redistributes it"
+
+forbidden_curves_check:
+  monotonic_ascent_with_no_relief: not triggered
+  premature_resolution_of_debt_0001: not triggered (carried forward)
+  any_resolution_of_redacted_event: not triggered
+
+summary:
+  status: pass
+  notes:
+    - "all three debts behave as the chapter plan predicted"
+    - "the chapter's structural rebalancing — Mira's debt retiring, Tomas's debts spiking — is delivered via the debt graph as much as via the prose"
+    - "the forty-day pressure is now in the graph (debt:0004 carries an explicit deadline) — downstream chapters inherit a time-bounded structural pressure"

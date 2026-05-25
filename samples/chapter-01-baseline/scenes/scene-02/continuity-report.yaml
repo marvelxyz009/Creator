@@ -1,0 +1,124 @@
+agent: continuity-auditor
+agent_version: 1.0.0
+run_id: chapter-01-scene-02-continuity
+status: ok
+
+audit_report:
+  draft_ref: samples/chapter-01-baseline/scenes/scene-02/final-prose.md
+  graph_snapshot_at: post-scene-01-canon
+  scene_id: scene:02
+
+  hard_violations: []
+  soft_violations: []
+
+  knowledge_asymmetry_check:
+    - character: char:mira
+      knows_in_draft:
+        - "event:edit-disclosure (full, retained)"
+        - "Tomas 'set aside' a portion (qualified, retained)"
+        - "body-knowledge of the lighter (retained, manifest as absence)"
+        - "the rim chip is older than the crack — new this scene (peripheral)"
+      delta: ok
+    - character: char:tomas
+      knows_in_draft:
+        - "(absent in scene; knowledge state unchanged)"
+      delta: ok
+    - character: char:survivor-contact
+      knows_in_draft:
+        - "mira-exists-and-has-reached-out (new this scene; level full; content of message NOT disclosed)"
+      delta: ok
+    - character: reader
+      knows_in_draft:
+        - "Mira nearly filed and did not"
+        - "Mira sent a message before deciding to send"
+        - "the cracked glass is resolved (fitted whole)"
+        - "the chip on the rim is older than the crack (new structural detail)"
+        - "the forty-day deadline exists (read but not narrated)"
+        - "content of message NOT disclosed; survivor identity NOT disclosed"
+      delta: ok — reader gains structural pressure, not redacted content
+
+  symbol_state_check:
+    - symbol: sym:cracked-glass
+      state_in_draft: resolved
+      state_in_graph_before: transformed
+      verdict: ok
+      manifestation_check: "she fitted the last shard; the cracked glass was whole. Not named as symbol. Honors arc."
+    - symbol: sym:old-lighter
+      state_in_draft: resting (felt as absence in Mira's hand-closing gesture)
+      state_in_graph_before: introduced + body_only_knowledge
+      verdict: ok — rested per recommendation; the absence is doing work without advancing the arc
+    - symbol: sym:archive-complaint-form
+      state_in_draft: introduced (unused — sat unsigned through scene)
+      state_in_graph_before: not_present
+      verdict: ok — newly introduced; arc opens; no symbolism-tracker violation
+
+  rim_chip_addition:
+    new_structural_detail: "chip on the rim of the cracked glass, older than the crack"
+    significance: "seeded for future chapters; may attach to a debt or a person Mira cannot name"
+    verdict: ok — addition is consistent with sym:cracked-glass's resolved state; does not contradict scene 01
+
+  open_debts_status:
+    - debt: debt:0001
+      expected_pressure: unchanged (Tomas absent)
+      addressed_in_draft: no (held)
+      pressure_in_draft: held at 0.85
+      verdict: ok
+    - debt: debt:0002
+      expected_pressure: spike at decision moment
+      addressed_in_draft: yes (retired-by-counter-move)
+      pressure_in_draft: retired
+      verdict: ok — retired by structural action, not by resolution of the underlying question
+
+  new_relations_seeded:
+    - rel:mira-survivors
+      tension: 0.6
+      verdict: ok — declared in blueprint; rendered in draft via the sent message
+      note: "the survivor's identity is withheld; the asymmetric KNOWS edge protects the next scenes' pressure"
+
+  forbidden_content_check:
+    - { check: "rule r2 explained in narration", finding: passed (deadline read, not narrated) }
+    - { check: "redacted event content delivered", finding: passed (not delivered) }
+    - { check: "Tomas's name in narration", finding: passed (absent; Mira's signature) }
+    - { check: "direct emotion naming", finding: passed (none) }
+    - { check: "audit voice", finding: passed }
+    - { check: "scene ends on rhetorical question", finding: passed (ends on object) }
+    - { check: "lighter touched (against rest recommendation)", finding: passed (not touched; felt as absence — legal) }
+
+  residue_writes_verification:
+    declared_in_blueprint:
+      - "sym:cracked-glass.state := resolved"
+      - "sym:archive-complaint-form.state := introduced (unused)"
+      - "debt:0002.status := retired-by-counter-move"
+      - "new edge: KNOWS { subject: char:survivor-contact, object: 'mira-exists-and-has-reached-out', level: full }"
+      - "new node: rel:mira-survivors"
+      - "rel:mira-tomas.tension := 0.92 (unchanged)"
+    rendered_in_draft:
+      - "cracked glass resolved: rendered (last shard fitted)"
+      - "form introduced unused: rendered (sat unsigned through scene; left on table at close)"
+      - "debt:0002 retired by counter-move: rendered (she sent message before deciding to send)"
+      - "KNOWS edge to survivor: rendered (message sent)"
+      - "rel:mira-survivors: rendered (the address she had kept; the previous unsent letters)"
+      - "rel:mira-tomas.tension held: confirmed by absence of any Tomas-mention except as 'a different book one Tomas had not given her'"
+    verdict: all_residue_writes_supported
+
+  voice_continuity_with_scene_01:
+    - signature_check: "realigns objects before answering hard question"
+      scene_01_manifestation: "Mira realigns the stapler / fits the glass shards in the desk during accusation"
+      scene_02_manifestation: "Mira fits the cracked glass shards during decision"
+      verdict: pass — same signature, different objects (clinic desk in 01; her own tabletop in 02)
+    - signature_check: "refuses Tomas's first name in pressure"
+      scene_01_manifestation: "she does not name him during accusation"
+      scene_02_manifestation: "she does not name him in narration; refers only as 'one Tomas had not given her'"
+      verdict: pass (note: the only Tomas-name occurrence is in a reference book Mira identifies — boundary case but permitted; she names him to herself in domestic context, not to him or in pressure)
+
+  summary:
+    hard_violation_count: 0
+    soft_violation_count: 0
+    recommended_route: accept_canonize
+
+  canonization_authorized: true
+
+  notes_for_chapter_audit:
+    - "rim chip is a new seedling — flag for chapter-level symbol-rhythm audit (3c)"
+    - "debt:0002 retired by counter-move (not by resolution) — flag for chapter-level debt-pressure-curve audit (3d)"
+    - "voice continuity with scene 01 confirmed; flag for chapter-level voice-continuity audit (3b)"

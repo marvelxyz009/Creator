@@ -1,0 +1,127 @@
+agent: scene-director
+agent_version: 1.0.0
+run_id: chapter-01-scene-03-blueprint
+status: ok
+
+scene_blueprint:
+  scene_id: scene:03
+  act: 2
+  chapter: 01
+  position_in_chapter: end-turn
+  fulfills_plot_beat: beat:p09
+
+  participants: [char:tomas]
+  pov: char:tomas              # POV SHIFT — first time the reader is inside Tomas
+  location: loc:tomas-apartment-window
+  time: "the next morning; cold light; the harbor visible below; the bell has not yet rung"
+
+  purpose:
+    one_sentence: "Tomas reads a flagged Archive notice about a contact between Mira and the blank-zone-survivors; the forty-day window closes another day; he does not act; the not-acting is the chapter's pivot."
+    theme_touch:
+      - { beat: beat:t1, mode: invert }        # care that withholds vs. manipulation — from inside Tomas, the withholding now looks less like care
+      - { beat: beat:t2, mode: complicate }    # body-knowledge as evidence — Tomas now treats Mira's body-knowledge as data he cannot file
+      - { beat: beat:t3, mode: complicate }    # the body remembers — from Tomas's side, he is now the one whose body knows things his record will not say
+
+  goal:
+    who: char:tomas
+    what: "to find a reason — any reason — not to reverse the edit"
+
+  opposition:
+    source: self + structural
+    form: "the forty-day window; his own training as someone who fixes; his hand on the lighter"
+
+  stakes:
+    if_won: "he closes another day of the window; the edit becomes more nearly permanent"
+    if_lost: "he reverses the edit; Mira receives the redacted memory unmediated; the original wound returns to her"
+
+  conflict_type: moral + epistemic (internal)
+
+  emotional_shift:
+    pov_entry_state: "calibrated; the morning's small routines; the lighter is in his palm before he has decided to pick it up"
+    pov_exit_state: "calibrated still; the morning's small routines completed; the Archive notification read and closed without action; a new misalignment fixed; the lighter back in the pocket"
+    mechanism: "he fixes three small misalignments before the notification arrives, four after; on the fourth he registers that he is fixing things faster than he is reading, and stops"
+
+  character_actions:
+    - who: char:tomas
+      action_intent: "to perform the morning"
+      visible_behavior: "kettle; window; the lighter in his palm without intent; the Archive notification opened on the terminal; closed without action; three picture frames adjusted; four after"
+      hidden_behavior: "the body-knowledge of Mira's hand on his lighter is in his memory now in a way the archive cannot record; he registers, without acknowledging, that the fixing-things tic has accelerated"
+
+  turn:
+    type: debt
+    description: "Tomas opens debt:0004 (to himself) — to act within the window or to let it close. By not acting today he has not refused the option; but each day's not-acting compounds. The decision is the residue."
+
+  revealed_information:
+    - { what: "Tomas was the editor on duty during the Cognitive Collapse Year — referenced via a small badge on his shelf, never named", to: reader, cost: "structural background, never lectured" }
+    - { what: "the forty-day window has begun (the Archive notification carries a date stamp the reader can read)", to: reader, cost: "the clock the characters cannot name is now in the reader's hand" }
+    - { what: "Tomas has noticed Mira's body-knowledge as evidence in HIS record now — he is the one whose conscience cannot be filed", to: reader, cost: "the chapter's theme inverts: he is now where Mira was at scene 01" }
+
+  hidden_information:
+    - { what: "content of event:the-redacted-event", withheld_from: [char:mira, reader] }
+    - { what: "what Mira said to the survivor", withheld_from: [char:tomas, reader] }
+    - { what: "whether Tomas will act in the remaining 39 days", withheld_from: [reader, char:mira] }
+
+  symbolism_used:
+    - id: sym:old-lighter
+      op: null                 # rest per recommendation; appears in hand without being handled deliberately
+      manifestation: "the lighter is in his palm before he has decided to pick it up; he puts it back without striking it; it is the gesture of someone whose hand has decided before his mind"
+    - id: sym:archive-complaint-form
+      op: null                 # not present in this scene (Mira's instrument; Tomas does not see it)
+      manifestation: n/a
+    - id: sym:cognitive-collapse-badge
+      op: introduce (peripheral; will be loaded in later chapters)
+      manifestation: "on the shelf, behind a folded coat, the kind of object someone keeps but does not display"
+
+  residue:
+    graph_writes:
+      - "rel:mira-tomas.tension := 0.95 (rises despite no contact — the survivor-contact news has reached him)"
+      - "sym:old-lighter.appearances_count += 1 (peripheral; no state change)"
+      - "sym:cognitive-collapse-badge.state := introduced (peripheral)"
+      - "new edge: KNOWS { subject: char:tomas, object: 'mira-contacted-survivors', level: full }"
+      - "new node: debt:0004 { owed_by: char:tomas (to self), content: 'act within the forty-day window or let it close', due_by: explicit-deadline-day-40 }"
+      - "debt:0001.pressure := 0.95 (redoubled — by not acting Tomas deepens the debt)"
+
+  ending_hook:
+    type: gesture
+    description: "Tomas closes the Archive notification; the lighter is in his palm again; he sets it on the windowsill, the angle exactly the angle it had been when he set it on the desk at the clinic; he straightens it once; he walks away from the window; the lighter remains on the sill."
+
+  prose_constraints:
+    forbidden:
+      - "any direct statement of feeling"
+      - "any moment of self-aware monologue ('I am doing this because...')"
+      - "the word 'erased' — Tomas's character refuses it"
+      - "the word 'love'"
+      - "Mira's full name in narration during pressure moments"
+      - "an explanation of the forty-day rule"
+      - "the word 'edit' in Tomas's interior — he refuses it"
+      - "scene ending on rhetorical question"
+      - "any line that catches the reader up on prior plot ('she had come last night and...')"
+    required:
+      - "Tomas's signature 'fixes a small misalignment when under pressure' must manifest — but now the POV sees the fixing as it happens, which is a structural change"
+      - "Tomas's signature 'ends with a qualifier or unfinished fragment' must manifest in his interior thought (compressed indirect), not only in dialogue"
+      - "the lighter must appear without being handled deliberately (rest)"
+      - "the forty-day window must be felt structurally — a date stamp on the notification, his glance at a calendar, but no narration of the rule"
+      - "scene closes on Tomas walking away from the lighter on the sill; no following sentence"
+    pov_shift_rules:
+      - "this is the chapter's first interior-Tomas scene; the reader gains his interior for the first time"
+      - "Tomas's interior is calibrated, never histrionic; his self-talk is short and qualified"
+      - "no flashback to the redacted event; no flashback to scene 01; the present-tense holds"
+      - "the reader infers backstory from objects and routines, never from interior catch-up"
+
+  micro_beats:
+    - "kettle; window; the harbor below"
+    - "the lighter in his palm — already — before he has decided to pick it up"
+    - "he sets it on the table; he puts the kettle off; he straightens the wall calendar (first misalignment)"
+    - "the folded coat shifted half an inch (second)"
+    - "the picture frame on the table-edge (third)"
+    - "the Archive notification arrives — the icon"
+    - "he reads it without sitting down"
+    - "Mira's name; the survivor-contact registry; the timestamp"
+    - "he closes the notification without acting"
+    - "the date in the corner of the screen — he reads it; he does not register it; he registers it"
+    - "the second picture frame (fourth misalignment)"
+    - "he registers the count — four after, three before — and stops"
+    - "the lighter is in his palm again"
+    - "he sets it on the windowsill; angles it"
+    - "he straightens it once"
+    - "he walks away from the window"

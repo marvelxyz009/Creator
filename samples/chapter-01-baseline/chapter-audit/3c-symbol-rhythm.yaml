@@ -1,0 +1,98 @@
+agent: symbolism-tracker
+agent_version: 1.0.0
+mode: chapter_audit
+run_id: chapter-01-audit-symbol-rhythm
+status: ok_with_recommendations
+
+audit: symbol_rhythm_across_chapter
+
+inputs:
+  chapter_plan: samples/chapter-01-baseline/chapter-plan.yaml
+  scene_continuity_reports:
+    - samples/mvp-scene-01/outputs/06-continuity-report.yaml
+    - samples/chapter-01-baseline/scenes/scene-02/continuity-report.yaml
+    - samples/chapter-01-baseline/scenes/scene-03/continuity-report.yaml
+
+per_symbol_audits:
+
+  - id: sym:cracked-glass
+    arc_target: "introduced → transformed → resolved | betrayed"
+    chapter_arc:
+      - { scene: scene:01, op: transform, manifestation: "shards realigned mid-line during accusation" }
+      - { scene: scene:02, op: resolve, manifestation: "Mira fits the last shard; the glass whole; the rim chip noticed" }
+      - { scene: scene:03, op: null, manifestation: "rests" }
+    arc_complete_in_chapter: true
+    state_machine_legality: pass
+    over_recurrence_check: no (3 scenes; 2 active; 1 rest)
+    decorative_use_check: no (every appearance advances state or carries explicit residue)
+    new_seedling_attached:
+      rim_chip:
+        introduced_at: scene:02
+        bound_to_future_arc: true
+        provisional_meaning: "older than the crack; belongs to a person Mira cannot name"
+        scheduled_op: introduce-formally-in-chapter-02
+        recommendation: "treat the rim chip as a new sub-symbol or a sister-symbol; flag for chapter-02 symbol planning"
+    verdict: arc_well_executed
+
+  - id: sym:old-lighter
+    arc_target: "introduce → seen-but-not-named → fired-by-body-knowledge"
+    chapter_arc:
+      - { scene: scene:01, op: introduce + body-fire, manifestation: "Mira lights it on first try" }
+      - { scene: scene:02, op: null, manifestation: "felt as absence in Mira's hand-closing gesture" }
+      - { scene: scene:03, op: null, manifestation: "in Tomas's hand without intent; set on windowsill at the angle from the consultation desk" }
+    arc_complete_in_chapter: false (carries into next chapter)
+    state_machine_legality: pass — the scene-03 manifestation is touch-without-state-advance
+    over_recurrence_check: no
+    rest_discipline_check: pass — symbolism tracker had recommended rest ≥ 2 scenes; both scene 02 (absent) and scene 03 (touched but not advanced) respect rest
+    cross_POV_significance:
+      scene_01: Mira's body knows the lighter
+      scene_03: Tomas places the lighter at the same angle Mira saw it at
+      diagnostic: "the lighter is now a structural connector between the two POVs — present in both characters' interior without being handled deliberately by either"
+    verdict: rest_well_handled; next op should be a deliberate fire or transformation in chapter 02 or later
+
+  - id: sym:archive-complaint-form
+    arc_target: "introduced → transformed (signed but not sent) | betrayed (filled in someone else's name) | resolved (formally filed)"
+    chapter_arc:
+      - { scene: scene:01, op: null }
+      - { scene: scene:02, op: introduce, manifestation: "unsigned on table at open and close" }
+      - { scene: scene:03, op: null (Tomas does not see it) }
+    arc_complete_in_chapter: false
+    state_machine_legality: pass
+    verdict: well_introduced; next op pending; the unsigned form is a structural debt to the reader
+
+  - id: sym:cognitive-collapse-badge
+    arc_target: "introduced → loaded in later chapters"
+    chapter_arc:
+      - { scene: scene:03, op: declared_in_blueprint_but_OMITTED_in_prose }
+    arc_complete_in_chapter: not_started
+    state_machine_legality: deviation_documented
+    rationale_for_omission: "Anti-AI Editor humanization pass elected to subtract — scene 03 had already accumulated four small-misalignment beats; the badge would have been a fifth and risked over-density"
+    recommendation:
+      option_A: "re-schedule introduction to an early chapter-02 scene (preferred); the badge has not yet had a canonical appearance and is therefore not bound to scene 03"
+      option_B: "retire the badge if the editor decides the work does not need the Cognitive Collapse Year backstory at this level of explicitness"
+      orchestrator_default: option_A (re-schedule)
+
+over_recurrence_chapter_level_check:
+  symbols_per_scene_average: 2.0
+  symbols_active_per_scene_average: 1.3
+  diagnostic: "below over-recurrence threshold; the chapter does not load itself with too many symbols at once"
+
+cross_symbol_pressure_check:
+  scenes_with_multiple_active_symbols:
+    - scene_01: sym:cracked-glass + sym:old-lighter (both active; cracked-glass transformed, lighter introduced+fired)
+    - scene_02: sym:cracked-glass + sym:archive-complaint-form (cracked-glass resolved; form introduced)
+    - scene_03: only sym:old-lighter touched (rest); peripheral handling
+  load_distribution_check: pass — the chapter does not stack three active symbols in any one scene
+
+new_seedlings_for_next_chapter:
+  - rim_chip (introduced scene 02; needs first formal arc-op in chapter 02 or 03)
+  - sym:cognitive-collapse-badge (re-scheduled per option A; first canonical introduction needed in chapter 02)
+  - rel:mira-survivors (relation node, not strictly a symbol, but carries symbolic load; the survivor's identity is reader-unknown — flag for chapter 02 reveal pacing)
+
+summary:
+  status: ok_with_recommendations
+  recommendations:
+    - "re-schedule sym:cognitive-collapse-badge to chapter 02"
+    - "formalize rim chip as either sub-symbol or sister-symbol of cracked-glass in chapter 02 planning"
+    - "the lighter's next op should be scheduled — it has rested for 2 scenes; another rest is acceptable but a deliberate op is overdue by mid-chapter 02"
+  no_hard_violations: true

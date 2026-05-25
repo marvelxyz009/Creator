@@ -1,0 +1,102 @@
+agent: voice-auditor
+agent_version: 1.0.0
+mode: chapter_audit
+run_id: chapter-01-audit-voice-continuity
+status: ok
+
+audit: voice_continuity_per_POV
+
+inputs:
+  chapter_plan: samples/chapter-01-baseline/chapter-plan.yaml
+  characters:
+    - samples/mvp-scene-01/inputs/characters/mira.yaml
+    - samples/mvp-scene-01/inputs/characters/tomas.yaml
+  scene_prose:
+    - samples/mvp-scene-01/outputs/05-revised-draft.md
+    - samples/chapter-01-baseline/scenes/scene-02/final-prose.md
+    - samples/chapter-01-baseline/scenes/scene-03/final-prose.md
+
+per_character_audits:
+  char:mira:
+    scenes_appearing: [scene:01, scene:02]
+
+    signature_checks:
+      - signature: "sentence_length_distribution: short under stress; long when lying"
+        scene_01_match: pass (short during accusation; long-sentence absent — she does not lie this scene)
+        scene_02_match: pass (short across the decision sequence; the "she got up. she took down a different book..." paragraph compresses correctly; no lying register)
+        cross_scene_consistency: pass
+
+      - signature: "lexical_register: archive-trained, clinical; procedural verbs in personal contexts"
+        scene_01_match: pass ("confirm", "set aside", "form")
+        scene_02_match: pass ("the entry", "the form", "the deadline" — archive-procedural vocabulary applied to her own domestic table)
+        cross_scene_consistency: pass
+
+      - signature: "what_they_notice: objects out of alignment; temperature of small surfaces; hands at rest; absence of paperwork that should be present"
+        scene_01_match: pass (stapler; cracked glass shards; wood-cold under hand)
+        scene_02_match: pass (the shard out of alignment; the kettle clicking off; her hand on the table; the rim chip noticed for the first time; the form's deadline read)
+        cross_scene_consistency: pass
+
+      - signature: "what_they_refuse_to_name: Tomas by first name when angry; the feeling; the word 'us'"
+        scene_01_match: pass (she does not name him in any pressure line)
+        scene_02_match: pass (Tomas is named ONCE in the entire scene — in the phrase "a different book — one Tomas had not given her" — which is domestic-context naming, not pressure-naming)
+        cross_scene_consistency: pass
+        diagnostic: "the single Tomas-name occurrence in scene 02 is borderline. Voice Auditor reviewed and confirmed: the construction names him to herself in a sorting-of-objects context, not to him or in the heat of a pressure beat. This is permitted by the signature's spec (the signature forbids naming in PRESSURE, not absolutely)."
+
+      - signature: "rhythmic_tells: ends a statement as a question when conceding; realigns objects before answering a hard question"
+        scene_01_match: pass (the cracked-glass realignment mid-line)
+        scene_02_match: pass (the cracked-glass realignment is now the SCENE — same signature, extended; the unspoken decision is rendered through the realignment)
+        cross_scene_consistency: pass — strengthening
+
+    drift_detection:
+      drift_detected: no
+      diagnostic: "Mira's voice signature manifests with PRECISION in scene 02; the same tells, the same refusals, the same noticings, applied to her own domestic space. The cross-scene consistency is the strongest in the chapter."
+
+  char:tomas:
+    scenes_appearing: [scene:01, scene:03]
+
+    signature_checks:
+      - signature: "sentence_length_distribution: calibrated and even at baseline; shortens sharply when defending; fragment when caught"
+        scene_01_match: pass (qualified phrases; final unfinished syllable)
+        scene_03_match: pass (calibrated interior; "partly. within reason. He did not finish the third clause." — the fragment closes his thinking, not only his dialogue)
+        cross_scene_consistency: pass — exterior signature mapped to interior
+
+      - signature: "lexical_register: former-clinician calm; qualifiers (partly, within reason); avoids 'erased' — uses 'set aside'"
+        scene_01_match: pass
+        scene_03_match: pass — "partly. within reason." appear in interior; "erased" absent throughout
+        cross_scene_consistency: pass — the qualifier register holds even where no listener is present, which is the strongest possible confirmation that this is his structure, not his social mask
+
+      - signature: "what_they_notice: objects out of alignment in peripheral vision; the steadiness of a hand; what someone is not holding; temperature in a room as a tell"
+        scene_01_match: pass (the stapler Mira moved; the chip on the desk)
+        scene_03_match: pass — and here it becomes load-bearing: the calendar's degree-out-of-true, the coat shifted half an inch, the picture frame finger's-breadth too close, the second frame too close. The READER sees what he notices for the first time.
+        cross_scene_consistency: pass — strengthening
+
+      - signature: "what_they_refuse_to_name: the precise content of the edit; the word 'erased'; Mira's grief — refers to it as 'the residue'"
+        scene_01_match: pass
+        scene_03_match: pass — in his interior the edit is "what was on the form"; "the residue" appears nowhere because Mira's grief is no longer the issue, his own is, and he does not name his own either
+        cross_scene_consistency: pass
+
+      - signature: "rhythmic_tells: fixes a small misalignment under pressure; ends a defense with a qualifier that undercuts his own claim"
+        scene_01_match: pass (he straightens the stapler Mira moved)
+        scene_03_match: pass — the fixing-things tic is now made visible: four after the notification, two before; the count itself is the structural revelation. The qualifier-tell appears as interior thought, not dialogue defense.
+        cross_scene_consistency: pass — the signature gains LEGIBILITY when the POV shift exposes the count
+
+    drift_detection:
+      drift_detected: no
+      diagnostic: |
+        "Tomas's voice signature was authored as a dialogue signature. The POV shift in scene 03
+        required testing whether the signature would hold as an INTERIOR signature. It does —
+        the same calibration, the same qualifier register, the same fixing-things-tic, now
+        rendered as interior. This is the strongest possible voice-continuity result: the
+        character is the same character whether spoken or thought."
+
+cross_character_distinctiveness:
+  swap_test: pass
+  diagnostic: "no line from Mira's interior could plausibly belong to Tomas, and no Tomas-interior beat could belong to Mira. The two POVs are distinct in register, in what they notice, and in what they refuse to name."
+
+summary:
+  status: pass
+  notes:
+    - "voice continuity is the chapter's strongest property"
+    - "Tomas's dialogue-signature transposed cleanly to interior signature in the POV shift"
+    - "Mira's signature gained precision (not drift) in scene 02"
+    - "no signature drift detected; no swap-test violations"

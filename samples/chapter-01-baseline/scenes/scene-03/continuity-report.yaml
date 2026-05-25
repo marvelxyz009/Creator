@@ -1,0 +1,125 @@
+agent: continuity-auditor
+agent_version: 1.0.0
+run_id: chapter-01-scene-03-continuity
+status: ok
+
+audit_report:
+  draft_ref: samples/chapter-01-baseline/scenes/scene-03/final-prose.md
+  graph_snapshot_at: post-scene-02-canon
+  scene_id: scene:03
+
+  hard_violations: []
+  soft_violations:
+    - id: s_s1
+      type: blueprint_deviation
+      cited_at: "scene-wide"
+      description: "sym:cognitive-collapse-badge was scheduled for introduction in the blueprint but omitted in the prose draft (Anti-AI Editor humanization-pass decision to subtract). Flagged here for chapter audit 3c to confirm scheduling."
+      severity: soft
+      verdict: acceptable_with_documentation
+
+  knowledge_asymmetry_check:
+    - character: char:tomas
+      knows_in_draft:
+        - "event:the-redacted-event (full, unchanged)"
+        - "event:edit-disclosure (level: none — Mira has NOT produced the entry)"
+        - "Mira retained body-knowledge of the lighter (from scene 01, retained)"
+        - "mira-contacted-survivors (new this scene; from Archive notification)"
+        - "the forty-day window has begun (date registered)"
+      delta: ok
+    - character: char:mira
+      knows_in_draft:
+        - "(absent in scene; knowledge state unchanged from scene 02)"
+      delta: ok
+    - character: reader
+      knows_in_draft:
+        - "Tomas was on duty during the Cognitive Collapse Year (inferred from blueprint's notes — but NOT delivered in final prose due to badge omission; flagged for chapter audit)"
+        - "Tomas does not act today"
+        - "the forty-day clock is now in his world too"
+      delta: ok — though the badge omission means the Cognitive Collapse Year reference is NOT in the canon prose; reader gains less than the blueprint declared. Documented as soft.
+
+  symbol_state_check:
+    - symbol: sym:old-lighter
+      state_in_draft: still_introduced (no state change — rest honored)
+      verdict: ok
+      manifestation_check: |
+        "in hand without intent; set on windowsill at the angle from the consultation desk;
+        angled and straightened once. None of these are body-fire (that fires only when Mira
+        lights it without prior archival memory). Tomas handling it does not constitute a
+        state advancement. Rest is preserved."
+    - symbol: sym:cognitive-collapse-badge
+      state_in_draft: NOT_RENDERED
+      state_declared_in_blueprint: introduced
+      verdict: deviation
+      diagnostic: |
+        "Anti-AI Editor humanization pass elected to omit. The Symbolism Tracker must
+        re-schedule the badge for an early-chapter-2 scene if it remains in the symbol
+        tree, or formally retire it if the editor decides the work does not need it.
+        Surfaced to chapter audit 3c."
+
+  open_debts_status:
+    - debt: debt:0001
+      expected_pressure: 0.95 (per chapter plan)
+      addressed_in_draft: yes (Tomas's non-action is itself a pressure on the debt — by not acting, he redoubles)
+      pressure_in_draft: 0.95
+      verdict: ok
+    - debt: debt:0002
+      expected_pressure: 0.95 (held; Mira absent from scene)
+      verdict: ok
+    - debt: debt:0004 (NEW)
+      declared_in_blueprint: yes
+      seeded_in_draft: yes ("partly. within reason. He did not finish the third clause." — the unfinished thought IS debt:0004 entering the graph)
+      pressure_at_seed: 0.95
+      verdict: ok
+
+  pov_shift_audit:
+    first_interior_tomas: yes
+    voice_continuity_with_tomas_in_scene_01: pass
+    no_histrionic_register: pass
+    no_flashback: pass
+    interior_register_check: |
+      "Tomas's interior in this scene reads as compressed-indirect free-indirect-discourse.
+      His thoughts arrive as qualified fragments ('partly. within reason.') — the SAME
+      tells he showed in dialogue in scene 01. The interior preserves the exterior signature."
+    pov_shift_legibility: |
+      "the shift is structural (the chapter pivots here); the reader knows immediately
+      they are inside Tomas because the first sentence is the lighter — the object Mira's
+      body knew in scene 01 — now in Tomas's hand. This is the chapter's most efficient
+      structural sentence."
+
+  forbidden_content_check:
+    - { check: "rule r2 (forty-day) explained", finding: passed (date appears; rule does not) }
+    - { check: "redacted event content delivered", finding: passed (not delivered) }
+    - { check: "self-aware monologue", finding: passed (interior is fragmented, never articulate) }
+    - { check: "Tomas uses word 'erased' even in interior", finding: passed (absent) }
+    - { check: "interior catch-up about scene 01", finding: passed (no recap; reader infers via the lighter and the calibrated tics) }
+    - { check: "scene ends on rhetorical question", finding: passed (ends on object) }
+
+  residue_writes_verification:
+    declared_in_blueprint:
+      - "rel:mira-tomas.tension := 0.95"
+      - "sym:old-lighter.appearances_count += 1"
+      - "sym:cognitive-collapse-badge.state := introduced"
+      - "new edge: KNOWS { subject: char:tomas, object: 'mira-contacted-survivors', level: full }"
+      - "new node: debt:0004"
+      - "debt:0001.pressure := 0.95"
+    rendered_in_draft:
+      - "tension rise: rendered (Tomas registers the contact-log notification)"
+      - "lighter appearance count: rendered (multiple touches, no state advance)"
+      - "Cognitive Collapse badge: NOT RENDERED — soft deviation, flagged for chapter audit"
+      - "Tomas's KNOWS edge to mira-contacted-survivors: rendered (the notification line)"
+      - "debt:0004 seeded: rendered (the unfinished third clause is the debt entering the graph)"
+      - "debt:0001 pressure spike: rendered (the not-acting is itself the spike)"
+    verdict: 5_of_6_residue_writes_supported + 1_soft_deviation_documented
+
+  summary:
+    hard_violation_count: 0
+    soft_violation_count: 1
+    recommended_route: accept_canonize_with_chapter_audit_notation
+
+  canonization_authorized: true (subject to chapter audit 3c handling of the badge deviation)
+
+  notes_for_chapter_audit:
+    - "POV shift to Tomas is the chapter's structural pivot — flag for audit 3b (voice continuity per POV)"
+    - "Tomas's interior preserves his dialogue signature (qualifier fragments) — chapter audit 3b confirms"
+    - "badge omission is a deliberate humanization-pass subtraction — chapter audit 3c must decide: re-schedule or retire"
+    - "debt:0004 entering the graph at the chapter's closing beat — flag for audit 3d (debt pressure curve)"

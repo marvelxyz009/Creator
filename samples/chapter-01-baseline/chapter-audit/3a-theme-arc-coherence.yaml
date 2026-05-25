@@ -1,0 +1,87 @@
+agent: theme-sentinel
+agent_version: 1.0.0
+mode: chapter_audit
+run_id: chapter-01-audit-theme-arc
+status: ok
+
+audit: theme_arc_coherence
+
+inputs:
+  chapter_plan: samples/chapter-01-baseline/chapter-plan.yaml
+  scenes: [scene:01, scene:02, scene:03]
+  theme_ref: samples/mvp-scene-01/inputs/theme.yaml
+
+scene_by_scene_theme_touches:
+  - scene_id: scene:01
+    beat:t1: { mode: complicate }
+    beat:t2: { mode: complicate }
+    beat:t3: { mode: advance }
+  - scene_id: scene:02
+    beat:t1: { mode: complicate }
+    beat:t2: { mode: complicate }
+    beat:t3: { mode: advance }
+  - scene_id: scene:03
+    beat:t1: { mode: invert }     # ← the chapter's invert beat — and it lands on the POV shift
+    beat:t2: { mode: complicate }
+    beat:t3: { mode: complicate }
+
+mode_distribution_observed:
+  advance: 2 / 9   = 0.22
+  complicate: 6 / 9 = 0.67
+  invert: 1 / 9    = 0.11
+  # chapter has 3 scenes × 3 beats = 9 theme-touches total
+
+chapter_plan_target:
+  advance: 0.20
+  complicate: 0.60
+  invert: 0.20
+
+distribution_check:
+  within_tolerance: true
+  diagnostic: "advance 0.22 vs 0.20 target — within tolerance. complicate 0.67 vs 0.60 — slight over-weight (acceptable for complication-heavy chapter). invert 0.11 vs 0.20 — slight under but the SINGLE invert is on beat:t1 at the end-turn, which is structurally efficient (one well-placed invert > scattered inverts)."
+
+invert_placement_audit:
+  invert_beat: beat:t1 (care that withholds vs. manipulation)
+  invert_scene: scene:03
+  invert_position_in_chapter: end-turn
+  legibility_check: pass
+  diagnostic: |
+    "the invert lands when the reader gains Tomas's interior for the first time. The
+    chapter has been building a reading of his withholding as care; the POV shift
+    inverts this — from inside Tomas, the withholding looks less like care and more
+    like the choice it actually is. The invert is delivered NOT by narration but by
+    proximity: the reader sees what Tomas fixes, what he does not finish saying, what
+    he sets on the windowsill. The Theme Sentinel confirms the invert is legible."
+
+scene_arc_coherence:
+  has_advancement: yes (scene:01 + scene:02 on beat:t3)
+  has_complication: yes (every scene on at least one beat)
+  has_inversion: yes (scene:03 on beat:t1)
+  no_monotonic_advance: pass
+  no_monotonic_complicate: pass (an invert breaks the chapter's complication run)
+
+forbidden_resolution_check:
+  - resolution: "Mira accepts Tomas's reasoning"
+    triggered: no
+  - resolution: "Mira rejects Tomas outright"
+    triggered: no
+  - resolution: "either character delivers a speech about what memory means"
+    triggered: no
+  - resolution: "the erasure is revealed to be benign / malicious in a single beat"
+    triggered: no
+  - resolution: "a single restored memory resolves the question"
+    triggered: no
+
+core_question_status:
+  question: "If a feeling outlives the memory that caused it, whose feeling is it?"
+  status_after_chapter: held_open
+  pressure_change: increased (now BOTH characters carry feelings their archives cannot file — symmetry deepens)
+  diagnostic: "the chapter does not answer the core question. The chapter inverts who-the-question-applies-to by extending it from Mira (one whose feeling outlives the missing memory) to Tomas (one whose conscience now outlives his ability to file what he has done)."
+
+summary:
+  status: pass
+  notes:
+    - "theme arc is coherent across the chapter"
+    - "the single invert beat is placed efficiently at the structural pivot (POV shift)"
+    - "no forbidden resolution triggered"
+    - "core question carried into next chapter with greater pressure"
