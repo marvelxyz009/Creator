@@ -23,27 +23,73 @@ python -m orchestrator inspect-sample --sample samples/mvp-scene-01
 pytest -ra
 ```
 
-## ⭐ Manual Agent Mode — no API required (default)
+## ⭐ End-to-end scene creation — `create-scene` (recommended)
 
-The recommended workflow if you have Claude available in your IDE (VSCode/Cursor extension, or any LLM chat). **No `ANTHROPIC_API_KEY` needed.**
+One command, interactive walk-through, all 5 agents, no API key.
 
 ```bash
-# Phase 1 — hydrate the prompt and write it to disk
-python -m orchestrator prepare-agent scene-director --sample samples/mvp-scene-01
-
-# → writes samples/mvp-scene-01/generated/manual/scene-director-prompt.md
-# → open that file, copy the block under "--- BEGIN PROMPT ---"
-# → paste into the Claude extension in your IDE
-# → save Claude's full response to:
-#   samples/mvp-scene-01/generated/manual/scene-director-output.yaml (or .md)
-
-# Phase 2 — validate the output, write canonical artifact
-python -m orchestrator validate-agent-output scene-director \
-  --sample samples/mvp-scene-01 \
-  --input samples/mvp-scene-01/generated/manual/scene-director-output.yaml
+python -m orchestrator create-scene --sample samples/mvp-scene-01
 ```
 
-On validation success the canonical artifact lands at `samples/mvp-scene-01/generated/01-scene-blueprint.yaml`. On failure the orchestrator prints a structured list of missing/empty fields; edit the output or re-prompt Claude and re-run.
+The runner walks through `scene-director → symbolism-tracker → dialogue-specialist → anti-ai-editor → continuity-auditor`. For each agent it:
+
+1. Hydrates the manual prompt and writes it to `samples/<sample>/generated/manual/<agent>-prompt.md`.
+2. Prints the path + clear instructions.
+3. **Waits while you do the copy-paste through Claude in your IDE.**
+4. You save Claude's reply to the path shown.
+5. Press Enter — the orchestrator validates, writes the canonical artifact, moves to the next agent.
+6. On validation failure: choose `r` (retry — edit output and re-validate), `s` (skip), or `q` (quit).
+
+When all 5 agents complete the runner writes **`samples/<sample>/generated/05-revised-draft.md`** — that's the prose, the actual story.
+
+```
+==============================================================
+Manual Scene Generation Workflow
+Sample : samples/mvp-scene-01
+Output : samples/mvp-scene-01/generated/
+Agents : scene-director → symbolism-tracker → dialogue-specialist
+         → anti-ai-editor → continuity-auditor
+==============================================================
+
+[1/5] scene-director
+─────────────────────────────────────────────────────────────
+  Role: Produces the scene blueprint — the structural design.
+
+  Hydrated prompt written to:
+    samples/mvp-scene-01/generated/manual/scene-director-prompt.md
+
+  → Open Claude (extension in VSCode/Cursor, or any LLM chat)
+  → Open the prompt file above
+  → Copy everything below the line `--- BEGIN PROMPT ---`
+  → Paste into Claude as a new conversation
+  → Save Claude's full reply to:
+    samples/mvp-scene-01/generated/manual/scene-director-output.yaml
+
+  Press Enter when ready to validate, or 'q' to quit:
+```
+
+## Single-agent commands (manual mode, no API required)
+
+If you'd rather drive one agent at a time:
+
+```bash
+# Phase 1 — hydrate one agent's prompt
+python -m orchestrator prepare-agent <agent-id> --sample samples/mvp-scene-01
+
+# Phase 2 — validate the saved output
+python -m orchestrator validate-agent-output <agent-id> \
+  --sample samples/mvp-scene-01 \
+  --input samples/mvp-scene-01/generated/manual/<agent-id>-output.yaml
+```
+
+Supported `<agent-id>` values:
+- `scene-director`
+- `symbolism-tracker`     (depends on canonized scene-director output)
+- `dialogue-specialist`   (depends on canonized scene-director output)
+- `anti-ai-editor`        (depends on canonized scene-director + dialogue-specialist)
+- `continuity-auditor`    (depends on canonized scene-director + anti-ai-editor)
+
+Downstream agents read prior agents' canonical artifacts from `generated/`, so you must run them in order — or just use `create-scene` which handles ordering for you.
 
 See **[docs/implementation/manual-agent-workflow.md](../docs/implementation/manual-agent-workflow.md)** for the full step-by-step including how to use it with the Claude extension in VSCode/Cursor.
 
@@ -80,20 +126,25 @@ API mode is appropriate for batch validation, CI, and reproducibility audits. Fo
 ## CLI reference
 
 ```
-# Manual mode (no API key)
-python -m orchestrator prepare-agent scene-director --sample <path>
-python -m orchestrator validate-agent-output scene-director --sample <path> --input <path>
+# Recommended end-to-end (no API key)
+python -m orchestrator create-scene --sample <path>
+
+# Single-agent manual mode (no API key)
+python -m orchestrator prepare-agent <agent-id> --sample <path>
+python -m orchestrator validate-agent-output <agent-id> --sample <path> --input <path>
 
 # API mode (requires ANTHROPIC_API_KEY)
 python -m orchestrator run-agent scene-director --sample <path>
 
-# Full workflow (Milestone 2+, not yet stable)
+# Full workflow (Milestone 2+, API-driven; not yet stable)
 python -m orchestrator run scene-generation --sample <path> [--dry-run]
 
 # Utilities
 python -m orchestrator list-workflows
 python -m orchestrator inspect-sample --sample <path>
 ```
+
+`<agent-id>` ∈ `{scene-director, symbolism-tracker, dialogue-specialist, anti-ai-editor, continuity-auditor}`.
 
 Global flag:
 - `--log-level {DEBUG,INFO,WARNING,ERROR}` — overrides `AETHERFORGE_LOG_LEVEL`.
@@ -157,7 +208,8 @@ Tests are deliberately minimal at MVP:
 | `test_bundle.py` | Bundle assembly from a real sample; missing input raises | no |
 | `test_prompt_render.py` | Jinja2 user-prompt hydration; YAML extraction from agent responses | no |
 | `test_dag_order.py` | Topological order; cycle detection; dry-run; hard_reject halts | no |
-| `test_scene_director_manual.py` | `prepare-agent` writes prompt; `validate-agent-output` accept/reject paths | no |
+| `test_scene_director_manual.py` | Back-compat wrappers for scene-director manual mode | no |
+| `test_manual_mode.py` | Registry-driven manual mode across all 5 agents | no |
 | `test_scene_director_integration.py` | Pure validator logic (always) + end-to-end LLM call (skip-without-key) | partial |
 
 Unit tests have no network dependencies. The single LLM-touching test in

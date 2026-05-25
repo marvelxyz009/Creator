@@ -2,6 +2,23 @@
 
 The default operational mode for the AetherForge orchestrator. **No Anthropic API key required.** The orchestrator handles file I/O, bundle assembly, prompt hydration, and output validation. The LLM call itself happens inside your IDE — typically the Claude extension in VSCode or Cursor.
 
+## Two ways to drive it
+
+**End-to-end (recommended):**
+```bash
+python -m orchestrator create-scene --sample samples/mvp-scene-01
+```
+Interactive walk-through of all 5 agents (scene-director → symbolism-tracker → dialogue-specialist → anti-ai-editor → continuity-auditor). The runner pauses after each `prepare-agent` step so you can paste into Claude, save the reply, then continue. The final prose lands in `samples/<sample>/generated/05-revised-draft.md`.
+
+**Single-agent (advanced):**
+```bash
+python -m orchestrator prepare-agent <agent-id> --sample <sample>
+python -m orchestrator validate-agent-output <agent-id> --sample <sample> --input <path>
+```
+Useful when you want to redo a single step without re-running prior agents. The remainder of this document describes the single-agent flow; `create-scene` is an interactive wrapper around it.
+
+Supported `<agent-id>` values: `scene-director`, `symbolism-tracker`, `dialogue-specialist`, `anti-ai-editor`, `continuity-auditor`.
+
 ## Why this mode exists
 
 Most contributors to AetherForge work inside an IDE with Claude already integrated. They have a chat with Claude running while editing files; they do not maintain a separate Anthropic API account or pay per-call from an API key.
