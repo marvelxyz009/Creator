@@ -134,16 +134,32 @@ Then move to Phase 4 without further prompting.
 
 ## Phase 4 — Generate the input files
 
-For each input file, READ `samples/mvp-scene-01/inputs/<file>` first to learn the structural shape. Then WRITE a fresh version under `samples/<slug>/inputs/`, populated from the user's spec + reasonable defaults for non-required fields.
+For each input file, READ the matching **schema doc under `docs/schema/`** first to learn the structural shape — NOT the example samples. Schemas describe the abstract shape (required fields, validation rules, value enums); examples leak character names and content from other projects.
 
-Files to generate:
+Then WRITE a fresh version under `samples/<slug>/inputs/`, populated from the user's spec + reasonable defaults for non-required fields.
 
-1. `vision.yaml` — register, scope, refusals (3+), success criteria, anchoring references
-2. `theme.yaml` — core_question, oppositions (1+), beats (3), forbidden_resolutions, symbols (the one the user chose + one more for arc continuity)
+| File to write | Schema to read first |
+|---|---|
+| `vision.yaml` | `docs/schema/vision-schema.md` |
+| `theme.yaml` | `docs/schema/theme-schema.md` |
+| `world.yaml` | `docs/schema/world-schema.md` |
+| `characters/<name1>.yaml` | `docs/schema/character-schema.md` |
+| `characters/<name2>.yaml` | `docs/schema/character-schema.md` |
+| `plot_beat.yaml` | `docs/schema/plot-beat-schema.md` |
+| `memory_graph_excerpt.yaml` | `docs/schema/memory-graph-schema.md` |
+
+**Filename rule for characters**: name the file after the character's actual name in lower-kebab-case (`thao.yaml`, `tuan.yaml`, `marie-claire.yaml`), NOT `mira.yaml`/`tomas.yaml`. The bundle assembler discovers every `*.yaml` under `inputs/characters/` dynamically.
+
+**Required content per file**:
+
+1. `vision.yaml` — register, scope, refusals (3+), success criteria (2+ falsifiable), anchoring references with `what_we_will_not_imitate`
+2. `theme.yaml` — core_question (ends with `?`), oppositions (1+), beats (3), forbidden_resolutions, symbols (the one the user chose + one more for arc continuity), voice_of_theme.forbidden_words
 3. `world.yaml` — premise (one unusual constraint), 2 rules with consequence_if_broken, 1-2 locations, 1 faction, sensory_palette
-4. `characters/<name1>.yaml`, `characters/<name2>.yaml` — each with contradictions (matching user input), drives.surface ≠ drives.buried, wound, voice_signature (all 4 sub-fields: sentence_length_distribution, lexical_register, what_they_notice, what_they_refuse_to_name, rhythmic_tells), knowledge_set, relations
-5. `plot_beat.yaml` — single beat with the turn type chosen, touches_theme_beats, intended_turn_type, symbol_activity, knowledge_delta
-6. `memory_graph_excerpt.yaml` — starting state: 2 character nodes, 1+ symbol node (state from user's spec), 1+ event node, asymmetric KNOWS edges, 1 debt node
+4. `characters/<name>.yaml` (×2) — each with contradictions (matching user input — opposed forces, not graded), `drives.surface ≠ drives.buried`, wound, `voice_signature` (all 5 sub-fields: `sentence_length_distribution`, `lexical_register`, `what_they_notice`, `what_they_refuse_to_name`, `rhythmic_tells`), knowledge_set, relations. If the project's target language has grammaticalized politeness (Vietnamese, Japanese, Korean), also populate `voice_signature.language_register` with `target_language`, `address_pattern`, `self_reference`, `preferred_softeners`, `canonical_subconscious_leak`.
+5. `plot_beat.yaml` — single beat with the turn type chosen, `touches_theme_beats`, `intended_turn_type` (never `atmosphere`), `symbol_activity`, `knowledge_delta` (at least one entry), `notes_for_scene_director` (at least one anti-direction).
+6. `memory_graph_excerpt.yaml` — starting state: 2 character nodes, 1+ symbol node (state from user's spec; valid state-machine value), 1+ event node with `who_knows_full`/`partial`/`nothing`, asymmetric `KNOWS` edges, 1 debt node.
+
+**Never copy content from `samples/mvp-scene-01/inputs/`** — character names (Mira/Tomas), wound details, sensory palette items, anchoring references, location ids, etc. are project-specific to MVP and will contaminate your new project. Read schemas for shape; write content from the user's spec.
 
 After each Write, run via Bash:
 ```
@@ -197,7 +213,8 @@ A well-filled brief should result in **zero or near-zero questions** and direct 
 
 - Never paste the IDEA BRIEF template back to the user verbatim — only reference its path if they want a structured way to give input.
 - Never ask the user to write YAML themselves.
-- Never modify `samples/mvp-scene-01/` — only read it as a structural reference.
+- Never read `samples/mvp-scene-01/inputs/` (or any other existing sample) as a structural template. Use `docs/schema/*-schema.md` instead. Reading samples leaks content (character names, wounds, sensory palettes) into new projects.
+- Never name character files `mira.yaml` / `tomas.yaml` unless the user's protagonist is actually named Mira/Tomas. Use the actual character names in lower-kebab-case.
 - Never skip a required field "for now" and circle back. Fill every required field BEFORE generating.
 - Never invent canonical artifact paths the orchestrator doesn't expect.
 - Never bundle questions ("What's your theme AND your characters?"). One at a time.
