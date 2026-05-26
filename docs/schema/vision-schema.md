@@ -23,9 +23,12 @@ register:
   pacing_default: "<measured | brisk | breath-paced + a sentence on how rhythm works>"
 
 scope:
-  intended_length: short_story         # short_story | novella | novel | scene_study
-  structural_shape: "<single-scene | episodic | braided | linear-progress | other — one phrase>"
+  intended_length: short_story         # scene_study | short_story | novella | novel | webnovel | screenplay
+  structural_shape: "<single-scene | episodic | braided | linear-progress | chapter-serial | other — one phrase>"
   time_span: "<concrete duration of the work's diegetic time>"
+  form_metadata: null                  # form-specific extension; populated for novella/novel/webnovel/screenplay when those forms are supported.
+                                        # for short_story / scene_study this remains null.
+                                        # examples (future): { chapters_target: 80, chapter_length: 2000, release_cadence: "weekly" } for webnovel
 
 refusals:
   - "<one forbidden move, concrete and specific>"
@@ -55,7 +58,7 @@ success_criteria:
 - `emotional_intent.primary`
 - `intellectual_intent.question_the_work_lives_inside`
 - `register` — all three sub-fields
-- `scope.intended_length` and `scope.structural_shape`
+- `scope.intended_length` and `scope.structural_shape`. `scope.form_metadata` is required only for non-short-story forms (novella+, webnovel, screenplay) when those flows are supported.
 - `refusals` — at least 3
 - `success_criteria` — at least 2, each falsifiable (a test you could run on the finished prose)
 

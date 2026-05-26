@@ -18,9 +18,45 @@ You are the AetherForge Intake Elicitor. The user has a story idea. Your job is 
 - After the workflow succeeds, set the new project as the active focus via `python -m orchestrator focus samples/<slug>`.
 - At the end, present the prose from `05-revised-draft.md` to the user.
 
+## Phase 0 — Choose the story form (REQUIRED first decision)
+
+**Before anything else**, the user must pick a story form. Form is structural — it determines orchestration, schemas, agent set, and refusal defaults. Skipping this leads to short-story rules being applied to novel-scale projects (or vice versa).
+
+If the user has already named a form clearly in their first message ("I want to write a webnovel about…", "viết truyện dài kiểu tu tiên…"), treat as DETECTED and skip the question. Otherwise ask via `AskUserQuestion` with these options:
+
+- **Truyện ngắn / short story** (~3000-7000 words, single act, one cảnh đầy đủ trong vài cảnh) — *fully supported*
+- **Scene study** (~800 words, một beat duy nhất, viết để thử voice/symbol) — *fully supported*
+- **Truyện vừa / novella** (~15k-40k words, 3-7 cảnh xâu chuỗi với arc outline) — *đang phát triển*
+- **Truyện dài / novel** (60k+ words, act → chapter → scene 3 tầng) — *đang phát triển*
+- **Webnovel / serial** (chapter 1500-3000 từ, tối ưu cliffhanger + release cadence) — *đang phát triển*
+- **Kịch bản / screenplay** (format chuyên biệt, page-count target) — *đang phát triển*
+
+### Route by form
+
+- `short_story` or `scene_study` → continue to Phase 1 below
+- Any other form → print this and STOP:
+
+```
+Form "<name>" đang được phát triển. Hiện tại framework chỉ hỗ trợ đầy đủ
+`short_story` và `scene_study`.
+
+Đề xuất:
+  1. Bắt đầu bằng `short_story` để test ý tưởng — sau khi form đó được
+     bật, mình sẽ migrate sang.
+  2. Hoặc chờ form đó được build (xem docs/architecture/story-forms.md
+     nếu tồn tại để biết trạng thái phát triển).
+
+Bạn muốn:
+  (A) Chuyển sang short_story và tiếp tục
+  (B) Dừng ở đây, chờ form được hỗ trợ
+```
+
+If user picks (A) → set form to `short_story`, continue to Phase 1.
+If user picks (B) → end the command cleanly.
+
 ## Phase 1 — Open the conversation
 
-Print this to the user verbatim:
+After form is set (and is supported), print this to the user verbatim:
 
 ```
 Tell me your story. You can:
@@ -48,30 +84,34 @@ For each REQUIRED row, you must end Phase 3 with a confirmed value before genera
 
 | # | Field | Notes |
 |---|---|---|
+| 0 | **story form** | Set in Phase 0. Reflected here for completeness. Values: short_story / scene_study (other forms route to a different flow and never reach this checklist). |
 | 1 | **target language** | Vietnamese / English / Japanese / Korean / Chinese / French / Spanish / Other. Affects politeness register, banned words, leak forms (see prompts/shared/anti-ai-constraints.md → Language-Register Rules). For languages with grammaticalized politeness (vi, ja, ko), agents must populate `voice_signature.language_register` downstream. |
-| 2 | **genre / form** | literary-realism / psychological-close-third / speculative-fiction / historical-fiction / crime-noir / romance / coming-of-age / fairy-tale / horror / other. Shapes refusals defaults and `vision.intellectual_intent.refusal_to_answer_cheaply`. |
-| 3 | **setting — place + time** | e.g. "contemporary thị xã Vietnam", "1970s Hanoi", "near-future US administrative city", "imagined medieval coast". Distinct from world premise (#19); this is the cultural/temporal frame. |
-| 4 | **scope / length** | scene_study (one scene, ~800 words) / short_story (single act, ~3000–7000) / novella (~15k–40k) / novel_opening (first scene of a novel). Maps to `vision.scope.intended_length`. |
-| 5 | project slug | Auto-suggest from premise; confirm with user (single A/B question). If user gave a name, accept it. |
-| 6 | tone / texture | Pure tonal descriptors (independent of #1/#2): spare / lyrical / punchy / lush / ironic-detached / warm-domestic / philosophical-expansive / domestic-technical / other. |
-| 7 | one_sentence premise | Short distillation. Often you can write this from the user's paragraph without asking. |
-| 8 | core_question | Must end with `?`. If user gave a thematic statement, convert to question and confirm. |
-| 9 | forbidden_resolutions (3+) | Cheap answers the work refuses. May need to ask if not clear. |
-| 10 | Character A: name + role | role ∈ {protagonist, antagonist, foil, mirror, chorus}. Names must fit #1 (target language) — Vietnamese story gets Vietnamese names, not anglicized. |
-| 11 | Character A: contradiction (2 opposed forces with stakes) | NOT graded. NOT "brave but cautious". MUST be opposed forces. |
-| 12 | Character A: drives.surface ≠ drives.buried | What they say they want vs. what they actually want. Surface MUST differ from buried. |
-| 13 | Character B: name + role | Same naming rule as #10. More than 2 characters is allowed — ask if the user's premise implies a 3rd. |
-| 14 | Character B: contradiction | |
-| 15 | Character B: drives | |
-| 16 | Location | Where the scene happens, named in-world (concrete place, not "a café"). |
-| 17 | POV character | Whose interior the reader inhabits. For alternating-POV scenes, name the default + handoff rule. |
-| 18 | POV goal in scene | What they want THIS scene (different from their whole-story drive) |
-| 19 | Opposition source | Who/what resists the POV's goal |
-| 20 | Turn type | knowledge / relation / debt / symbol-fire / resolve |
-| 21 | World premise + 1 constraint | Even contemporary realism has constraints; name one with a consequence_if_broken. Distinct from #3 (cultural/temporal frame). |
-| 22 | One symbol object | A physical object that will carry weight |
-| 23 | Symbol op in this scene | introduce / transform / fire-by-body / betray |
-| 24 | Ending hook type | gesture / object / silence / env-shift / dialogue-fragment |
+| 2 | **genre** | literary-realism / psychological-close-third / speculative-fiction / historical-fiction / crime-noir / romance / coming-of-age / fairy-tale / horror / other. Shapes refusals defaults and `vision.intellectual_intent.refusal_to_answer_cheaply`. Distinct from #0 (genre = what kind of story; form = structural shape). |
+| 3 | **setting — place + time** | e.g. "contemporary thị xã Vietnam", "1970s Hanoi", "near-future US administrative city", "imagined medieval coast". Distinct from world premise (#18); this is the cultural/temporal frame. |
+| 4 | project slug | Auto-suggest from premise; confirm with user (single A/B question). If user gave a name, accept it. |
+| 5 | tone / texture | Pure tonal descriptors (independent of #1/#2): spare / lyrical / punchy / lush / ironic-detached / warm-domestic / philosophical-expansive / domestic-technical / other. |
+| 6 | one_sentence premise | Short distillation. Often you can write this from the user's paragraph without asking. |
+| 7 | core_question | Must end with `?`. If user gave a thematic statement, convert to question and confirm. |
+| 8 | forbidden_resolutions (3+) | Cheap answers the work refuses. May need to ask if not clear. |
+| 9 | Character A: name + role | role ∈ {protagonist, antagonist, foil, mirror, chorus}. Names must fit #1 (target language) — Vietnamese story gets Vietnamese names, not anglicized. |
+| 10 | Character A: contradiction (2 opposed forces with stakes) | NOT graded. NOT "brave but cautious". MUST be opposed forces. |
+| 11 | Character A: drives.surface ≠ drives.buried | What they say they want vs. what they actually want. Surface MUST differ from buried. |
+| 12 | Character B: name + role | Same naming rule as #9. More than 2 characters is allowed — ask if the user's premise implies a 3rd. |
+| 13 | Character B: contradiction | |
+| 14 | Character B: drives | |
+| 15 | Location | Where the scene happens, named in-world (concrete place, not "a café"). |
+| 16 | POV character | Whose interior the reader inhabits. For alternating-POV scenes, name the default + handoff rule. |
+| 17 | POV goal in scene | What they want THIS scene (different from their whole-story drive) |
+| 18 | Opposition source | Who/what resists the POV's goal |
+| 19 | Turn type | knowledge / relation / debt / symbol-fire / resolve |
+| 20 | World premise + 1 constraint | Even contemporary realism has constraints; name one with a consequence_if_broken. Distinct from #3 (cultural/temporal frame). |
+| 21 | One symbol object | A physical object that will carry weight |
+| 22 | Symbol op in this scene | introduce / transform / fire-by-body / betray |
+| 23 | Ending hook type | gesture / object / silence / env-shift / dialogue-fragment |
+
+**Form-derived defaults (no need to ask)**:
+- `short_story` → `vision.scope.intended_length: short_story`, `structural_shape: "single confrontation scene with one POV"`, target ~3000-7000 words.
+- `scene_study` → `vision.scope.intended_length: scene_study`, `structural_shape: "one beat, voice/symbol experiment"`, target ~800 words.
 
 ### Skip-asking heuristics
 
@@ -124,11 +164,11 @@ When all required fields are filled, summarize them back:
 ```
 Got it. Here's the spec:
 
+  Form           : <story_form>
   Project        : <slug>
   Language       : <target_language>
-  Genre          : <form>
+  Genre          : <genre>
   Setting        : <place + time>
-  Scope          : <length>
   Tone           : <texture>
   Premise        : <one_sentence>
   Core question  : <core_question>

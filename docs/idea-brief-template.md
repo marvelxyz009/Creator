@@ -13,6 +13,18 @@ Copy the block below, fill it in, paste it as your reply when `/af-start` asks f
 
 ## 0. Framing (REQUIRED — these shape everything else)
 
+> **Section 0 is the architecture decision.** Story form determines orchestration (one scene vs. chapter chain vs. multi-act novel), schemas used, and refusal defaults. Language + genre + setting cascade through every later field.
+
+- **Story form** (REQUIRED — pick exactly one):
+  - [ ] **scene-study** (~800 words, one beat — voice/symbol experiment) — *fully supported*
+  - [ ] **short-story** (~3000–7000 words, single act, một cảnh có sức nặng đầy đủ) — *fully supported*
+  - [ ] novella (~15k–40k words, 3-7 scenes chained) — *đang phát triển*
+  - [ ] novel (60k+ words, act → chapter → scene structure) — *đang phát triển*
+  - [ ] webnovel / serial (chapter 1500-3000 từ, cliffhanger-optimized) — *đang phát triển*
+  - [ ] screenplay (page-count format) — *đang phát triển*
+
+  > Chọn form chưa hỗ trợ thì /af-start sẽ đề xuất bạn chuyển về short-story để test, hoặc dừng để chờ form được build.
+
 - **Target language** (the language the prose will be written in):
   - [ ] Vietnamese
   - [ ] English
@@ -23,7 +35,7 @@ Copy the block below, fill it in, paste it as your reply when `/af-start` asks f
   - [ ] Spanish
   - [ ] Other: ___
 
-- **Genre / form**:
+- **Genre** (what kind of story — distinct from story form above):
   - [ ] literary-realism
   - [ ] psychological-close-third
   - [ ] speculative-fiction (sci-fi / soft-speculative)
@@ -39,12 +51,6 @@ Copy the block below, fill it in, paste it as your reply when `/af-start` asks f
   > e.g. "contemporary thị xã Vietnam", "1970s Hanoi after the war", "near-future US administrative city", "imagined medieval coast"
 
   [setting here]
-
-- **Scope / length**:
-  - [ ] scene-study (~800 words, one beat)
-  - [ ] short-story (~3000–7000 words, single act)
-  - [ ] novella (~15k–40k words)
-  - [ ] novel-opening (first scene of a longer work)
 
 ## 1. Premise (REQUIRED)
 > One sentence: who, where, what's at stake. Write it in the target language if you prefer — AI will detect and proceed.
