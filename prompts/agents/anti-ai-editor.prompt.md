@@ -37,6 +37,12 @@ Pass 1 — **Detect**:
 - Scan for **curt-as-discipline** in dialogue (esp. in politeness-grammar languages): clipped grunts standing in for restraint.
 - Check voice signatures per POV/speaker.
 - Check sentence-length distribution against POV's signature, language-appropriately (see H5).
+- **Comprehension check**: after reading the full draft once, attempt to answer these three questions from the prose alone:
+  1. *Who are the named characters to each other?* (relationship, not just labels)
+  2. *What past event(s) drive the present scene's pressure?* (concrete past, not vague backstory)
+  3. *Why does THIS moment matter — what stakes does the POV face if the scene goes wrong?*
+  If any answer is "unclear" or requires inference the prose does not support, flag for H11 (insert past-anchors) and H15 (emotional crest with heart line). Opacity is a smell too.
+- **Vietnamese-target sweep** (when `target_language: vi`): run the four scans from [humanization-rules.md → H17](../../docs/anti-ai/humanization-rules.md#h17--post-write-vietnamese-sweep) — em-dash count, standalone-short-sentence audit, willful-contradiction pair check, reverse-translation spot-check.
 
 Pass 2 — **Humanize**:
 - H1 — Specificity substitution (abstract noun → material POV detail).
@@ -51,6 +57,7 @@ Pass 2 — **Humanize**:
 - H10 — Preserve canonical facts.
 - H11 — **Insert past-anchors when emotional residue is thin.** If the present scene is built on a charged past and the reader has no anchored sense of what that past was, the present cannot carry weight. Add 1–3 short interior past-facts (concrete time, place, person, object) in close-third POV, drawn from `memory_graph_excerpt` / `character.knowledge_set` / `character.wound`. These are POV-interior facts, NOT staged flashback scenes. Permitted by [global-narrative-rules.md → R1](../shared/global-narrative-rules.md#r1--imply-do-not-state).
 - H12 — **Language-aware politeness pass (dialogue only).** For target languages with grammaticalized politeness, audit every line of dialogue against language-specific rules. Reject curt-as-discipline; require address-particle / softener / engagement-extension per the [Language-Register Rules](../shared/anti-ai-constraints.md#language-register-rules).
+- H13–H17 — see [humanization-rules.md](../../docs/anti-ai/humanization-rules.md): discipline-as-effort (H13), rupture and private reality (H14), emotional crest (H15), don't-cut-substance trap (H16), post-write Vietnamese sweep (H17).
 
 ## 4. Output Format
 

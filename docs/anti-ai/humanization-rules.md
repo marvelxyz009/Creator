@@ -80,6 +80,38 @@ Counter-moves to apply after H1–H13:
 
 Detection signal: re-read the draft and try to predict the next beat after each paragraph. If you predict correctly ≥ 70% of the time, the rhythm is too even — apply H14 ruptures and density cap.
 
+### H15 — Emotional Crest (anti-flatline)
+A scene built on full suppression / restraint from beginning to end reads as flat, no matter how technically clean. Without one moment of crested felt sensation that the character then immediately suppresses, the reader has no thermometer for the discipline's stakes.
+
+Required for short_story and scene_study forms (other forms may have different cresting patterns):
+
+- **One moment of crested felt sensation** — somatic, concrete, named (not as emotion but as body-fact). Examples: `Một thứ lạnh chạy dọc sống lưng anh.` / `Tim cô đập một nhịp lệch.` / `Lòng bàn tay anh bỗng nóng lên một độ.` Place this at or near the canonical turn beat. The sensation should NOT be followed by a narrator-explanation of what it means — just the next concrete action.
+
+- **One moment of explicit desire before restraint** — the character WANTED to do the forbidden thing, before they didn't do it. `Một thoáng, có thể nửa giây, anh muốn gạt nó. Nhưng anh không gạt.` Required: the `nhưng` connector (L-VI-16) and a time-qualifier that bounds the desire (`một thoáng`, `chỉ trong một nhịp`, `nửa giây`). Without the bounded desire, the restraint reads as having cost nothing.
+
+- **One heart line** — a single sentence (or two clauses) in close-third POV that contains the work's central asymmetry or wound, in plain Vietnamese, no abstraction, no metaphor. Pattern: a fact about the character + a fact about the addressee/world, joined by `nhưng` or `mà`. Examples: `Trong nhiều năm anh đã đợi đèn cô. Mà cô không biết.` / `Cô đã chờ anh không bằng tên. Mà anh chưa bao giờ tới.` Place this near the end, just before the final environmental beat. The heart line should be the most plain sentence in the scene — the elevated sentences earn it.
+
+Detection signal: ask "where is the moment the discipline costs something visible?" If there is no answer, H15 is missing.
+
+### H16 — Do Not Cut Substance to Fix "Abstraction Too Much"
+When a critic says `literary abstraction vẫn hơi nhiều` or `câu trừu tượng dày`, the temptation is to delete every abstract sentence and replace with concrete reportage. **This is the wrong fix.** The substance the abstract sentences carry — the character's interior architecture, the canonical wound, the heart line — usually needs to STAY. What needs to go is the *meta-layer over* the abstraction (`anh nhận ra rằng...`, `cái đó đã trở thành một dạng khác của...`), not the abstraction itself.
+
+Process when responding to "abstraction too much":
+1. List every abstract/elevated sentence in the draft.
+2. Rank by function — which one IS the heart line? Which ones support it? Which ones repeat or restate?
+3. Keep the heart line and one or two strongest supports. Cut the rest. Do NOT cut to zero.
+4. For the cut ones, ask: is the substance still needed? If yes, render that substance through concrete action elsewhere. Do not lose the substance.
+
+The cắt-sạch (cut-everything) trap produces hollow prose that reads "clean" but says nothing. The reader was complaining about density, not about presence.
+
+### H17 — Post-Write Vietnamese Sweep
+Before finalizing prose for a Vietnamese target language, run these scans:
+
+1. **Em-dash count**: grep `—`. For each occurrence, classify as (a) true parallel that needs em-dash, (b) gloss/parenthetical — cut and restructure, (c) staged hesitation — replace with `...`. Target em-dash count for Vietnamese prose: 0 unless (a) is unavoidable.
+2. **Standalone short sentences**: every sentence ≤ 4 Vietnamese words. For each, classify as (a) clock-stamp (`2:17.`) — keep, (b) intentional rupture beat — keep if H14 calls for it, (c) accidental dangling fragment — expand or merge into adjacent sentence.
+3. **Willful-contradiction pairs**: search for the pattern `<want-action>. <not-action>.` (e.g. `Anh muốn X. Anh không X.`). Insert `Nhưng` or `Mà` between them (L-VI-16).
+4. **Reverse-translation spot-check**: pick three sentences that feel "literary" and back-translate to English. If the English reads as fluent literary prose, the Vietnamese is suspect — rewrite in Vietnamese-native syntax.
+
 ## Calibration Loop
 
 The agent maintains, per project:
