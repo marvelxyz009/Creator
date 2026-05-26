@@ -100,6 +100,16 @@ A character's slip should be a natural Vietnamese register shift, not a tacked-o
 - A tender address-particle out of register (`"đi cẩn thận nhé em"` from a character maintaining neutral distance).
 - Do NOT use `"à"` tacked after a comma as a leak. It does not occur naturally in Vietnamese.
 
+**Lexical and syntactic anglicisms to avoid in narration.**
+The most common AI tells when generating Vietnamese prose — each maps to an `L-VI-*` smell in [ai-smells](../../docs/anti-ai/ai-smells.md). Reject during the dialogue draft AND prose pass:
+
+- **English loanwords as common nouns** (L-VI-8): `block`, `set`, `key`, `feedback`, `framework`. Use Vietnamese equivalent unless the term is technical with no Vietnamese form.
+- **Spatial prepositions used for time** (L-VI-9): `quanh 2:05` is wrong (`quanh` = spatial *around*). Use `khoảng`, `chừng`, `vào khoảng`.
+- **Hyphen-chained word compounds** (L-VI-10): `không-gọi`, `không-cho-vào`, `chưa-biết`. Vietnamese has no nominal hyphen-compound. Either quote (`cái "không gọi" ấy`) or expand to natural phrase (`cái việc anh không gọi`).
+- **Em-dash + bare-noun apposition** (L-VI-11): `Công tắc — nhựa, hơi lung lay`. Integrate the attribute into the clause: `Công tắc nhựa, hơi lung lay`.
+- **Stacked time adverbials** (L-VI-12): `Sau đó, gần sáng,` — two time anchors fighting each other. Pick one: `Đến gần sáng,`.
+- **Abstract metacognitive phrasing** (L-VI-13): `anh không nghĩ điều này bằng câu`. Render through behavior or concrete somatic anchor instead of meta-language about thought.
+
 ## Calibration
 
 The banned-lexicon list is a starting seed. Per project, the [anti-ai-editor](../agents/anti-ai-editor.prompt.md) maintains an extended list of locally-overused phrases.
