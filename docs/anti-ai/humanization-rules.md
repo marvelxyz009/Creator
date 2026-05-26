@@ -63,6 +63,23 @@ A disciplined / repressing character whose suppression is rendered as *absence* 
 
 The reader needs to feel the *shape of what is being held*, not the *fact that nothing is there*.
 
+### H14 — Rupture and Private Reality (anti-AI-literary-voice)
+Generated prose tends toward uniform literary elevation — every detail serves the theme, every sentence wants to be the best sentence, every character is super-aware of their own discipline. This produces the "AI literary voice" smell: technically defensible per sentence, ngột thở at the paragraph level.
+
+Counter-moves to apply after H1–H13:
+
+- **Rupture** — at least one small loss of control per scene that the character did not intend. A hand that moves before the eye decides. A check of the phone they had decided not to check. Standing up and sitting back down for no reason. The character is briefly NOT the calibrated being they have been performing.
+
+- **Private reality detail** — at least one body-fact or tangential worry per scene that does NOT serve the symbol or the theme. A foot gone numb. Hunger. Needing to pee but staying. A memory of a fight with a colleague yesterday. The wrong shoe. Detergent smell from an ex's clothes. These details have no literary payoff. That is the point. Their job is to anchor the character in a real life with body-needs and non-thematic mental noise.
+
+- **Density cap on elevated sentences** — no more than one "heavy abstract sentence" per paragraph. The neighboring sentences must be concrete: action, sensation, environmental fact, or boring reportage. Without breath between, the reader cannot feel the abstract sentences as elevated — they all flatten into the same register.
+
+- **Strip the meta-meta** — character self-awareness about their own discipline (`a habit he taught himself`, `anh nhận ra mình đang thực hiện việc đó kỹ hơn`) reads as the character knowing they are a character. Cut. Discipline shows through action, not through awareness of discipline.
+
+- **Allow boring sentences** — the reader needs valleys to feel the peaks. After producing a beautiful sentence, the next sentence should be plain. Trust the reader to register the gradient.
+
+Detection signal: re-read the draft and try to predict the next beat after each paragraph. If you predict correctly ≥ 70% of the time, the rhythm is too even — apply H14 ruptures and density cap.
+
 ## Calibration Loop
 
 The agent maintains, per project:

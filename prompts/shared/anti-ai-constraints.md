@@ -34,6 +34,18 @@ A character explains an environmental detail to another character for the reader
 - A creature/object appearing once with editorial emphasis (`"a moth on the lampshade — she did not see it"`), advancing no arc state.
 - Sunlight-on-X imagery that does no work (`"golden dust in the sunlight slanting through the tin roof"`). Banned by default unless the light is itself a tracked symbol.
 
+### Performed Literary Voice (Category M — "AI literary voice")
+The smell of prose imitating literary minimalism too cleanly. Each sentence is defensible in isolation; the chain is the problem. Operationalized as a calibration check, not a binary rejection:
+
+- **Density cap**: no more than one "heavy abstract sentence" per paragraph. Heavy abstract = a sentence that articulates an idea about thought, time, recognition, or being. Adjacent sentences must be concrete (action / sensation / environmental fact / plain reportage).
+- **No meta-meta**: a character noticing their own noticing (`anh nhận ra mình đang thực hiện kỹ hơn`, `she felt herself feeling it`) reads as the character knowing they are in a story. Strip one layer.
+- **Rupture required**: every scene needs at least one small loss of control by the POV — an irrational micro-action (checking the phone they decided not to check, standing up and sitting back down, an unintended verbal slip).
+- **Private-reality detail required**: every scene needs at least one body-fact or tangential mental noise that does NOT serve the symbol/theme — back ache, hunger, a colleague's irritation, the wrong shoe, an ex-spouse's detergent. These have no literary payload; that is their job.
+- **No uniformly elevated paragraph chains**: if the reader can predict the rhythm (observation → abstraction → silence) for three paragraphs in a row, the scene has collapsed into Performed Literary Voice. Break the rhythm with pure-action or pure-environment paragraphs.
+- **Strip self-aware-discipline meta**: `a habit he taught himself`, `the act of doing this was itself...`, `a thói quen anh tự dạy mình` — the character is allowed to have the habit; the character is NOT allowed to articulate that they taught themselves to have it.
+
+See [ai-smells M1–M9](../../docs/anti-ai/ai-smells.md) and [humanization-rules H14](../../docs/anti-ai/humanization-rules.md).
+
 ## Banned Lexicon (Category G — delete on sight)
 
 ```

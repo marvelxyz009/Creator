@@ -94,11 +94,27 @@ A working blocklist (extended by the Humanization Agent):
 
 Blocklist hits do not auto-reject; they raise the burden of justification.
 
+## Category M — Performed Literary Voice ("AI literary voice")
+
+The smell of prose that imitates literary minimalism too cleanly. Each sentence might be defensible in isolation; the chain is the problem. Generated prose often hits these because the model is performing "literary depth" rather than rendering a specific character's specific life.
+
+| # | Pattern | Fix Direction |
+|---|---|---|
+| M1 | Predictable rhythm: observation → abstraction → silence triplet repeated more than twice in a row. The reader can predict the next beat. | Break the pattern. Insert a paragraph that is pure action with no reflection, OR a private-reality detail with no thematic payload. |
+| M2 | Character self-aware about their own discipline (`a habit he taught himself`, `the act of doing this was itself...`, `anh thực hiện kỹ hơn thường ngày, đủ kỹ để nhận ra mình đang thực hiện nó`). The character knows they are being a character. | Strip the meta-layer. If discipline must show, show through action (the hand stayed; the second look did not come), not through the character's awareness of their own discipline. |
+| M3 | Every detail serves the metaphor. There is no "garbage" — no neutral observation, no body-fact unrelated to theme. | Insert 1–2 details per scene that **do not serve the symbol or the theme**. A stomach gurgle. The wrong shoe. The phone buzzing in the other room. A thought about tomorrow's dentist. |
+| M4 | No rupture — the character never loses small control. Every micro-action is measured, deliberate, calibrated. | Add at least one rupture per scene: a small loss of control the character did not intend (a hand that moves before the eye decides; a sentence half-spoken; a small irrational action — checking a phone they had decided not to check, getting up and sitting back down without doing anything). |
+| M5 | Cinematic framing of mundane detail without character-specific perception. "The rectangle of light on the floor." "The cooling tea." Could be in any literary story. | Replace with **character-specific weird perception**: what does THIS specific person notice that another literary character would not? An ex-spouse's brand of detergent. A specific wrong-tuned radio frequency. The way one ear hears less. |
+| M6 | Meta-meta — character notices their own noticing (`anh nhận ra mình đang nghĩ về điều ấy`, `cái sự để ý ấy cũng là một dạng để ý khác`). | Cut one layer. Either character notices, or narrator notices character's noticing — never both. Default: cut the meta-meta entirely. |
+| M7 | Heavy abstract sentence followed by another heavy abstract sentence with no concrete breath between. Reader has no place to land. | Cap density: no more than **one heavy abstract sentence per paragraph**. The next sentence must be concrete action, sensation, or environmental fact. |
+| M8 | Lack of "private reality" — the character is rendered only through their literary-relevant perceptions. They never have a body-need, a financial worry, a small bored thought, a memory that has nothing to do with the scene's question. | Add at least one private-reality beat per scene: a body fact (a back ache, hunger, needing to pee), a non-thematic worry (rent, a colleague's irritation), or a tangential memory (something that happened yesterday at work). |
+| M9 | "Every sentence wants to be the best sentence" — the prose is uniformly elevated. There are no boring sentences to give the good ones contrast. | The reader needs valleys to feel the peaks. Cut 30–40% of the elevated sentences. Replace with plain reportage. The remaining elevated sentences will hit harder. |
+
 ## Severity
 
 - **Hard reject:** A1, A3, A4, B1, C3, E1, F1, F2, F2a, F5
-- **Soft reject (justify or rewrite):** A2, B2, C1, C2, D1, D2, E2, F3, F4, H1, H2
-- **Flag for humanization pass:** Category G, C4, C5, all of Category L (per active target language)
+- **Soft reject (justify or rewrite):** A2, B2, C1, C2, D1, D2, E2, F3, F4, H1, H2, M2, M4, M6
+- **Flag for humanization pass:** Category G, C4, C5, all of Category L (per active target language), all of Category M (calibration — count incidences, do not auto-reject)
 
 ## Related
 
