@@ -51,7 +51,33 @@ A taxonomy of the recurring failure patterns of generative prose. The Smell Dete
 |---|---|---|
 | F1 | Chapter ending on a question. | Forbidden by default; require a gesture or object instead. |
 | F2 | Scene closing with a reflection paragraph. | Cut last paragraph; end on the action that caused it. |
+| F2a | Narrator italicizing: em-dash apposition that explains (`"X — chưa từng Y"`), tag-explaining-meaning after concrete action (`"như chưa có việc gì"`), negation-as-finger (`"chỗ không có gì"`). | Cut the explaining clause; let the fact stand alone. |
 | F3 | Symmetry of opening and closing image used as substitute for change. | Require an actual graph-level delta. |
+| F4 | Decorative motif — object/creature/light appearing once with editorial emphasis, advancing no arc state. | Cut, or promote to a tracked symbol via [[symbolism-tracker]]. |
+| F5 | Detail-as-dialogue — a character explains an environmental detail to an addressee who would know or not care, solely to inform the reader. | Move detail to narration or cut. |
+
+## Category H — Discipline-As-Absence
+
+| # | Pattern | Fix Direction |
+|---|---|---|
+| H1 | A "controlled / disciplined" character rendered through omission — no body-tells, no caught-thoughts, no over-fixation on an object — reads as a passerby, not as restraint. | Render suppression as a small visible act (see [[humanization-rules]] H13). |
+| H2 | Curt monosyllabic answers (`"Ừ."`, `"Còn."`, `"Lâu rồi."`) used as a stand-in for discipline in languages with grammaticalized politeness. | Replace with full polite sentences whose content withholds. See Category L for language-specific rules. |
+
+## Category L — Language-Specific Smells (non-English target)
+
+The Smell Detector applies the English-language categories above plus per-language overrides. The framework's default rhythm-of-restraint is English-minimalist; other languages require their own rules.
+
+### Vietnamese
+
+| # | Pattern | Fix Direction |
+|---|---|---|
+| L-VI-1 | Choppy fragment chains — three or more period-separated fragments of ≤4 words consecutively (`"Mở. Rồi khép. Không cầm gì."`). English minimalism translated to Vietnamese reads as unnatural staccato. | Subtract via subject-elision and connectors (`rồi`, `mà`, `đoạn`, `xong`, `để`), not via period-chopping. |
+| L-VI-2 | Dangling adjective/adverb fragments (`"Anh hít vào. Chậm."`). | Join into one breath: `"Anh hít vào chậm."` or `"Anh hít một hơi rất chậm."`. |
+| L-VI-3 | ≥3 consecutive sentences starting with the same subject (`"Cô X. Cô Y. Cô Z."`). | Break with action-shift, object-anchor, or elided subject. |
+| L-VI-4 | Bare `"Ừ"` standing alone or opening a polite reply. Heavy in Vietnamese — reads as actively cold. | Reserve for canonical cold moments only. Prefer `"Phải."`, `"Đúng vậy."`, `"Có thể vậy thật."`, `"Cũng đúng đó."`. |
+| L-VI-5 | Dialogue lines without address particle (name, `anh`, `em`, `chị`, `cô`) or sentence-final softener (`nhỉ`, `thôi`, `đó`, `mà`, `nhé`, `chứ`, `vậy`). Reads as disrespectful, not as discipline. | Add at least one of: address particle, softener, or extension that echoes the addressee. |
+| L-VI-6 | Anglo-style tacked-on filler particle as subconscious leak (`"...lâu không, à?"`). Does not occur naturally in Vietnamese. | Replace with a culturally appropriate leak: a xưng hô shift (disciplined-name → relational pronoun), a small repetition (`"em về… em về lần này lâu không?"`), a tender particle out of register (`"đi cẩn thận nhé em"`). |
+| L-VI-7 | Theme abstract nouns leaked into narration (`ký ức` as abstract, `kỷ niệm`, `tình yêu`, `trái tim`, `linh hồn`, `định mệnh`, `vĩnh viễn`). | Replace with concrete sense (a record, a file, a year, a place, a hair-tie) or remove. Per-project blacklist extends this list. |
 
 ## Category G — Lexical Tells
 
@@ -64,9 +90,9 @@ Blocklist hits do not auto-reject; they raise the burden of justification.
 
 ## Severity
 
-- **Hard reject:** A1, A3, A4, B1, C3, E1, F1, F2
-- **Soft reject (justify or rewrite):** A2, B2, C1, C2, D1, D2, E2, F3
-- **Flag for humanization pass:** Category G, C4, C5
+- **Hard reject:** A1, A3, A4, B1, C3, E1, F1, F2, F2a, F5
+- **Soft reject (justify or rewrite):** A2, B2, C1, C2, D1, D2, E2, F3, F4, H1, H2
+- **Flag for humanization pass:** Category G, C4, C5, all of Category L (per active target language)
 
 ## Related
 

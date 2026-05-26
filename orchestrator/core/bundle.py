@@ -69,6 +69,26 @@ class BundleAssembler:
     def __init__(self, sample_dir: Path):
         self.sample_dir = sample_dir
 
+    def _load_all_characters(self, inputs: Path) -> dict[str, Any]:
+        """Discover and load every character file under inputs/characters/*.yaml.
+
+        Returns a dict keyed by ``"characters/<filename>"`` so the assembled
+        bundle preserves the same artifact-ref format the agents expect.
+
+        Raises FileNotFoundError if the characters directory is missing or
+        contains no .yaml files — the bundle contract requires at least one
+        participating character to be loadable.
+        """
+        from orchestrator.core.artifact import read_yaml
+
+        chars_dir = inputs / "characters"
+        if not chars_dir.is_dir():
+            raise FileNotFoundError(f"Character directory missing: {chars_dir}")
+        files = sorted(chars_dir.glob("*.yaml"))
+        if not files:
+            raise FileNotFoundError(f"No character files in {chars_dir}")
+        return {f"characters/{f.name}": read_yaml(f) for f in files}
+
     def assemble_for_scene_director(self, task_id: str) -> Bundle:
         """Assemble the bundle for [scene-director] from samples/<sample>/inputs/."""
         from orchestrator.core.artifact import read_yaml
@@ -80,8 +100,7 @@ class BundleAssembler:
             pinned_artifacts={
                 "theme.yaml": read_yaml(inputs / "theme.yaml"),
                 "world.yaml": read_yaml(inputs / "world.yaml"),
-                "characters/mira.yaml": read_yaml(inputs / "characters" / "mira.yaml"),
-                "characters/tomas.yaml": read_yaml(inputs / "characters" / "tomas.yaml"),
+                **self._load_all_characters(inputs),
                 "plot_beat.yaml": read_yaml(inputs / "plot_beat.yaml"),
                 "memory_graph_excerpt.yaml": read_yaml(inputs / "memory_graph_excerpt.yaml"),
             },
@@ -123,8 +142,7 @@ class BundleAssembler:
             task_id=task_id,
             pinned_artifacts={
                 "scene_blueprint": scene_blueprint,
-                "characters/mira.yaml": read_yaml(inputs / "characters" / "mira.yaml"),
-                "characters/tomas.yaml": read_yaml(inputs / "characters" / "tomas.yaml"),
+                **self._load_all_characters(inputs),
                 "memory_graph_excerpt.yaml": read_yaml(inputs / "memory_graph_excerpt.yaml"),
             },
             constraints={"rules": ["R1", "R3", "R4", "R5", "R7", "R8"]},
@@ -135,8 +153,6 @@ class BundleAssembler:
         self, task_id: str, draft: str, scene_blueprint: dict[str, Any]
     ) -> Bundle:
         """Assemble bundle for [anti-ai-editor]."""
-        from orchestrator.core.artifact import read_yaml
-
         inputs = self.sample_dir / "inputs"
         return Bundle(
             for_agent="anti-ai-editor",
@@ -144,8 +160,7 @@ class BundleAssembler:
             pinned_artifacts={
                 "draft_under_edit": draft,
                 "scene_blueprint": scene_blueprint,
-                "characters/mira.yaml": read_yaml(inputs / "characters" / "mira.yaml"),
-                "characters/tomas.yaml": read_yaml(inputs / "characters" / "tomas.yaml"),
+                **self._load_all_characters(inputs),
             },
             constraints={"rules": ["R1", "R8", "R9", "R10"]},
             budget_tokens=8000,

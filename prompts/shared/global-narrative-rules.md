@@ -8,6 +8,8 @@ Mirrors and operationalizes [docs/foundation/narrative-laws.md](../../docs/found
 - Emotion is rendered through **action, behavior, silence, environment, object** — never narrated directly.
 - Banned by default: *"She felt sad." / "He was angry." / "A wave of fear washed over her."*
 - Exception: a POV character may explicitly *misname* their own feelings (self-deception is permitted).
+- **Discipline must read as effort, not absence.** A character holding back is not the same as a character who has nothing to hold back. Render suppression as a small visible act (catching oneself mid-thought, body-displacement to a neutral object, a sentence that breaks off). Restraint-as-vacancy reads as "passerby", not as restraint.
+- **Interior past-facts are permitted in close-third POV** — one or two sentences of concrete past (a specific time, place, person, object the POV-character holds in mind) are not "staged flashback" and are often required for a scene's emotional residue to land. What is forbidden is **dressing up the past as a present-tense scene**, not the POV-character carrying past-facts. If the reader has no anchored sense of what the past was, the present has no weight.
 
 ## R2 — Theme is Never Explained
 - No character delivers a philosophical monologue summarizing the theme.
@@ -43,6 +45,7 @@ Mirrors and operationalizes [docs/foundation/narrative-laws.md](../../docs/found
 - Each POV/character has a measurable voice signature: sentence-length distribution, lexical register, *what they notice*, *what they refuse to name*.
 - Two characters cannot sound interchangeable.
 - Generic narration is a violation.
+- **Language register is part of voice.** In languages with grammaticalized politeness (Vietnamese xưng hô, Japanese keigo, Korean honorifics, etc.), a character's register-discipline is itself voice. See [anti-ai-constraints.md → Language-Register Rules](./anti-ai-constraints.md#language-register-rules). The framework's English-language defaults (clipped fragments as restraint, bare grunts as cool) do not translate; agents working in non-English target languages must consult the language-specific section.
 
 ## R9 — No Free Information
 - Every exposition beat must be *paid for* in scene, conflict, or revelation.

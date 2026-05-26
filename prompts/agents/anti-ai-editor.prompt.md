@@ -31,20 +31,26 @@ Pass 1 — **Detect**:
 - Scan for hard-banned patterns (Category A1/A3/A4, B1, C3, E1, F1, F2 — see [ai-smells](../../docs/anti-ai/ai-smells.md)).
 - Scan for soft patterns (A2, B2, C1/C2, D1/D2, F3).
 - Scan for banned lexicon (Category G).
+- Scan for **narrator-italicizing** (em-dash apposition that explains; tag-explaining-meaning after concrete action; negation-as-finger). See [anti-ai-constraints.md → Narrator-Italicizing](../shared/anti-ai-constraints.md#narrator-italicizing-f2-class).
+- Scan for **detail-as-dialogue** (character explaining environmental detail to an addressee who would know or not care).
+- Scan for **decorative motifs** (objects/creatures/light appearing once with editorial emphasis, advancing no arc).
+- Scan for **curt-as-discipline** in dialogue (esp. in politeness-grammar languages): clipped grunts standing in for restraint.
 - Check voice signatures per POV/speaker.
-- Check sentence-length distribution against POV's signature.
+- Check sentence-length distribution against POV's signature, language-appropriately (see H5).
 
 Pass 2 — **Humanize**:
 - H1 — Specificity substitution (abstract noun → material POV detail).
-- H2 — Show the refusal (render suppression, not feeling).
+- H2 — Show the refusal (render suppression, not feeling). For disciplined characters, render discipline as **effort** (small visible act of catching/redirecting/displacing), not as absence.
 - H3 — Cut the last beat (delete final sentence of paragraphs; check stronger).
 - H4 — Voice re-pinning.
-- H5 — Sentence-length perturbation.
+- H5 — Sentence-length perturbation. **In non-English target languages, sentence-length perturbation must respect the language's natural rhythm** — do not break clauses into English-minimalist fragments. For Vietnamese, prefer subject-elision and connector-joining (`rồi`, `mà`, `đoạn`) over period-chopping. See [anti-ai-constraints.md → Language-Register Rules](../shared/anti-ai-constraints.md#language-register-rules).
 - H6 — Object anchor every emotional beat.
 - H7 — Asymmetric punctuation redistribution.
 - H8 — Delete banished phrases; rebuild lines.
 - H9 — Net token reduction required.
 - H10 — Preserve canonical facts.
+- H11 — **Insert past-anchors when emotional residue is thin.** If the present scene is built on a charged past and the reader has no anchored sense of what that past was, the present cannot carry weight. Add 1–3 short interior past-facts (concrete time, place, person, object) in close-third POV, drawn from `memory_graph_excerpt` / `character.knowledge_set` / `character.wound`. These are POV-interior facts, NOT staged flashback scenes. Permitted by [global-narrative-rules.md → R1](../shared/global-narrative-rules.md#r1--imply-do-not-state).
+- H12 — **Language-aware politeness pass (dialogue only).** For target languages with grammaticalized politeness, audit every line of dialogue against language-specific rules. Reject curt-as-discipline; require address-particle / softener / engagement-extension per the [Language-Register Rules](../shared/anti-ai-constraints.md#language-register-rules).
 
 ## 4. Output Format
 

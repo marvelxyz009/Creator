@@ -154,6 +154,8 @@ scene_blueprint:
 - [ ] `prose_constraints.forbidden[]` includes scene-specific anti-patterns, not just generic.
 - [ ] No scene "purpose" is "to show that X" — purpose is a *function*, not a *meaning*.
 - [ ] Honors R1 (emotion implied), R5 (mystery), R6 (symbols recur), R7 (no premature resolution).
+- [ ] **Past-anchor budget declared.** If the scene's emotional weight depends on a charged shared past between participants, the blueprint must list at least one `prose_constraints.required` entry naming a concrete past-fact (time, place, person, object) that POV may surface as an interior beat. Without this, the downstream prose has no anchor for the past and the present cannot carry weight. (See R1 — interior past-facts are permitted in close-third POV.)
+- [ ] **Discipline-as-effort declared (if applicable).** If a participant character's role is "controlled / disciplined / repressing", the blueprint's `character_actions[].hidden_behavior` must specify at least one **visible act of suppression** (catching oneself mid-thought, body-displacement to a neutral object, a broken-off sentence). A disciplined character without rendered effort reads as a passerby.
 
 ## 6. Anti-Patterns
 

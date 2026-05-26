@@ -71,6 +71,16 @@ character:
     what_they_notice: [<3–5 specific items they will register>]
     what_they_refuse_to_name: [<things they will not utter directly>]
     rhythmic_tells: [<observable speech/thought patterns>]
+    language_register:                # required when target language has grammaticalized politeness (Vietnamese, Japanese, Korean, etc.)
+      target_language: <e.g. "vi" | "en" | "ja" | "ko">
+      address_pattern:                # how this character addresses each interlocutor
+        - to: char:<id>
+          form: <e.g. "anh/em (older male to younger female, ex-lovers)" | "stranger-formal" | "name-only, no pronoun">
+          discipline: <e.g. "maintains formal distance — never abbreviates her name, never uses pet-pronoun">
+      self_reference: <e.g. "anh" | "em" | "no first-person address" | "tôi">
+      preferred_softeners: [<e.g. "chắc vậy", "cũng có thể", "nhỉ", "thôi" — language-specific final particles this character habitually uses>]
+      forbidden_particles: [<e.g. "ạ (would be ironic from older to younger)", "tao/mày">]
+      canonical_subconscious_leak: <e.g. "slips from 'Thảo' to 'em' under pressure" — the ONE register shift that signals breakdown>
 
   knowledge_set:
     knows:
@@ -102,6 +112,7 @@ character:
 - [ ] `forbidden[]` includes at least one anti-pattern specific to this character.
 - [ ] Honors R3 (no perfect morality — even saints have a wound).
 - [ ] Honors R4 (contradiction is structural, not cosmetic).
+- [ ] **`voice_signature.language_register` is populated** when the project's target language has grammaticalized politeness (Vietnamese, Japanese, Korean, etc.). For English-only projects this field may be omitted. Downstream agents ([dialogue-specialist](./dialogue-specialist.prompt.md), [anti-ai-editor](./anti-ai-editor.prompt.md)) depend on `address_pattern`, `preferred_softeners`, and `canonical_subconscious_leak` to render dialogue that does not read as clipped-as-discipline.
 
 ## 6. Anti-Patterns
 

@@ -90,6 +90,7 @@ dialogue_draft:
 - [ ] No antagonist self-articulates their motive (R3 / banned beats).
 - [ ] At least one `voice_signature.what_they_refuse_to_name` is held — character does NOT name what they refuse.
 - [ ] `rhythm_arc` shows variation — no monotonic exchange.
+- [ ] **Language-register check (per target language)**: dialogue honors the politeness rules in [anti-ai-constraints.md → Language-Register Rules](../shared/anti-ai-constraints.md#language-register-rules) for the project's target language. No clipped-as-discipline; no detail-as-dialogue; canonical leaks use culturally appropriate forms.
 
 ## 6. Anti-Patterns
 
@@ -100,6 +101,15 @@ dialogue_draft:
 - ❌ **Tag-summarizing-meaning.** *"he said, trying to be brave"* — banned. Cut the tag's meaning; let voice and action carry it.
 - ❌ **Equal-length exchanges.** Real conflict produces rhythm imbalance; uniformity is suspect.
 - ❌ **First-offer reconciliation.** Apologies/concessions accepted on first offer.
+- ❌ **Curt-as-discipline.** In languages with politeness registers, clipped one-or-two-word answers do not read as discipline — they read as rudeness or absence-of-character. Render disciplined speakers with **full polite sentences whose content withholds**, not with truncated syntax.
+- ❌ **Detail-as-dialogue.** A character explains an environmental detail to an addressee who already knows it or would not care, solely to inform the reader. Move the detail to narration or cut it.
+
+## 6a. Politeness Register (language-aware)
+
+For target languages with grammaticalized politeness, consult [anti-ai-constraints.md → Language-Register Rules](../shared/anti-ai-constraints.md#language-register-rules). Quick reference:
+
+- **Vietnamese**: Every dialogue line in a polite/intimate register must include at least one of (a) address particle (name, `anh`/`em`/`chị`/`cô`), (b) sentence-final softener (`nhỉ`, `thôi`, `đó`, `mà`, `nhé`, `chứ`, `vậy`), (c) an extension/echo of the addressee's prior line. Bare `"Ừ"` standing alone is heavy and reserved for canonical cold moments or single grunts at parting.
+- A character's canonical **subconscious leak** should be a culturally appropriate register shift (Vietnamese: a xưng hô slip from disciplined-name to relational-pronoun; a tender particle appearing in a previously-neutral speech), not an Anglo-style tacked-on filler.
 
 ## 7. Failure Modes
 

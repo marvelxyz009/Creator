@@ -230,7 +230,7 @@ def cmd_run(args: argparse.Namespace, config: Config) -> int:
 
         wf = SceneGenerationWorkflow(config=config)
         report = wf.run(
-            sample_dir=args.sample.resolve(),
+            sample_dir=_normalize_sample_path(args.sample, config.repo_root),
             compare_golden=args.compare_golden,
             dry_run=args.dry_run,
         )
@@ -253,7 +253,7 @@ def cmd_inspect_sample(args: argparse.Namespace, config: Config) -> int:
     """Print the sample's directory tree and whether required inputs exist."""
     from orchestrator.core.artifact import inspect_sample
 
-    return inspect_sample(args.sample.resolve())
+    return inspect_sample(_normalize_sample_path(args.sample, config.repo_root))
 
 
 def cmd_run_agent(args: argparse.Namespace, config: Config) -> int:
@@ -272,7 +272,7 @@ def cmd_run_agent(args: argparse.Namespace, config: Config) -> int:
             run_scene_director,
         )
 
-        result = run_scene_director(sample_dir=args.sample.resolve(), config=config)
+        result = run_scene_director(sample_dir=_normalize_sample_path(args.sample, config.repo_root), config=config)
         print_summary(result, repo_root=config.repo_root)
         return 0 if result.ok else 1
 
@@ -345,12 +345,37 @@ def cmd_validate_agent_output(args: argparse.Namespace, config: Config) -> int:
     return 0 if result.ok else 1
 
 
+def _normalize_sample_path(raw: Path, repo_root: Path) -> Path:
+    """Resolve a --sample arg.
+
+    Accepts both the full form (``samples/mvp-scene-01``) and the bare-slug
+    form (``mvp-scene-01``). If the literal path does not exist but
+    ``samples/<slug>`` does, prefer the latter — otherwise canonical artifacts
+    get written to a stray top-level directory.
+    """
+    resolved = raw.resolve()
+    if resolved.exists():
+        return resolved
+    # Bare-slug fallback: try repo_root/samples/<name>.
+    fallback = (repo_root / "samples" / raw.name).resolve()
+    if fallback.exists():
+        logger.info(
+            "Sample %s not found; using samples/%s instead.",
+            raw,
+            raw.name,
+        )
+        return fallback
+    # Return the resolved-but-nonexistent original so the caller can emit a
+    # specific error message against the path the user actually typed.
+    return resolved
+
+
 def _resolve_sample(args: argparse.Namespace, config: Config) -> Path | None:
     """Pick sample from --sample arg, else active project, else None."""
     from orchestrator.core.project import get_active_sample
 
     if getattr(args, "sample", None) is not None:
-        return args.sample.resolve()
+        return _normalize_sample_path(args.sample, config.repo_root)
     active = get_active_sample(config.repo_root)
     if active is not None:
         logger.info("Using active project: %s", active.relative_to(config.repo_root))
@@ -389,7 +414,7 @@ def cmd_create_scene(args: argparse.Namespace, config: Config) -> int:
 def cmd_focus(args: argparse.Namespace, config: Config) -> int:
     from orchestrator.core.project import set_active_sample, write_project_summary
 
-    sample = args.sample.resolve()
+    sample = _normalize_sample_path(args.sample, config.repo_root)
     if not sample.exists():
         logger.error("Sample directory does not exist: %s", sample)
         return 1
