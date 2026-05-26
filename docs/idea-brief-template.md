@@ -11,8 +11,43 @@ Copy the block below, fill it in, paste it as your reply when `/af-start` asks f
 ```
 # IDEA BRIEF
 
+## 0. Framing (REQUIRED — these shape everything else)
+
+- **Target language** (the language the prose will be written in):
+  - [ ] Vietnamese
+  - [ ] English
+  - [ ] Japanese
+  - [ ] Korean
+  - [ ] Chinese
+  - [ ] French
+  - [ ] Spanish
+  - [ ] Other: ___
+
+- **Genre / form**:
+  - [ ] literary-realism
+  - [ ] psychological-close-third
+  - [ ] speculative-fiction (sci-fi / soft-speculative)
+  - [ ] historical-fiction
+  - [ ] crime-noir
+  - [ ] romance
+  - [ ] coming-of-age
+  - [ ] fairy-tale / magical-realism
+  - [ ] horror
+  - [ ] Other: ___
+
+- **Setting — place + time** (cultural/temporal frame, distinct from world rules below):
+  > e.g. "contemporary thị xã Vietnam", "1970s Hanoi after the war", "near-future US administrative city", "imagined medieval coast"
+
+  [setting here]
+
+- **Scope / length**:
+  - [ ] scene-study (~800 words, one beat)
+  - [ ] short-story (~3000–7000 words, single act)
+  - [ ] novella (~15k–40k words)
+  - [ ] novel-opening (first scene of a longer work)
+
 ## 1. Premise (REQUIRED)
-> One sentence: who, where, what's at stake.
+> One sentence: who, where, what's at stake. Write it in the target language if you prefer — AI will detect and proceed.
 > Câu một dòng: ai, ở đâu, đang gì.
 
 [your premise here]
@@ -69,12 +104,16 @@ Copy the block below, fill it in, paste it as your reply when `/af-start` asks f
 - Consequence if that rule is broken:
 - How it creates pressure on this specific scene:
 
-## 7. Tone / register (REQUIRED — pick one or describe)
-- [ ] Spare, materially specific (Cusk / Ishiguro / late Hemingway)
-- [ ] Psychological close-third with introspection (Munro / Robinson)
-- [ ] Speculative-melancholic (psychological sci-fi)
-- [ ] Domestic-intergenerational (Vietnamese-literary tradition)
-- [ ] Philosophical-expansive (Russian-literary tradition)
+## 7. Tone / texture (REQUIRED — pure tonal descriptors, independent of language + genre above)
+> Pick a tonal texture. This is HOW the prose feels at the sentence level, not WHAT genre or language it's in.
+- [ ] spare (Cusk / Ishiguro / late Hemingway)
+- [ ] lyrical (long-breath sentences, image-forward)
+- [ ] punchy (short, impacting, working-class register)
+- [ ] lush (rich texture, multiple sensory channels per line)
+- [ ] ironic-detached (cool narrator distance, dry wit)
+- [ ] warm-domestic (intimate kitchen-table register)
+- [ ] philosophical-expansive (Russian-literary tradition)
+- [ ] domestic-technical (clinical terms used like kitchen terms)
 - [ ] Other:
 
 ## 8. Symbol (REQUIRED)

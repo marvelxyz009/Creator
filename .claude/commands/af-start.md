@@ -44,37 +44,46 @@ Read the user's reply carefully. For each row of the checklist below, mark the f
 
 ### REQUIRED checklist
 
-For each REQUIRED row, you must end Phase 3 with a confirmed value before generation begins.
+For each REQUIRED row, you must end Phase 3 with a confirmed value before generation begins. Rows 1–4 are **framing decisions** that shape every later answer — ask these first, in order, if the user hasn't already provided them.
 
 | # | Field | Notes |
 |---|---|---|
-| 1 | project slug | Auto-suggest from premise; confirm with user (single A/B question). If user gave a name, accept it. |
-| 2 | tone / register | One of: spare-literary, psychological-close-third, speculative-melancholic, vietnamese-literary, russian-philosophical, or custom |
-| 3 | one_sentence premise | Short distillation. Often you can write this from the user's paragraph without asking. |
-| 4 | core_question | Must end with `?`. If user gave a thematic statement, convert to question and confirm. |
-| 5 | forbidden_resolutions (3+) | Cheap answers the work refuses. May need to ask if not clear. |
-| 6 | Character A: name + role | role ∈ {protagonist, antagonist, foil, mirror, chorus} |
-| 7 | Character A: contradiction (2 opposed forces with stakes) | NOT graded. NOT "brave but cautious". MUST be opposed forces. |
-| 8 | Character A: drives.surface ≠ drives.buried | What they say they want vs. what they actually want. Surface MUST differ from buried. |
-| 9 | Character B: name + role | |
-| 10 | Character B: contradiction | |
-| 11 | Character B: drives | |
-| 12 | Location | Where the scene happens |
-| 13 | POV character | Whose interior the reader inhabits |
-| 14 | POV goal in scene | What they want THIS scene (different from their whole-story drive) |
-| 15 | Opposition source | Who/what resists the POV's goal |
-| 16 | Turn type | knowledge / relation / debt / symbol-fire / resolve |
-| 17 | World premise + 1 constraint | Even contemporary realism has constraints; name one with a consequence_if_broken |
-| 18 | One symbol object | A physical object that will carry weight |
-| 19 | Symbol op in this scene | introduce / transform / fire-by-body / betray |
-| 20 | Ending hook type | gesture / object / silence / env-shift / dialogue-fragment |
+| 1 | **target language** | Vietnamese / English / Japanese / Korean / Chinese / French / Spanish / Other. Affects politeness register, banned words, leak forms (see prompts/shared/anti-ai-constraints.md → Language-Register Rules). For languages with grammaticalized politeness (vi, ja, ko), agents must populate `voice_signature.language_register` downstream. |
+| 2 | **genre / form** | literary-realism / psychological-close-third / speculative-fiction / historical-fiction / crime-noir / romance / coming-of-age / fairy-tale / horror / other. Shapes refusals defaults and `vision.intellectual_intent.refusal_to_answer_cheaply`. |
+| 3 | **setting — place + time** | e.g. "contemporary thị xã Vietnam", "1970s Hanoi", "near-future US administrative city", "imagined medieval coast". Distinct from world premise (#19); this is the cultural/temporal frame. |
+| 4 | **scope / length** | scene_study (one scene, ~800 words) / short_story (single act, ~3000–7000) / novella (~15k–40k) / novel_opening (first scene of a novel). Maps to `vision.scope.intended_length`. |
+| 5 | project slug | Auto-suggest from premise; confirm with user (single A/B question). If user gave a name, accept it. |
+| 6 | tone / texture | Pure tonal descriptors (independent of #1/#2): spare / lyrical / punchy / lush / ironic-detached / warm-domestic / philosophical-expansive / domestic-technical / other. |
+| 7 | one_sentence premise | Short distillation. Often you can write this from the user's paragraph without asking. |
+| 8 | core_question | Must end with `?`. If user gave a thematic statement, convert to question and confirm. |
+| 9 | forbidden_resolutions (3+) | Cheap answers the work refuses. May need to ask if not clear. |
+| 10 | Character A: name + role | role ∈ {protagonist, antagonist, foil, mirror, chorus}. Names must fit #1 (target language) — Vietnamese story gets Vietnamese names, not anglicized. |
+| 11 | Character A: contradiction (2 opposed forces with stakes) | NOT graded. NOT "brave but cautious". MUST be opposed forces. |
+| 12 | Character A: drives.surface ≠ drives.buried | What they say they want vs. what they actually want. Surface MUST differ from buried. |
+| 13 | Character B: name + role | Same naming rule as #10. More than 2 characters is allowed — ask if the user's premise implies a 3rd. |
+| 14 | Character B: contradiction | |
+| 15 | Character B: drives | |
+| 16 | Location | Where the scene happens, named in-world (concrete place, not "a café"). |
+| 17 | POV character | Whose interior the reader inhabits. For alternating-POV scenes, name the default + handoff rule. |
+| 18 | POV goal in scene | What they want THIS scene (different from their whole-story drive) |
+| 19 | Opposition source | Who/what resists the POV's goal |
+| 20 | Turn type | knowledge / relation / debt / symbol-fire / resolve |
+| 21 | World premise + 1 constraint | Even contemporary realism has constraints; name one with a consequence_if_broken. Distinct from #3 (cultural/temporal frame). |
+| 22 | One symbol object | A physical object that will carry weight |
+| 23 | Symbol op in this scene | introduce / transform / fire-by-body / betray |
+| 24 | Ending hook type | gesture / object / silence / env-shift / dialogue-fragment |
 
 ### Skip-asking heuristics
 
-If a user paragraph **clearly implies** a field, treat it as DETECTED — don't ask:
-- "A grieving widow walks into a memory clinic" → DETECTED: protagonist role, location, tone (speculative-melancholic), one character
-- "Set in 1970s Hanoi after the war" → DETECTED: world premise, register (vietnamese-literary), implicit refusals
-- "She finally confronts her father about the letter" → DETECTED: protagonist, opposition, turn type (likely knowledge or relation)
+If a user paragraph **clearly implies** a field, treat it as DETECTED — don't ask. The framing decisions (rows 1–4) cascade through everything; aggressive detection is preferred.
+
+- "A grieving widow walks into a memory clinic" → DETECTED: protagonist role, location, genre (speculative-fiction), one character
+- "Set in 1970s Hanoi after the war" → DETECTED: target language (Vietnamese), setting (1970s Hanoi), genre (historical-fiction), tone hints (likely spare or warm-domestic), implicit refusals (no anglicization, no historical-novel-tourism)
+- "Cô giáo cũ về thăm thị xã" → DETECTED: target language (Vietnamese), setting (contemporary Vietnamese provincial town), Character A (former teacher returning), implicit register (vietnamese-literary, domestic-technical)
+- "She finally confronts her father about the letter" → DETECTED: protagonist, opposition, turn type (likely knowledge or relation), genre hint (literary-realism)
+- "A boy in a small village finds a stone that speaks at night" → DETECTED: genre (fairy-tale / magical-realism), Character A (child protagonist), symbol (the stone), scope hint (short_story)
+
+**Language detection from premise text**: if the user writes the premise in Vietnamese, target language is Vietnamese unless explicitly contradicted. Same for any non-English language.
 
 Trust the user's input. Only ask about things they genuinely didn't tell you.
 
@@ -116,11 +125,15 @@ When all required fields are filled, summarize them back:
 Got it. Here's the spec:
 
   Project        : <slug>
-  Tone           : <register>
+  Language       : <target_language>
+  Genre          : <form>
+  Setting        : <place + time>
+  Scope          : <length>
+  Tone           : <texture>
   Premise        : <one_sentence>
   Core question  : <core_question>
   Refusals       : <count> total
-  Characters     : <A> (<role>) ↔ <B> (<role>)
+  Characters     : <A> (<role>) ↔ <B> (<role>) [+ <C> if 3-character]
   Scene location : <location>
   POV            : <character>
   Turn type      : <turn_type>
