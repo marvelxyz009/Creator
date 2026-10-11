@@ -10,4 +10,4 @@ Nét dày hơn ở mặt tiền, nét mảnh ở núi xa; màu đất và lục 
 
 Thoại bình thường trong bóng mềm, tiếng hét dùng biên gãy vừa đủ; suy nghĩ dùng caption khác thoại nói. Thoại trong bản viết phải giữ nguyên tiếng Việt, dấu đầy đủ. Bố trí khoảng trống trước khi vẽ, đuôi bóng chỉ đúng người, không che tay bấu rễ hoặc hướng nhìn. Một hệ chữ có nhịp nét phù hợp tranh; chưa chọn font thật trước kiểm tra dấu và giấy phép.
 
-Ảnh thiếu: sheet nhận diện thạch hầu, Xám, Tai Sứt, mẹ con Mầm; biểu cảm; sơ đồ khe; trang thử cứu hộ. Chưa có ảnh được tạo hoặc duyệt. Chỉ chuẩn bị bộ ảnh sau prose được duyệt và yêu cầu sản xuất manga.
+Ảnh thiếu: sheet nhận diện thạch hầu, khỉ già, khỉ tai sứt, mẹ con khỉ con; biểu cảm; sơ đồ khe; trang thử cứu hộ. Chưa có ảnh được tạo hoặc duyệt. Chỉ chuẩn bị bộ ảnh sau prose được duyệt và yêu cầu sản xuất manga.

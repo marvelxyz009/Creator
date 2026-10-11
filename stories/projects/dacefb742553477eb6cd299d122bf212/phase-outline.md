@@ -25,7 +25,7 @@ Phase III có những chương gia đình, đời sống và tranh luận trong 
 3. Nước đổi dòng: xung đột nguồn sống với yêu thú có mục tiêu cụ thể.
 4. Lần dẫn khí đầu: có tiến bộ nhưng thất bại thực hành gây chấn thương, buộc đổi cách luyện.
 5. Đường sau thác: khảo sát lối trú trước khi đem cả đàn qua; ký ức chỉ gợi ý, không bảo đảm an toàn.
-6. Ai đi trước: Tai Sứt muốn liều, Khỉ Xám muốn giữ con nhỏ; thạch hầu phải đưa ra kế hoạch cứu cả hai nhóm.
+6. Ai đi trước: khỉ tai sứt muốn liều, khỉ già lông xám muốn giữ con nhỏ; thạch hầu phải đưa ra kế hoạch cứu cả hai nhóm.
 7. Trận đánh đầu: dùng địa hình, chuẩn bị và năng lực đã thể hiện; không đột phá vô cớ giữa trận.
 8. Một nơi gọi là nhà: được trao quyền dẫn đàn kèm trách nhiệm; nhận ra không thể ở mãi mà vẫn giải quyết giới hạn tu luyện.
 
@@ -36,8 +36,8 @@ Có thể tách các mốc thành nhiều chương khi cảnh cần dung lượn
 - Mở bằng tiếng đá nứt, muối biển và thân thể lạ. Ký ức hiện đại đến rời rạc; hắn thử đứng, thất bại vì chưa quen đuôi và bàn chân.
 - Phát hiện đàn khỉ tránh một sườn núi, nhận thấy cả nguy cơ lẫn lối thoát. Chưa biết chắc niên đại, chưa gọi tất cả bằng tên nguyên tác.
 - Một khỉ nhỏ mắc ở mép đá. Hắn có thể bỏ đi tìm thác như ký ức gợi ý, nhưng chọn cứu.
-- Dùng rễ cây và sự trợ giúp của Tai Sứt; sức bền tiên thiên chỉ hỗ trợ, không thay kế hoạch. Cứu được con nhỏ, bị thương ở lòng bàn tay.
-- Khỉ Xám cho đi cùng đàn nhưng chưa tin làm thủ lĩnh. Hắn nhận ra đây là những sinh mạng có nhu cầu thật.
+- Dùng rễ cây và sự trợ giúp của khỉ tai sứt; sức bền tiên thiên chỉ hỗ trợ, không thay kế hoạch. Cứu được con nhỏ, bị thương ở lòng bàn tay.
+- Khỉ già lông xám cho đi cùng đàn nhưng chưa tin làm thủ lĩnh. Hắn nhận ra đây là những sinh mạng có nhu cầu thật.
 - Kết: nước ở điểm trú cũ đã cạn, trong bùn có dấu chân yêu thú. Mục tiêu chương sau là tìm nước và nơi trú; không kết bằng một vị thần đột nhiên biết toàn bộ bí mật.
 
 ## Bản đồ tri thức
@@ -49,8 +49,8 @@ Có thể tách các mốc thành nhiều chương khi cảnh cần dung lượn
 | Mã | Lần xuất hiện và ích lợi tức thời | Payoff dự kiến | Điều kiện |
 |---|---|---|---|
 | S01 | Rễ chịu lực dùng cứu khỉ ở chương 1 | Tuyến thoát và phòng thủ khi núi bị vây, phase VI | Ghi địa hình nhất quán; không biến rễ thành thần vật |
-| S02 | Khỉ Xám nhớ đường nước theo mùa trong arc đầu | Tri thức cộng đồng giúp giữ dân khi vua vắng mặt, III/VI | Bà phải có cảnh khảo sát và truyền kiến thức |
-| S03 | Tai Sứt liều vì sợ bị bỏ lại, arc đầu | Bất đồng mệnh lệnh trong liên minh, IV | Có tích lũy quan hệ, không đổi tính chỉ để tạo phản bội |
+| S02 | Khỉ già lông xám nhớ đường nước theo mùa trong arc đầu | Tri thức cộng đồng giúp giữ dân khi vua vắng mặt, III/VI | Bà phải có cảnh khảo sát và truyền kiến thức |
+| S03 | Khỉ tai sứt liều vì sợ bị bỏ lại, arc đầu | Bất đồng mệnh lệnh trong liên minh, IV | Có tích lũy quan hệ, không đổi tính chỉ để tạo phản bội |
 | S04 | Một kết quả cứu đàn khác ký ức, I | Chiến lược dựa dự đoán thất bại trong V | Nêu rõ nhân vật từng dự đoán gì và hành động nào làm lệch |
 | S05 | Nguồn nước bị chiếm, I | Ngộ Không phải đối diện cách mình phân tài nguyên, III/VII | Nhắc lại bằng lựa chọn phân phối, không chỉ thoại triết lý |
 

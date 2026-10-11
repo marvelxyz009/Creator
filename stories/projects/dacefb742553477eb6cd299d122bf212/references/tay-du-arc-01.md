@@ -8,7 +8,7 @@
 
 ## Cải biên sử dụng trong chương 1
 
-Ký ức hiện đại; lúng túng với thân thể; Khỉ Xám, Tai Sứt, Mầm; tai nạn cứu khỉ; nguồn nước cạn và dấu chân lạ đều là sáng tác mới. Nhân vật cảm nhận ánh chói lúc mở mắt nhưng không biết Thiên Đình có quan sát không. Chưa kể cảnh Thiên Đình hoặc sửa nó thành thế lực biết bí mật chuyển sinh. Hoa Quả Sơn là suy đoán có cơ sở của nhân vật, chưa được bảng tên xác nhận. Khỉ hiểu nhau qua tiếng gọi bầy được người chuyển sinh lĩnh hội, không mặc nhiên nói tiếng người.
+Ký ức hiện đại; lúng túng với thân thể; khỉ già lông xám, khỉ tai sứt, khỉ con lông nâu nhạt; tai nạn cứu khỉ; nguồn nước cạn và dấu chân lạ đều là sáng tác mới. Nhân vật cảm nhận ánh chói lúc mở mắt nhưng không biết Thiên Đình có quan sát không. Chưa kể cảnh Thiên Đình hoặc sửa nó thành thế lực biết bí mật chuyển sinh. Hoa Quả Sơn là suy đoán có cơ sở của nhân vật, chưa được bảng tên xác nhận. Khỉ hiểu nhau qua tiếng gọi bầy được người chuyển sinh lĩnh hội, không mặc nhiên nói tiếng người.
 
 [Hồi 2](https://zh.wikisource.org/wiki/西遊記/第002回) đã mở để chuẩn bị đối chiếu tiếp; chưa trích công pháp vào chương này.
 

@@ -40,9 +40,9 @@ Cơ thể thực sự là khỉ; đuôi, bàn chân và thăng bằng ảnh hư�
 ## Dàn nhân vật mở đầu — nhân vật phụ mới là sáng tác
 
 - Thạch hầu: muốn chứng minh có thể kiểm soát tương lai. Cứu đàn khỉ là lựa chọn đầu tiên, không phải phần thưởng nhiệm vụ.
-- Bà Khỉ Xám: giữ ký ức đường di cư và nguồn thức ăn; muốn cả đàn sống qua mùa thiếu. Không trao ngôi vua chỉ vì thạch hầu khác thường. Câu thoại mẫu: “Ngươi nhảy xa. Ai mang con nhỏ qua?”
-- Khỉ Tai Sứt: giỏi dò đường, sợ bị bỏ lại; muốn sức mạnh để không phải chạy nữa. Có thể bất tuân lệnh khi cho rằng rút lui là hèn. Câu thoại mẫu: “Giữ hang đến bao giờ? Đợi chúng quay lại à?”
-- Hầu nhỏ Mầm: cần sự chăm sóc, không có bí mật thân thế siêu cấp. Việc chăm một sinh mạng khiến kế hoạch luyện công phải điều chỉnh; không lặp lại mô-típ bắt cóc làm động lực.
+- Khỉ già lông xám: giữ ký ức đường di cư và nguồn thức ăn; muốn cả đàn sống qua mùa thiếu. Không trao ngôi vua chỉ vì thạch hầu khác thường. Câu thoại mẫu: “Ngươi nhảy xa. Ai mang con nhỏ qua?”
+- Khỉ tai sứt: giỏi dò đường, sợ bị bỏ lại; muốn sức mạnh để không phải chạy nữa. Có thể bất tuân lệnh khi cho rằng rút lui là hèn. Câu thoại mẫu: “Giữ hang đến bao giờ? Đợi chúng quay lại à?”
+- Khỉ con lông nâu nhạt: cần sự chăm sóc, không có bí mật thân thế siêu cấp. Việc chăm một sinh mạng khiến kế hoạch luyện công phải điều chỉnh; không lặp lại mô-típ bắt cóc làm động lực.
 - Sơn chủ đối địch đầu tiên: yêu thú địa phương muốn chiếm nguồn nước trước mùa khô. Có địa bàn và lợi thế thật; xung đột có thể giải quyết bằng đổi tuyến nước hoặc giao chiến, không chỉ giết để nhận bảo vật.
 
 Các nhân vật như Bồ Đề, Ngưu Ma Vương, Na Tra, Dương Tiễn chỉ chốt vai trò sau kiểm chứng nguồn và thiết kế arc; chưa gán bí mật “đều biết chuyện chuyển sinh”.
