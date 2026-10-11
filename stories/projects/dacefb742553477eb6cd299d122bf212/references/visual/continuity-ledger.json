@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "reference": "references/visual/cast-sheet-v1.png",
+  "sha256": "88073bbb5ac86cbf4716e89526fb71c38b15d74df052c4a90381ec64ac1a59dc",
+  "inspected": true,
+  "inspection": "Ảnh đã được xem bằng view_image: ba góc toàn thân thạch hầu, ba biểu cảm, lineup Xám/Tai Sứt/mẹ Mầm và biển núi. Lông vàng nâu, mặt đào nhạt và mắt hổ phách nhất quán. Tai Sứt nâu sẫm, khuyết tai trái ở phía phải người xem. Chưa có sheet riêng từng nhân vật phụ, đủ cho trang thử với hai nhân vật.",
+  "status": "assistant_accepted_for_proof",
+  "human_review": "pending",
+  "characters": {
+    "stone-monkey": [
+      "golden brown fur",
+      "narrow peach muzzle",
+      "amber eyes",
+      "long tail",
+      "lean adolescent monkey",
+      "no clothes or weapons"
+    ],
+    "torn-ear": [
+      "dark brown fur",
+      "left ear upper notch",
+      "long arms",
+      "bare animal body"
+    ]
+  },
+  "scene_page_4": {
+    "injuries": "Chưa có thương tích cứu hộ",
+    "props": "Không gậy, không giáp",
+    "previous_approved_page": null
+  }
+}
