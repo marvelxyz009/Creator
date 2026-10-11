@@ -1,0 +1,3 @@
+# Biên tập chương 1
+
+Đã đọc toàn bản thảo và sửa toàn bản chương, giữ tuyến nguyên nhân cứu hộ và kết cảnh nước cạn. Giảm một câu đùa làm nhẹ nguy hiểm; thêm giới hạn điều tra dấu chân, làm rõ Tai Sứt định dùng đá khi gặp thú và lời dặn rút lui. Điểm yếu đã xử lý: đoạn sau cứu hộ có thể thành kể kế hoạch dài; giữ kế hoạch ngắn, nối bằng đường vòng và quan sát thực địa. Chưa gọi chủ nhân dấu chân là một yêu thú đã xác định; chưa tuyên bố thay đổi thiên mệnh. Hình thể, thương tích và thoại bầy khỉ được theo dõi trong audit. Nhịp chậm đầu chương là chủ ý để sức mạnh sau này có nền, không phải lỗi continuity.

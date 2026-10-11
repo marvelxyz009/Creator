@@ -56,7 +56,13 @@ samples/*/generated/
 *.sqlite3-shm
 *.log
 
-# Chat-first manuscripts, generated images and progress
-stories/
+# Chat-first data stays local except this explicitly published story
+stories/*
+!stories/projects/
+stories/projects/*
+!stories/projects/dacefb742553477eb6cd299d122bf212/
+!stories/sessions/
+stories/sessions/*
+!stories/sessions/df696de1978e472083195b270a117176/
 
 .packaging/

@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Thần thoại thủy mặc",
+    "summary": "Manhua màu dạng trang, đọc trái sang phải. Mỹ thuật dùng nét mực mạnh, màu khoáng, mây và đá có kết cấu, kiến trúc cổ phân tầng theo từng thế lực. Ngộ Không mang hình thể khỉ linh hoạt, gương mặt biểu cảm và dấu hiệu nhận diện ổn định; trang phục đổi theo quá trình trưởng thành. Đại cảnh có quy mô, giao chiến giữ địa hình và đường chuyển động rõ.",
+    "tradeoff": "Không khí thần thoại nổi bật; cảnh đánh cần tiết chế hiệu ứng mực để không mất độ rõ.",
+    "direction": "ltr"
+  },
+  {
+    "title": "Manhua hành động màu",
+    "summary": "Manhua màu cuộn dọc. Nét vẽ sắc, biểu cảm mạnh, phân biệt các phe bằng phục sức và bảng màu. Giữ hình thể khỉ của Ngộ Không, thiết kế vũ khí và cấp độ trang phục nhất quán. Nhịp cuộn tạo khoảng nghỉ trước đòn đánh, cảnh giới và đại cảnh; bong bóng thoại được bố trí cùng tranh, chữ Việt dễ đọc.",
+    "tradeoff": "Dễ đọc trên điện thoại, nhịp chiến đấu nhanh; đại cảnh nhiều phe cần chia thành nhiều khung.",
+    "direction": "vertical"
+  },
+  {
+    "title": "Manga chiến trận đen trắng",
+    "summary": "Manga đen trắng dạng trang, đọc phải sang trái. Nét bút có trọng lượng, mảng đen và sắc độ rõ, dùng cận cảnh biểu cảm xen toàn cảnh chiến trường. Ngộ Không có hình thể khỉ và dáng chiến đấu riêng; mỗi phe có hình khối, giáp và vũ khí nhận diện được bằng bóng dáng. Thiết kế khung và thoại ưu tiên hành động dễ theo dõi.",
+    "tradeoff": "Nhịp trang và động tác mạnh, hợp các trận đấu dài; cảnh thần thoại phải tạo vẻ huyền ảo bằng nét và sắc độ.",
+    "direction": "rtl"
+  }
+]
