@@ -1,7 +1,7 @@
 [project]
 name = "creator-story-studio"
-version = "0.3.0"
-description = "Local multi-genre prose-first story and manga production harness"
+version = "0.4.0"
+description = "Chat-first multi-genre prose and manga workshop with local storage"
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "Proprietary" }
@@ -20,7 +20,7 @@ dev = [
 ]
 
 [project.scripts]
-creator-studio = "story_studio.server:main"
+creator-studio = "story_studio.cli:main"
 creator-agent = "story_studio.cli:main"
 
 [build-system]
@@ -31,7 +31,7 @@ build-backend = "setuptools.build_meta"
 include = ["story_studio*"]
 
 [tool.setuptools.package-data]
-story_studio = ["web/*.html", "skills/*/SKILL.md"]
+story_studio = ["skills/*/SKILL.md"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

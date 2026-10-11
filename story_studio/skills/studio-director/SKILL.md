@@ -5,13 +5,13 @@ description: Run a local Creator Story Studio project from prose planning to sou
 
 # Studio director
 
-The writing is the source. Manga adapts approved prose. Read project.json, current chapter artifacts and job state before work. Select genre-specific techniques from references without importing plots or characters. Do not use XEROTH rules in unrelated projects.
+The writing is the source. Manga adapts approved prose. Read project.json, current chapter artifacts and progress files before work. Select genre-specific techniques from references without importing plots or characters. Do not use XEROTH rules in unrelated projects.
 
-Use `python -m story_studio.cli --data <data-dir> status` to inspect state. `prompt <project> <chapter> <stage>` exports an exact task with selected context and skill instructions. Complete it using available text tools; use `submit` with the same prompt packet so parents cannot silently change. For images use the built-in image tool if available, inspect references before generation, then import through `page` and mark review through `approve-page` only after visual inspection.
+Use `python -m story_studio.cli --data <data-dir> status` to inspect state. `prompt <project> <chapter> <stage> task.json` exports an exact task with selected context and skill instructions. Complete it using available text tools; use `submit` with the same prompt packet so parents cannot silently change. For images use the built-in image tool if available, inspect references before generation, then import through `page` and mark review through `review-page` only after visual inspection.
 
-Autonomy is scoped to the requested chapter/arc. In semi mode approve edited prose after continuity review, then continue adaptation. In auto mode passing continuity may promote prose, but never approve images without visual review. Stop on missing model, unavailable image tool, conflicting canon or failed quality after bounded repair attempts. Never fabricate a generated page, fulfilled download, or passed review.
+Autonomy is scoped to the requested chapter/arc. Approve edited prose only after its matching continuity review passes; never approve images without actual visual inspection. Stop on unavailable session image tools, conflicting canon or failed quality after bounded repair attempts. Never fabricate a generated page, fulfilled download, or passed review.
 
-At finish show actual files and unresolved production status. Skill instructions do not invoke Codex or image_gen by themselves: the active agent or configured provider executes them.
+At finish show actual files and unresolved production status. Skill instructions do not invoke Codex or image_gen by themselves: the active agent or active chat executes them.
 
 ## Creative direction
 
@@ -21,8 +21,8 @@ Prefer choices that create consequences over decorative complexity. Reject scene
 
 Review the finished chapter against its creative thesis as well as continuity. An audit passing does not prove the chapter is gripping. Identify a concrete weak scene and revision goal. For manga approve a proof page's acting, composition and lettering before scaling the look to many pages, when an image tool is available. Never claim an automatic visual repair happened unless an actual image was generated and reinspected.
 
-## AI-led onboarding and production
+## Chat-first production
 
-Start with Discovery's three concept choices, then three story directions conditional on the selected concept, then three art directions conditional on both. Let selection establish the creative contract and infer practical defaults; do not demand a long setup form before offering creative options. The saved creative_choices field is binding context for later roles.
+Use creator-studio as the entry skill. The active conversation proposes three concepts, three story directions and three art directions, then asks the human here. Persist proposals before asking and the actual selection after it arrives. No UI or background model invocation is used.
 
-The background manga worker uses the selected CLI's configured MCP image tool. It validates tool receipts and PNG files, attaches real images to vision QA, checks exact dialogue, and rechecks up to two repairs per page. Distinguish model review from human review. Missing CLI image tools are a connection failure, not permission to invent images. Preserve source pinning and completed-page checkpoints when resuming.
+Write in the active chat and store each result through revision-safe prompt/submit packets. Use the session's native image tool, inspect actual generated pages here, and save them locally. Review and repair up to twice using actual images, then report unresolved defects. Distinguish active-assistant inspection from human review. Missing image tooling is a session capability limit, not permission to invent images. Preserve approved-source lineage when resuming.

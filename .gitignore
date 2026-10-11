@@ -55,3 +55,8 @@ samples/*/generated/
 *.sqlite3-wal
 *.sqlite3-shm
 *.log
+
+# Chat-first manuscripts, generated images and progress
+stories/
+
+.packaging/

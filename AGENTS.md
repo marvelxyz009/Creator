@@ -1,8 +1,9 @@
-# Creator Story Studio
+# Creator chat workshop
 
-Primary implementation is `story_studio/`, tests in `tests/`, active skills in `story_studio/skills/`.
-The older framework, sample schemas and prose prompts are preserved under `legacy/`; do not use their manual workflow as the new app entrypoint.
+Operate entirely in the active chat. Entry skill: story_studio/skills/creator-studio/SKILL.md. Ask meaningful creative choices directly here; no web UI, background model jobs, provider API or nested Codex/Claude process. Use available session image tools for manga. Read saved progress before continuing.
 
-The product is multi-genre. Prose is the canonical source and manga is its revision-linked adaptation. Never let an unapproved/latest stale source drive new manga. Visual quality review must inspect actual images. Never claim image prompts are generated pages.
+Primary code: story_studio/. Tests: tests/. Active role skills: story_studio/skills/. The product covers multiple genres and independent worlds; XEROTH is never assumed for unrelated projects.
 
-Keep project content and credentials out of Git by default. Store generated project artifacts under the configured data root. Run `python -m unittest discover -s tests -v` for core changes and check the local UI for interface changes.
+Prose is canonical. Current audited edited prose is required for manga. Preserve source-linked revisions and invalidate downstream artifacts when a source changes. Inspect actual images before recording visual approval. Never claim an image prompt is a rendered page or a schema check is a visual review.
+
+Save actual output and checkpoints locally under stories/ (or configured STUDIO_DATA). Keep stories/, old .studio/ data and credentials out of Git by default. Do not delete old project data. Commit/push code or skills when requested. Run python -m unittest discover -s tests -v for changes.
