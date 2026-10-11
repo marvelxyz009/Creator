@@ -1,0 +1,19 @@
+{
+  "status": "stale_source_preview_only",
+  "imported": false,
+  "approved": false,
+  "source_edit": "fc124b412d694492b046860cc9b31997",
+  "inspected": true,
+  "image_sha256": "c7a529ef99f24c774e1c43f9803f73da20d49ab9b3d7f408527f5991a8bba270",
+  "observed_dialogue": [
+    "Đừng xuống!",
+    "Tiếng động trên ấy là gì?",
+    "Đá vỡ.",
+    "Ngươi ở đó à?",
+    "Vừa ra khỏi đó."
+  ],
+  "issues": [
+    "Nguồn chương 1 đã đổi; phải cập nhật brief trước sản xuất.",
+    "Bong bóng đáp cuối ở khung 6 chưa có đuôi chỉ người nói rõ."
+  ]
+}

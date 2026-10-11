@@ -55,3 +55,10 @@ Nửa đêm, đá khóc ở đất cũ; kết arc 2. Ngộ Không đã giết H�
 ## Bước tiếp
 
 Chương 19 — (arc 3 — Một ngọn núi thành một nước, chưa đặt tên). Đọc resume/canon và references/vietnamese-prose-guide.md trước khi soạn. Manga dừng vì phiên hiện tại không có công cụ tạo ảnh. Mỗi lần viết hoặc sửa, cập nhật chương, canon/audit, tiến độ và đẩy Git.
+
+## Kiểm tra chéo ngày 2026-10-11
+
+- Đã lưu review-chapters-02-18.md; giữ nguyên bản thảo. Có lỗi vạch ngày và giờ trở về cần sửa, cùng các đề nghị gia cố động cơ/luật phép.
+- Cập nhật git-snapshot.json theo dữ liệu hiện hành tới chương 18.
+- Trang manga 4 đã vẽ và xem ảnh; lưu preview tại references/visual/page-04-preview-old-source-v1.png. Nguồn cũ, chưa nhập/duyệt.
+- Bước tiếp: sửa các điểm đã nêu theo quyết định người dùng; manga phải lấy lại nguồn chương 1 hiện hành.
