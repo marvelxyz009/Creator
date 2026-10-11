@@ -48,3 +48,10 @@ samples/*/generated/
 
 # Per-contributor active-project state (set via `orchestrator focus`)
 .aetherforge/
+
+# Local projects, manuscripts, reference texts, provider keys and queue database
+.studio/
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+*.log

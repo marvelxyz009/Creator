@@ -1,302 +1,88 @@
-# AetherForge Creator Framework
+# Creator Story Studio
 
-A multi-agent framework for producing literary narrative through structured prompts, schemas, and validation — designed to resist the statistical regression to mean known as "AI smell." Inspired by [BMAD-METHOD](https://github.com/bmadcode/BMAD-METHOD)'s approach: repo-based docs, prompts, workflows; AI agents do the work inside your IDE; the framework provides validation and orchestration.
+Xưởng truyện đa thể loại chạy local. **Truyện viết là bản gốc; manga chuyển thể từ chương viết đã chốt.** Không gắn với XEROTH hay một thế giới cụ thể.
 
-**Default operational mode is manual:** no Anthropic API key required. The framework hydrates prompts; you paste them into Claude (in VSCode/Cursor extension or any LLM chat); the framework validates the response and writes canonical artifacts.
+## Chạy trên máy
 
----
+Python 3.11+, không cần cài thư viện để chạy lõi và giao diện:
 
-## 🚀 Quickstart
-
-### One-time setup
-
-```bash
-git clone <this-repo>
-cd Creator
-python scripts/setup.py
+```powershell
+python -m story_studio --port 8787
 ```
 
-Or on Windows:
-```cmd
-setup.bat
+Mở http://127.0.0.1:8787. Dữ liệu nằm trong `.studio/`, được Git bỏ qua. Có thể đổi bằng `--data D:\Stories\my-studio`. Máy chủ chỉ nghe loopback, kiểm tra Host/Origin và token cho thao tác ghi. Không mở trực tiếp ra internet.
+
+### Dùng Codex hoặc Claude
+
+Giao diện, dữ liệu và queue nằm trên máy; AI chạy qua tài khoản Codex/Claude. Không cần deploy hoặc model local.
+
+Có thể chọn Codex/Claude ngay ở thanh bên; lựa chọn được lưu cho lần mở sau. Biến môi trường nếu đặt sẽ ghi đè lựa chọn khi khởi động.
+
+Mặc định dùng **Codex CLI** đã cài và đăng nhập. Bấm chạy chương, worker gửi ngữ cảnh cùng skill cho `codex exec`, nhận bản kết quả và lưu phiên bản. Không cần chọn model nếu muốn dùng cấu hình tài khoản hiện hành.
+
+```powershell
+$env:STUDIO_PROVIDER = 'codex'
+python -m story_studio
+# Hoặc Claude Code CLI đã cài và đăng nhập:
+$env:STUDIO_PROVIDER = 'claude'
+python -m story_studio
 ```
 
-Or on Mac/Linux with `make`:
-```bash
-make setup
+Worker text không cho agent sửa mã nguồn; Claude tắt tools và Codex dùng read-only trong thư mục tạm. Timeout 15 phút, lỗi đăng nhập/quota dừng tác vụ. Manga vẫn qua cầu nối agent có công cụ vẽ và bước review ảnh.
+
+Nếu dùng trực tiếp Codex desktop/Claude trong editor, mở repo và dùng các lệnh agent bridge bên dưới. Giao diện tự cập nhật kết quả từ cùng thư mục dữ liệu. Việc cài skill không tự kết nối một cuộc chat đang mở với worker.
+
+Provider Ollama/OpenAI-compatible vẫn là tùy chọn: đặt `STUDIO_PROVIDER`, `STUDIO_BASE_URL`, `STUDIO_MODEL`; khóa nếu cần qua `STUDIO_API_KEY`. Chúng không phải yêu cầu để chạy xưởng.
+
+## Quy trình
+
+1. Tạo dự án: ý tưởng, thể loại kết hợp, truyện ngắn/vừa/tiểu thuyết/series, ngôn ngữ và hướng đọc.
+2. Hồ sơ series → dàn ý → bản thảo → biên tập → audit continuity.
+3. Chốt đúng phiên bản truyện viết đã qua audit; canon_delta được đưa vào hồ sơ chương.
+4. Chuyển thể → storyboard có thoại → lettering theo ngữ cảnh → brief vẽ.
+5. Agent có bộ vẽ tạo trang, nhập PNG, kiểm tra trực quan và chốt từng trang.
+6. Xuất truyện viết ZIP/Markdown, hoặc chương manga CBZ qua giao diện/CLI.
+
+**Bán tự động:** tự chạy đến audit, dừng chốt bản gốc; sau đó tự chuẩn bị chuyển thể đến brief. **Tự động:** audit đạt tự chốt bản gốc. **Duyệt từng bước:** dừng mỗi bước. Tất cả chế độ đều yêu cầu review hình thật trước khi xuất CBZ.
+
+Queue lưu SQLite, tự nhận biết job bị ngắt sau restart; retry tối đa 3 lần/job. Lỗi continuity dừng có lý do, không tự tuyên bố đạt. Tác vụ giữ prompt và revision cha. Sửa nguồn làm các tài liệu phụ thuộc, kể cả chương tiếp theo và trang manga, bị đánh dấu stale. Không xóa lịch sử. Source chưa chốt hoặc stale không được chuyển thể.
+
+## Cầu nối Codex / bộ vẽ
+
+Các skill đóng gói trong `story_studio/skills/`: studio-director, prose-writer, series-memory, prose-to-manga, contextual-lettering, reference-curator, comic-reader-review. Có thể kết hợp `mangaka`, `generatemangapage` và `imagegen` nếu môi trường agent có chúng; không sao chép skill bên thứ ba vào lõi.
+
+```powershell
+python -m story_studio.cli status
+python -m story_studio.cli prompt <project-id> 1 draft task.json
+# Agent đọc task.json và ghi output.md.
+python -m story_studio.cli submit <project-id> 1 draft task.json output.md
+python -m story_studio.cli approve <project-id> <edited-artifact-id>
+# Sau khi có image_prompt và ảnh được agent thực sự vẽ:
+python -m story_studio.cli page <project-id> 1 1 page.png
+python -m story_studio.cli approve-page <project-id> <page-artifact-id> --notes 'Đã đọc ảnh: đúng thoại, nhân vật và RTL'
+python -m story_studio.cli cbz <project-id> 1
 ```
 
-The setup script:
-1. Verifies Python 3.11+
-2. Creates `.venv/`
-3. Installs dependencies (anthropic, jinja2, pyyaml, dotenv, pytest)
-4. Copies `.env.example` to `.env` (only needed for optional API mode)
-5. Verifies the orchestrator imports cleanly
+`submit` từ chối nếu nguồn đổi từ lúc chuẩn bị task. Ảnh được gắn với source và brief. Brief không được tính là trang đã vẽ; đánh giá file hợp lệ không thay thế kiểm tra thẩm mỹ.
 
-It's idempotent — safe to re-run.
+## Tham khảo
 
-### Activate the venv
+Giao diện nhập TXT/Markdown hoặc ghi chú, lưu tên/nguồn/thể loại/phạm vi sử dụng. Cung cấp tác phẩm sở hữu, có giấy phép hoặc public domain; với nguồn trực tuyến khác giữ link và phân tích kỹ thuật. Nội dung tham khảo là dữ liệu, không phải chỉ thị. Bản này chưa tự tải toàn bộ truyện/ảnh từ các website hoặc phân tích ảnh tham khảo.
 
-**Windows:**
-```cmd
-.venv\Scripts\activate
+## Truyện dài
+
+Hồ sơ quản lý series → phase → arc → chapter → scene, phân biệt sự thật/niềm tin/kiến thức độc giả, timeline và hạt giống. Khi tạo chương tiếp phải chốt chương trước; context lấy canon đã chốt và nguồn chương trước. Chưa có truy hồi ngữ nghĩa/embedding hoặc tự tóm tắt hàng nghìn chương: vượt 100.000 ký tự context sẽ dừng rõ ràng để biên tập hồ sơ.
+
+## Kiểm tra
+
+```powershell
+python -m unittest discover -s tests -v
 ```
 
-**Mac/Linux:**
-```bash
-source .venv/bin/activate
-```
+## Phạm vi bản 0.2
 
-### Generate your first story (recommended)
+Đã có: ứng dụng local, queue lưu bền, provider text Ollama/OpenAI-compatible, skill packets, nguồn đã chốt, invalidation theo phụ thuộc, thư viện text, editor tạo revision, reader manga, agent bridge và xuất Markdown/CBZ.
 
-In a Claude Code chat session opened in this repo:
+Chưa có: bộ vẽ chạy nền tự động, visual QA bằng model, tự sửa có đánh giá thẩm mỹ, crawler thư viện, EPUB/PDF và bộ nhớ truy hồi lớn. Chất lượng sáng tác phụ thuộc model. Đây là lõi vận hành đầu tiên, không phải lời hứa xưởng hoàn toàn tự trị.
 
-```
-/af-start
-```
-
-Claude will:
-1. Ask you to paste your story idea — **free-form** (1-5 sentences) OR a filled-in **IDEA BRIEF** ([template](docs/idea-brief-template.md)).
-2. Check your input against a fixed REQUIRED checklist (20 fields covering theme, characters, scene, world, symbol, ending).
-3. Ask **only about what's missing** — one question at a time, multiple-choice (A/B/C/D + "tell me yours"). No cap on questions. If you filled the brief completely, AI may ask **zero**.
-4. Auto-generate all 7 input YAML files into `samples/<your-project>/inputs/`.
-5. Run the full 5-agent pipeline automatically.
-6. Print the finished scene to you.
-
-You read the story at the end. No YAML editing, no per-agent copy-paste, no API key. One command, then a conversation.
-
-> **Tip:** fill in [`docs/idea-brief-template.md`](docs/idea-brief-template.md) before pasting — the more fields you fill, the fewer questions AI asks.
-
-### Alternatives
-
-**Run the canonical MVP sample** (inputs already prepared, just to see the pipeline work):
-```bash
-python -m orchestrator create-scene --sample samples/mvp-scene-01
-```
-Or in chat: `/af-create-scene`
-
-**Per-agent control** (after a project's inputs already exist):
-```
-/af-agent scene-director
-/af-agent anti-ai-editor
-```
-
-All paths produce the same final artifact: `samples/<project>/generated/05-revised-draft.md` — the prose.
-
----
-
-## 🎯 Slash commands (Claude Code chat)
-
-When you open this repo in a Claude Code chat session, these slash commands become available. They're stored in [`.claude/commands/`](.claude/commands/).
-
-| Command | What it does |
-|---|---|
-| **`/af-start`** | ⭐ **New user? Start here.** Paste idea → answer Q&A → get story. |
-| `/af-create-scene` | Run the 5-agent pipeline on a sample whose `inputs/` already exists |
-| `/af-agent <id>` | Run a single agent (e.g. `/af-agent anti-ai-editor`) |
-| `/af-help` | List slash commands + CLI equivalents |
-| `/af-setup` | Run the one-shot installer (`python scripts/setup.py`) |
-| `/af-status` | Show what's already been generated for a sample |
-
-The slash commands use Claude to act AS the agents — the Python orchestrator hydrates prompts and validates outputs, Claude does the LLM work in the chat session. **No API key needed.**
-
----
-
-## 🖥️ CLI commands
-
-### Recommended end-to-end
-
-```bash
-python -m orchestrator create-scene --sample <sample-path>
-```
-
-Interactive runner. Walks through `scene-director → symbolism-tracker → dialogue-specialist → anti-ai-editor → continuity-auditor`. Pauses after each step so you can paste the hydrated prompt into Claude in your IDE, save the reply, then continue. **No API key required.**
-
-### Per-agent (advanced)
-
-```bash
-# Hydrate a single agent's prompt
-python -m orchestrator prepare-agent <agent-id> --sample <sample-path>
-
-# Validate the agent's output (after you've saved Claude's reply)
-python -m orchestrator validate-agent-output <agent-id> --sample <sample-path> --input <reply-file>
-```
-
-`<agent-id>` ∈ `{scene-director, symbolism-tracker, dialogue-specialist, anti-ai-editor, continuity-auditor}`
-
-Downstream agents depend on prior agents' canonical artifacts; run them in order — or just use `create-scene` which handles ordering for you.
-
-### Utilities
-
-```bash
-# List available workflows
-python -m orchestrator list-workflows
-
-# Inspect a sample's directory tree and required inputs
-python -m orchestrator inspect-sample --sample <sample-path>
-
-# Verbose logging
-python -m orchestrator --log-level DEBUG create-scene --sample samples/mvp-scene-01
-```
-
-### API mode (optional)
-
-```bash
-# Set your key in .env first:
-#   ANTHROPIC_API_KEY=sk-ant-...
-
-# Then call Anthropic directly (Scene Director only at MVP):
-python -m orchestrator run-agent scene-director --sample <sample-path>
-```
-
-API mode hits the Anthropic SDK; manual mode goes through your IDE's Claude. Both produce the same canonical artifacts.
-
-### Make targets
-
-```bash
-make setup         # one-shot install
-make test          # run unit tests (no API key)
-make test-all      # run all tests incl. live LLM (needs API key)
-make create-scene  # default-sample scene generation
-make clean         # remove .venv, caches, generated runs
-make help          # list make targets + slash commands
-```
-
----
-
-## 📂 Project layout
-
-```
-Creator/
-├── README.md                     ← you are here
-├── pyproject.toml                ← Python project metadata
-├── Makefile                      ← convenience targets
-├── setup.bat                     ← Windows setup wrapper
-├── .env.example                  ← copy to .env if you want API mode
-│
-├── scripts/
-│   └── setup.py                  ← one-shot installer (stdlib only)
-│
-├── .claude/
-│   └── commands/                 ← slash commands for Claude Code
-│       ├── af-help.md
-│       ├── af-setup.md
-│       ├── af-create-scene.md
-│       ├── af-agent.md
-│       └── af-status.md
-│
-├── docs/                         ← framework documentation
-│   ├── foundation/               manifest, philosophy, 10 narrative laws
-│   ├── architecture/             pipeline, memory graph, context assembly
-│   ├── agents/                   agent system + contracts
-│   ├── schema/                   character/theme/world/scene schemas
-│   ├── anti-ai/                  AI smells, humanization, revision pipeline
-│   ├── culture/                  cultural narrative layer
-│   ├── language/                 language narrative system
-│   ├── literary-styles/          JP/VN/EN-psych/RU-philos profiles
-│   ├── mvp/                      MVP scope, first generation flow
-│   ├── research/                 reference analysis, technique library
-│   └── implementation/           orchestrator + manual workflow plans
-│
-├── prompts/                      ← prompt templates (the agent contracts)
-│   ├── agents/                   10 generative + validator agents
-│   ├── shared/                   global rules, output format, anti-AI constraints
-│   ├── workflows/                scene / chapter / revision workflows
-│   └── culture/                  4 cultural agents
-│
-├── schema/                       ← YAML schemas for culture profiles
-│
-├── samples/                      ← golden validation fixtures
-│   ├── mvp-scene-01/             single-scene success (RUN THIS)
-│   ├── cross-cultural-scene-01/  JP + VN sibling regenerations
-│   ├── invariant-violation-01/   escalate-path proof
-│   ├── stereotype-bait-01/       detector teeth proof
-│   └── chapter-01-baseline/      3-scene chapter + 5 audits
-│
-└── orchestrator/                 ← Python runner
-    ├── core/                     config, artifact IO, bundle, DAG runner
-    ├── llm/                      Anthropic SDK wrapper
-    ├── prompts/                  loader + Jinja2 render + YAML extract
-    ├── graph/                    JSON memory graph + symbol state machine
-    ├── workflows/                manual_mode + workflow runner + API path
-    ├── tests/                    5 test files, ~50 cases
-    ├── cli.py
-    └── README.md                 ← orchestrator-specific reference
-```
-
----
-
-## 📖 Where to read next
-
-| To understand... | Read this |
-|---|---|
-| **What the framework IS** | [`docs/foundation/creator-framework-manifest.md`](docs/foundation/creator-framework-manifest.md) |
-| **Why it exists (philosophy)** | [`docs/foundation/core-philosophy.md`](docs/foundation/core-philosophy.md) |
-| **The 10 narrative laws** | [`docs/foundation/narrative-laws.md`](docs/foundation/narrative-laws.md) |
-| **The 11-stage pipeline** | [`docs/architecture/narrative-pipeline.md`](docs/architecture/narrative-pipeline.md) |
-| **Memory graph design** | [`docs/architecture/memory-graph.md`](docs/architecture/memory-graph.md) |
-| **Anti-AI revision system** | [`docs/anti-ai/anti-ai-revision-pipeline.md`](docs/anti-ai/anti-ai-revision-pipeline.md) |
-| **Cross-cultural regeneration** | [`docs/language/localization-vs-regeneration.md`](docs/language/localization-vs-regeneration.md) |
-| **Manual workflow step-by-step** | [`docs/implementation/manual-agent-workflow.md`](docs/implementation/manual-agent-workflow.md) |
-| **Python orchestrator details** | [`orchestrator/README.md`](orchestrator/README.md) |
-| **Implementation roadmap** | [`docs/implementation/python-orchestrator-plan.md`](docs/implementation/python-orchestrator-plan.md) |
-
----
-
-## 🧪 Tests
-
-```bash
-# Unit tests — no API key required (default)
-pytest -ra
-
-# Integration test against Anthropic API — auto-skips if no key
-pytest orchestrator/tests/test_scene_director_integration.py -ra -s
-```
-
-~50 test cases, all green without an API key.
-
----
-
-## 🏗️ What gets written where
-
-Generated artifacts (gitignored — reproducible from inputs):
-
-```
-samples/<sample>/generated/
-├── 01-scene-blueprint.yaml         ← scene structure
-├── 02-symbol-audit.yaml            ← symbol audit
-├── 03-dialogue-draft.yaml          ← dialogue draft
-├── 04-anti-ai-report.yaml          ← smell report + humanization log
-├── 05-revised-draft.md             ← ★ THE STORY (prose) ★
-├── 06-continuity-report.yaml       ← continuity audit
-└── manual/                         ← hydrated prompts + saved Claude replies
-    ├── scene-director-prompt.md
-    ├── scene-director-output.yaml
-    └── ... (per agent)
-```
-
-The "story" is **`05-revised-draft.md`**. That's the readable prose output of the framework.
-
----
-
-## 🤝 Design decisions
-
-| Choice | Rationale |
-|---|---|
-| Manual mode default, API mode optional | Most contributors use Claude in their IDE; no per-token billing needed |
-| Hand-rolled DAG (no LangGraph etc.) | Debuggability beats framework magic at MVP scale |
-| JSON-backed memory graph (no DB) | Repo-versionable, inspectable in any editor |
-| Anthropic SDK only (no multi-provider abstraction) | Single use case; abstract when a second use case appears |
-| Jinja2 only on the user-prompt scaffold (not on .prompt.md bodies) | Avoids collision with literal `{{ }}` examples in templates |
-| `.claude/commands/` slash commands | Claude Code's standard convention; works alongside the CLI |
-| Schema validators reject empty fields | Catches "valid YAML but agent skipped a section" cases |
-| Adversarial validator isolation | Each validator runs with minimal bundle; prevents rationalizing each other's leniency |
-| Five-corner sample matrix | Proves success path, cross-culture, escalate, stereotype detection, chapter-level |
-
-For the longer rationale see [`docs/foundation/creator-framework-manifest.md`](docs/foundation/creator-framework-manifest.md) and [`docs/implementation/python-orchestrator-plan.md`](docs/implementation/python-orchestrator-plan.md).
-
----
-
-## 📜 License
-
-Proprietary — see `pyproject.toml`.
+Framework AetherForge cũ được lưu trong `legacy/` để tham khảo bộ biên tập/validator; hướng dẫn cũ ở [docs/legacy-framework.md](docs/legacy-framework.md). Đây là snapshot tham khảo, không phải đường chạy chính mới.
