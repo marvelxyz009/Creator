@@ -13,7 +13,8 @@
 - Chương 9 — Mùa mưa: chapter-09.md, edit 25167c4bafc44c55a3f424fba6f9e6b6, continuity 760248e721ce4aaab6b6ad01069c2877 (pass, audit của trợ lý), đã chốt.
 - Chương 10 — Lá rụng: chapter-10.md, edit a21930b9f35d4d808dc243ed44209c7b, continuity 22d7f38573354da4ae2bc4add0128484 (pass, audit của trợ lý), đã chốt.
 - Chương 11 — Biển: chapter-11.md, edit d86b5c10f7e14100b109508ce7734a1a, continuity 86fc20c9de1449418d75babc37b02873 (pass, audit của trợ lý), đã chốt.
-- book.zip đã export lại gồm chương 1–11.
+- Chương 12 — Tiếng người: chapter-12.md, edit 42e35feaec854941bae01cb6042c5d0b, continuity 13733387cdb1418290766174c447cc42 (pass, audit của trợ lý), đã chốt.
+- book.zip đã export lại gồm chương 1–12.
 
 ## Quy ước gọi tên
 
@@ -21,6 +22,7 @@ Theo yêu cầu người dùng ngày 2026-10-11: đàn khỉ không có tên ri�
 
 ## Nhật ký
 
+- 2026-10-11: Viết chương 12: học tiếng người với ông lão mù, chợ và tiên đan giả, thầy pháp lùng yêu, nghe tên Tây Ngưu Hạ Châu.
 - 2026-10-11: Viết chương 11: chín ngày trên biển, giông, nút của con tai sứt giữ bè, cập bờ châu phía nam, gặp người, lấy áo.
 - 2026-10-11: Viết chương 10: ranh giới vết cào, khỉ già mất, đàn chọn người dẫn, con tai sứt giữ vạch ngày, làm bè ra khơi.
 - 2026-10-11: Viết chương 9 (mở arc 2): mưa đầu mùa, chuỗi tay cứu khỉ nhỏ, lũ cuốn chỗ chắn, khí chạm giới hạn.
@@ -34,10 +36,10 @@ Theo yêu cầu người dùng ngày 2026-10-11: đàn khỉ không có tên ri�
 - 2026-10-11: Viết chương 2, khoảng 4.000 tiếng; đủ bible → outline → characters → art → draft → edit → continuity → approve.
 - 2026-10-11: Viết lại toàn bộ chương 1 theo phản hồi văn tiếng Việt (bản v2).
 
-## Trạng thái cuối chương 11
+## Trạng thái cuối chương 12
 
-Khoảng ngày 129. Thạch hầu đã vượt biển chín ngày, cập bờ một châu phía nam (theo sách là Nam Thiệm Bộ Châu). Xóm chài bỏ chạy, gọi hắn là yêu quái; hắn lấy một bộ áo vải thô, để lại con cá to, giấu đuôi trong vạt áo. Không hiểu tiếng người. Gầy, kiệt sức; khí ở giới hạn.
+Khoảng ngày 520. Thạch hầu đã sống hơn một năm ở châu phía nam, nói được tiếng người (giọng khàn, lạ), biết chợ búa; đội nón lá, đi dép cỏ, giấu đuôi. Ông lão mù vá lưới biết hắn là khỉ, vẫn nhận, cho nón và dép. Đã nghe thủy thủ nói về Tây Ngưu Hạ Châu bên kia biển tây; sắp lên đường. Khí ở giới hạn.
 
 ## Bước tiếp
 
-Chương 12 — Tiếng người. Đọc resume/canon và references/vietnamese-prose-guide.md trước khi soạn. Manga dừng vì phiên hiện tại không có công cụ tạo ảnh. Mỗi lần viết hoặc sửa, cập nhật chương, canon/audit, tiến độ và đẩy Git.
+Chương 13 — Biển tây. Đọc resume/canon và references/vietnamese-prose-guide.md trước khi soạn. Manga dừng vì phiên hiện tại không có công cụ tạo ảnh. Mỗi lần viết hoặc sửa, cập nhật chương, canon/audit, tiến độ và đẩy Git.
