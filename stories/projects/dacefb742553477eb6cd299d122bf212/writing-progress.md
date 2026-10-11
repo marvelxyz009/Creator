@@ -17,7 +17,8 @@
 - Chương 13 — Biển tây: chapter-13.md, edit 1fa6f604989a430db6079a510ddb58e8, continuity 8195f318a731428ca96949286fb844e2 (pass, audit của trợ lý), đã chốt.
 - Chương 14 — Tà Nguyệt Tam Tinh: chapter-14.md, edit be8accaa9a3a4a05ab78bf41d54c0f60, continuity e3c98d5629cc45c3bb63be735ac21544 (pass, audit của trợ lý), đã chốt.
 - Chương 15 — Bảy lần đào chín: chapter-15.md, edit 99d04c232d6249309d1efa187480af3b, continuity 5c88b79c394a44d4859b92f29805b40f (pass, audit của trợ lý), đã chốt.
-- book.zip đã export lại gồm chương 1–15.
+- Chương 16 — Ba tai: chapter-16.md, edit 14f893cbdd1442c9853dadf2c040e52d, continuity f3bbd52056764513846ae2b9a16a7d3f (pass, audit của trợ lý), đã chốt.
+- book.zip đã export lại gồm chương 1–16.
 
 ## Quy ước gọi tên
 
@@ -25,6 +26,7 @@ Theo yêu cầu người dùng ngày 2026-10-11: đàn khỉ không có tên ri�
 
 ## Nhật ký
 
+- 2026-10-11: Viết chương 16: ba năm luyện, ba tai, chọn bảy mươi hai biến, cân đẩu vân, lòng hướng về nhà.
 - 2026-10-11: Viết chương 15: bảy năm việc vặt, học chữ, bốn môn, câu đố gõ đầu, biết và hiểu, truyền đạo trường sinh.
 - 2026-10-11: Viết chương 14: cổng mở, Tổ sư nhìn thấu việc biết trước, đặt tên Tôn Ngộ Không theo nguyên tác.
 - 2026-10-11: Viết chương 13: làm thuê trên thuyền buôn, cứu thủy thủ, lộ mặt, gặp tiều phu, tới cổng động.
@@ -42,10 +44,10 @@ Theo yêu cầu người dùng ngày 2026-10-11: đàn khỉ không có tên ri�
 - 2026-10-11: Viết chương 2, khoảng 4.000 tiếng; đủ bible → outline → characters → art → draft → edit → continuity → approve.
 - 2026-10-11: Viết lại toàn bộ chương 1 theo phản hồi văn tiếng Việt (bản v2).
 
-## Trạng thái cuối chương 15
+## Trạng thái cuối chương 16
 
-Năm thứ bảy trong môn (gần chín năm từ ngày đá nứt). Ngộ Không đã làm việc vặt bảy năm, học đọc viết chữ Hán, khí nới ra chút ít; từ chối bốn môn, bị gõ đầu ba cái, tự giải câu đố, canh ba được Tổ sư truyền đạo trường sinh (tinh khí thần), chưa luyện thành. Bảy hạt đào trên bậu cửa. Không có tin Hoa Quả Sơn.
+Cuối đông năm thứ mười một trong môn. Ngộ Không đã luyện đạo trường sinh ba năm, biết ba tai, học thành địa sát bảy mươi hai biến (vì muốn có nhiều đường thoát, bảo vệ đàn) và cân đẩu vân. Chưa khoe phép; một số đồng môn ghen. Đêm lên đỉnh núi nhìn về phía đông, không về; lòng đã ở nhà. Hoa Quả Sơn hơn bốn nghìn vạch.
 
 ## Bước tiếp
 
-Chương 16 — Ba tai. Đọc resume/canon và references/vietnamese-prose-guide.md trước khi soạn. Manga dừng vì phiên hiện tại không có công cụ tạo ảnh. Mỗi lần viết hoặc sửa, cập nhật chương, canon/audit, tiến độ và đẩy Git.
+Chương 17 — Cây thông. Đọc resume/canon và references/vietnamese-prose-guide.md trước khi soạn. Manga dừng vì phiên hiện tại không có công cụ tạo ảnh. Mỗi lần viết hoặc sửa, cập nhật chương, canon/audit, tiến độ và đẩy Git.
