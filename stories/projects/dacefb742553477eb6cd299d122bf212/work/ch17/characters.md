@@ -1,0 +1,19 @@
+# Nhân vật — chương 17
+
+## Tôn Ngộ Không
+Biến cây thông cho bạn xem; bị đuổi; hứa không nói tên thầy. Mang túi vải đựng mười một hạt đào. Bay cân đẩu về Hoa Quả Sơn. Tìm thấy động trống, vạch dừng.
+
+## Tu Bồ Đề Tổ Sư
+Trách theo nguyên tác; đuổi về; cấm xưng là đệ tử; biết lòng hắn đã về từ mùa đông; lời riêng về cái biết và cái hiểu.
+
+## Đồng môn thư sinh gầy
+Sắp xuống núi làm thầy dạy chữ; xin xem phép một lần; khóc nhận lỗi khi hắn bị đuổi.
+
+## Đám đồng môn ghen
+Bám theo, reo hò; khai khi Tổ sư hỏi.
+
+## Sư huynh mặt vuông
+“Sân này ngươi quét giỏi rồi.”
+
+## Đàn ở Hoa Quả Sơn
+Vắng mặt. Con tai sứt không còn vạch khoảng ba mươi ngày; mảnh đá trắng nằm dưới chân vách. Không xác nhận sống chết.
