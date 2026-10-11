@@ -15,10 +15,10 @@ Tiếp theo: generate_and_review_manga
 - draft: 33e51574b5f445acb7e1d8874021b5c4
 - edit: 3c9f3814f6314c79a7af8272fe7a74e0
 - continuity: b7038859e9e447d9a9de81069fe755cf
-- adaptation: a64e1be7e8e04274b8b76399d0ef65a8
-- storyboard: aee698e195344ac1b339066ba7076b4d
-- lettering: e831f223743949faac4ce8e2adac72c4
-- image_prompt: 437f856ee6334a699972509fd44d16e7
+- adaptation: 0788caa694a64c83b9dc0808ebf57ce7
+- storyboard: 8e95ab77c1324a5285b6e9536950f78b
+- lettering: d691c98d7519497ca880bf5ee0ee762c
+- image_prompt: d0b3ec32fac34f1490b8a5898f61e7cb
 
 ## Trang manga
 

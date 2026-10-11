@@ -74,3 +74,14 @@ Chương 19 — (arc 3 — Một ngọn núi thành một nước, chưa đặt 
 - Người dùng thấy hình quá AI: dừng triển khai tiếp. Ảnh trang 1/2/4 là thử, chưa hoàn thành chương; thu hồi duyệt mỹ thuật trang 4.
 - Nhận xét và hướng chỉnh tại manga/chapter-01/art-review-hold.md. Chưa vẽ lại hoặc dựng bộ cast mới.
 - Sửa ranh giới trích nguồn trang 19/20 trong production ledger; trước khởi động lại cần tạo revision mới cho các tài liệu manga theo mỹ thuật đã chốt.
+
+## Vòng sửa mỹ thuật theo yêu cầu duyệt
+
+- Người dùng cho tiếp tục sửa tới khi duyệt. Chưa chốt phong cách và chưa mở rộng 20 trang.
+- Trang 4 v2 đã vẽ, kiểm tra và tự bác: còn rendering vụn và biểu cảm lặp. Lưu ảnh và review thất bại.
+- Tạo bộ cast graphic candidate, sửa dấu khuyết tai trái; dùng sheet mới v2 để dựng trang 4 v3. Sheet và trang chỉ là ứng viên, không thay nhận diện đã chốt.
+- Đã cập nhật creator-studio cài trên máy, bản repo, bản .agents và .claude; thêm hướng dẫn art-approval, phân biệt kiểm tra kỹ thuật với duyệt mỹ thuật của người dùng. Art-director và studio-director đã theo quy trình này.
+- Kiểm tra: 20 tests của xưởng pass; frontmatter và đường dẫn reference của các bản skill đã đối chiếu. Validator riêng chưa chạy được vì runtime thiếu PyYAML; đã kiểm tra cấu trúc entry bằng stdlib.
+- Bước tiếp: xem trang 4 v3, sửa lỗi kỹ thuật nếu có, rồi đưa người dùng duyệt nét trước khi chốt profile và sản xuất chương.
+
+- Trang 4 v3 đã vẽ/xem, kỹ thuật đạt; người dùng chưa duyệt nét. Ảnh: manga/chapter-01/page-04-v3.png. Không chốt profile hoặc vẽ tiếp cả chương khi còn chờ.

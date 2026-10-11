@@ -1,0 +1,14 @@
+{
+  "status": "pending_human_proof_review",
+  "reference": "D:\\Creator\\stories\\projects\\dacefb742553477eb6cd299d122bf212\\references\\visual\\cast-graphic-candidate-v2.png",
+  "reference_sha256": "14318001be28d6faee603007f010a7ccc4b433367f38f165b109e962216b49ad",
+  "inspected": true,
+  "inspection": "Đã xem cả sheet gốc và sửa: mảng lông lớn, màu ochre/umber, mảng đen; biểu cảm alert/deadpan của thạch hầu và tò mò/hoảng của khỉ nâu. Sheet sửa làm tai phải nguyên, tai trái khuyết rõ, không đảo hai bên.",
+  "source_revision": "3c9f3814f6314c79a7af8272fe7a74e0",
+  "style": "Graphic ink with selective mineral color; this is a candidate departure from dense watercolor, not yet locked.",
+  "anchor_candidate": "D:\\Creator\\stories\\projects\\dacefb742553477eb6cd299d122bf212\\manga\\chapter-01\\page-04-v3.png",
+  "anchor_sha256": "073cb5c00e415f09458d8c590fb4f014bd6de60e50c98bd2013a5dbc349ecd53",
+  "technical_pass": true,
+  "human_approval": null,
+  "approved_style_revision": null
+}

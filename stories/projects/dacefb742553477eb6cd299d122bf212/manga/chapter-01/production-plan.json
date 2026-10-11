@@ -161,17 +161,12 @@
       "panels": [
         {
           "panel": 1,
-          "action": "Wide top: golden monkey jumps across fallen log in forest descending from red coastal cliffs.",
+          "action": "Overshot log jump, landed into sparse bush; one coastal establishing view",
           "lettering": []
         },
         {
           "panel": 2,
-          "action": "Small: over-jumps into bush, leaves fly around face; no wound.",
-          "lettering": []
-        },
-        {
-          "panel": 3,
-          "action": "Small: next controlled jump lands on chosen flat rock, tail balances. Jagged off-panel warning with tail toward lower forest.",
+          "action": "Controlled landing, alert to off-panel warning",
           "lettering": [
             {
               "speaker": "torn-ear",
@@ -181,20 +176,14 @@
           ]
         },
         {
-          "panel": 4,
-          "action": "Medium: DARK BROWN male with LEFT ear notch hangs on branch above, looks uphill then at golden; soft question balloon tail ends at dark muzzle.",
+          "panel": 3,
+          "action": "Dark on black branch above golden, suspicious question and dry response",
           "lettering": [
             {
               "speaker": "torn-ear",
               "text": "Tiếng động trên ấy là gì?",
               "kind": "speech"
-            }
-          ]
-        },
-        {
-          "panel": 5,
-          "action": "Close golden looking up, startled to understand monkey speech; answer balloon tail to golden muzzle.",
-          "lettering": [
+            },
             {
               "speaker": "stone-monkey",
               "text": "Đá vỡ.",
@@ -203,8 +192,8 @@
           ]
         },
         {
-          "panel": 6,
-          "action": "Two shot, dark LEFT and golden RIGHT; first balloon upper left dark, second upper right golden; GOLDEN brushes white stone dust off chest.",
+          "panel": 4,
+          "action": "Dark left skeptical, golden right brushes white dust, faces/balloon tails clearly attributed",
           "lettering": [
             {
               "speaker": "torn-ear",
@@ -219,12 +208,14 @@
           ]
         },
         {
-          "panel": 7,
-          "action": "Wide bottom: both turn toward a distant alarm and run downhill between trees, dark first golden follows.",
+          "panel": 5,
+          "action": "Both run down slope, dark leading; no scenic microtexture",
           "lettering": []
         }
       ],
-      "prompt": "Use case: illustration-story. Asset: one finished portrait 2:3 COLOR MANHUA PAGE, read LEFT to RIGHT then top to bottom. Use attached images as IDENTITY/style reference ONLY, draw a NEW page composition. Mineral watercolor and expressive hand-ink on warm ivory paper, crisp uneven brush contours, rich ochre/forest green/sea teal, restrained washes, strong acting, clear anatomy and geography. Wide/tall/close panels with white gutters and variable hierarchy; no identical mechanical grid. Golden stone monkey is lean adolescent-sized ANIMAL monkey, amber eyes, narrow peach muzzle, swept spiky GOLDEN BROWN fur, long tail, no clothing or weapons. Dark male has DARK brown fur, distinct missing V on LEFT ear upper edge (front facing viewer RIGHT); elder FEMALE gray fur, pale peach face, stooped; mother RUSSET red brown; infant LIGHT TAN small. Preserve cast proportions. No human garments or genitals, family-friendly natural animal bodies. No added characters in closeups. DAYLIGHT remains warm afternoon all chapter, forest shade does not turn night. No battle scars in chapter1, no glowing eyes, no magical powers. Lettering: EXACT listed Vietnamese text including diacritics; comfortable dark ink comic print lettering, slightly organic stroke matching hand ink, NOT cursive. Plan balloon shapes and text WITH layout, soft asymmetrical ordinary speech, sharp shapes only urgent calls, small inset thought/caption without mouth tail. Tails ALWAYS end near actual speaker muzzle, including off-panel direction; never point at wrong character, never cover eyes, handholds or action contacts. Natural compact balloons, 10-15% interior padding, no enormous blank ellipses. No fake SFX, NO other text, title, labels, logos, watermark or page number. Render ALL listed text ONCE and verbatim, no paraphrase; use line breaks at natural phrase pauses. Never copy reference sheet layout. Follow numbered panels and continuity states precisely.\nCHAPTER 1, PAGE 04; 7 panels. Scene: The first other monkey.\nPanel 1: Wide top: golden monkey jumps across fallen log in forest descending from red coastal cliffs.\n\nPanel 2: Small: over-jumps into bush, leaves fly around face; no wound.\n\nPanel 3: Small: next controlled jump lands on chosen flat rock, tail balances. Jagged off-panel warning with tail toward lower forest.\n  Text speaker=torn-ear type=shout-off-panel: \"Đừng xuống!\"\nPanel 4: Medium: DARK BROWN male with LEFT ear notch hangs on branch above, looks uphill then at golden; soft question balloon tail ends at dark muzzle.\n  Text speaker=torn-ear type=speech: \"Tiếng động trên ấy là gì?\"\nPanel 5: Close golden looking up, startled to understand monkey speech; answer balloon tail to golden muzzle.\n  Text speaker=stone-monkey type=speech: \"Đá vỡ.\"\nPanel 6: Two shot, dark LEFT and golden RIGHT; first balloon upper left dark, second upper right golden; GOLDEN brushes white stone dust off chest.\n  Text speaker=torn-ear type=speech: \"Ngươi ở đó à?\"\n  Text speaker=stone-monkey type=speech: \"Vừa ra khỏi đó.\"\nPanel 7: Wide bottom: both turn toward a distant alarm and run downhill between trees, dark first golden follows.\n"
+      "prompt": "Use case: illustration-story. Generate one NEW FIVE-PANEL COLOR MANHUA page of a monkey encounter, portrait 2:3, left-to-right reading. The attached image is ONLY the new character and ink/color reference, not a layout. Use precisely its GOLDEN monkey (top) and DARK BROWN monkey (bottom), their matte ochre/umber fills, broad black shapes, expressive narrow-muzzle faces, lean bodies and long tails. Dark's anatomical LEFT ear has one missing V in upper rim; RIGHT ear intact. They are ANIMAL monkeys, covered in fur, no garments/weapons, no wounds yet. Do NOT reuse the old dense watercolor page; no old page reference is attached.\n\nSEQUENTIAL ART: clear authored staging, physical motion and differentiated acting. Confident variable ink contours, chunky sparse fur silhouette, very few interior hair marks, plain ivory-white negative space, matte color planes and brush-ink black shadows. Keep a little soft mineral wash on the ONE establishing backdrop to retain mythic ink setting; all dialogue backgrounds almost blank. No airbrushed gloss, decorative grain, miniature patterned leaves, scratch marks covering every surface, 3D doll faces or scenic picture-book rendering. White space has a deliberate role. This is a finished comic page, not a rough sketch and not a sheet.\n\nLAYOUT five panels: top wide panel about25% height; middle row narrow left panel2 and broad right panel3 together ~30%; wide panel4 ~25%; wide finishing panel5 ~20%. White gutters; ink panel borders slightly varied but clean. Render no panel numbers.\n\nPANEL1: bird's-eye oblique view down slope: golden has OVERSHOT a leap over a fallen log and plunged head/shoulders into a sparse small bush, both arms spread trying to catch himself, leaves caught on hair, startled slightly embarrassed expression, tail arcs upward behind him. Fallen log behind his hindfeet gives cause, front torso partly in the bush gives effect. Exactly a few large leaf shapes on bush. Distant rust sea-cliff silhouettes and pale blue sea at edge of panel, two simple trunks. No text. Do not depict confident log running; this is the failed landing.\nPANEL2: golden's second jump lands cleanly on a chosen flat stone. Feet grip, bent knees, tail balances, head snapped toward downhill voice; alert eyebrows unlike panel1. Mostly white backdrop with two movement strokes. Jagged urgent OFF-PANEL balloon at upper edge, tail toward outside downhill: \"Đừng xuống!\"\nPANEL3: dark monkey PERCHED on black tree branch ABOVE golden, dark upper LEFT, golden lower RIGHT. Dark has suspicious curiosity, only ONE eyebrow lifted, mouth not scowling; looks at newcomer. Golden looks UP, breath caught, listens then replies dryly with neutral small mouth. Background white and one light muted-green brush patch, no foliage texture. Balloon1 upper-left soft irregular rounded shape, clear tapered tail to DARK mouth: \"Tiếng động trên ấy là gì?\" Balloon2 lower-right smaller rounded, clear tail to GOLDEN mouth: \"Đá vỡ.\" Make speaker assignment unmistakable. Dark left ear notch visible if frontal angle shows it.\nPANEL4: medium close two-shot, DARK on left leans toward GOLDEN on right. DARK head tilted and lips open asking with interested skeptical face, NOT snarling. GOLDEN wipes WHITE stone dust from chest with right hand; half-lidded deadpan face from reference with one mouth corner slightly relaxed, contrasting to dark's questioning face. Anatomy crisp; fingers separated naturally, white dust just a few specks. Almost all background blank white. Balloon upper left tail to DARK mouth: \"Ngươi ở đó à?\" Balloon upper right tail to GOLDEN mouth: \"Vừa ra khỏi đó.\" Each tail visibly reaches toward the speaking muzzle, not the other character or torso.\nPANEL5: both suddenly pivot and RUN downhill after a distant off-panel alarm, DARK ahead LEFT, GOLDEN follows RIGHT. Three-quarter backs/side profiles, stretched running limbs, tail arcs, no repeated frontal crouching portraits. Few simple black tree trunks give direction, pale green distant wash fades to WHITE. No other figures or text.\n\nLETTERING: exactly the FIVE quoted lines, each once, Vietnamese accents exact. Upright hand-ink comic PRINT, stable readable letterforms, no italic slant, no cursive, no cartoon wobble. Match medium dark lineweight to ink art. Compact balloons with modest padding; normal speech smooth but not identical computer ellipses, urgent warning angular; clear tails near actual speakers. Don't block faces or hands. No captions, title, labels, watermark, fake sound effects or random Chinese marks. Keep exactly5 panels and all causal beats described.",
+      "art_revision": "candidate-v3",
+      "human_approval": "pending"
     },
     {
       "number": 5,
@@ -1101,6 +1092,6 @@
       "prompt": "Use case: illustration-story. Asset: one finished portrait 2:3 COLOR MANHUA PAGE, read LEFT to RIGHT then top to bottom. Use attached images as IDENTITY/style reference ONLY, draw a NEW page composition. Mineral watercolor and expressive hand-ink on warm ivory paper, crisp uneven brush contours, rich ochre/forest green/sea teal, restrained washes, strong acting, clear anatomy and geography. Wide/tall/close panels with white gutters and variable hierarchy; no identical mechanical grid. Golden stone monkey is lean adolescent-sized ANIMAL monkey, amber eyes, narrow peach muzzle, swept spiky GOLDEN BROWN fur, long tail, no clothing or weapons. Dark male has DARK brown fur, distinct missing V on LEFT ear upper edge (front facing viewer RIGHT); elder FEMALE gray fur, pale peach face, stooped; mother RUSSET red brown; infant LIGHT TAN small. Preserve cast proportions. No human garments or genitals, family-friendly natural animal bodies. No added characters in closeups. DAYLIGHT remains warm afternoon all chapter, forest shade does not turn night. No battle scars in chapter1, no glowing eyes, no magical powers. Lettering: EXACT listed Vietnamese text including diacritics; comfortable dark ink comic print lettering, slightly organic stroke matching hand ink, NOT cursive. Plan balloon shapes and text WITH layout, soft asymmetrical ordinary speech, sharp shapes only urgent calls, small inset thought/caption without mouth tail. Tails ALWAYS end near actual speaker muzzle, including off-panel direction; never point at wrong character, never cover eyes, handholds or action contacts. Natural compact balloons, 10-15% interior padding, no enormous blank ellipses. No fake SFX, NO other text, title, labels, logos, watermark or page number. Render ALL listed text ONCE and verbatim, no paraphrase; use line breaks at natural phrase pauses. Never copy reference sheet layout. Follow numbered panels and continuity states precisely.\nCHAPTER 1, PAGE 20; 5 panels. Scene: Water before immortality.\nPanel 1: Dark turns stone in hand, questions golden.\n  Text speaker=torn-ear type=speech: \"Nếu gặp con để lại dấu này?\"\nPanel 2: Golden looks at footprint sharp claw holes; clear short response.\n  Text speaker=stone-monkey type=speech: \"Chạy. Đừng ném đá vào nó.\"\nPanel 3: Elder holds open palm until dark hands over stone reluctantly; fallen tree visible upstream.\n  Text speaker=gray-elder type=speech: \"Xem nước chảy đi đâu\"\n  Text speaker=gray-elder type=speech: \"Đừng qua cây gãy.\"\nPanel 4: Wide: dark walks ahead up DRY stream bed, golden follows, avoids putting injured RIGHT palm on rocks, waits to step where dark steps. Mother behind feeds tiny remnant GREEN fruit to infant. Warm late afternoon.\n\nPanel 5: Large bottom quiet: golden squeezes GREEN leaf in injured RIGHT palm and follows dark toward fallen tree and hidden upstream. Unknown beast never shown. Slim narration caption with final exact sentence, keep generously readable.\n  Text speaker=narrator type=caption: \"Nhưng trước khi trời tối, hắn cần biết nước ở ngọn núi này đã chảy về đâu.\""
     }
   ],
-  "status": "on_hold_user_art_feedback",
+  "status": "awaiting_human_style_review_v3",
   "source_mapping_note": "Bounds for pages19/20 corrected in production ledger; no change to prose, dialogue or image instructions. Formal downstream revision needed before restarting."
 }
