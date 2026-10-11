@@ -16,10 +16,10 @@
 - Chương 12 — Tiếng người: chapter-12.md, edit 42e35feaec854941bae01cb6042c5d0b, continuity 13733387cdb1418290766174c447cc42 (pass, audit của trợ lý), đã chốt.
 - Chương 13 — Biển tây: chapter-13.md, edit 1fa6f604989a430db6079a510ddb58e8, continuity 8195f318a731428ca96949286fb844e2 (pass, audit của trợ lý), đã chốt.
 - Chương 14 — Tà Nguyệt Tam Tinh: chapter-14.md, edit be8accaa9a3a4a05ab78bf41d54c0f60, continuity e3c98d5629cc45c3bb63be735ac21544 (pass, audit của trợ lý), đã chốt.
-- Chương 15 — Bảy lần đào chín: chapter-15.md, edit 99d04c232d6249309d1efa187480af3b, continuity 5c88b79c394a44d4859b92f29805b40f (pass, audit của trợ lý), đã chốt.
-- Chương 16 — Ba tai: chapter-16.md, edit 14f893cbdd1442c9853dadf2c040e52d, continuity f3bbd52056764513846ae2b9a16a7d3f (pass, audit của trợ lý), đã chốt.
-- Chương 17 — Cây thông: chapter-17.md, edit b534bffb0604411fbbacdf3dff59ec24, continuity a83520fbe36f476d95ce69e0e9473592 (pass, audit của trợ lý), đã chốt.
-- Chương 18 — Hỗn Thế: chapter-18.md, edit 674de25adaaa4037a15aa290a6f2b03e, continuity a0b458d62d544bafa523edbfcc6ddc3c (pass, audit của trợ lý), đã chốt.
+- Chương 15 — Bảy lần đào chín: chapter-15.md, edit 8ea9db39d0244b07865c1cdde19b81f3, continuity c362bb6b408a41b79d3fb55981f87721 (pass, audit của trợ lý), đã chốt.
+- Chương 16 — Ba tai: chapter-16.md, edit dab542a6cb38419eb3aefbd351dfc3ba, continuity d6497af62a1c489c90058ddfa21fee25 (pass, audit của trợ lý), đã chốt.
+- Chương 17 — Cây thông: chapter-17.md, edit 9b3609775f77416c97a52df7c01e6586, continuity e306a1df04234830b70cd07426132959 (pass, audit của trợ lý), đã chốt.
+- Chương 18 — Hỗn Thế: chapter-18.md, edit f542bd8b978f472f964f889ef5a916ac, continuity a21d98f2316249e78026d36e6760a3d7 (pass, audit của trợ lý), đã chốt.
 - book.zip đã export lại gồm chương 1–18.
 
 ## Quy ước gọi tên
@@ -62,3 +62,9 @@ Chương 19 — (arc 3 — Một ngọn núi thành một nước, chưa đặt 
 - Cập nhật git-snapshot.json theo dữ liệu hiện hành tới chương 18.
 - Trang manga 4 đã vẽ và xem ảnh; lưu preview tại references/visual/page-04-preview-old-source-v1.png. Nguồn cũ, chưa nhập/duyệt.
 - Bước tiếp: sửa các điểm đã nêu theo quyết định người dùng; manga phải lấy lại nguồn chương 1 hiện hành.
+
+## Sửa và sản xuất manga ngày 2026-10-11
+
+- Đã sửa chương 15–18 theo review; kiểm tra lại và duyệt bản sửa bằng audit của trợ lý. Giảm giải thích lặp, thiết lập phân thân, gia cố lựa chọn ở lại và kế hoạch xem phép; sửa vạch ngày, thời gian trở về; kết mở quản trị núi.
+- Chương 1 giữ nguồn hiện hành 3c9f3814f6314c79a7af8272fe7a74e0. Manga mới có 20 trang; kế hoạch và thoại tại manga/chapter-01/production-plan.json.
+- Đang vẽ proof trang 4 nguồn hiện hành, sau đó triển khai cả chương. Preview nguồn cũ vẫn là tài liệu lịch sử, không trang chính thức.

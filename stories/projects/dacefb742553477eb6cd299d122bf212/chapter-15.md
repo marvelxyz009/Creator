@@ -66,7 +66,7 @@ Năm thứ hai, hắn đi qua cổng động, dừng lại trước tấm bia.
 
 Linh. Đài. Phương. Thốn. Sơn. Tà. Nguyệt. Tam. Tinh. Động.
 
-Hắn đọc được từng chữ. Không phải đoán. Không phải ghép theo trí nhớ. Đọc.
+Những nét trước kia chỉ gợi một cái tên quen giờ tách thành từng chữ rõ ràng. Hắn đọc chậm hết tấm bia, rồi đọc lại từ đầu.
 
 Tối hôm ấy, hắn ngồi trước phiến đá, chấm bút vào nước, viết một chữ. Rồi viết lại. Rồi viết lại. Bộ tử bên trái, bộ hệ bên phải.
 
@@ -92,19 +92,9 @@ Nhưng có những câu hắn nhớ mãi.
 
 Một chiều, Tổ sư giảng về nước. Đại ý rằng nước không bị ai đẩy mà tự chảy. Nhưng nước chảy tràn lan thì thành đầm lầy. Có bờ thì nước mới thành sông, mới chảy được xa.
 
-Hắn ngồi im, không nghe tiếp những câu sau.
+Hắn cúi nhìn bàn tay từng sưng tím sau lần ép khí. Suốt mấy năm, cứ thấy hơi ấm lan khỏi bụng là hắn kéo nó về. Có lẽ chính hắn đã chặn đường của nó.
 
-Không đẩy, chỉ nhìn. Không đưa khí lên tay chân. Luật hắn tự đặt sau lần ép khí. Những luật ấy đã giữ hắn an toàn suốt mấy năm. Nhưng hắn đã nghĩ rằng không đưa khí lên tay là cấm hẳn, là cứ để nó nằm im ở bụng.
-
-Không phải cấm. Mà phải có bờ.
-
-Hắn đã ép nước lũ qua một cái rãnh hẹp, rãnh vỡ. Rồi hắn sợ, không dám cho nước đi đâu cả, để nó nằm trong bát. Bát đầy. Không có bờ, nước không đi được. Không có thầy, không ai chỉ cho hắn bờ ở đâu.
-
-Từ hôm ấy, hắn ngồi luyện khác đi một chút. Không đẩy. Nhưng không giữ khư khư nữa. Hắn để khí lan ra, và chú ý xem nó tự muốn chảy về đâu, theo đường nào. Như ngày đầu tiên nhìn chim én bay vào thác.
-
-Nhiều tháng sau, một sáng, hắn nhận ra đốm ấm dưới rốn đã lớn hơn. Không nhiều. Như cái bát được nong rộng ra một chút. Nhưng lớn hơn.
-
-Không có tiếng sấm, không có hào quang. Chỉ là một buổi sáng hắn ngồi trên tảng đá, thấy cái bát hơi rộng ra, rồi đứng dậy đi quét sân.
+Sáng hôm sau, hắn thử để hơi ấm đi xa hơn một chút. Chỗ nào bắt đầu căng đau, hắn dừng lại, chờ rồi mới tiếp tục. Mất nhiều tháng, bàn chân mới ấm lên trong một buổi sương lạnh mà không tê nhức. Hắn đứng dậy, xỏ dép, đi quét sân.
 
 ---
 
@@ -112,7 +102,7 @@ Năm thứ ba. Năm thứ tư.
 
 Bốn hạt đào trên bậu cửa sổ.
 
-Có những đêm hắn nằm nhìn mấy hạt đào, nghĩ tới Hoa Quả Sơn. Mỗi hạt đào ở đây là ba trăm sáu mươi vạch trên vách động. Đã gần hai nghìn vạch rồi. Đã bao nhiêu mùa khô đi qua. Nước ở vũng cũ có cạn không. Con gấu có đắp chắn lại không. Nó có tôn trọng ba vết cào trên thân cây không. Khỉ con lông nâu nhạt chắc đã lớn, đã có con. Con tai sứt… con tai sứt có còn vạch không, hay đã chán, đã quên.
+Có những đêm hắn nằm nhìn mấy hạt đào, nghĩ tới Hoa Quả Sơn. Hắn thử hình dung những hàng vạch ở nhà. Có lẽ đã gần hai nghìn rồi. Đã bao nhiêu mùa khô đi qua. Nước ở vũng cũ có cạn không. Con gấu có đắp chắn lại không. Nó có tôn trọng ba vết cào trên thân cây không. Khỉ con lông nâu nhạt chắc đã lớn, đã có con. Con tai sứt… con tai sứt có còn vạch không, hay đã chán, đã quên.
 
 Hắn không có cách nào biết.
 
@@ -150,9 +140,7 @@ Chiều hôm ấy có giảng.
 
 Tổ sư giảng về đạo. Giảng về cái lý của trời đất, về cái gốc của vạn vật, về chỗ mà sinh và tử gặp nhau. Hắn ngồi ở hàng cuối, nghe.
 
-Và lần này, hắn hiểu.
-
-Không phải hiểu hết. Nhưng có một đoạn, chỉ một đoạn, khi Tổ sư nói tới chỗ khí đi vào thân thể như nước đi vào đất, hắn hiểu đến tận cùng. Không phải vì hắn đã đọc. Vì hắn đã ngồi trên bãi tiên thạch, trên gờ sau thác, trên bè giữa biển, trên ghềnh đá ven biển châu phía nam, trên tảng đá sau dãy nhà ngủ. Bảy năm, gần chín năm, mỗi sáng. Những lời ấy nói đúng thứ hắn đã cảm thấy, mà chưa bao giờ biết gọi tên.
+Tới đoạn khí đi vào thân thể, bàn tay hắn vô thức áp lên bụng. Hơi ấm vừa đi qua chỗ Tổ sư nói. Những sáng ngồi trên bãi tiên thạch, trên bè giữa biển, sau dãy nhà ngủ bỗng nối lại: chỗ hắn vẫn tưởng phải dồn sức hóa ra chỉ cần buông lỏng. Hắn thử ngay, và hơi thở sâu thêm mà ngực không căng.
 
 Hắn thấy trong người như có ai mở toang một cánh cửa sổ.
 
@@ -224,7 +212,7 @@ Hắn suýt bật cười. Hắn đã biết trước. Và biết trước chẳ
 
 — Thế thì không học.
 
-Hắn quỳ đó, trả lời từng câu. Hắn biết từng câu trả lời của mình. Đã biết từ lâu. Nhưng không câu nào là diễn. Hắn không muốn biết trước điều sắp tới, hắn đã biết rồi. Hắn không muốn đọc kinh, kinh không cứu được khỉ già. Hắn không muốn ngồi nín thở cho tới khi thành gạch mộc. Hắn không muốn mò trăng.
+Hắn quỳ đó, trả lời từng câu. Các câu đáp quen thuộc lần lượt ra khỏi miệng, nhưng tới câu cuối, hắn thấy cổ mình nghẹn lại. Hắn nhớ bàn tay khỉ già lạnh dần trong tay mình. Hắn đã tới đây để tìm cách giữ một bàn tay như thế còn ấm; mỗi môn vừa nghe lại đưa hắn đi xa khỏi điều ấy.
 
 Hắn muốn không chết. Thế thôi.
 
@@ -278,25 +266,11 @@ Hắn nằm im.
 
 Hắn hiểu được bao nhiêu? Hắn biết ba cái gõ nghĩa là canh ba vì sách viết thế. Nhưng tại sao lại là gõ đầu? Tại sao không nói thẳng? Tại sao phải để cả giảng đường mắng hắn là khỉ khốn kiếp?
 
-Hắn bắt đầu nghĩ. Không phải nhớ. Nghĩ.
+Ngoài phòng có tiếng dép đi qua, rồi dừng ở đầu hành lang. Hắn nằm im cho tới khi tiếng ấy xa hẳn.
 
-Thầy không nói thẳng vì có người nghe. Hơn ba chục đệ tử ngồi đó. Thứ thầy định dạy không phải thứ dạy giữa giảng đường. Không phải thứ ai nghe cũng được.
+Hơn ba chục người đã ngồi trong giảng đường. Nếu thầy muốn tất cả cùng nghe, cần gì đóng cửa? Hắn nhớ cái nhìn của Tổ sư ngay trước lúc quay lưng, cây thước còn trong tay. Ba cái gõ, hai tay đặt phía sau, cửa giữa đóng lại: từng dấu đều có thể ghép thành lời hẹn hắn nhớ, nhưng cũng có thể là hắn đang cố ghép vì quá muốn được truyền pháp.
 
-Vậy thầy phải nói một cách mà chỉ người cần nghe mới nghe ra.
-
-Gõ đầu. Không phải gõ vai, gõ lưng. Gõ vào đầu, chỗ người ta nghĩ. Như bảo: nghĩ đi. Ba cái. Một con số. Trong đêm, người ta đếm giờ bằng canh. Canh ba là lúc tối nhất, lúc mọi người ngủ say nhất.
-
-Chắp tay sau lưng. Không chỉ tay về phía nào, mà để tay ở sau. Phía sau.
-
-Đóng cửa giữa. Cửa giữa là lối thầy vẫn đi, lối ai cũng thấy. Thầy đóng nó lại. Không đi lối ấy.
-
-Và để cả giảng đường mắng. Vì nếu ai cũng hiểu, thì không cần giấu. Những người mắng hắn là những người chỉ thấy cái bề ngoài: thầy giận, thầy đánh, thầy bỏ đi. Thầy muốn xem có ai nhìn thấy cái ở sau cái bề ngoài ấy không.
-
-Hắn nằm đó, từng chút một, tự giải từng cử chỉ. Bằng cái đầu của mình. Không phải bằng trang sách.
-
-Rồi hắn nghĩ tới một điều khác. Nếu hắn không đi. Nếu hắn sợ mình chỉ biết mà chưa hiểu, nằm đây cho tới sáng. Có thể thầy sẽ không bao giờ hỏi lại. Có thể hắn sẽ quét sân thêm mười năm, như sư huynh mặt vuông.
-
-Không đi cũng là một lựa chọn. Và nó cũng có giá.
+Hắn ngồi dậy, xỏ một chiếc dép rồi lại tháo ra. Nếu đoán sai, hắn sẽ phải chịu trách nhiệm trước thầy. Nếu nằm yên, sáng mai hắn vẫn gánh nước, và có thể chẳng bao giờ được hỏi lại. Hắn đặt đôi dép sát cửa chiếu, chờ tiếng báo canh.
 
 Khi hắn nghe tiếng mõ canh vọng lên từ xa, báo sang canh ba, hắn đứng dậy.
 

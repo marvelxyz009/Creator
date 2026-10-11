@@ -4,7 +4,7 @@
   "sha256": "88073bbb5ac86cbf4716e89526fb71c38b15d74df052c4a90381ec64ac1a59dc",
   "inspected": true,
   "inspection": "Ảnh đã được xem bằng view_image: ba góc toàn thân thạch hầu, ba biểu cảm, lineup khỉ già/khỉ tai sứt/khỉ mẹ lông nâu đỏ và biển núi. Lông vàng nâu, mặt đào nhạt và mắt hổ phách nhất quán. Khỉ tai sứt nâu sẫm, khuyết tai trái ở phía phải người xem. Chưa có sheet riêng từng nhân vật phụ, đủ cho trang thử với hai nhân vật.",
-  "status": "assistant_accepted_for_proof",
+  "status": "assistant_accepted_for_chapter_production",
   "human_review": "pending",
   "characters": {
     "stone-monkey": [
@@ -20,11 +20,33 @@
       "left ear upper notch",
       "long arms",
       "bare animal body"
+    ],
+    "gray-elder": [
+      "elderly female",
+      "shaggy gray fur",
+      "pale peach muzzle",
+      "small stooped silhouette"
+    ],
+    "russet-mother": [
+      "reddish brown fur",
+      "adult female",
+      "protective stance"
+    ],
+    "light-tan-infant": [
+      "small light tan monkey",
+      "round face",
+      "shorter proportionate limbs"
     ]
   },
   "scene_page_4": {
     "injuries": "Chưa có thương tích cứu hộ",
     "props": "Không gậy, không giáp",
     "previous_approved_page": null
+  },
+  "supplement": {
+    "file": "references/visual/cast-supplement-v1.png",
+    "sha256": "a37c0ca6a2a675aac7d0f071205ed1a2a7ef96f7e8c7a38e4074bbfdbeeab088",
+    "inspected": true,
+    "observations": "Đã xem sheet: thạch hầu chạy/bám cây và biểu cảm; khỉ nâu tai trái khuyết ở vành trên; khỉ già xám trước/bên; mẹ nâu đỏ và con nhạt riêng. Giữ mặt và màu bộ cast cũ."
   }
 }

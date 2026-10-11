@@ -64,3 +64,7 @@ Lưu ý: phép phân thân bằng lông có trong Tây Du Ký hồi 2, ngay tr�
 Bản manga thử trang 4 được tạo từ bản chương 1 cũ (edit fc124b412d694492b046860cc9b31997). Claude đã sửa nguồn chương 1; ảnh được giữ làm preview, chưa nhập thành trang chính thức hay duyệt sản xuất. Cần dựng lại brief theo nguồn hiện hành trước khi tiếp tục.
 
 Git snapshot đã được cập nhật theo dữ liệu hiện hành tới chương 18. Snapshot trước chỉ chứa tới chương 1; thiếu các revision về sau dù Markdown đã có trong Git.
+
+## Kết quả xử lý ngày 2026-10-11
+
+Người dùng yêu cầu sửa. Đã sửa chương 15–18 và re-audit tuần tự, tái tạo các tài liệu phụ thuộc chương 16–18. Các lỗi ngày/vạch, suy đoán ngày và nguồn động cơ đã xử lý; cảnh luyện phân thân thêm vào 16; kết 18 chuyển sang hỏi thông tin cộng đồng và kế hoạch bảo vệ núi. Chương 1 không đổi văn, manga dựng lại từ nguồn hiện hành.

@@ -2,9 +2,9 @@
 
 ## Chương 18 · Hỗn Thế
 
-Hắn ngồi trên gờ đá cho tới khi trời hửng sáng.
+Hắn ngồi trên gờ đá, nắng sớm đã chạm tới vai.
 
-Mảnh đá trắng nằm trong lòng bàn tay, mòn vẹt một đầu. Hắn không buông nó ra. Hắn nhắm mắt, thở, để khí lan ra. Không phải cái đốm ấm nhỏ xíu ngày trước nữa, mà là cả một hồ nước. Hắn thả cho nó chảy ra tới tai, rồi lắng nghe.
+Mảnh đá trắng nằm trong lòng bàn tay, mòn vẹt một đầu. Hắn không buông nó ra. Hắn nhắm mắt, thở, để khí lan ra. Hơi thở đi chậm lại, tiếng nước sát bên lùi ra sau những âm thanh xa hơn. Hắn lắng nghe.
 
 Tiếng thác. Tiếng gió lùa qua rừng. Tiếng chim sáng.
 
@@ -96,9 +96,9 @@ Hắn ngồi trên đất, mảnh đá trắng trong tay, không nói được g
 
 Ba mươi ngày trước, hắn đang ở Tà Nguyệt Tam Tinh. Có lẽ đang quét sân. Có lẽ đang ngồi trên tảng đá sau dãy nhà ngủ, luyện khí. Có lẽ đang tự hỏi lúc nào thì nên về.
 
-Hắn đã có thể về. Cuối mùa đông năm ngoái, trên đỉnh núi, hắn đã có thể về. Một cái lộn.
+Hắn đã có thể về. Cuối mùa đông vừa rồi, trên đỉnh núi, hắn đã có thể về. Một cái lộn.
 
-Hắn đã không về.
+Hắn đã không về. Hắn đã tính rằng khi mình còn ở lại học, kẻ chiếm động trong sách cũng sẽ chờ. Đàn khỉ không biết tới phép tính ấy; chúng chỉ chờ hắn.
 
 — Phía bắc là đâu? — hắn hỏi.
 
@@ -204,7 +204,9 @@ Lần này phải đánh.
 
 ---
 
-Hắn đưa tay phải lên vai, giật một nắm lông.
+Hắn sờ lên vai phải, nhớ bầy phân thân tan trên bãi tập và hai đầu gối mình quỵ xuống. Mười hai thân có thể kéo cùng một cành; cả một bầy chỉ giữ được trong vài hơi thở. Đủ thời gian giật một thanh đao không?
+
+Hắn nhìn tay cầm đao của ma vương, rồi những khe giữa giáp và găng. Hắn chỉ cần chúng níu, không cần từng con nghĩ cách đánh. Hắn đưa tay phải lên vai, giật một nắm lông.
 
 Hắn bỏ nắm lông vào miệng, nhai nát. Rồi hắn ngửa cổ, phun ra.
 
@@ -220,7 +222,7 @@ Và khí trong người hắn tụt đi. Không phải từ từ. Như nước t
 
 Phải nhanh.
 
-Hắn dồn tất cả những mảnh chú ý ấy vào một chỗ. Hỗn Thế Ma Vương.
+Hắn ép mình thôi nhìn qua từng đôi mắt. Chỉ ba chỗ: hai chân, tay cầm đao, mặt. Bám lấy, kéo xuống. Cùng một lệnh hắn đã tập với cành khô; lần này hắn phải giữ qua tiếng la và những phân thân đang vỡ.
 
 Mười con khỉ nhỏ ôm chặt chân phải của nó. Mười con ôm chân trái. Hai mươi con bám vào cánh tay cầm đao, níu xuống. Mấy con trèo lên vai, lên mũ sắt, lấy tay bịt mắt nó. Mấy con chui vào khe giáp, cắn, cào.
 
@@ -242,7 +244,7 @@ Thanh đại đao nằm trong tay hắn.
 
 Nặng.
 
-Nặng hơn bất cứ thứ gì hắn từng cầm. Lưỡi đao dài hơn cả thân hắn, cán đao to hơn cổ tay hắn. Hắn phải dồn khí xuống hai tay mới nhấc nổi. Lần đầu tiên từ lần ép khí trên bãi tiên thạch, hắn đưa khí lên tay. Lần này có bờ. Khí chảy theo bờ, không vỡ.
+Nặng hơn bất cứ thứ gì hắn từng cầm. Lưỡi đao dài hơn cả thân hắn, cán đao to hơn cổ tay hắn. Hắn dồn khí qua vai xuống hai tay, theo đường vẫn dùng để gánh những thùng nước. Cán đao nhấc khỏi đất; cánh tay run lên vì sức đã bị bầy phân thân rút gần hết.
 
 Hỗn Thế Ma Vương ngã ngửa xuống đất, bị hàng chục khỉ nhỏ đè lên. Nó gầm, quẫy, hất văng từng đám. Nhưng chúng cứ bám lấy.
 
@@ -270,7 +272,7 @@ Hắn chém.
 
 Khi mọi thứ im lặng, hắn quỳ xuống, chống đao.
 
-Hắn thu lông về. Hàng trăm con khỉ nhỏ tan thành sợi, bay ngược về, mọc lại trên vai hắn. Mỗi con quay về là một mảnh chú ý quay về, đầu hắn dịu đi từng chút. Nhưng khí thì không quay về. Cái hồ trong bụng hắn chỉ còn lại một vũng nhỏ dưới đáy, như vũng nước cũ ngày mùa khô.
+Hắn thu lông về. Hàng trăm con khỉ nhỏ tan thành sợi, bay ngược về, mọc lại trên vai hắn. Mỗi con quay về là một mảnh chú ý quay về, đầu hắn dịu đi từng chút. Nhưng sức không quay về. Hắn thử đứng thẳng, chân lại khuỵu; phải chống cả hai tay lên cán đao mới đứng được.
 
 Lũ yêu nhỏ đã chạy hết. Không còn ai đứng trước cửa động.
 
@@ -326,7 +328,9 @@ Hắn bật cười. Rồi bật khóc. Cả hai cùng một lúc.
 
 Hắn đốt động.
 
-Không phải vì sách viết thế. Mà vì hắn không muốn có con yêu nào khác tới đây, ở lại, dùng lại những cái lồng ấy. Hắn chất củi khô vào những cái lồng đã chặt, vào đống da thú, vào xác Hỗn Thế Ma Vương. Hắn lấy hai hòn đá đánh lửa, như đã học ở châu phía nam.
+Trước khi châm lửa, hắn đi hết những ngách còn nghe tiếng động, nhìn xuống từng hốc sau lồng. Một con nhỏ nằm co dưới đống da thú; hắn bế nó ra, giao cho đứa lớn đứng đợi ở cửa.
+
+Lồng đã trống, nhưng đốt một cửa động không khiến lũ yêu bỏ vùng này. Hắn nhìn những lối chân dẫn ra sườn bắc, ghi nhớ chỗ chúng tách nhau, rồi mới kéo các lồng gỗ và da thú thành một đống. Hắn lấy hai hòn đá đánh lửa, như đã học ở châu phía nam.
 
 Lửa bốc lên, đỏ rực trong hang đen.
 
@@ -356,12 +360,18 @@ Hắn lấy mảnh đá trắng ra. Hắn cầm bàn tay con tai sứt lên, m�
 
 Các ngón tay ấy khép lại. Yếu ớt, nhưng khép lại.
 
-Hắn ngồi đó, giữa đàn khỉ đang khóc, đang cười, đang tìm nhau dưới ánh trăng, và nhìn lên vách đá khóc. Nước rỉ ra thành giọt, tách, tách, như mười hai năm trước.
+Hắn đợi bàn tay ấy giữ được mảnh đá rồi mới buông.
 
-Ngươi đi chuyến này, ắt sinh chuyện không lành.
+Khỉ cái lông nâu nhạt ngồi bên kia hõm nước, đứa con đã ngủ trên lưng. Hắn hỏi những người chưa tìm thấy con, hỏi chỗ nào trên đường về còn có thể giấu được cả đàn. Có câu nàng trả lời được, có câu chỉ lắc đầu. Hắn nhặt một cành khô, vạch xuống đất từng lối nàng chỉ.
 
-Hôm nay hắn giết. Lần đầu tiên.
+— Sáng mai chưa về động — hắn nói. — Gọi những ai còn đi được tới đây. Ta cần biết ở phía bắc còn bao nhiêu đường xuống núi.
 
-Hắn nhìn thanh đại đao nằm cạnh mình, lưỡi còn dính máu đen.
+Nàng nhìn thanh đao nằm bên chân hắn.
 
-Hắn biết đây chưa phải là kết thúc. Đây mới là bắt đầu.
+— Ngươi đi nữa à?
+
+— Ta đi xem. Nhưng lần này các ngươi biết ta đi đâu. Quá trưa chưa về thì đưa lũ nhỏ sang lối này.
+
+Hắn đặt cành khô ngang một đường trên đất. Nàng kéo nó sang lối bên cạnh: chỗ hắn chọn mùa này trơn, khỉ con không qua được. Hắn gật đầu, sửa lại.
+
+Đại đao nằm trong tầm tay. Bên kia, con tai sứt đã ngủ, mảnh đá trắng vẫn giữ trong lòng bàn tay. Hắn tiếp tục hỏi, cho tới khi trên đất có đủ lối đi và chỗ trú để sáng mai một người khác cũng nhìn mà hiểu được.

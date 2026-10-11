@@ -1,0 +1,22 @@
+{
+  "chapters": {
+    "15": {
+      "edit": "8ea9db39d0244b07865c1cdde19b81f3",
+      "continuity": "c362bb6b408a41b79d3fb55981f87721"
+    },
+    "16": {
+      "edit": "dab542a6cb38419eb3aefbd351dfc3ba",
+      "continuity": "d6497af62a1c489c90058ddfa21fee25"
+    },
+    "17": {
+      "edit": "9b3609775f77416c97a52df7c01e6586",
+      "continuity": "e306a1df04234830b70cd07426132959"
+    },
+    "18": {
+      "edit": "f542bd8b978f472f964f889ef5a916ac",
+      "continuity": "a21d98f2316249e78026d36e6760a3d7"
+    }
+  },
+  "reason": "User requested repair findings before manga chapter 1",
+  "chapter_1_source": "3c9f3814f6314c79a7af8272fe7a74e0"
+}

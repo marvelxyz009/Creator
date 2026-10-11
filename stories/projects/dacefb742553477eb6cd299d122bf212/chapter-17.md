@@ -26,39 +26,45 @@ Trong sách, khỉ đá biến thành cây thông trước mặt đồng môn. C
 
 Nhưng đây không phải đám đồng môn ghen tị. Đây là người đã dạy hắn đọc tên mình.
 
-Hắn nghĩ: chỉ một người. Ở chỗ không ai thấy. Rồi thôi.
+Hắn không nhận lời ngay.
 
-— Đêm nay — hắn nói. — Rừng tùng sau động.
+— Không ở đây. Không gọi ai theo. Ta không truyền khẩu quyết.
+
+Cậu thư sinh gật đầu. Hắn hẹn ở bãi đá sau rừng tùng, qua khe nước, chỗ tiếng động khó vọng về phòng. Hắn sẽ tới trước xem lối; cậu ta đợi một tuần hương rồi mới đi. Thay cả giờ, cả nơi, cả người xem, hắn tự nhủ mình đã tháo được cái bẫy trong trí nhớ.
+
+— Đêm nay — hắn nói. — Chỉ nhìn một lần rồi về.
 
 ---
 
 Trăng nghiêng treo trên ngọn tùng, sáng vằng vặc.
 
-Hai người đứng giữa một khoảng trống trong rừng, nơi hắn đã luyện biến hóa suốt mấy năm. Cậu thư sinh gầy nhìn quanh, mắt sáng rỡ, tay nắm chặt vạt áo.
+Hắn đã tới trước, vòng qua khe nước và nhìn dọc hai lối vào bãi đá. Không có ai. Khi cậu thư sinh xuất hiện, hắn đưa tay ra hiệu im lặng rồi dẫn cậu ta qua hàng tùng cuối cùng. Cậu ta nhìn quanh, mắt sáng rỡ, tay nắm chặt vạt áo.
 
 — Biến cái gì cũng được à?
 
-— Cái gì cũng được.
+— Có những hình ta chưa giữ nổi. Chọn một thứ nhỏ thôi.
 
 Cậu ta nghĩ một lúc. Rồi cậu ta nhìn lên những ngọn tùng xung quanh, cao vút trong đêm.
 
 — Một cây thông.
 
-Hắn bật cười. Không kìm được. Cậu thư sinh nhìn hắn, ngơ ngác.
+Nụ cười trên miệng hắn tắt đi. Cậu thư sinh thấy thế, vội chỉ một cây non mọc giữa hai phiến đá.
 
-— Sao thế?
+— Nhỏ như cây kia cũng được.
 
-— Không có gì. — Hắn lắc đầu, vẫn còn cười. — Cây thông thì cây thông.
+Hắn nhìn cây non, rồi nhìn lối đã kiểm tra. Một cây thấp, trong bãi khuất, trước đúng một người. Hắn đã tránh cảnh cả đám tụ quanh một cây lớn ở sân; chẳng lẽ hai chữ cây thông cũng không được phép nói tới?
 
-Hắn đọc khẩu quyết. Khí chảy theo bờ, theo cái hình hắn đã biết rõ từng chút. Thân cây thẳng, vỏ xù xì, rễ cắm sâu, cành vươn ra, lá kim tua tủa. Hắn đã leo lên bao nhiêu cây thông ở sườn bắc Hoa Quả Sơn, đã bẻ bao nhiêu cành thông làm bè. Hắn biết cái bờ của cây thông.
+— Đừng reo lên — hắn dặn. — Ta đổi lại ngay.
+
+Hắn đọc khẩu quyết. Hắn giữ hình cây non trong ý nghĩ: thân mảnh, vỏ nâu, mấy tầng lá kim. Đôi bàn chân thu lại sát nhau; khí đi xuống trước khi những ngón chân thành rễ.
 
 Hắn mọc lên.
 
-Giữa khoảng trống trong rừng tùng, một cây thông đứng sừng sững, cao gấp mấy lần người. Lá kim rì rào trong gió đêm. Vỏ cây xù xì, nứt nẻ, có nhựa thơm.
+Giữa bãi đá mọc lên một cây thông chỉ cao ngang hông người. Ngọn cây rung nhẹ trong gió, lớp vỏ mỏng có mùi nhựa thơm.
 
 Cậu thư sinh gầy đứng chết lặng.
 
-Rồi cậu ta bước tới, đặt tay lên thân cây. Vuốt ve lớp vỏ xù xì. Ngẩng lên nhìn những cành cao. Rồi cậu ta cười. Không phải nụ cười lặng lẽ thường ngày. Cười như một đứa trẻ, cười thành tiếng, vai rung lên.
+Cậu ta ngồi xổm, chạm một ngón tay lên vỏ, rồi rụt lại. Cậu ta cắn môi giữ tiếng cười, hai vai vẫn rung lên.
 
 — Thật này — cậu ta nói. — Thật này.
 
@@ -72,15 +78,23 @@ Rồi có tiếng reo vang lên từ sau lưng.
 
 Hắn không cần quay lại. Cây thông không có mắt, nhưng hắn nghe.
 
-Bảy, tám, mười người. Đám đồng môn ngủ cùng phòng. Có giọng của người hay lên tiếng trong bữa cơm, người đã nói to rằng ở đây mười năm chẳng ai dạy riêng mình. Họ đã bám theo. Có lẽ từ lúc hai người rời phòng. Có lẽ họ đã chờ dịp này từ lâu.
+Bảy, tám, mười người. Có giọng của kẻ vẫn than trong bữa cơm rằng mình ở đây mười năm chưa được truyền riêng. Hắn đổi hình lại ngay, nhìn cậu thư sinh. Cậu ta quay phắt về lối vừa tới.
+
+— Các ngươi theo ta?
+
+Một đồng môn hất cằm về phía phòng ngủ.
+
+— Thấy ngươi lén ra sau nó, bọn ta đi xem.
+
+Hắn đã kiểm tra lối trước khi bạn tới. Những kẻ kia chỉ cần chờ người không biết nghe xa, không biết nhìn dấu chân đi dẫn đường. Bàn tay hắn đang nắm chặt bỗng buông ra.
 
 Giờ họ thấy tận mắt. Một con khỉ biến thành cây thông.
 
-Họ vỗ tay. Họ hò hét. Họ chạy tới, sờ vào thân cây, cười ầm lên. Tiếng reo vang dội trong rừng tùng, dội vào vách núi, vang khắp cả Linh Đài Phương Thốn trong đêm khuya tĩnh lặng.
+Họ vỗ tay, hò hét, chen tới chỗ hắn vừa đứng trong hình cây thông. Có người cúi sờ dấu rễ trên đất, rồi quay sang giục hắn biến lại. Tiếng reo vượt qua khe nước, vọng vào vách núi trong đêm khuya tĩnh lặng.
 
 Cậu thư sinh gầy quay lại, mặt tái mét.
 
-Hắn bung ra, thành khỉ, đứng giữa đám đông đang reo hò. Họ vẫn vỗ tay, vẫn cười. Hắn không cười.
+Hắn đứng chắn trước cậu thư sinh, đưa tay bảo họ hạ giọng. Tiếng cười và tiếng hỏi khẩu quyết chồng lên nhau; một người đã bước tới giữ cổ tay hắn.
 
 Rồi có tiếng gậy gõ xuống nền đá.
 
@@ -134,7 +148,7 @@ Hắn biết câu này sẽ tới. Biết từ hơn mười năm trước. Biế
 
 — Đệ tử xa nhà hơn mười năm. — Hắn dập đầu xuống đất. — Ơn sư phụ chưa báo được chút nào. Xin sư phụ cho đệ tử ở lại.
 
-— Ơn gì. — Tổ sư lắc đầu. — Ngươi tưởng ta không biết? Đêm cuối đông năm ngoái, ngươi ngồi trên đỉnh núi, nhìn về phía đông, tới sáng. Lòng ngươi về từ đêm ấy rồi.
+— Ơn gì. — Tổ sư lắc đầu. — Ngươi tưởng ta không biết? Đêm cuối đông vừa rồi, ngươi ngồi trên đỉnh núi, nhìn về phía đông, tới sáng. Lòng ngươi về từ đêm ấy rồi.
 
 Hắn sững người.
 
@@ -226,7 +240,7 @@ Châu phía nam trôi qua. Rồi biển đông. Biển mà hắn đã lênh đê
 
 Rồi hắn thấy nó.
 
-Trời còn tối, chưa rạng. Nhưng hắn thấy. Một ngọn núi đứng giữa biển, những vách đá đỏ sát mép nước, rừng xanh thẫm phủ kín sườn núi. Và ở lưng chừng, một vệt trắng nhỏ.
+Mặt trời đã lên khỏi biển phía đông. Hắn thấy rõ Một ngọn núi đứng giữa biển, những vách đá đỏ sát mép nước, rừng xanh thẫm phủ kín sườn núi. Và ở lưng chừng, một vệt trắng nhỏ.
 
 Thác.
 
@@ -252,7 +266,7 @@ Sợi dây leo dọc theo gờ đá đã bị cắt đứt. Không phải đứt
 
 Hắn men theo gờ, lách qua lớp nước mỏng ở mép thác, bước vào trong.
 
-Ánh sáng xanh trước rạng đông lọc qua màn nước, nhạt nhòa. Cây cầu sắt vẫn nằm đó, bắc qua dòng nước chảy ra từ vách đá. Hắn bước lên cầu, đi qua.
+Nắng sớm lọc qua màn nước, in những vệt lay động trên nền đá. Cây cầu sắt vẫn nằm đó, bắc qua dòng nước chảy ra từ vách đá. Hắn bước lên cầu, đi qua.
 
 Gian động trống trơn.
 
@@ -272,7 +286,7 @@ Mảng vách ấy giờ kín vạch.
 
 Những vạch đá trắng, ngắn, đều nhau, hàng nối hàng, từ trên xuống dưới, từ trái sang phải. Rồi sang một mảng vách khác. Rồi một mảng khác nữa. Kín cả một góc động. Hàng nghìn vạch. Hắn không đếm được bằng mắt.
 
-Hắn biết nét vạch. Mười lăm vạch đầu tiên là của hắn, nét thô, to, nghiêng. Từ vạch thứ mười sáu trở đi, nét nhỏ hơn, thẳng hơn, đều hơn. Nét của con tai sứt.
+Hắn nhận ra những hàng đầu: nét thô, to, có đường nghiêng vì bàn tay chưa quen. Hơn một trăm vạch hắn khắc trước ngày rời núi. Sau đó, nét nhỏ và thẳng hơn nối tiếp hàng còn dở. Nét của con tai sứt.
 
 Mười hai năm. Sáng nào nó cũng vạch.
 
@@ -282,9 +296,7 @@ Vạch cuối.
 
 Sau vạch cuối là đá trống.
 
-Hắn đứng nhìn khoảng đá trống ấy. Hắn tính. Hắn biết mình đi bao nhiêu năm, bao nhiêu mùa. Hắn biết mỗi năm bao nhiêu vạch. Hắn đếm ngược từ hôm nay, theo những hạt đào trong túi vải, theo những mùa ở Tà Nguyệt Tam Tinh.
-
-Khoảng đá trống ấy đáng lẽ phải có chừng ba mươi vạch.
+Hắn không biết vạch cuối thuộc ngày nào. Mười một hạt đào chỉ đếm được mùa; chúng không giúp hắn tìm một ngày giữa hàng nghìn nét đá. Hắn sờ đầu dây đã khô quắt, nhìn bụi đọng trong bát vỡ. Chuyện ở đây xảy ra đủ lâu để không còn dấu chân mới. Trong quãng ấy, hắn vẫn ngồi ở nơi khác.
 
 Dưới chân vách, giữa đống vụn bát đá, có một thứ màu trắng.
 
@@ -294,6 +306,6 @@ Một mảnh đá trắng, nhỏ bằng ngón tay cái, một đầu đã mòn v
 
 Hắn đứng giữa động trống, nắm chặt mảnh đá trong tay.
 
-Ba mươi ngày.
+Hắn mở tay. Bột đá trắng dính trong những nếp da.
 
-Con tai sứt đã không vạch ba mươi ngày.
+Con tai sứt chưa từng bỏ mảnh đá này ở dưới đất. Hắn phải tìm nó.

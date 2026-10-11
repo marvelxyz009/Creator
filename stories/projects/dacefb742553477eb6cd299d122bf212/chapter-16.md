@@ -8,7 +8,7 @@ Không ai biết. Ban ngày hắn vẫn quét sân, gánh nước, nhổ cỏ nh
 
 Khác với trước, giờ hắn biết khí phải đi đâu.
 
-Không phải biết hết. Khẩu quyết chỉ có mấy câu, mỗi câu như một cánh cửa, mở ra lại thấy thêm những cánh cửa khác. Nhưng hắn không còn mò mẫm trong bóng tối nữa. Có bờ. Hắn để khí chảy, và nó chảy theo bờ, quay về, chảy tiếp, như nước chảy vòng quanh một cái hồ.
+Khẩu quyết chỉ có mấy câu. Hắn luyện tới câu nào còn vướng thì quay lại hỏi thầy, có đêm chỉ sửa được cách đặt lưỡi và thả vai. Dần dần, hơi ấm đi một vòng trong thân rồi trở về dưới rốn, không còn dừng thành một cục căng đau.
 
 Thân thể hắn đổi dần. Chậm, không ai nhận ra, kể cả hắn, cho tới một ngày.
 
@@ -16,7 +16,7 @@ Hôm ấy hắn gánh nước từ suối lên, tới đầu dốc mới nhận 
 
 Hắn ăn ít hơn. Không phải vì nhịn mà vì không đói. Có hôm cả ngày quên ăn, tối mới nhớ ra. Ngủ ít hơn. Hai canh là đủ. Hắn nghe xa hơn mà không cần ngồi lâu. Chỉ cần dừng lại một nhịp, thở một hơi, tiếng chim ở bên kia núi đã vọng tới.
 
-Cái bát trong bụng hắn rộng ra. Không phải nong ra từng chút như những năm trước. Mà như cái bát đã biến thành cái chậu, cái chậu thành cái vò, cái vò thành cái hồ nhỏ.
+Hắn có thể gánh hộ thêm hai chuyến nước, rồi ngồi luyện tới sáng mà hơi ấm trong bụng vẫn chưa vơi. Đổi sức từ chân lên vai đã trở thành việc quen; chỉ lúc vội, đường khí mới thắt lại và buộc hắn phải dừng.
 
 Tám hạt đào. Chín. Mười.
 
@@ -110,9 +110,7 @@ Không phải hóa thành hòn đá. Mà là cánh tay trái, chân trái, nửa
 
 Hắn nằm đó, thở dốc, đọc ngược khẩu quyết, kéo khí về. Phải gần sáng, nửa người bên trái mới mềm ra, ấm lại. Ba ngày sau, cánh tay trái vẫn còn tê.
 
-Hắn nghĩ lại lời giảng về nước có bờ.
-
-Biến hóa không phải ép thân thể thành một thứ khác. Biến hóa là để khí đi theo bờ của một hình khác. Hòn đá có bờ của hòn đá. Hắn đã nghĩ tới hòn đá, nhưng không giữ được cái bờ ấy trọn vẹn. Khí tràn qua một nửa, nửa kia vẫn theo bờ cũ. Bờ vỡ.
+Tới lúc cánh tay hết tê, hắn mới dám hỏi lại. Tổ sư bắt hắn nhắc từng chỗ đã đổi hình; hắn nhớ được cánh tay, chân trái, nhưng bỏ quên nửa thân phải trong lúc đau. Ông bảo hắn giữ trọn hình từ trước khi vận khí, đừng đợi một phần đã biến mới vá phần còn lại.
 
 Hắn bắt đầu lại. Với những thứ nhỏ hơn.
 
@@ -131,6 +129,18 @@ Ngay cạnh mười hạt đào.
 Hắn đậu đó, một con chim sẻ có một vệt lông vàng nâu trên ngực, nhìn mười hạt đào thẳng hàng. Rồi hắn bung ra, thành khỉ, ngồi trên bậu cửa sổ.
 
 Trong phòng, các đồng môn vẫn ngủ say.
+
+Qua mùa đào tiếp theo, Tổ sư dạy hắn thêm phép thân ngoại thân. Hắn nhổ một sợi lông ở vai, làm theo lời thầy; một con khỉ nhỏ hiện ra trên nền đất, nhìn hắn chằm chằm. Hắn bảo nó nhặt chiếc lá, rồi cúi xuống nhặt chiếc lá khác. Cả hai cùng đâm đầu vào nhau.
+
+Tổ sư dùng đầu gậy tách chúng ra.
+
+— Tay ngươi ở đây. Tay nó ở kia. Đừng sai cả hai bằng cùng một ý.
+
+Hai phân thân mất nhiều đêm mới làm được hai việc khác nhau. Tới con thứ tư, hắn thường quên mất thân thật đang đứng ở đâu. Một lần, hắn thấy qua mắt phân thân trên cành mà cứ bước tới, suýt rơi khỏi bậc đá.
+
+Hắn tập theo cách khác. Mười hai con cùng kéo một cành khô thì được; chia chúng ra vừa kéo, vừa nhặt, vừa leo cây là rối ngay. Càng nhiều thân, mỗi việc càng phải đơn giản. Thử tạo cả một bầy bằng nắm lông, hắn chỉ giữ được chúng qua vài hơi thở trước khi đầu đau như búa bổ, chân khuỵu xuống. Con cuối tan đi mà hắn vẫn run tay đến sáng.
+
+Từ đó, hắn chỉ tập tăng số thân khi còn đủ sức thu chúng về. Hắn không mang phép này ra trước đồng môn.
 
 ---
 
@@ -224,7 +234,7 @@ Từ đó, hắn tập từng chút. Lộn nửa cái. Lộn một phần mườ
 
 ---
 
-Một đêm cuối đông, khi trên bậu cửa sổ đã có mười một hạt đào, hắn ra khỏi phòng, đi tới góc rừng tùng sau động.
+Một đêm cuối đông năm thứ mười một trong môn, sau thêm một mùa đào và những tháng luyện dừng mây, hắn ra khỏi phòng, đi tới góc rừng tùng sau động.
 
 Hắn đọc khẩu quyết, lộn một cái.
 
@@ -246,7 +256,17 @@ Hơn bốn nghìn vạch.
 
 Hắn ngồi trên đỉnh núi, gió lạnh thổi tung lông, và không đứng dậy.
 
-Chưa. Hắn chưa học xong. Tổ sư chưa bảo hắn đi. Ba tai năm trăm năm còn đang chờ ở phía trước. Và trong sách, có những điều sắp xảy ra ở đây mà hắn còn chưa biết sẽ xảy ra thế nào, khi hắn đã cố tránh chúng.
+Chiều hôm trước, hắn đã hỏi Tổ sư có thể về thăm nhà vài ngày không. Thầy đặt quyển sách xuống.
+
+— Đường ngươi đã đi được. Muốn về thì về.
+
+Hắn đã chờ một lời ngăn. Không có lời ngăn nào.
+
+Hắn nhẩm lại những điều ở nhà: con gấu bị đẩy lùi, đường nước đã thông, lối thoát con tai sứt thuộc hơn hắn. Kẻ chiếm động trong trí nhớ chỉ xuất hiện ở đoạn khỉ đá trở về; sách không nói nó tới vào ngày nào. Hắn vẫn ngầm đặt tai họa ấy sau buổi rời môn, như thể mình chưa xuống núi thì nó cũng chưa được tới.
+
+Ở đây, hắn còn có thể hỏi thầy mỗi khi một phân thân tan làm đầu đau nhói. Về nhà, ai sẽ sửa giúp hắn? Hắn quyết định ở thêm qua mùa đông, tập cho chắc rồi xin đi hẳn. Một chuyến thăm chỉ vài hôm sẽ phải bỏ đàn lần nữa, còn lần tới hắn muốn ở lại.
+
+Hắn nhìn về phía đông thêm một lúc. Chỉ cần đưa chân bật khỏi đá là mọi tính toán ấy phải dừng. Hắn đặt hai bàn tay lên đầu gối, ngồi yên.
 
 Hắn ngồi đó cho tới khi trời phía đông hửng sáng.
 

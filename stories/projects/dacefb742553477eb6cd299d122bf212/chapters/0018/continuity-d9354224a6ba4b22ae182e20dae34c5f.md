@@ -1,0 +1,136 @@
+{
+  "pass": true,
+  "issues": [],
+  "notes": [
+    "Audit của trợ lý sau kiểm tra bản sửa, không phải đánh giá độc lập hay duyệt của người dùng.",
+    "Cùng ngày từ sáng tới nửa đêm; mốc ba mươi ngày chỉ từ nhân chứng.",
+    "Phân thân đã học trong 16, lệnh theo nhóm và kiệt sức nhất quán; vết đao vai trái, đau tay phải, bạn gãy chân giữ nguyên.",
+    "Cứu người trước châm lửa; khảo sát và bảo vệ đàn ở kết chỉ là kế hoạch, không tự ghi thành sự kiện đã xảy ra."
+  ],
+  "canon_delta": {
+    "characters": [
+      {
+        "id": "stone-monkey",
+        "name": "Tôn Ngộ Không",
+        "position": "Vách đá khóc ở đất cũ, nửa đêm",
+        "injuries": [
+          "Vết đao rách vai trái trên sẹo cũ",
+          "Tay phải đau do đấm vào giáp"
+        ],
+        "state": "Khí gần cạn sau phân thân",
+        "resources": [
+          "Đại đao của Hỗn Thế Ma Vương",
+          "Túi vải mười một hạt đào"
+        ],
+        "abilities": [
+          "Thân ngoại thân đã học ở chương 16, nay dùng hàng trăm thân với nhóm lệnh đơn giản; vượt mức luyện bền, kiệt khí"
+        ],
+        "events_personal": [
+          "Lần đầu giết"
+        ]
+      },
+      {
+        "id": "torn-ear",
+        "position": "Vách đá khóc",
+        "injuries": [
+          "Gãy một chân sau",
+          "Mặt sưng, một mắt nhắm",
+          "Bị đánh nhiều"
+        ],
+        "state": "Sống, rất yếu",
+        "resources": [
+          "Mảnh đá trắng được trả lại"
+        ]
+      },
+      {
+        "id": "big-male",
+        "state": "Đã chết khi giữ gờ đêm Hỗn Thế Ma Vương tấn công"
+      },
+      {
+        "id": "sprout",
+        "identity": "Khỉ cái trưởng thành, có con",
+        "role": "Dẫn đàn sống sót khi con tai sứt đi"
+      },
+      {
+        "id": "sprout-mother",
+        "state": "Già, lông bạc gần hết"
+      },
+      {
+        "id": "hunshi-demon",
+        "name": "Hỗn Thế Ma Vương",
+        "state": "Đã chết, xác bị đốt cùng động ở núi phía bắc"
+      },
+      {
+        "id": "troop",
+        "state": "Khoảng ba chục con sống sót ở đá khóc cộng ba bốn chục khỉ nhỏ được cứu; một số khỉ con không tìm thấy mẹ"
+      }
+    ],
+    "events": [
+      {
+        "order": 99,
+        "event": "Ngộ Không nghe thấy đàn ở đá khóc; được nhận ra qua sẹo",
+        "time": "Sáng, sau khi tới động"
+      },
+      {
+        "order": 100,
+        "event": "Đàn kể: Hỗn Thế Ma Vương tấn công ba mươi đêm trước, khỉ đực to con chết, con tai sứt dẫn đàn thoát rồi đi cứu lũ nhỏ",
+        "time": "Sáng"
+      },
+      {
+        "order": 101,
+        "event": "Đánh Hỗn Thế Ma Vương ở núi phía bắc; phân thân; đoạt đao, chém chết",
+        "time": "Trưa"
+      },
+      {
+        "order": 102,
+        "event": "Cứu khỉ nhỏ trong lồng và con tai sứt; đốt động",
+        "time": "Chiều"
+      },
+      {
+        "option": 103,
+        "order": 103,
+        "event": "Đi bộ dẫn đàn về đá khóc; trả mảnh đá trắng cho con tai sứt",
+        "time": "Nửa đêm"
+      },
+      {
+        "order": 104,
+        "event": "Hỏi đàn về đường trú, lập kế hoạch khảo sát với hạn trở về và tuyến sơ tán; được sửa đường chọn",
+        "time": "Đêm, sau đoàn tụ"
+      }
+    ],
+    "seeds": [
+      {
+        "id": "S03",
+        "state": "paid_off",
+        "source": "“Ngươi đi lâu thế.”",
+        "fact": "Con tai sứt đi cứu lũ nhỏ, không chạy"
+      },
+      {
+        "id": "S11",
+        "state": "paid_off",
+        "fact": "Mảnh đá trắng về lại tay con tai sứt"
+      },
+      {
+        "id": "S22",
+        "state": "paid_off",
+        "fact": "Hỗn Thế Ma Vương lộ diện và bị giết"
+      },
+      {
+        "id": "S20",
+        "state": "advanced",
+        "fact": "Bảy mươi hai biến dùng để cứu đàn và để giết"
+      },
+      {
+        "id": "S23",
+        "state": "introduced",
+        "source": "“Hôm nay hắn giết. Lần đầu tiên.”",
+        "fact": "Hệ quả nội tâm của lần giết đầu, mở phase III"
+      },
+      {
+        "id": "S24",
+        "state": "paid_off",
+        "fact": "Sai tính về thời điểm tai họa bị lời kể đàn bác bỏ; giới hạn phân thân tạo cái giá trận đánh"
+      }
+    ]
+  }
+}
