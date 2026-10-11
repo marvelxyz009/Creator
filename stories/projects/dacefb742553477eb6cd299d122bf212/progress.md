@@ -18,8 +18,16 @@ Tiếp theo: generate_and_review_manga
 - adaptation: 0788caa694a64c83b9dc0808ebf57ce7
 - storyboard: 8e95ab77c1324a5285b6e9536950f78b
 - lettering: d691c98d7519497ca880bf5ee0ee762c
-- image_prompt: d0b3ec32fac34f1490b8a5898f61e7cb
+- image_prompt: bddb7dafec9d40baa7fa1dea3c098e77
 
 ## Trang manga
 
 - Trang 4: đã duyệt
+- Trang 1: đã duyệt
+- Trang 2: đã duyệt
+- Trang 3: đã duyệt
+- Trang 5: đã duyệt
+- Trang 6: đã duyệt
+- Trang 7: đã duyệt
+- Trang 8: đã duyệt
+- Trang 9: đã duyệt

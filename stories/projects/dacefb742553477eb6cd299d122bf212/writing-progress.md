@@ -90,3 +90,13 @@ Chương 19 — (arc 3 — Một ngọn núi thành một nước, chưa đặt 
 ## Mỹ thuật chốt ngày 11/10/2026
 
 Người dùng duyệt trang thử v3. Mẫu hiện hành: [graphic-ink-v3](art-style-profile.md); ghi nhận duyệt và hash ảnh trong hồ sơ JSON. Trang 4 được duyệt sản xuất; các trang còn lại chờ brief và tham chiếu cập nhật.
+
+
+## Tiếp tục sản xuất v3 — 11/10/2026
+
+Đã tạo và xem tham chiếu khỉ già/mẹ/con; cập nhật đủ 20 brief sang graphic-ink-v3. Trang 4 được tái nhập nguyên ảnh đã duyệt theo brief mới để giữ lineage hiện hành. Bắt đầu vẽ lại trang 1–3, sau đó phần cứu nạn và tìm nước.
+
+
+## Dừng theo yêu cầu — 11/10/2026
+
+Trang 1–9 hiện hành đã kiểm tra và duyệt; trang 4 giữ mẫu được người dùng duyệt. Trang 10 đã tạo nhưng chưa duyệt: khung toàn cảnh đảo tay bám rễ. Chưa sửa hoặc vẽ trang 11–20. Khi tiếp tục: sửa trang 10, tay trái giữ cao/tay phải bị kéo và rách; sau đó kiểm tra trước khi vẽ tiếp.

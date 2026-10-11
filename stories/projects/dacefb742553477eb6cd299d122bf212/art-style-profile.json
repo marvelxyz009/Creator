@@ -34,8 +34,7 @@
     "manga/chapter-01/page-04-v2.png"
   ],
   "pending": [
-    "Tạo tham chiếu cùng nét cho khỉ già, khỉ mẹ và khỉ con.",
-    "Cập nhật brief các trang còn lại trước khi vẽ; prompt cũ chưa được tự động chuyển phong cách.",
     "Hoàn thành và kiểm tra các trang còn lại; chưa xuất bản trọn chương."
-  ]
+  ],
+  "supporting_reference": "references/visual/supporting-cast-graphic-v1.png"
 }
