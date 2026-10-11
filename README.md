@@ -37,7 +37,7 @@ Provider Ollama/OpenAI-compatible vẫn là tùy chọn: đặt `STUDIO_PROVIDER
 ## Quy trình
 
 1. Tạo dự án: ý tưởng, thể loại kết hợp, truyện ngắn/vừa/tiểu thuyết/series, ngôn ngữ và hướng đọc.
-2. Hồ sơ series → dàn ý → bản thảo → biên tập → audit continuity.
+2. Giao diện: **Ý tưởng → Cốt truyện → Nhân vật → Mỹ thuật → Sản xuất**. Dây chuyền bên dưới: hồ sơ → dàn ý → thiết kế nhân vật → art bible → bản thảo → biên tập → audit continuity.
 3. Chốt đúng phiên bản truyện viết đã qua audit; canon_delta được đưa vào hồ sơ chương.
 4. Chuyển thể → storyboard có thoại → lettering theo ngữ cảnh → brief vẽ.
 5. Agent có bộ vẽ tạo trang, nhập PNG, kiểm tra trực quan và chốt từng trang.
@@ -49,7 +49,7 @@ Queue lưu SQLite, tự nhận biết job bị ngắt sau restart; retry tối �
 
 ## Cầu nối Codex / bộ vẽ
 
-Các skill đóng gói trong `story_studio/skills/`: studio-director, prose-writer, series-memory, prose-to-manga, contextual-lettering, reference-curator, comic-reader-review. Có thể kết hợp `mangaka`, `generatemangapage` và `imagegen` nếu môi trường agent có chúng; không sao chép skill bên thứ ba vào lõi.
+Các skill đóng gói trong `story_studio/skills/`: studio-director, story-architect, character-designer, art-director, prose-writer, series-memory, prose-to-manga, contextual-lettering, reference-curator, comic-reader-review. Có thể kết hợp `mangaka`, `generatemangapage` và `imagegen` nếu môi trường agent có chúng; không sao chép skill bên thứ ba vào lõi.
 
 ```powershell
 python -m story_studio.cli status
@@ -86,3 +86,9 @@ python -m unittest discover -s tests -v
 Chưa có: bộ vẽ chạy nền tự động, visual QA bằng model, tự sửa có đánh giá thẩm mỹ, crawler thư viện, EPUB/PDF và bộ nhớ truy hồi lớn. Chất lượng sáng tác phụ thuộc model. Đây là lõi vận hành đầu tiên, không phải lời hứa xưởng hoàn toàn tự trị.
 
 Framework AetherForge cũ được lưu trong `legacy/` để tham khảo bộ biên tập/validator; hướng dẫn cũ ở [docs/legacy-framework.md](docs/legacy-framework.md). Đây là snapshot tham khảo, không phải đường chạy chính mới.
+
+## Hướng sáng tạo
+
+Story Architect thiết kế nhân quả, phase và cách tiết lộ thông tin; Character Designer tạo động lực, quan hệ, giọng nói và nhận dạng; Art Director chốt ngôn ngữ hình ảnh và thoại. Các đầu ra nhân vật/mỹ thuật là phiên bản thật, tham gia dependency của bản thảo và chuyển thể. Sửa chúng làm nội dung phụ thuộc cần cập nhật.
+
+Studio Director giữ lời hứa cảm xúc của tác phẩm và quyết định hướng sáng tạo có lý do. Các tiêu chí review/repair ảnh trong skill là quy trình cho agent có bộ vẽ, không phải worker visual QA đã triển khai. Giao diện chính giấu kỹ thuật trong phần chi tiết vận hành.

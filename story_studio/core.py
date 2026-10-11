@@ -22,9 +22,11 @@ PACKAGE_ROOT = Path(__file__).resolve().parent
 ROOT = PACKAGE_ROOT.parent
 DEFAULT_DATA = Path(os.environ.get("STUDIO_DATA", str(Path.cwd() / ".studio"))).resolve()
 GENRES = ["Hành động", "Phiêu lưu", "Tình cảm", "Gia đình", "Đời sống", "Trinh thám", "Kinh dị", "Fantasy", "Khoa học viễn tưởng", "Lịch sử", "Chính trị", "Hài", "Triết học"]
-STAGES = ["bible", "outline", "draft", "edit", "continuity", "adaptation", "storyboard", "lettering", "image_prompt"]
-SKILLS = {"bible": "series-memory", "outline": "studio-director", "draft": "prose-writer", "edit": "prose-writer", "continuity": "series-memory", "adaptation": "prose-to-manga", "storyboard": "prose-to-manga", "lettering": "contextual-lettering", "image_prompt": "prose-to-manga"}
+STAGES = ["bible", "outline", "characters", "art", "draft", "edit", "continuity", "adaptation", "storyboard", "lettering", "image_prompt"]
+SKILLS = {"bible": "story-architect", "outline": "story-architect", "characters": "character-designer", "art": "art-director", "draft": "prose-writer", "edit": "prose-writer", "continuity": "series-memory", "adaptation": "prose-to-manga", "storyboard": "prose-to-manga", "lettering": "contextual-lettering", "image_prompt": "prose-to-manga"}
 INSTRUCTIONS = {
+ "characters": "Design the recurring cast and relationships for this chapter and current arc, using the story architecture. Deliver motivations, agency, conflicting loyalties, distinct dialogue voices, visual invariants and current scene states. Preserve established identities from prior canon.",
+ "art": "Create a production art bible from the story and character designs. Specify visual grammar, environments, geography, character identifiers, contextual balloons, lettering, required reference images and a proof-page plan. This is a design document, not generated artwork.",
  "bible": "Build a series bible: premise, rules, characters, relationships, chronology, arcs, ending direction. Separate world truth, character belief and reader knowledge. Do not write the entire series now.",
  "outline": "Plan the current arc and requested chapter. Describe causal beats, POV, emotional turns, seeds and payoffs. Leave distant arcs flexible. Maintain genre blend and originality.",
  "draft": "Write a complete prose chapter in the requested language, not a screenplay or summary. Use concrete scenes, distinct dialogue, interiority and deliberate pacing. Respect the outline and current canon.",
@@ -274,16 +276,16 @@ class Studio:
             parents.append(source["id"])
             selected.append(source)
         # Context is selected by project/chapter, bounded with an explicit failure instead of silent loss.
-        for kind in ("bible", "outline"):
+        for kind in ("bible", "outline", "characters", "art"):
             row = self.latest(project, chapter, kind)
-            if row and row["id"] not in parents and kind != stage:
+            if row and row["id"] not in parents and STAGES.index(kind) < STAGES.index(stage):
                 selected.append(row)
                 parents.append(row["id"])
         for row in artifacts:
             if row["kind"] == "canon" and row["approved"] and not row["stale"] and row["chapter"] < chapter:
                 selected.append(row)
                 parents.append(row["id"])
-        if chapter > 1 and stage in ("bible", "outline", "draft"):
+        if chapter > 1 and stage in ("bible", "outline", "characters", "art", "draft"):
             previous_source = self.latest(project, chapter - 1, "edit", approved=True)
             if not previous_source:
                 raise ValueError("Chốt chương trước trước khi tiếp tục series")
@@ -291,6 +293,8 @@ class Studio:
             parents.append(previous_source["id"])
         refs = [r for r in self.references() if r["genre"] in info["genres"]][:3]
         skill = (PACKAGE_ROOT / "skills" / SKILLS[stage] / "SKILL.md").read_text(encoding="utf-8")
+        if stage in ("bible", "outline", "art", "edit"):
+            skill += "\n\n" + (PACKAGE_ROOT / "skills" / "studio-director" / "SKILL.md").read_text(encoding="utf-8")
         context = encode({"project": info, "chapter": chapter, "artifacts": selected, "references": refs})
         if len(context) > 100_000:
             raise ValueError("Context too large: curate canon summaries/references before continuing")

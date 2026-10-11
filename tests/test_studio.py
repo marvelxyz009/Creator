@@ -26,7 +26,7 @@ class StudioTests(unittest.TestCase):
         self.tmp.cleanup()
     def pipeline(self):
         self.s.enqueue(self.p)
-        for _ in range(5):
+        for _ in range(STAGES.index("continuity") + 1):
             self.assertTrue(self.s.run_one())
         self.assertEqual(self.s.jobs()[-1]["status"], "needs_review")
     def test_cli_adapters_transport_prompt_and_handle_failure(self):
@@ -62,6 +62,24 @@ class StudioTests(unittest.TestCase):
         self.s.save(self.p, 1, "bible", "Revised bible")
         with self.assertRaises(ValueError):
             self.s.save(self.p, 1, "outline", "Late outline", [first])
+    def test_creative_designs_feed_draft_and_invalidate_it(self):
+        self.pipeline()
+        characters = self.s.latest(self.p, 1, "characters")
+        art = self.s.latest(self.p, 1, "art")
+        draft = self.s.latest(self.p, 1, "draft")
+        self.assertIn(characters["id"], draft["parents"])
+        self.assertIn(art["id"], draft["parents"])
+        self.s.save(self.p, 1, "characters", "Revised motives and identity", characters["parents"])
+        self.assertIsNone(self.s.latest(self.p, 1, "art"))
+        self.assertIsNone(self.s.latest(self.p, 1, "draft"))
+    def test_creative_stage_routes_use_specialist_skills(self):
+        self.s.save(self.p, 1, "bible", "Series plan")
+        self.s.save(self.p, 1, "outline", "Chapter plan")
+        prompt, _ = self.s.prompt(self.p, 1, "characters")
+        self.assertIn("Character Designer", prompt)
+        self.s.save(self.p, 1, "characters", "Cast design")
+        prompt, _ = self.s.prompt(self.p, 1, "art")
+        self.assertIn("Art Director", prompt)
     def test_pipeline_gates_source(self):
         self.pipeline()
         with self.assertRaises(ValueError):
@@ -105,7 +123,7 @@ class StudioTests(unittest.TestCase):
                 return super().generate(prompt)
         self.s.provider = Bad()
         self.s.enqueue(self.p)
-        for _ in range(5):
+        for _ in range(STAGES.index("continuity") + 1):
             self.s.run_one()
         self.assertEqual(self.s.jobs()[-1]["status"], "failed")
         self.assertIsNone(self.s.latest(self.p, 1, "edit", approved=True))
