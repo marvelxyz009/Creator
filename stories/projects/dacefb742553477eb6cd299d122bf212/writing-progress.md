@@ -10,7 +10,8 @@
 - Chương 6 — Ai đi trước: chapter-06.md, edit 8f470356218d4f1c8e14355852ed2037, continuity 2a6abd4c67df415eabc1e4e6e9107fb6 (pass, audit của trợ lý), đã chốt.
 - Chương 7 — Trận đánh đầu: chapter-07.md, edit 0d88f36da20b4f8582c23cacb38a51f0, continuity e112c22a21da43e49a52c1ec7325f4d8 (pass, audit của trợ lý), đã chốt.
 - Chương 8 — Một nơi gọi là nhà: chapter-08.md, edit 7ea0d53d7da046e98779e9c73b5f06a7, continuity d5ac28acc89e4c8f838c92e2ff352d04 (pass, audit của trợ lý), đã chốt.
-- book.zip đã export lại gồm chương 1–8.
+- Chương 9 — Mùa mưa: chapter-09.md, edit 25167c4bafc44c55a3f424fba6f9e6b6, continuity 760248e721ce4aaab6b6ad01069c2877 (pass, audit của trợ lý), đã chốt.
+- book.zip đã export lại gồm chương 1–9.
 
 ## Quy ước gọi tên
 
@@ -18,6 +19,7 @@ Theo yêu cầu người dùng ngày 2026-10-11: đàn khỉ không có tên ri�
 
 ## Nhật ký
 
+- 2026-10-11: Viết chương 9 (mở arc 2): mưa đầu mùa, chuỗi tay cứu khỉ nhỏ, lũ cuốn chỗ chắn, khí chạm giới hạn.
 - 2026-10-11: Viết chương 8, kết arc đầu: dựng nhà ở Thủy Liêm Động, khỉ già trao quyền đi trước, quyết định đi sớm tìm thầy (S04).
 - 2026-10-11: Viết chương 7: sương làm hỏng kế hoạch, con gấu nằm phục ở khoảng trống, mồi nhử dụ về cây gãy, phá chắn, cả đàn vào Thủy Liêm Động.
 - 2026-10-11: Viết chương 6: đàn chia rẽ, bí mật con tai sứt, kế hoạch hai nhóm và mồi nhử, thử gờ thác.
@@ -28,10 +30,10 @@ Theo yêu cầu người dùng ngày 2026-10-11: đàn khỉ không có tên ri�
 - 2026-10-11: Viết chương 2, khoảng 4.000 tiếng; đủ bible → outline → characters → art → draft → edit → continuity → approve.
 - 2026-10-11: Viết lại toàn bộ chương 1 theo phản hồi văn tiếng Việt (bản v2).
 
-## Trạng thái cuối chương 8
+## Trạng thái cuối chương 9
 
-Rạng sáng ngày 30, kết arc đầu. Đàn sống ở Thủy Liêm Động, kiếm ăn ở thung lũng phía tây; luật không qua sườn cây cào. Thạch hầu là đầu đàn (uống sau cùng, đi đầu khi có nguy, đàn được nói khi hắn sai); sẹo ba vệt trên lưng, vai trái còn cứng. Khỉ già yếu, ho, biết hắn từ nơi rất xa và muốn học để không chết. S04 kích hoạt: hắn quyết không chờ ba đến năm trăm năm như sách, sẽ đi tìm thầy bên kia biển sau khi đàn tự đứng được. Con gấu vẫn ở sườn cây cào.
+Khoảng ngày 52, sau mưa đầu mùa. Lũ cuốn trôi chỗ chắn, nước về vũng cũ, con gấu uống ở đó; đàn sống ở Thủy Liêm Động và thung lũng phía tây; lũ nhỏ tự đi đúng đường. Khí của thạch hầu chạm giới hạn, cần thầy. Khỉ già yếu, nói hắn đi được rồi. Con tai sứt bỏ việc đếm nợ.
 
 ## Bước tiếp
 
-Chương 9 — (arc mới — Đường cầu đạo, chưa đặt tên chương). Đọc resume/canon và references/vietnamese-prose-guide.md trước khi soạn. Manga dừng vì phiên hiện tại không có công cụ tạo ảnh. Mỗi lần viết hoặc sửa, cập nhật chương, canon/audit, tiến độ và đẩy Git.
+Chương 10 — Lá rụng. Đọc resume/canon và references/vietnamese-prose-guide.md trước khi soạn. Manga dừng vì phiên hiện tại không có công cụ tạo ảnh. Mỗi lần viết hoặc sửa, cập nhật chương, canon/audit, tiến độ và đẩy Git.
