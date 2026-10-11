@@ -19,7 +19,8 @@
 - Chương 15 — Bảy lần đào chín: chapter-15.md, edit 99d04c232d6249309d1efa187480af3b, continuity 5c88b79c394a44d4859b92f29805b40f (pass, audit của trợ lý), đã chốt.
 - Chương 16 — Ba tai: chapter-16.md, edit 14f893cbdd1442c9853dadf2c040e52d, continuity f3bbd52056764513846ae2b9a16a7d3f (pass, audit của trợ lý), đã chốt.
 - Chương 17 — Cây thông: chapter-17.md, edit b534bffb0604411fbbacdf3dff59ec24, continuity a83520fbe36f476d95ce69e0e9473592 (pass, audit của trợ lý), đã chốt.
-- book.zip đã export lại gồm chương 1–17.
+- Chương 18 — Hỗn Thế: chapter-18.md, edit 674de25adaaa4037a15aa290a6f2b03e, continuity a0b458d62d544bafa523edbfcc6ddc3c (pass, audit của trợ lý), đã chốt.
+- book.zip đã export lại gồm chương 1–18.
 
 ## Quy ước gọi tên
 
@@ -27,6 +28,7 @@ Theo yêu cầu người dùng ngày 2026-10-11: đàn khỉ không có tên ri�
 
 ## Nhật ký
 
+- 2026-10-11: Viết chương 18, kết arc 2: đánh Hỗn Thế Ma Vương, lần đầu giết, cứu con tai sứt. Người dùng bảo dừng sau chương này.
 - 2026-10-11: Viết chương 17: biến cây thông cho bạn xem, bị đuổi về, về tới Hoa Quả Sơn thấy động trống và vạch dừng.
 - 2026-10-11: Viết chương 16: ba năm luyện, ba tai, chọn bảy mươi hai biến, cân đẩu vân, lòng hướng về nhà.
 - 2026-10-11: Viết chương 15: bảy năm việc vặt, học chữ, bốn môn, câu đố gõ đầu, biết và hiểu, truyền đạo trường sinh.
@@ -46,10 +48,10 @@ Theo yêu cầu người dùng ngày 2026-10-11: đàn khỉ không có tên ri�
 - 2026-10-11: Viết chương 2, khoảng 4.000 tiếng; đủ bible → outline → characters → art → draft → edit → continuity → approve.
 - 2026-10-11: Viết lại toàn bộ chương 1 theo phản hồi văn tiếng Việt (bản v2).
 
-## Trạng thái cuối chương 17
+## Trạng thái cuối chương 18
 
-Trước rạng sáng, mùa xuân khoảng năm thứ 13 từ ngày đá nứt. Ngộ Không bị Tổ sư đuổi về sau cảnh cây thông (cho bạn xem), cấm xưng đệ tử. Bay cân đẩu về Hoa Quả Sơn: gờ không người canh, dây leo bị cắt, động trống, đồ đá đổ vỡ, mùi tanh và khét lạ; vạch của con tai sứt dừng khoảng ba mươi ngày; hắn nhặt mảnh đá trắng. Chưa biết kẻ tấn công.
+Nửa đêm, đá khóc ở đất cũ; kết arc 2. Ngộ Không đã giết Hỗn Thế Ma Vương (lần đầu giết), đốt động phía bắc, cứu khỉ nhỏ và con tai sứt (gãy chân, rất yếu). Khỉ đực to con đã chết. Đàn còn khoảng ba chục con cùng lũ nhỏ được cứu, đang ở đá khóc; Thủy Liêm Động bỏ trống. Ngộ Không khí gần cạn, vai trái rách, có đại đao. Con gấu chưa xuất hiện lại.
 
 ## Bước tiếp
 
-Chương 18 — Hỗn Thế. Đọc resume/canon và references/vietnamese-prose-guide.md trước khi soạn. Manga dừng vì phiên hiện tại không có công cụ tạo ảnh. Mỗi lần viết hoặc sửa, cập nhật chương, canon/audit, tiến độ và đẩy Git.
+Chương 19 — (arc 3 — Một ngọn núi thành một nước, chưa đặt tên). Đọc resume/canon và references/vietnamese-prose-guide.md trước khi soạn. Manga dừng vì phiên hiện tại không có công cụ tạo ảnh. Mỗi lần viết hoặc sửa, cập nhật chương, canon/audit, tiến độ và đẩy Git.
