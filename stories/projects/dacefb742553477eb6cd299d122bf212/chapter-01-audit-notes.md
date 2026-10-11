@@ -1,13 +1,15 @@
-# Kiểm tra bản biên tập chương 1
+# Kiểm tra chương 1 — bản viết lại v2
 
-Bản được kiểm: edit 7940edec9f0c498fa0990fa9ebb421ba. Đã đọc toàn chương so với bible, outline, nhân vật và địa hình. Đây là kiểm tra của trợ lý đang viết, không phải đánh giá độc lập của người dùng.
+Bản edit: fc124b412d694492b046860cc9b31997. Trợ lý kiểm tra toàn bản v2 so với nền truyện, outline, hồ sơ nhân vật, địa hình và trạng thái kết thúc v1. Đây là audit của trợ lý, không phải ý kiến độc lập của người dùng.
 
-- Trình tự: ra đời → xuống rừng → cứu hộ → nhập đàn → vũng cạn → bắt đầu điều tra; không tua tuổi hoặc thời gian trái phép.
-- Năng lực: dùng tay, chân, đuôi và hợp tác; chưa có pháp lực hay công pháp. Cảm giác ấm sau ăn chỉ là nghi vấn của nhân vật.
-- Không gian cứu: cây sát mép, rễ trái xuống gờ thấp; Tai Sứt ở rễ ngang; mẹ chuyển tới bờ chắc. Gờ gãy khi Mầm đã lên vai; chuyển khỉ con trước khi thạch hầu lên.
-- Trạng thái: tay phải rách, vai trái đau; cuối chương không chữa lành và không nhận nhiệm vụ đánh nhau. Mầm về với mẹ. Tai Sứt bỏ đá.
-- Danh xưng: Tôn Ngộ Không chỉ là tên nhớ trong đầu; bầy chưa gọi tên này hoặc tôn vua.
-- Tri thức: tiếng khỉ hiểu theo thân thể; dấu chân và nguyên nhân cạn nước còn mở. Số lượng đàn chưa cố định vì người kể đếm sót một con.
-- Nguyên tác: chói mắt không phủ nhận kim quang; không xác nhận Thiên Đình biết chuyển sinh. Nhân vật phụ và tai nạn là cải biên ghi trong hồ sơ nguồn.
-- Seeds: chỉ ghi setup đã xuất hiện; S04 chưa xảy ra, S02/S03/S05 mới một phần. Không biến dự kiến thành canon.
-- Kết cục cục bộ: cứu được Mầm và được gia nhập đàn; mục tiêu thượng nguồn nối chương 2. Không có mâu thuẫn continuity trọng yếu còn tồn tại.
+- Sinh ra từ trứng đá gặp gió; chói mắt không phủ nhận kim quang nguyên tác. Không có tri thức chuyển sinh tự truyền lên Thiên Đình.
+- Thân thể có lực tốt, nhưng chưa biết công pháp hay dùng pháp lực. “Nếu” và “hẳn” trong nhận diện địa danh là suy đoán của nhân vật.
+- Cứu hộ giữ gờ dưới mép, rễ chịu lực bên trái và rễ ngang cho Tai Sứt; mẹ chuyển tới bờ chắc. Mầm lên vai trước gờ gãy, được chuyển cho mẹ trước khi thạch hầu trèo lên. Không dịch chuyển tức thời hoặc thêm người cứu không có vị trí.
+- Tay phải rách và vai trái đau. Có lá ép máu, không hồi phục siêu tốc. Mầm sống bên mẹ. Tai Sứt trao đá cho Xám, không mang đá lúc dò nước.
+- Tên Ngộ Không chỉ trong ý nghĩ, chưa được gọi là vua; tên gọi Xám và Tai Sứt có trong thoại. Tiếng bầy khỉ được hiểu, chưa học tiếng người.
+- Cây cào, bụi quả tránh hái và đường vòng là quan sát; không kết luận độc hoặc loài thú. Nguồn nước và dấu chân chưa có lời giải.
+- Đàn chỉ được nhân vật đếm thử, số lượng chưa khóa. Thời gian trong cùng ngày, kết trước tối.
+- S04 chưa kích hoạt; các seeds khác giữ trạng thái introduced/partial_setup. Evidence được cập nhật theo câu chữ bản v2.
+- Khác biệt v1/v2 là diễn đạt và động cơ trực tiếp, không thay kết quả các biến cố hoặc phát sinh nghĩa vụ mới. Lựa chọn tới thượng nguồn vẫn bị giới hạn ở cây gãy.
+
+Kết quả: không thấy mâu thuẫn continuity trọng yếu chưa xử lý. Chất lượng nhịp văn v2 còn chờ người dùng đọc thử.

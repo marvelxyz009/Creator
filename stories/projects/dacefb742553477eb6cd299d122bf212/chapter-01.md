@@ -2,382 +2,320 @@
 
 ## Chương 1 · Ngày đá biết đau
 
-Tiếng nứt vang lên ở ngay trong đầu.
+Hắn tỉnh lại vì không thở được.
 
-Hắn tưởng có ai vừa đập vỡ một chiếc bát sát bên tai. Nhưng tiếng ấy kéo dài, chạy xuống sống lưng, lan qua hai cánh tay đang bị ép trước ngực. Một đường sáng mở ra phía trên. Không khí lạnh luồn vào, mang theo mùi muối.
+Ngực bị ép chặt, hai cánh tay mắc trước mặt. Muốn duỗi chân cũng không có chỗ. Hắn quẫy trong bóng tối, đầu gối thúc phải một lớp vỏ cứng; từ chỗ ấy, tiếng rạn chạy lên sát tai.
 
-Hắn đạp.
+Một khe sáng hé ra. Gió lùa vào, lạnh buốt và tanh mùi biển. Hắn dồn hết sức đạp thêm lần nữa.
 
-Lớp vỏ bật tung. Thứ gì đó tròn và nặng lăn trên đá, gặp gió rồi rã khỏi người hắn thành những mảnh vụn. Hắn ngã sấp, há miệng hớp lấy hơi thở đầu tiên.
+Vỏ đá bật tung. Cả khối tròn bọc lấy hắn lăn khỏi hõm đá; vừa gặp gió, lớp vỏ còn lại đã tách ra. Hắn ngã sấp giữa những mảnh vụn, ho sặc sụa, hai tay quào trên mặt đá nóng.
 
-Nắng tràn vào mắt.
+Không khí tràn vào phổi. Hắn nằm như thế một lúc, thở đến đau cả ngực mới dám ngẩng đầu.
 
-Trong một khoảnh khắc, cả vòm trời trắng xóa. Hắn vội nhắm nghiền. Đến khi dám mở mắt lần nữa, chỉ còn những đốm sáng trôi trước mặt và một khoảng biển rộng đến mức không thấy bờ bên kia.
+Một luồng sáng chói lòa qua mắt khiến hắn vội cúi xuống. Khi những đốm trắng trước mặt tan dần, biển hiện ra dưới chân núi, xanh thẫm đến tận chân trời. Sóng vỡ quanh các cột đá đỏ; xa hơn một chút, mây thấp mắc giữa những chóp núi, che khuất từng mảng rừng.
 
-Sóng cuộn dưới chân núi. Những cột đá đỏ dựng lên khỏi mây thấp. Xa hơn, rừng xanh phủ kín từng nếp gấp của sườn núi; chim trắng vòng qua một ngọn tháp đá rồi mất hút.
+Trước mắt hắn đáng lẽ phải là một màn hình. Bên cạnh màn hình có cốc nước uống dở. Điện thoại vừa rung, hay đã rung từ lâu? Càng cố nhớ, những hình ảnh ấy càng rời rạc. Tiếng xe ngoài cửa sổ, một cái tên trên màn hình, ngón tay chưa kịp chạm vào nút nghe.
 
-Hắn nằm im một lúc.
+Rồi chẳng còn gì.
 
-Điều cuối cùng nhớ được là ánh màn hình hắt lên một cốc nước. Còn trước đó nữa? Một cuộc gọi chưa trả lời. Tiếng xe ngoài cửa sổ. Những hình ảnh chồng lên nhau, không chịu nối thành một buổi tối hoàn chỉnh.
+Hắn chống tay ngồi dậy, định nhìn xem người có bị thương không. Ánh mắt vừa chạm xuống mu bàn tay đã dừng lại.
 
-Hắn chống tay ngồi dậy.
+Lông. Một lớp lông vàng nâu mọc từ cổ tay xuống tận các ngón.
 
-Năm ngón tay bám xuống mặt đá.
+Hắn lật bàn tay, sờ lên mặt. Đầu ngón chạm phải cái mõm nhô ra, rồi lớp lông ngắn phủ hai bên má. Sau lưng, có thứ vừa quét qua đá. Hắn ngoái lại; một cái đuôi dài cong lên theo động tác ấy.
 
-Lông vàng nâu phủ kín mu bàn tay.
+Nắm lấy nó, kéo nhẹ, hắn lập tức nhăn mặt.
 
-Hắn đưa bàn tay lên sát mắt, xoay một lần, rồi lần thứ hai. Những ngón dài, lòng bàn tay đen nhạt, móng ngắn. Hắn chạm lên má. Mõm nhô ra. Tai nằm cao hơn chỗ hắn chờ đợi. Sau lưng có thứ gì quét trên đá.
+Của mình thật.
 
-Một cái đuôi.
+Hắn bật dậy. Ít nhất, hắn đã định bật dậy như một con người. Nhưng hai bàn chân quá dài, trọng tâm lại dồn về phía trước. Chưa đứng thẳng được, hắn đã ngã ngồi xuống một mảnh đá, đau đến ứa nước mắt.
 
-Hắn quay đầu nhìn nó. Nó cũng động đậy.
+Lần này hắn không vội đứng nữa.
 
-Hắn thử đứng bằng hai chân, theo thói quen của một cơ thể không còn nữa. Đầu gối duỗi quá sớm. Gót chân trượt. Cái đuôi vung sang bên, kéo hắn ngã ngồi xuống đống vỏ đá.
+Phía sau là khối đá lớn đã nứt toác. Những lỗ nhỏ rải quanh mặt đá, còn ở giữa là một hõm rỗng phủ bụi trắng. Hắn nhìn khối đá, nhìn biển, rồi cúi xuống lớp lông trên ngực mình.
 
-Cú ngã đau đến mức nước mắt ứa ra.
+Khỉ sinh ra từ đá.
 
-Được rồi. Đau thật.
+Một cái tên vốn chẳng liên quan gì đến đời hắn bỗng trở nên gần đến đáng sợ.
 
-Hắn nhìn khối tiên thạch đã vỡ phía sau. Những lỗ nhỏ chạy quanh mặt đá; trong lòng khối đá là một hõm rỗng còn bám bụi trắng. Biển. Núi. Một con khỉ vừa chui khỏi đá.
+*Tôn Ngộ Không?*
 
-Một cái tên hiện lên trong đầu, rõ hơn mọi ký ức khác.
+Hắn ngẩng nhìn trời. Ngoài vài con chim bay vòng trên bãi đá, không có gì khác. Không tiếng chuông, không ai xuống giải thích. Gió vẫn thổi; dưới kia, biển cứ đập vào chân núi.
 
-*Tôn Ngộ Không.*
+Hắn đưa tay vuốt mặt lần nữa. Cái mõm vẫn còn đó.
 
-Hắn ngẩng nhìn trời.
+Nếu thật sự là Ngộ Không, nơi này hẳn là Hoa Quả Sơn. Hắn sẽ tìm được một cái động sau thác, làm vua của đàn khỉ, vượt biển tìm Bồ Đề rồi học phép trường sinh. Sau đó còn gậy Như Ý, Long Cung, Thiên Đình…
 
-Trời vẫn xanh. Một con chim lượn qua, thả xuống mặt đá cách hắn vài bước một vệt trắng.
+Nghĩ đến Ngũ Hành Sơn, hắn vô thức co vai.
 
-Hắn nhìn vệt trắng ấy, rồi nhìn bàn tay mình.
+Năm trăm năm dưới một ngọn núi. Chỉ cần tưởng tượng không trở mình được trong một đêm, hắn đã thấy khó chịu. Năm trăm năm ấy tuyệt đối không thể cứ thế rơi xuống đầu mình.
 
-Nếu đây là Hoa Quả Sơn, hắn biết đại khái đời mình sẽ đi tới đâu. Một cái động sau thác. Một vị tổ sư. Gậy sắt. Thiên cung. Một ngọn núi đè lên lưng lâu đến mức người thường có thể sinh ra, già đi và chết hết vài đời.
+Hắn nhìn về phía rừng. Trước hết phải tìm thác. Có nơi trú rồi mới tính chuyện ra biển; tìm được thầy càng sớm, hắn càng có thời gian chuẩn bị.
 
-Phải tìm thác trước. Có chỗ ở, có đàn khỉ, sau đó tìm đường cầu đạo. Hắn sẽ không đợi đến khi sợ chết mới nghĩ đến trường sinh.
+Một ý nghĩ khác chen vào. Thạch hầu vốn do tinh hoa trời đất sinh ra, biết đâu chỉ cần ngồi xuống đã có thể luyện công?
 
-Hắn hít sâu, thử bắt chước tư thế ngồi luyện công từng thấy trên phim.
+Hắn thử xếp bằng. Đuôi mắc dưới mông, chân phải không chịu nằm yên, còn trong đầu thì trống trơn. Những câu từng nghe trên phim chỉ nhớ được đôi chữ. Đôi chữ ấy không cho hắn biết phải làm gì với hơi thở đang ra vào lồng ngực.
 
-Chân phải không chịu nằm ở chỗ hắn muốn. Đuôi vướng dưới mông. Đầu gối lại đau.
+Ngồi thêm cũng chẳng có ích. Hắn gỡ cái đuôi ra, chống tay lên đá rồi chậm rãi đứng dậy. Hai chân vẫn loạng choạng, nhưng khi hơi cúi người và để đuôi duỗi ra sau, hắn giữ được thăng bằng.
 
-Không có lấy một câu công pháp mà hắn chắc chắn dùng được.
-
-Hắn gỡ đuôi ra, chống cả tay lẫn chân, bắt đầu xuống núi.
+Thử bước một bước, rồi thêm bước nữa. Đến mép bãi đá, hắn đã đi được mà không phải nhìn xuống chân.
 
 ---
 
-Qua khỏi bãi đá trống, tiếng biển dịu xuống. Rừng có những âm thanh khác: lá cọ nhau, côn trùng rúc dưới vỏ cây, quả rơi đâu đó giữa các tầng cành.
+Đường xuống núi không khó tìm. Những khe đá nhỏ dẫn vào rừng, nơi bóng cây che mát và mùi đất thay dần mùi muối. Hắn men theo một lối giữa bụi rậm, thỉnh thoảng phải dừng lại gỡ gai khỏi lông.
 
-Hắn đi chậm. Cơ thể mới nhẹ và khỏe hơn mức hắn tưởng, nhưng sức khỏe ấy chưa nghe lời. Một lần muốn nhảy qua gốc cây, hắn vọt quá xa, đập vai vào bụi rậm. Lần sau, hắn co chân ít hơn và đáp được xuống một phiến đá bằng phẳng.
+Thân thể này khỏe hơn hắn tưởng. Chỉ hơi nhún chân đã nhảy qua được một gốc cây; khổ nỗi, cú nhảy xa quá khiến hắn chúi vào bụi lá bên kia. Lần sau hắn co chân ít hơn, đáp trúng phiến đá mình đã chọn. Cái đuôi tự vung ra để giữ người lại.
 
-Đuôi kéo lại phía sau. Thăng bằng trở về.
+Hắn quay nhìn khoảng cách vừa vượt qua. Nếu trước kia, chắc phải lấy đà mới nhảy nổi.
 
-Hắn thử thêm lần nữa.
+Đang định thử lần nữa thì từ dưới rừng vọng lên một tiếng gọi gấp. Hắn chưa từng nghe thứ tiếng ấy, nhưng lại hiểu ngay lời cảnh báo.
 
-Đúng lúc ấy, phía dưới có tiếng gọi.
+*Đừng xuống!*
 
-Ngắn, gấp, chói qua tán lá.
+Một con khỉ đực nhảy lên cành thấp ngay trước mặt. Nó có bộ lông nâu sẫm, vành tai trái mất một mẩu. Vừa trông thấy hắn, nó khựng lại, bàn tay vẫn nắm cành phía trên, mắt liếc về đỉnh núi.
 
-Hắn dừng lại. Âm thanh không giống tiếng người, nhưng ý nghĩa đến với hắn trước khi kịp suy nghĩ.
+— Tiếng động trên ấy là gì?
 
-*Đừng xuống đó.*
-
-Một con khỉ đực nhảy lên cành thấp phía trước. Lông nâu sẫm. Vành tai trái khuyết một mẩu. Nó vừa thấy hắn đã khựng lại, một chân giữ trên thân cây, tay kia chộp cành cao.
-
-Hai con khỉ nhìn nhau.
-
-Con tai sứt liếc qua vai hắn, về phía đỉnh núi.
-
-— Tiếng gì thế?
-
-Hắn mở miệng.
-
-Những tiếng bật ra khác hẳn tiếng nói trong đầu, nhưng con khỉ kia hiểu. Hắn cũng hiểu mình vừa nói gì.
+Hắn định trả lời như thường lệ, nhưng tiếng phát ra khỏi miệng là một chuỗi âm ngắn và lạ. Con khỉ kia vẫn hiểu. Chính hắn cũng nghe ra nghĩa của chúng.
 
 — Đá vỡ.
 
-— Ngươi ở trên ấy?
+— Ngươi ở đó à?
 
-Hắn nhìn lớp bụi trắng còn bám trên lông ngực.
+Hắn phủi bụi trắng trên ngực.
 
-— Vừa ra.
+— Vừa ra khỏi đó.
 
-Con tai sứt nghiêng đầu. Có lẽ câu ấy chẳng giải thích được gì. Nó định hỏi tiếp, nhưng tiếng gọi lại vang lên, lần này kèm tiếng đá va vào nhau.
+Con tai sứt nhìn hắn thêm một cái. Chưa kịp hỏi tiếp, nó đã quay phắt xuống dưới khi tiếng gọi lại vang lên. Lần này có cả tiếng đá lở.
 
-Nó phóng xuống trước.
+Hắn chạy theo.
 
-Hắn theo sau.
+Qua vài bụi cây, mặt đất bỗng mở ra thành một khe sâu. Một cây lớn đứng sát bờ, rễ bò qua các kẽ đá rồi thòng xuống vách. Đất dưới gốc cây vừa sụp một mảng, để lộ lớp đá nhẵn bên trong.
 
-Rừng đột ngột mở ra ở mép một khe sâu. Một cây lớn đứng sát bờ, rễ bám qua các vết nứt, vài nhánh rễ thòng dọc vách. Đất ở mép khe vừa sụp, để lại một dải màu nâu mới giữa lớp cỏ.
+Một khỉ con nằm co trên gờ đá phía dưới. Gờ chỉ vừa đủ chỗ cho nó; mỗi lần nó cựa, sỏi lại tuột khỏi chân, lăn mất vào bóng tối. Từ chỗ hắn đứng xuống đó khoảng hai thân khỉ. Còn từ gờ tới đáy khe, hắn không muốn đoán.
 
-Một khỉ con đang co mình trên gờ đá bên dưới, thấp hơn mép khoảng hai thân người hắn. Gờ chỉ rộng vừa đủ cho nó ngồi. Mỗi khi nó nhúc nhích, sỏi lại tuột khỏi chân, rơi mất trong bóng tối.
+Khỉ mẹ lông nâu đỏ đang nằm sấp trên bờ, cố với xuống. Phía sau, một khỉ cái già giữ chặt chân bà, kéo ngược lại.
 
-Một con khỉ cái lông nâu đỏ nằm ép bụng trên bờ, vươn tay xuống. Quá xa.
+— Lùi lên! Bờ còn lở đấy!
 
-Phía sau nó, một khỉ cái già lông xám giữ chặt cổ chân, vừa kéo vừa gọi:
+Khỉ mẹ chẳng buồn nghe, cứ gọi con:
 
-— Lùi lên. Mép đang rời ra!
+— Mầm! Nhìn mẹ này!
 
-— Mầm! Nhìn mẹ!
+Khỉ con ngẩng đầu, kêu lên. Bàn tay nhỏ xíu cào trên đá nhưng không tìm được chỗ bám.
 
-Khỉ con ngẩng đầu, kêu một tiếng nhỏ.
+Con tai sứt lao tới một mỏm đất nhô ra gần gờ hơn.
 
-Con tai sứt chạy ra một đoạn bờ nhô gần gờ đá nhất.
+— Để ta xuống.
 
-— Ta xuống.
+Nó vừa đặt chân lên, đất đã trượt. Hắn túm cánh tay kéo nó lại, đúng lúc mỏm đất rời khỏi bờ, đập vào vách rồi vỡ tung.
 
-Nó vừa đặt chân lên, đất đã trôi dưới các ngón.
+— Ngươi làm gì thế? — Nó giằng tay.
 
-— Tai Sứt! — khỉ già quát.
+Hắn chỉ xuống chỗ vừa lở.
 
-Hắn chộp cánh tay nó, giật ngược lại. Một mảng đất vỡ ra, rơi trúng vách rồi tan thành bụi.
+— Muốn rơi cùng nó à?
 
-Tai Sứt giằng tay.
+Con tai sứt còn định nói, nhưng dưới chân khỉ con có tiếng rạn. Cả hai cùng quay lại. Một vết nứt mới chạy ngang gờ đá.
 
-— Buông!
+Hắn nhìn quanh tìm đường xuống. Bên trái, một lối đất chắc chạy khỏi mép khe rồi vòng lên sườn núi. Xa xa giữa lá cây có một dải trắng mờ; có thể là thác nước hắn đang tìm.
 
-— Đứng chỗ ấy, ngươi sẽ xuống cùng cả bờ.
+Chỉ cần đi theo lối ấy, hắn sẽ rời được chỗ này.
 
-Một tiếng rạn nhỏ vang dưới gờ đá của khỉ con.
+Khỉ mẹ vẫn không với tới con. Bàn tay bà quờ xuống rồi lại phải chống lên bờ đang rã, mỗi lần như thế khỉ con đều chồm về phía mẹ. Sớm muộn gì nó cũng trượt.
 
-Cả hai cùng im.
+Hắn nhìn dải trắng lần nữa, rồi quay về gốc cây.
 
-Hắn nhìn sang bên kia khe. Trong những tán lá xa, một vệt trắng mờ rủ xuống sườn núi. Có thể là thác. Cũng có thể chỉ là mây mắc giữa hai đỉnh.
+— Rễ nào bám chắc?
 
-Lối vòng lên phía ấy chạy về bên trái, ra khỏi chỗ đất đang sụp. Hắn chỉ cần rời đi. Đàn khỉ ở đây đâu phải cả Hoa Quả Sơn. Hắn còn một đời rất dài phải chuẩn bị.
+Khỉ già ngẩng đầu. Lông bà bạc xám, hai bàn tay vẫn ghì cổ chân khỉ mẹ.
 
-Khỉ con gọi mẹ lần nữa.
+— Cái lớn bên trái. Đừng nắm cái vỏ trắng.
 
-Hắn cúi nhìn bàn tay mình. Bụi đá còn kẹt dưới móng.
+Hắn kéo thử rễ bên trái. Lá trên cây rung lên, mấy hạt đất rơi ra từ vách, nhưng gốc rễ không nhúc nhích. Hắn dồn sức kéo thêm lần nữa.
 
-— Rễ kia có chắc không? — hắn hỏi.
+— Ngươi giữ chỗ này giúp ta.
 
-Khỉ già nhìn theo tay hắn. Một rễ lớn thòng từ cây xuống ngang gờ; đầu trên chui sâu vào vách, thân rễ cong thành một đoạn dễ nắm.
+Con tai sứt nhìn xuống khỉ con, rồi bò lên một rễ ngang phía trên, chèn chân vào chạc rễ. Nó ôm đoạn rễ thòng sát gốc cây, thúc hắn:
 
-— Cái lớn bên trái. Không phải cái có vỏ trắng.
+— Xuống đi. Đưa nó lên ta đỡ.
 
-Hắn đến sát gốc cây, kéo thử. Rễ lớn rung, lá phía trên xao động; chỗ bám không bung ra. Hắn giật thêm một lần, mạnh hơn. Vài hạt đất rơi nhưng thân rễ giữ nguyên.
+Khỉ mẹ chồm tới định theo. Khỉ già kéo bà về phía đất chắc sau gốc cây.
 
-Tai Sứt đã hiểu. Nó bò ra trên một rễ ngang, nằm xuống giữ đoạn rễ thòng sát chỗ mọc khỏi thân.
+— Sang đây đón con. Ngươi đứng trên đầu nó, đất lại rơi xuống.
 
-— Đưa nó lên đây.
+Hắn bám rễ, xoay người ra ngoài vách. Gió từ đáy khe tạt lên làm lông trên ngực dựng cả lên. Đến lúc chân rời khỏi bờ, hắn mới thấy hai bàn tay mình ướt mồ hôi.
 
-Hắn nhìn khỉ con, rồi nhìn tay Tai Sứt. Khoảng cách từ gờ tới mép không đủ để chuyền ngay.
+Rơi từ đây xuống thì thạch hầu có sống nổi không?
 
-— Ta trèo lên với nó. Ngươi đỡ lúc tới gần.
+Hắn không muốn thử.
 
-Khỉ mẹ lại muốn xuống. Khỉ già giữ bà lại, chỉ về phần bờ còn chắc sau gốc cây.
+Bàn chân trái tìm được một chỗ lồi trên vách. Chân phải kẹp rễ; hắn dồn thử trọng lượng lên đó, thấy giữ được mới hạ tay xuống. Cứ thế, từng chút một, hắn xuống ngang gờ đá.
 
-— Sang đó đón con. Đừng đứng trên đầu nó.
+Khỉ con lập tức nhào tới.
 
-Hắn bám rễ, xoay người ra ngoài khe.
+— Khoan!
 
-Đáy sâu hiện ra dưới chân. Tán cây thấp hơn ngọn cây hắn đang bám rất nhiều. Nếu ngã, hắn sẽ đụng vách trước khi tới đất.
+Đã muộn. Hai bàn tay nhỏ chộp lấy cổ tay phải hắn, kéo cả người lệch sang bên. Chân trái tuột khỏi chỗ bám. Vai trái va mạnh vào vách, đau đến tối sầm mắt.
 
-Đột nhiên những chữ *thiên sinh thạch hầu* chẳng giúp được gì.
+Khỉ con treo ở tay hắn, chân cào loạn. Trên đầu, con tai sứt siết rễ, chửi một tiếng. Hắn cắn răng giữ tay trái, quờ chân tìm lại điểm tựa. Vỏ rễ cứa sâu vào lòng bàn tay phải.
 
-Hắn hạ tay trái, tìm chỗ đặt chân. Bàn chân mới mở ra và kẹp lấy một chỗ lồi trên rễ. Hắn dồn ít trọng lượng lên đó, rồi nhiều hơn.
+— Lên vai ta! Đừng bám tay!
 
-Giữ được.
+Khỉ con càng bấu chặt hơn. Hắn cúi xuống sát nó, nhưng cái cổ tay đang chịu cả sức nặng khiến ngón tay tê dần.
 
-Tay phải trượt xuống một đoạn. Vỏ rễ cọ vào da.
+Tiếng khỉ mẹ vang lên từ trên bờ:
 
-Mầm ngước nhìn hắn, răng va lập cập. Khi hắn xuống ngang đầu nó, nó chồm lên muốn bám ngay.
+— Mầm, ôm cổ! Như bám mẹ ấy!
 
-— Đợi.
+Nó nhìn lên. Một bàn tay rời khỏi cổ tay hắn, nắm lấy lông ngực, rồi bàn tay còn lại cũng buông. Nó trèo qua vai trái, vòng chân quanh cổ hắn. Chỗ vừa đập vào đá đau nhói, nhưng bàn tay phải đã nhẹ đi.
 
-Nó không đợi.
+Hắn giữ người sát vách, chờ nó bám chắc rồi mới nhấc tay phải lên cao hơn. Da trong lòng bàn tay đã rách; máu làm rễ trơn hơn mỗi lần hắn đổi chỗ nắm.
 
-Hai bàn tay nhỏ chộp cổ tay phải hắn. Trọng lượng đột ngột kéo lệch người. Chân trái rời vách. Hắn đập vai trái vào đá, răng cắn vào môi.
+Phải đưa nó lên trước khi tay mất sức.
 
-Rễ rung mạnh.
+Hắn đạp vào vách, kéo người lên một đoạn. Trên rễ ngang, con tai sứt thò tay xuống, nhưng khoảng cách vẫn còn quá xa. Hắn nhấc chân phải, kẹp vào khúc rễ cao hơn và kéo tiếp.
 
-Trên đầu, Tai Sứt chửi một tiếng rồi ôm chặt hơn.
+Gờ đá dưới họ gãy lìa.
 
-Hắn siết tay trái, cố tìm lại chỗ đặt chân. Mầm treo ở cổ tay phải, hai chân cào vào không khí. Vỏ rễ cứa qua lòng bàn tay đang bị kéo.
+Khỉ con siết cổ hắn. Hơi thở mắc lại trong ngực. Hắn không nhìn xuống; ngay trước mắt là bàn tay đang chìa ra của con tai sứt. Chỉ cần lên thêm một chút.
 
-— Bám vai. — Hắn cúi xuống gần nó. — Đừng bám tay.
+Những ngón tay nâu sẫm cuối cùng cũng khóa vào cẳng tay hắn.
 
-Khỉ con vẫn không buông.
+— Buông một tay ra! Ta giữ được!
 
-Từ phía trên, mẹ nó gọi. Bà đã nằm ở đoạn đất sau gốc cây, thò đầu qua rễ ngang.
+— Giữ rễ. Đỡ nó trước.
 
-— Mầm, lên cổ! Như bám mẹ ấy!
+Con tai sứt lùi chân sâu vào chạc, đổi chỗ bám. Hắn rướn vai cho khỉ con với lên. Khỉ mẹ đã nằm đợi phía sau gốc cây; vừa chộp được cánh tay con, bà liền kéo nó vào lòng, còn con tai sứt đỡ chân nó qua rễ ngang.
 
-Khỉ con nhìn bà. Một tay của nó rời cổ tay hắn, chộp lấy lông ngực. Rồi tay còn lại. Nó bò lên vai trái khiến vết đập vừa rồi nhói buốt, vòng chân quanh cổ hắn.
+Tiếng khóc nấc vang trên bờ. Hắn nghe mà biết ít nhất khỉ con đã thoát.
 
-Hắn chờ nó bám chắc, mới thả tay phải khỏi rễ.
+Tay phải gần như không còn cảm giác. Hắn bám bằng tay trái, dùng chân đẩy người lên; tới gần mép thì con tai sứt túm lông sau lưng kéo thêm. Hắn bò qua rễ ngang rồi nằm vật dưới gốc cây, thở hổn hển.
 
-Máu đã tràn thành một vệt mỏng trong lòng bàn tay.
+Máu từ lòng bàn tay nhỏ xuống lá khô. Vai trái vừa cử động đã đau.
 
-Hắn đặt lại tay cao hơn, tránh mảnh vỏ sắc. Nhấc chân. Kéo người.
+Con tai sứt ngồi bên cạnh, cũng đang thở dốc.
 
-Từ trên rễ ngang, Tai Sứt hạ một tay xuống.
+— Ngươi nặng hơn ta tưởng.
 
-Chưa tới.
+Hắn nằm thêm một lúc mới đủ hơi đáp:
 
-Hắn kéo thêm một nhịp. Vai trái run lên. Chân trượt trên đá trơn, nhưng lần này bàn chân phải kẹp được rễ trước khi người rơi xuống.
+— Ta cũng chưa biết mình nặng thế.
 
-Ngay dưới họ, gờ đá gãy.
-
-Một tiếng động khô, ngắn. Mầm siết cổ hắn đến nghẹt thở.
-
-Hắn không nhìn xuống. Hắn nhìn bàn tay Tai Sứt.
-
-Còn một nhịp.
-
-Rồi những ngón nâu sẫm khóa vào cẳng tay hắn.
-
-— Bỏ một tay! Ta giữ!
-
-— Giữ rễ. Nó lên trước.
-
-Tai Sứt đổi chỗ bám, chèn hai chân vào chạc rễ ngang. Hắn nâng vai, để Mầm với lên. Khỉ mẹ chộp được cánh tay nhỏ, kéo nó về phía mình. Tai Sứt đỡ bên dưới cho đến khi khỉ con nằm gọn trong lòng mẹ.
-
-Hắn nghe tiếng khóc hổn hển trên bờ.
-
-Bây giờ mới đến lượt mình.
-
-Hắn trèo nốt đoạn cuối, lăn qua rễ ngang rồi nằm ngửa dưới gốc cây. Ngực phập phồng. Bàn tay phải đặt cạnh mặt, máu nhỏ xuống một chiếc lá khô.
-
-Tai Sứt ngồi xổm bên hắn.
-
-— Ngươi nặng đấy.
-
-Hắn quay đầu, thở thêm một hơi mới trả lời được:
-
-— May cho ngươi. Ta vừa mới sinh.
-
-Tai Sứt nhìn hắn như nhìn một con khỉ bị đá rơi trúng đầu.
-
-Hắn nhắm mắt. Có lẽ giải thích sau sẽ dễ hơn.
+Nó cúi nhìn hắn. Hắn khép mắt, để mặc nó nhìn. Chuyện sinh từ đá cứ để sau; lúc này, ngay việc ngồi dậy cũng phải tính.
 
 ---
 
-Khỉ già mang tới một nắm lá mềm. Bà lau bụi quanh vết rách, dùng lá sạch ép lên lòng bàn tay hắn.
+Khỉ già trở lại với một nắm lá mềm.
 
-— Giữ lấy.
+— Bà Xám, tay nó chảy máu nhiều quá — Tai Sứt nói, nhường chỗ cho bà. Bà gỡ bụi quanh vết rách, đặt lá sạch vào tay hắn rồi khép các ngón lại.
 
-Hắn làm theo. Lá mát, máu vẫn thấm qua nhưng chậm hơn.
+— Ép lấy. Đừng mở ra xem mãi.
 
-Mẹ Mầm ngồi cách đó vài bước, ôm con sát bụng. Khỉ con đã nín, chỉ còn thỉnh thoảng giật một cái. Người mẹ nhìn hắn, cúi đầu rất khẽ.
+Hắn giữ bàn tay sát ngực. Lá mát, một lúc sau máu mới thấm ra ngoài, chậm hơn trước. Mẹ Mầm ngồi cách đó vài bước, ôm con trong lòng; khỉ con thỉnh thoảng giật mình, lại dụi mặt sâu hơn vào bụng mẹ.
 
-Hắn định gật lại. Vai đau khiến động tác thành một cái nhăn mặt.
+Khỉ mẹ nhìn sang hắn. Bà cúi đầu khẽ, rồi bẻ một quả xanh đặt bên cạnh.
 
-Tai Sứt bật cười, rồi bị khỉ già liếc.
+Hắn nhận bằng tay trái. Vị chua làm quai hàm tê đi, nhưng vừa nuốt miếng đầu đã nhận ra mình đói đến thế nào. Hắn ăn gần hết quả, chỉ bỏ lại phần sát hạt.
 
-— Cả hai tránh mép. Mùa này đất rời khỏi đá.
+Con tai sứt đang phủi đất trên đùi bị khỉ già gọi lại:
 
-— Ta đã đứng chỗ ấy hôm qua.
+— Lần sau đừng đứng lên mép ấy.
 
-— Hôm qua chưa có đứa nào rơi.
+— Hôm qua ta vẫn đứng ở đó.
 
-Tai Sứt không nói nữa.
+— Hôm qua có đứa nào rơi đâu.
 
-Khỉ già xem vết xước vai hắn, rồi đứng dậy gọi bầy. Những con khỉ nấp trong tán cây bắt đầu tụ lại: vài con lớn, hai con mẹ khác địu con, những con trẻ nhặt quả rơi vừa đi vừa ngoái về khe.
+Nó ngậm miệng. Hắn nhìn hai con khỉ, bỗng thấy cuộc cãi vã ấy quen hơn tất cả những gì đã gặp từ lúc ra đời.
 
-Đàn nhỏ hơn hắn tưởng. Hắn đếm được mười bảy con, rồi một con ở trên cành gọi xuống khiến phải đếm lại.
+Khỉ già gọi bầy. Những con trốn trong tán cây lần lượt xuống: khỉ lớn, khỉ nhỏ, vài con mẹ địu con trên bụng. Có con xuống đến nơi vẫn cố nhặt một quả rơi, bị giục mới vội chạy theo.
 
-— Ngươi đi với ai? — khỉ già hỏi.
+Hắn đếm được mười bảy con, rồi một tiếng gọi từ trên cành khiến phải ngẩng lên đếm lại.
 
-Hắn nhìn lên đỉnh núi, nơi khối đá vỡ đã khuất sau cây.
+Khỉ già tới trước mặt hắn.
 
-— Chưa có ai.
+— Ngươi đi với đàn nào?
 
-— Đi được không?
+Hắn nhìn về đỉnh núi đã khuất sau cây.
 
-Hắn chống tay trái, đứng lên. Hai chân run nhưng chịu được.
+— Chưa có đàn.
 
-Bà nhìn bàn tay phải hắn đang giữ ép vào ngực.
+Bà chờ thêm, nhưng hắn không biết giải thích thế nào mà khỏi bị xem là vừa ngã hỏng đầu.
 
-— Theo sau ta. Chỗ nào ta vòng, ngươi cũng vòng. Đừng nhìn Tai Sứt mà đi.
+— Vậy theo chúng ta. Còn đi được chứ?
 
-— Ta nghe thấy đấy — Tai Sứt nói từ trên cành.
+Hắn chống tay trái đứng dậy. Chân hơi run, nhưng đã đỡ nhiều. Bà nhìn bàn tay phải hắn đang ôm trước ngực, rồi chỉ về lối bên trái.
 
-— Thế thì nhớ.
+— Đi sau ta. Thấy ta vòng chỗ nào thì vòng theo. Đừng chạy như Tai Sứt.
 
-Bà quay đi. Hắn bước theo.
+— Ta có chạy đâu! — Tiếng phản đối vọng xuống từ một cành cây.
 
-Một con khỉ lớn đưa cho hắn quả xanh. Hắn nhận bằng tay trái, cắn thử. Vị chua làm hai bên má co lại. Đã quá đói để chê, hắn ăn hết cả phần thịt còn cứng quanh hạt.
+Khỉ già chỉ liếc lên. Con tai sứt tụt xuống một cành thấp hơn, chờ bầy đi qua rồi mới theo.
 
-Nắng lọt qua lá, chạm vệt lông trên tay. Hắn thử hít sâu, chú ý thứ hơi ấm lan từ ngực tới bụng. Có thể là linh khí. Có thể đơn giản là cơ thể vừa được ăn sau một trận kiệt sức.
+Hắn bước sau bà, thỉnh thoảng phải quay bàn tay để chỗ rách khỏi cọ vào ngực. Nếu đúng là Ngộ Không, thương tích này hẳn chẳng đáng gì so với những thứ sẽ phải chịu sau này. Nhưng hắn vẫn ước lúc kéo khỉ con lên, mình đã chọn được chỗ nắm khác.
 
-Hắn chưa biết phân biệt.
+Làm sao học phép càng sớm càng tốt? Hắn nghĩ lại đến câu hỏi ấy khi đàn khỉ bắt đầu leo lên một dốc thấp. Trong ngực có hơi ấm lan ra sau khi ăn, nhưng hắn không biết đó là linh khí hay chỉ vì vừa đỡ đói. Công pháp chưa có; ngay đến phương hướng vượt biển cũng mới là mấy dòng nhớ mang máng.
 
-Trước hết phải kiếm được công pháp. Nhưng tìm thầy đồng nghĩa rời núi, vượt biển. Hắn nhìn những vết máu nhỏ còn đọng trên ngón tay. Ngay một cái khe cũng khiến hắn suýt rơi chết. Hắn cần đứng vững trên chân mình trước khi đóng bè.
+Khỉ Xám dừng trước một thân cây nghiêng về phía khe. Trên vỏ cây có ba vết cào dài, cao hơn đầu bà. Bà ngửi rồi kéo Tai Sứt khỏi lối bên phải, dẫn cả đàn vòng qua một tảng đá chẻ đôi.
 
-Ở phía trước, Khỉ Xám dừng lại bên một thân cây có vết xước dài. Bà ngửi, đưa tay kéo Tai Sứt khỏi lối đi bên phải.
-
-Đàn khỉ đổi đường, vòng sâu vào rừng.
-
-Hắn nhớ chỗ ấy: thân cây nghiêng về khe, ba vệt cào ở độ cao hơn đầu Khỉ Xám. Đường vòng có một tảng đá chẻ đôi, bên cạnh mọc bụi quả đỏ mà cả đàn không con nào chạm vào.
-
-Hắn đã bắt đầu nhớ những thứ chưa từng có trong câu chuyện mình biết.
+Hắn ghi nhớ tảng đá, nhớ cả bụi quả đỏ bên cạnh mà không con nào hái. Chỗ này không có trong trí nhớ về Tây Du. Từng lối đi, từng thứ ăn được, hắn vẫn phải học lại từ đầu.
 
 ---
 
-Họ tới vũng nước khi bóng cây đã dài qua lòng khe cạn.
+Đến vũng nước, Khỉ Xám đột ngột đứng lại.
 
-Khỉ Xám đi trước bỗng đứng sững.
+Tai Sứt nhảy xuống tảng đá bên bờ, cúi người rồi cũng dừng. Hắn bước tới sau nó và thấy đáy vũng đã lộ ra, lá mục dính thành mảng trên lớp bùn đen. Chỉ ở chỗ sâu nhất còn một hõm nước đục, nổi đầy xác côn trùng.
 
-Tai Sứt nhảy xuống một tảng đá, định cúi uống, rồi cũng dừng.
+— Sáng còn nước mà. — Tai Sứt nhìn ngược lên lòng suối.
 
-Đáy vũng lộ ra. Lá mục dính thành từng mảng trên bùn đen. Một hõm nhỏ ở chỗ sâu nhất còn nước, nhưng đục và đầy xác côn trùng. Vệt ẩm chạy quanh đá cho thấy hôm trước nước từng cao hơn nhiều.
+Khỉ Xám cúi sờ bùn. Lớp mặt đã se, nhưng bên dưới còn mềm. Bà xua mấy khỉ nhỏ đang muốn xuống uống, đẩy chúng về phía các con mẹ.
 
-Những con mẹ kéo con nhỏ lại. Tai Sứt chạy ngược theo lòng suối vài bước, nhìn lên sườn núi.
+Hắn nhìn vệt ẩm trên đá. Nước trước đó cao hơn rất nhiều; chẳng biết vì sao lại rút nhanh đến thế.
 
-— Sáng còn nước.
+Ngay cạnh hõm nước cuối cùng có một dấu chân lớn. Hắn xòe tay trái bên cạnh để so, thấy dấu ấy rộng hơn cả bàn tay. Đầu mỗi ngón hằn một lỗ nhọn, nước đang rịn trở lại một trong những lỗ đó.
 
-Khỉ Xám sờ bùn. Mặt bùn se lại, bên dưới vẫn mềm.
+Chưa cũ.
 
-— Không xuống vũng.
+Hắn nhìn lên bờ, tìm được dấu thứ hai đè trên lá và một cành thấp vừa gãy. Mặt gãy còn sáng màu. Dấu chân hướng ngược lên lòng suối, nhưng hai dấu ấy chưa đủ cho hắn đoán con vật đi một mình hay theo đàn.
 
-Hắn đang định hỏi vì sao thì nhìn thấy dấu chân.
+Tai Sứt đã nhặt một hòn đá.
 
-Dấu nằm ngay cạnh hõm nước cuối cùng, lớn hơn cả bàn tay hắn xòe hết. Những ngón sâu, đầu ngón có vết cắm nhọn. Mép dấu còn ướt; nước đang rịn trở vào một trong những lỗ ấy.
+— Ta lên xem.
 
-Hắn nhìn dọc bờ. Một dấu nữa đè lên đám lá. Một cành thấp bị gãy, mặt gãy sáng màu. Dấu chân hướng lên lòng suối, nhưng hắn chưa thấy đủ để biết con vật đi một mình hay theo đàn.
+Khỉ Xám chắn trước mặt nó.
 
-Chủ nhân của chúng vừa đi qua đây.
+— Không đi một mình. Đến cây gãy thì quay về.
 
-Tai Sứt cầm một hòn đá lên.
+Hắn ngẩng lên. Cách đó không xa, một thân cây đổ ngang suối; bên kia, lòng suối khuất sau các tảng đá lớn.
 
-— Ta xem phía trên.
+Mầm lại kêu. Mẹ nó đang dỗ, nhưng khỉ con cứ với tay về phía vũng. Mấy con nhỏ khác cũng nhìn hõm nước, bị giữ lại thì bắt đầu nhốn nháo.
 
-Khỉ Xám chặn trước mặt nó.
+Hắn có thể hỏi Khỉ Xám về dải trắng mình thấy trên sườn núi. Nếu là thác, có lẽ nước ở đó chưa cạn. Nhưng bà biết lối quanh đây, còn hắn mới chỉ nhìn được từ xa; muốn đem cả đàn đi, trước hết cũng phải biết có đường tới nơi hay không.
 
-— Có đi thì hai đứa. Không qua cây gãy.
+— Ta đi cùng nó — hắn nói.
 
-Hắn nhìn bàn tay phải mình. Chiếc lá băng tạm đã dính máu, không còn xanh. Khi khép ngón, vết rách kéo đau.
+Khỉ Xám nhìn chiếc lá đã thấm máu trong tay hắn.
 
-Bên kia sườn núi có thể là Thủy Liêm Động. Nhưng hắn chưa biết lối tới đó, chưa biết dòng thác mình thấy là gì, và ở đây có mấy con khỉ nhỏ đang khát.
+— Leo được nữa không?
 
-— Ta đi với nó — hắn nói.
+— Chỉ xem rồi về. Chỗ nào phải leo thì để nó lên.
 
-Khỉ Xám nhìn tay hắn.
+Tai Sứt xoay hòn đá trong tay.
 
-— Ngươi còn trèo được?
+— Nếu gặp con để lại dấu này?
 
-— Đi đến cây gãy thôi. Ta không đánh.
+Hắn nhìn những lỗ móng cạnh vũng nước.
 
-Tai Sứt cười khẽ, xoay hòn đá trong tay.
+— Chạy. Đừng ném đá vào nó.
 
-— Lỡ gặp nó?
+Khỉ Xám chìa tay. Tai Sứt chần chừ một lát mới đặt hòn đá vào đó.
 
-Hắn chỉ vào hòn đá.
+— Xem nước chảy đi đâu — bà dặn. — Đừng qua cây gãy.
 
-— Thấy nó thì chạy về báo. Đừng ném đá.
+Tai Sứt bước vào lòng suối trước. Hắn theo sau, tránh chạm bàn tay phải xuống đá, mắt nhìn hai bên bờ tìm thêm dấu chân. Khi tới một đoạn đá trơn, hắn đợi Tai Sứt đi qua rồi mới đặt chân vào đúng chỗ nó vừa đứng.
 
-Nụ cười biến mất.
+Phía sau vẫn còn tiếng gọi khát nước của lũ khỉ nhỏ. Hắn quay lại, thấy mẹ Mầm bẻ phần quả còn sót, đưa cho con ngậm.
 
-Khỉ Xám lấy hòn đá khỏi tay Tai Sứt, đặt xuống bờ.
+Hắn siết chiếc lá trong tay, bước tiếp.
 
-— Xem nước chảy đâu. Thấy gì thì quay lại.
-
-Hai con khỉ bước vào lòng suối cạn. Tai Sứt đi trước vài bước; hắn theo sau, mắt nhìn những thân cây hai bên, tránh đặt bàn tay đau xuống đá.
-
-Trong đầu hắn vẫn có những cái tên lớn: Thiên Đình, Long Cung, Bồ Đề, Ngũ Hành Sơn. Nhưng tiếng mẹ Mầm dỗ con ở sau lưng nghe rõ hơn tất cả.
-
-Chưa biết chiều nay có nước uống hay không, hắn đã nghĩ tới việc khuynh đảo Tam Giới.
-
-Hắn hạ người, bước qua một dấu chân mới.
-
-Lần này, hắn nhìn kỹ chỗ mình đặt chân.
+Công pháp, trường sinh, Thiên Đình… những việc ấy chưa đi đâu cả. Nhưng trước khi trời tối, hắn cần biết nước ở ngọn núi này đã chảy về đâu.

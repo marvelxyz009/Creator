@@ -1,7 +1,7 @@
 # Tiến độ sáng tác
 
-2026-10-11: Hoàn thành chương 1 — Ngày đá biết đau, 2.893 từ xấp xỉ. Bản biên tập mới nhất đã qua kiểm tra continuity của trợ lý và được promote thành canon. Chưa có manga hoặc ảnh tham chiếu.
+2026-10-11: Viết lại toàn bộ chương 1 — Ngày đá biết đau theo phản hồi văn tiếng Việt. Bản v2 khoảng 3.335 từ, dùng fiction-writing-prose; đã biên tập và qua audit continuity của trợ lý. Chưa có người dùng đánh giá chất lượng bản mới. Bản v1 và các revision cũ được giữ, không dùng làm nguồn hiện hành. Chưa có manga hoặc ảnh tham chiếu.
 
-Nguồn văn bản: chapter-01.md. Trạng thái cuối: thạch hầu cùng Tai Sứt đang xem thượng nguồn trước cây gãy; bàn tay phải bị rách, vai trái đau; chưa có pháp lực; Mầm đã an toàn bên mẹ; nguồn nước và dấu chân chưa có lời giải. Không còn lựa chọn người dùng đang chờ.
+Nguồn hiện hành: chapter-01.md, edit fc124b412d694492b046860cc9b31997. Trạng thái kết thúc: thạch hầu cùng Tai Sứt dò thượng nguồn nhưng chưa qua cây gãy; bàn tay phải rách, vai trái đau; không vũ khí, chưa có pháp lực; Mầm bên mẹ; nguồn nước và dấu chân chưa được giải thích. Không có lựa chọn đang chờ trả lời.
 
-Bước tiếp theo khi người dùng yêu cầu tiếp: viết chương 2 — Đàn khỉ không chờ vua, mở tại cuộc dò lòng suối; điều tra nước, thể hiện năng lực dò đường của Tai Sứt và giới hạn thân thể. Đọc resume và canon trước; không tạo bản draft lại chương 1 nếu không có yêu cầu sửa. Không tự chuyển sang vẽ manga chỉ vì harness đề xuất adaptation.
+Bước tiếp: người dùng đọc thử bản v2. Khi được yêu cầu tiếp, viết chương 2 — Đàn khỉ không chờ vua; đọc resume/canon và references/vietnamese-prose-guide.md trước khi soạn. Không tự chuyển sang manga. Mỗi lần viết hoặc sửa tiếp, cập nhật chương, canon/audit, tiến độ, snapshot và đẩy Git như người dùng đã yêu cầu.
