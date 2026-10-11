@@ -4677,12 +4677,12 @@
       "project": "dacefb742553477eb6cd299d122bf212",
       "chapter": 1,
       "kind": "page",
-      "body": "{\"number\": 4, \"source_revision\": \"3c9f3814f6314c79a7af8272fe7a74e0\", \"review\": \"needs_visual_review\"}",
+      "body": "{\"number\": 4, \"source_revision\": \"3c9f3814f6314c79a7af8272fe7a74e0\", \"review\": \"approved\", \"notes\": \"Active-chat visual inspection: {\\\"image_sha256\\\": \\\"073cb5c00e415f09458d8c590fb4f014bd6de60e50c98bd2013a5dbc349ecd53\\\", \\\"inspected\\\": true, \\\"technical_pass\\\": true, \\\"pass\\\": true, \\\"notes\\\": \\\"Đã xem ảnh thực v3: 5 khung đúng nhịp quá đà vào bụi, đáp đá, hỏi đáp và chạy xuống; khung cuối hai nhân vật quay lưng chạy khác hẳn kiểu chân dung cũ. Đọc đủ năm câu đúng dấu; bóng chỉ đúng người. Nét lông giảm thành khối, cận cảnh có trắng, nền cảnh đầu giữ vách đỏ/biển; bộ mặt theo sheet graphic, thạch hầu alert rồi deadpan, khỉ nâu hỏi với miệng mở. Dấu tai trái khuyết giữ theo góc, không vết thương hoặc đồ vật lạc thời điểm. Có wash nền ở khung cuối và mắt còn khá lớn theo hướng stylized; cần người dùng xét mức độ phù hợp, chưa gọi hết AI hay chốt phong cách. Người dùng đã duyệt chính bản v3 hiển thị: “Duyệt bản v3”.\\\", \\\"issues\\\": [], \\\"expected_dialogue\\\": [\\\"Đừng xuống!\\\", \\\"Tiếng động trên ấy là gì?\\\", \\\"Đá vỡ.\\\", \\\"Ngươi ở đó à?\\\", \\\"Vừa ra khỏi đó.\\\"], \\\"observed_dialogue\\\": [\\\"Đừng xuống!\\\", \\\"Tiếng động trên ấy là gì?\\\", \\\"Đá vỡ.\\\", \\\"Ngươi ở đó à?\\\", \\\"Vừa ra khỏi đó.\\\"], \\\"references_viewed\\\": [\\\"references/visual/cast-graphic-candidate-v2.png\\\", \\\"manga/chapter-01/page-04-v2.png\\\"], \\\"human_review\\\": \\\"approved\\\", \\\"art_direction_status\\\": \\\"locked\\\", \\\"human_approval\\\": {\\\"text\\\": \\\"Duyệt bản v3\\\", \\\"date\\\": \\\"2026-10-11\\\", \\\"timezone\\\": \\\"Asia/Saigon\\\", \\\"scope\\\": \\\"Tái sinh Tề Thiên — phong cách v3 và trang thử 4\\\"}, \\\"approved_style_revision\\\": \\\"graphic-ink-v3\\\"}\", \"sha256\": \"073cb5c00e415f09458d8c590fb4f014bd6de60e50c98bd2013a5dbc349ecd53\"}",
       "parents": [
         "3c9f3814f6314c79a7af8272fe7a74e0",
         "d0b3ec32fac34f1490b8a5898f61e7cb"
       ],
-      "approved": 0,
+      "approved": 1,
       "stale": 0,
       "created": "2026-10-11T14:57:38.947823+00:00"
     }

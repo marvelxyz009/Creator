@@ -22,4 +22,4 @@ Tiếp theo: generate_and_review_manga
 
 ## Trang manga
 
-- Trang 4: chờ kiểm tra
+- Trang 4: đã duyệt

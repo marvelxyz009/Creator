@@ -11,3 +11,8 @@ Nét dày hơn ở mặt tiền, nét mảnh ở núi xa; màu đất và lục 
 Thoại bình thường trong bóng mềm, tiếng hét dùng biên gãy vừa đủ; suy nghĩ dùng caption khác thoại nói. Thoại trong bản viết phải giữ nguyên tiếng Việt, dấu đầy đủ. Bố trí khoảng trống trước khi vẽ, đuôi bóng chỉ đúng người, không che tay bấu rễ hoặc hướng nhìn. Một hệ chữ có nhịp nét phù hợp tranh; chưa chọn font thật trước kiểm tra dấu và giấy phép.
 
 Ảnh thiếu: sheet nhận diện thạch hầu, khỉ già, khỉ tai sứt, mẹ con khỉ con; biểu cảm; sơ đồ khe; trang thử cứu hộ. Chưa có ảnh được tạo hoặc duyệt. Chỉ chuẩn bị bộ ảnh sau prose được duyệt và yêu cầu sản xuất manga.
+
+
+## Mỹ thuật chốt ngày 11/10/2026
+
+Người dùng duyệt trang thử v3. Mẫu hiện hành: [graphic-ink-v3](art-style-profile.md); ghi nhận duyệt và hash ảnh trong hồ sơ JSON. Trang 4 được duyệt sản xuất; các trang còn lại chờ brief và tham chiếu cập nhật.

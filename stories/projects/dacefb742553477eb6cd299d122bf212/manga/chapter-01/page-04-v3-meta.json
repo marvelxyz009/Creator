@@ -2,5 +2,12 @@
   "artifact": "3d61c0ffed0b4657970fe5039dedd394",
   "version": 3,
   "source_revision": "3c9f3814f6314c79a7af8272fe7a74e0",
-  "status": "technical_pass_human_style_pending"
+  "status": "human_approved",
+  "human_approval": {
+    "text": "Duyệt bản v3",
+    "date": "2026-10-11",
+    "timezone": "Asia/Saigon",
+    "scope": "Tái sinh Tề Thiên — phong cách v3 và trang thử 4"
+  },
+  "approved_style_revision": "graphic-ink-v3"
 }

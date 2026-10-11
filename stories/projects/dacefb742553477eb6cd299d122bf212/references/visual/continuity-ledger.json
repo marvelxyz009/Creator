@@ -48,5 +48,21 @@
     "sha256": "a37c0ca6a2a675aac7d0f071205ed1a2a7ef96f7e8c7a38e4074bbfdbeeab088",
     "inspected": true,
     "observations": "Đã xem sheet: thạch hầu chạy/bám cây và biểu cảm; khỉ nâu tai trái khuyết ở vành trên; khỉ già xám trước/bên; mẹ nâu đỏ và con nhạt riêng. Giữ mặt và màu bộ cast cũ."
+  },
+  "approved_style_revision": "graphic-ink-v3",
+  "active_style_profile": "art-style-profile.json",
+  "active_identity_reference": {
+    "path": "references/visual/cast-graphic-candidate-v2.png",
+    "sha256": "14318001be28d6faee603007f010a7ccc4b433367f38f165b109e962216b49ad"
+  },
+  "active_style_anchor": {
+    "path": "manga/chapter-01/page-04-v3.png",
+    "sha256": "073cb5c00e415f09458d8c590fb4f014bd6de60e50c98bd2013a5dbc349ecd53"
+  },
+  "human_approval": {
+    "text": "Duyệt bản v3",
+    "date": "2026-10-11",
+    "timezone": "Asia/Saigon",
+    "scope": "Tái sinh Tề Thiên — phong cách v3 và trang thử 4"
   }
 }

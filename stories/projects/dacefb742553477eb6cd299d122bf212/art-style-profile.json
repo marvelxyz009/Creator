@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "status": "human_approved",
+  "style_revision": "graphic-ink-v3",
+  "human_approval": {
+    "text": "Duyệt bản v3",
+    "date": "2026-10-11",
+    "timezone": "Asia/Saigon",
+    "scope": "Tái sinh Tề Thiên — phong cách v3 và trang thử 4"
+  },
+  "source_revision": "3c9f3814f6314c79a7af8272fe7a74e0",
+  "anchor": {
+    "path": "manga/chapter-01/page-04-v3.png",
+    "sha256": "073cb5c00e415f09458d8c590fb4f014bd6de60e50c98bd2013a5dbc349ecd53"
+  },
+  "identity_reference": {
+    "path": "references/visual/cast-graphic-candidate-v2.png",
+    "sha256": "14318001be28d6faee603007f010a7ccc4b433367f38f165b109e962216b49ad"
+  },
+  "rules": [
+    "Nét mực có độ dày biến thiên, khối đen rõ; lông tổ chức thành mảng, tránh tỉa đều từng sợi.",
+    "Màu nhân vật phẳng, lì: vàng đất và nâu sẫm; màu khoáng chọn lọc cho cảnh rộng.",
+    "Cận cảnh ưu tiên khoảng trắng; cảnh rộng giữ địa hình có logic, không phủ texture lên mọi khung.",
+    "Diễn xuất và tư thế phục vụ hành động; tránh chuỗi chân dung mắt mở lớn, biểu cảm giống nhau.",
+    "Bóng thoại theo ngữ cảnh, đuôi hướng đúng người; chữ tiếng Việt rõ dấu, nhất quán và hòa hợp nét mực.",
+    "Đọc trái sang phải; thoại đúng nguồn đã duyệt, không thêm câu để lấp khung.",
+    "Thạch hầu: dáng khỉ non gọn, lông vàng, mõm màu tan, đuôi dài. Khỉ nâu: tai TRÁI khuyết chữ V, tai PHẢI nguyên.",
+    "Thương tích và đạo cụ theo cảnh: trước cứu nạn không có thương tích; sau cứu nạn vai trái va đá, bàn tay phải rách."
+  ],
+  "supersedes": [
+    "references/visual/cast-sheet-v1.png",
+    "references/visual/cast-supplement-v1.png",
+    "manga/chapter-01/page-04-v1.png",
+    "manga/chapter-01/page-04-v2.png"
+  ],
+  "pending": [
+    "Tạo tham chiếu cùng nét cho khỉ già, khỉ mẹ và khỉ con.",
+    "Cập nhật brief các trang còn lại trước khi vẽ; prompt cũ chưa được tự động chuyển phong cách.",
+    "Hoàn thành và kiểm tra các trang còn lại; chưa xuất bản trọn chương."
+  ]
+}

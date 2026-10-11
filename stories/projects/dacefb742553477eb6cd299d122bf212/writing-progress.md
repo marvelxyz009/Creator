@@ -85,3 +85,8 @@ Chương 19 — (arc 3 — Một ngọn núi thành một nước, chưa đặt 
 - Bước tiếp: xem trang 4 v3, sửa lỗi kỹ thuật nếu có, rồi đưa người dùng duyệt nét trước khi chốt profile và sản xuất chương.
 
 - Trang 4 v3 đã vẽ/xem, kỹ thuật đạt; người dùng chưa duyệt nét. Ảnh: manga/chapter-01/page-04-v3.png. Không chốt profile hoặc vẽ tiếp cả chương khi còn chờ.
+
+
+## Mỹ thuật chốt ngày 11/10/2026
+
+Người dùng duyệt trang thử v3. Mẫu hiện hành: [graphic-ink-v3](art-style-profile.md); ghi nhận duyệt và hash ảnh trong hồ sơ JSON. Trang 4 được duyệt sản xuất; các trang còn lại chờ brief và tham chiếu cập nhật.
