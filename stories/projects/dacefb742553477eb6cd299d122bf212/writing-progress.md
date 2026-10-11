@@ -16,7 +16,8 @@
 - Chương 12 — Tiếng người: chapter-12.md, edit 42e35feaec854941bae01cb6042c5d0b, continuity 13733387cdb1418290766174c447cc42 (pass, audit của trợ lý), đã chốt.
 - Chương 13 — Biển tây: chapter-13.md, edit 1fa6f604989a430db6079a510ddb58e8, continuity 8195f318a731428ca96949286fb844e2 (pass, audit của trợ lý), đã chốt.
 - Chương 14 — Tà Nguyệt Tam Tinh: chapter-14.md, edit be8accaa9a3a4a05ab78bf41d54c0f60, continuity e3c98d5629cc45c3bb63be735ac21544 (pass, audit của trợ lý), đã chốt.
-- book.zip đã export lại gồm chương 1–14.
+- Chương 15 — Bảy lần đào chín: chapter-15.md, edit 99d04c232d6249309d1efa187480af3b, continuity 5c88b79c394a44d4859b92f29805b40f (pass, audit của trợ lý), đã chốt.
+- book.zip đã export lại gồm chương 1–15.
 
 ## Quy ước gọi tên
 
@@ -24,6 +25,7 @@ Theo yêu cầu người dùng ngày 2026-10-11: đàn khỉ không có tên ri�
 
 ## Nhật ký
 
+- 2026-10-11: Viết chương 15: bảy năm việc vặt, học chữ, bốn môn, câu đố gõ đầu, biết và hiểu, truyền đạo trường sinh.
 - 2026-10-11: Viết chương 14: cổng mở, Tổ sư nhìn thấu việc biết trước, đặt tên Tôn Ngộ Không theo nguyên tác.
 - 2026-10-11: Viết chương 13: làm thuê trên thuyền buôn, cứu thủy thủ, lộ mặt, gặp tiều phu, tới cổng động.
 - 2026-10-11: Viết chương 12: học tiếng người với ông lão mù, chợ và tiên đan giả, thầy pháp lùng yêu, nghe tên Tây Ngưu Hạ Châu.
@@ -40,10 +42,10 @@ Theo yêu cầu người dùng ngày 2026-10-11: đàn khỉ không có tên ri�
 - 2026-10-11: Viết chương 2, khoảng 4.000 tiếng; đủ bible → outline → characters → art → draft → edit → continuity → approve.
 - 2026-10-11: Viết lại toàn bộ chương 1 theo phản hồi văn tiếng Việt (bản v2).
 
-## Trạng thái cuối chương 14
+## Trạng thái cuối chương 15
 
-Khoảng ngày 541. Thạch hầu được Tu Bồ Đề Tổ Sư nhận vào Tà Nguyệt Tam Tinh Động, đặt họ Tôn, pháp danh Ngộ Không. Tổ sư nhìn ra hắn biết trước và cảm thấy trong hắn có thứ không thuộc về đá; cảnh cáo đừng dùng điều biết trước khi hiểu nó. Giao việc vặt; chưa truyền pháp. Ở Hoa Quả Sơn vách động đã hơn năm trăm vạch.
+Năm thứ bảy trong môn (gần chín năm từ ngày đá nứt). Ngộ Không đã làm việc vặt bảy năm, học đọc viết chữ Hán, khí nới ra chút ít; từ chối bốn môn, bị gõ đầu ba cái, tự giải câu đố, canh ba được Tổ sư truyền đạo trường sinh (tinh khí thần), chưa luyện thành. Bảy hạt đào trên bậu cửa. Không có tin Hoa Quả Sơn.
 
 ## Bước tiếp
 
-Chương 15 — Bảy lần đào chín. Đọc resume/canon và references/vietnamese-prose-guide.md trước khi soạn. Manga dừng vì phiên hiện tại không có công cụ tạo ảnh. Mỗi lần viết hoặc sửa, cập nhật chương, canon/audit, tiến độ và đẩy Git.
+Chương 16 — Ba tai. Đọc resume/canon và references/vietnamese-prose-guide.md trước khi soạn. Manga dừng vì phiên hiện tại không có công cụ tạo ảnh. Mỗi lần viết hoặc sửa, cập nhật chương, canon/audit, tiến độ và đẩy Git.

@@ -1,0 +1,7 @@
+## Trạng thái
+
+Chương 1–14 đã chốt, có canon. Cuối chương 14 (edit be8accaa9a3a4a05ab78bf41d54c0f60): khoảng ngày 541, thạch hầu được Tu Bồ Đề Tổ Sư đặt tên Tôn Ngộ Không, nhận làm đệ tử làm việc vặt; Tổ sư đã nhìn ra hắn biết trước.
+
+Chương 15 — Bảy lần đào chín: bảy năm (khoảng năm thứ 2 đến năm thứ 9 kể từ ngày đá nứt), kể cô đọng, rồi một buổi giảng và một đêm. Đúng nguyên tác hồi 2 (references/tay-du-arc-02.md): làm việc vặt quét sân, gánh nước, nhổ cỏ khoảng sáu bảy năm (ăn bảy lần đào); nghe giảng vui đến nhảy múa; Tổ sư đưa bốn môn 術 (thuật số, cầu tiên hỏi quẻ), 流 (các nhà học thuyết, kinh sách), 靜 (tĩnh, ngồi thiền nhịn ăn), 動 (động, luyện đan, thái âm bổ dương…) — không môn nào cho trường sinh; Ngộ Không đều từ chối. Tổ sư gõ đầu ba cái, chắp tay sau lưng, vào cửa giữa đóng lại; các đồng môn trách. Ngộ Không hiểu: canh ba, cửa sau. Được truyền đạo trường sinh, khẩu quyết xoay quanh tinh khí thần (không chép khẩu quyết).
+
+Cải biên của dự án: trong bảy năm hắn học đọc và viết chữ (từ đồng môn), luyện khí theo lời giảng chung, bức tường ở chương 9 được nới ra chút ít nhờ hiểu sai lầm của luật tự đặt — không đột phá. Thế khó: hắn biết nghĩa câu đố từ sách; đêm ấy hắn không đi ngay mà tự nghĩ vì sao thầy phải giấu, tới khi tự hiểu mới đi. Ở cửa sau, Tổ sư hỏi hắn tới vì biết hay vì hiểu. Hắn trả lời thật. Tổ sư truyền pháp. Hoa Quả Sơn trong bảy năm không có tin tức; hắn đếm thời gian bằng mùa đào.
