@@ -14,7 +14,8 @@
 - Chương 10 — Lá rụng: chapter-10.md, edit a21930b9f35d4d808dc243ed44209c7b, continuity 22d7f38573354da4ae2bc4add0128484 (pass, audit của trợ lý), đã chốt.
 - Chương 11 — Biển: chapter-11.md, edit d86b5c10f7e14100b109508ce7734a1a, continuity 86fc20c9de1449418d75babc37b02873 (pass, audit của trợ lý), đã chốt.
 - Chương 12 — Tiếng người: chapter-12.md, edit 42e35feaec854941bae01cb6042c5d0b, continuity 13733387cdb1418290766174c447cc42 (pass, audit của trợ lý), đã chốt.
-- book.zip đã export lại gồm chương 1–12.
+- Chương 13 — Biển tây: chapter-13.md, edit 1fa6f604989a430db6079a510ddb58e8, continuity 8195f318a731428ca96949286fb844e2 (pass, audit của trợ lý), đã chốt.
+- book.zip đã export lại gồm chương 1–13.
 
 ## Quy ước gọi tên
 
@@ -22,6 +23,7 @@ Theo yêu cầu người dùng ngày 2026-10-11: đàn khỉ không có tên ri�
 
 ## Nhật ký
 
+- 2026-10-11: Viết chương 13: làm thuê trên thuyền buôn, cứu thủy thủ, lộ mặt, gặp tiều phu, tới cổng động.
 - 2026-10-11: Viết chương 12: học tiếng người với ông lão mù, chợ và tiên đan giả, thầy pháp lùng yêu, nghe tên Tây Ngưu Hạ Châu.
 - 2026-10-11: Viết chương 11: chín ngày trên biển, giông, nút của con tai sứt giữ bè, cập bờ châu phía nam, gặp người, lấy áo.
 - 2026-10-11: Viết chương 10: ranh giới vết cào, khỉ già mất, đàn chọn người dẫn, con tai sứt giữ vạch ngày, làm bè ra khơi.
@@ -36,10 +38,10 @@ Theo yêu cầu người dùng ngày 2026-10-11: đàn khỉ không có tên ri�
 - 2026-10-11: Viết chương 2, khoảng 4.000 tiếng; đủ bible → outline → characters → art → draft → edit → continuity → approve.
 - 2026-10-11: Viết lại toàn bộ chương 1 theo phản hồi văn tiếng Việt (bản v2).
 
-## Trạng thái cuối chương 12
+## Trạng thái cuối chương 13
 
-Khoảng ngày 520. Thạch hầu đã sống hơn một năm ở châu phía nam, nói được tiếng người (giọng khàn, lạ), biết chợ búa; đội nón lá, đi dép cỏ, giấu đuôi. Ông lão mù vá lưới biết hắn là khỉ, vẫn nhận, cho nón và dép. Đã nghe thủy thủ nói về Tây Ngưu Hạ Châu bên kia biển tây; sắp lên đường. Khí ở giới hạn.
+Khoảng ngày 541. Thạch hầu ngồi chờ trước cổng Tà Nguyệt Tam Tinh Động, Linh Đài Phương Thốn Sơn, Tây Ngưu Hạ Châu; nón đặt cạnh, không giấu mặt. Đã vượt biển tây trên thuyền buôn, cứu một thủy thủ, bị lộ mặt; được tiều phu chỉ đường. Lo người sau cổng nhìn ra hắn biết trước.
 
 ## Bước tiếp
 
-Chương 13 — Biển tây. Đọc resume/canon và references/vietnamese-prose-guide.md trước khi soạn. Manga dừng vì phiên hiện tại không có công cụ tạo ảnh. Mỗi lần viết hoặc sửa, cập nhật chương, canon/audit, tiến độ và đẩy Git.
+Chương 14 — Tà Nguyệt Tam Tinh. Đọc resume/canon và references/vietnamese-prose-guide.md trước khi soạn. Manga dừng vì phiên hiện tại không có công cụ tạo ảnh. Mỗi lần viết hoặc sửa, cập nhật chương, canon/audit, tiến độ và đẩy Git.
