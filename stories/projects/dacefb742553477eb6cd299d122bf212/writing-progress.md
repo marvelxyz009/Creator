@@ -11,7 +11,8 @@
 - Chương 7 — Trận đánh đầu: chapter-07.md, edit 0d88f36da20b4f8582c23cacb38a51f0, continuity e112c22a21da43e49a52c1ec7325f4d8 (pass, audit của trợ lý), đã chốt.
 - Chương 8 — Một nơi gọi là nhà: chapter-08.md, edit 7ea0d53d7da046e98779e9c73b5f06a7, continuity d5ac28acc89e4c8f838c92e2ff352d04 (pass, audit của trợ lý), đã chốt.
 - Chương 9 — Mùa mưa: chapter-09.md, edit 25167c4bafc44c55a3f424fba6f9e6b6, continuity 760248e721ce4aaab6b6ad01069c2877 (pass, audit của trợ lý), đã chốt.
-- book.zip đã export lại gồm chương 1–9.
+- Chương 10 — Lá rụng: chapter-10.md, edit a21930b9f35d4d808dc243ed44209c7b, continuity 22d7f38573354da4ae2bc4add0128484 (pass, audit của trợ lý), đã chốt.
+- book.zip đã export lại gồm chương 1–10.
 
 ## Quy ước gọi tên
 
@@ -19,6 +20,7 @@ Theo yêu cầu người dùng ngày 2026-10-11: đàn khỉ không có tên ri�
 
 ## Nhật ký
 
+- 2026-10-11: Viết chương 10: ranh giới vết cào, khỉ già mất, đàn chọn người dẫn, con tai sứt giữ vạch ngày, làm bè ra khơi.
 - 2026-10-11: Viết chương 9 (mở arc 2): mưa đầu mùa, chuỗi tay cứu khỉ nhỏ, lũ cuốn chỗ chắn, khí chạm giới hạn.
 - 2026-10-11: Viết chương 8, kết arc đầu: dựng nhà ở Thủy Liêm Động, khỉ già trao quyền đi trước, quyết định đi sớm tìm thầy (S04).
 - 2026-10-11: Viết chương 7: sương làm hỏng kế hoạch, con gấu nằm phục ở khoảng trống, mồi nhử dụ về cây gãy, phá chắn, cả đàn vào Thủy Liêm Động.
@@ -30,10 +32,10 @@ Theo yêu cầu người dùng ngày 2026-10-11: đàn khỉ không có tên ri�
 - 2026-10-11: Viết chương 2, khoảng 4.000 tiếng; đủ bible → outline → characters → art → draft → edit → continuity → approve.
 - 2026-10-11: Viết lại toàn bộ chương 1 theo phản hồi văn tiếng Việt (bản v2).
 
-## Trạng thái cuối chương 9
+## Trạng thái cuối chương 10
 
-Khoảng ngày 52, sau mưa đầu mùa. Lũ cuốn trôi chỗ chắn, nước về vũng cũ, con gấu uống ở đó; đàn sống ở Thủy Liêm Động và thung lũng phía tây; lũ nhỏ tự đi đúng đường. Khí của thạch hầu chạm giới hạn, cần thầy. Khỉ già yếu, nói hắn đi được rồi. Con tai sứt bỏ việc đếm nợ.
+Khoảng ngày 120. Thạch hầu đã rời Hoa Quả Sơn trên bè cành thông, sào tre, mang quả và ống nước. Khỉ già đã mất vì tuổi già, vùi dưới đá ở thung lũng. Khỉ đực to con giữ gờ, con tai sứt dẫn đường và vạch ngày trên vách. Ranh giới vết cào với con gấu (không phải thỏa thuận). Khí của thạch hầu ở giới hạn.
 
 ## Bước tiếp
 
-Chương 10 — Lá rụng. Đọc resume/canon và references/vietnamese-prose-guide.md trước khi soạn. Manga dừng vì phiên hiện tại không có công cụ tạo ảnh. Mỗi lần viết hoặc sửa, cập nhật chương, canon/audit, tiến độ và đẩy Git.
+Chương 11 — Biển. Đọc resume/canon và references/vietnamese-prose-guide.md trước khi soạn. Manga dừng vì phiên hiện tại không có công cụ tạo ảnh. Mỗi lần viết hoặc sửa, cập nhật chương, canon/audit, tiến độ và đẩy Git.

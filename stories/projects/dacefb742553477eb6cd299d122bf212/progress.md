@@ -2,19 +2,19 @@
 
 Tái sinh Tề Thiên
 
-Chương đang làm: 9
+Chương đang làm: 10
 
 Tiếp theo: adaptation
 
 ## Tài liệu hiện hành
 
-- bible: ad996a1f7a7448deb8657c91e8a9fa9c
-- outline: 4b657ccfea244332ab7b23bedf39bc0c
-- characters: d34cf695658146b59c4764221e30620e
-- art: 036f7de7e7f34cf8873e75d0b2a527d6
-- draft: d516c7700600496e9ea78b70b516a11f
-- edit: 25167c4bafc44c55a3f424fba6f9e6b6
-- continuity: 760248e721ce4aaab6b6ad01069c2877
+- bible: 07f4394b1d054cbd87c0edd9ef31a716
+- outline: bcfb386b69e04d90a9764f3cd4dcb887
+- characters: 05c49646ac954d17b5d14751dda91e3d
+- art: 72872c440d83489fb28c74b442bb9d9e
+- draft: f06beac62812464ab7f1da6109a9bf2f
+- edit: a21930b9f35d4d808dc243ed44209c7b
+- continuity: 22d7f38573354da4ae2bc4add0128484
 
 ## Trang manga
 
