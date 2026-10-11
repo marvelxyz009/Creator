@@ -1,0 +1,26 @@
+{
+  "image_sha256": "629074f82d6c0b4d40a1f4ebce50178d8fa7ba145f939a7fe2179327a584b0e9",
+  "inspected": true,
+  "pass": true,
+  "notes": "Đã xem ảnh thực: 7 khung đọc trái-phải; hai lần nhảy, cảnh báo ngoài khung, hỏi đáp và chạy xuống rừng rõ. Đọc đủ năm câu tiếng Việt đúng dấu; bóng đáp cuối chỉ rõ thạch hầu. Mặt, lông, đuôi và màu giữ sheet; tai trái khuyết khuất theo góc mặt ở các khung nghiêng. Chưa có vết thương, bụi trắng trên ngực đúng thời điểm. Đuôi bóng câu hỏi dưới chỉ về nhân vật bên trái, có thể tinh chỉnh nét ở lượt biên tập mỹ thuật.",
+  "issues": [],
+  "expected_dialogue": [
+    "Đừng xuống!",
+    "Tiếng động trên ấy là gì?",
+    "Đá vỡ.",
+    "Ngươi ở đó à?",
+    "Vừa ra khỏi đó."
+  ],
+  "observed_dialogue": [
+    "Đừng xuống!",
+    "Tiếng động trên ấy là gì?",
+    "Đá vỡ.",
+    "Ngươi ở đó à?",
+    "Vừa ra khỏi đó."
+  ],
+  "references_viewed": [
+    "references/visual/cast-sheet-v1.png",
+    "references/visual/cast-supplement-v1.png"
+  ],
+  "human_review": "pending"
+}

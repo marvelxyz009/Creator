@@ -4553,6 +4553,20 @@
       "approved": 1,
       "stale": 0,
       "created": "2026-10-11T14:37:34.117349+00:00"
+    },
+    {
+      "id": "c9fc1945380e456d9795c8d9b9e8c273",
+      "project": "dacefb742553477eb6cd299d122bf212",
+      "chapter": 1,
+      "kind": "page",
+      "body": "{\"number\": 4, \"source_revision\": \"3c9f3814f6314c79a7af8272fe7a74e0\", \"review\": \"needs_art_revision\", \"notes\": \"Human art feedback supersedes assistant technical visual pass.\", \"sha256\": \"629074f82d6c0b4d40a1f4ebce50178d8fa7ba145f939a7fe2179327a584b0e9\", \"human_feedback\": \"Too AI-looking; user requested stop\"}",
+      "parents": [
+        "3c9f3814f6314c79a7af8272fe7a74e0",
+        "437f856ee6334a699972509fd44d16e7"
+      ],
+      "approved": 0,
+      "stale": 0,
+      "created": "2026-10-11T14:38:20.353185+00:00"
     }
   ],
   "session": {

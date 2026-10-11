@@ -1,0 +1,28 @@
+{
+  "image_sha256": "629074f82d6c0b4d40a1f4ebce50178d8fa7ba145f939a7fe2179327a584b0e9",
+  "inspected": true,
+  "pass": false,
+  "notes": "Người dùng bác mỹ thuật: quá giống ảnh AI; thu hồi duyệt sản xuất, giữ kết quả đọc chữ lịch sử.",
+  "issues": [
+    "Nền/texture phủ đều, nét quá chuốt, nhịp khung và biểu cảm thiếu biến hóa."
+  ],
+  "expected_dialogue": [
+    "Đừng xuống!",
+    "Tiếng động trên ấy là gì?",
+    "Đá vỡ.",
+    "Ngươi ở đó à?",
+    "Vừa ra khỏi đó."
+  ],
+  "observed_dialogue": [
+    "Đừng xuống!",
+    "Tiếng động trên ấy là gì?",
+    "Đá vỡ.",
+    "Ngươi ở đó à?",
+    "Vừa ra khỏi đó."
+  ],
+  "references_viewed": [
+    "references/visual/cast-sheet-v1.png",
+    "references/visual/cast-supplement-v1.png"
+  ],
+  "human_review": "rejected_art_direction"
+}

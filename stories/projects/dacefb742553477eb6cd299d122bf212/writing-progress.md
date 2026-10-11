@@ -68,3 +68,9 @@ Chương 19 — (arc 3 — Một ngọn núi thành một nước, chưa đặt 
 - Đã sửa chương 15–18 theo review; kiểm tra lại và duyệt bản sửa bằng audit của trợ lý. Giảm giải thích lặp, thiết lập phân thân, gia cố lựa chọn ở lại và kế hoạch xem phép; sửa vạch ngày, thời gian trở về; kết mở quản trị núi.
 - Chương 1 giữ nguồn hiện hành 3c9f3814f6314c79a7af8272fe7a74e0. Manga mới có 20 trang; kế hoạch và thoại tại manga/chapter-01/production-plan.json.
 - Đang vẽ proof trang 4 nguồn hiện hành, sau đó triển khai cả chương. Preview nguồn cũ vẫn là tài liệu lịch sử, không trang chính thức.
+
+## Dừng mỹ thuật theo phản hồi người dùng
+
+- Người dùng thấy hình quá AI: dừng triển khai tiếp. Ảnh trang 1/2/4 là thử, chưa hoàn thành chương; thu hồi duyệt mỹ thuật trang 4.
+- Nhận xét và hướng chỉnh tại manga/chapter-01/art-review-hold.md. Chưa vẽ lại hoặc dựng bộ cast mới.
+- Sửa ranh giới trích nguồn trang 19/20 trong production ledger; trước khởi động lại cần tạo revision mới cho các tài liệu manga theo mỹ thuật đã chốt.
