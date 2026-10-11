@@ -9,7 +9,8 @@
 - Chương 5 — Đường sau thác: chapter-05.md, edit 3d19f1ea2a52424da0d99d9e1102fd91, continuity 2da01031868a40df8af4f73f137af94b (pass, audit của trợ lý), đã chốt.
 - Chương 6 — Ai đi trước: chapter-06.md, edit 8f470356218d4f1c8e14355852ed2037, continuity 2a6abd4c67df415eabc1e4e6e9107fb6 (pass, audit của trợ lý), đã chốt.
 - Chương 7 — Trận đánh đầu: chapter-07.md, edit 0d88f36da20b4f8582c23cacb38a51f0, continuity e112c22a21da43e49a52c1ec7325f4d8 (pass, audit của trợ lý), đã chốt.
-- book.zip đã export lại gồm chương 1–7.
+- Chương 8 — Một nơi gọi là nhà: chapter-08.md, edit 7ea0d53d7da046e98779e9c73b5f06a7, continuity d5ac28acc89e4c8f838c92e2ff352d04 (pass, audit của trợ lý), đã chốt.
+- book.zip đã export lại gồm chương 1–8.
 
 ## Quy ước gọi tên
 
@@ -17,6 +18,7 @@ Theo yêu cầu người dùng ngày 2026-10-11: đàn khỉ không có tên ri�
 
 ## Nhật ký
 
+- 2026-10-11: Viết chương 8, kết arc đầu: dựng nhà ở Thủy Liêm Động, khỉ già trao quyền đi trước, quyết định đi sớm tìm thầy (S04).
 - 2026-10-11: Viết chương 7: sương làm hỏng kế hoạch, con gấu nằm phục ở khoảng trống, mồi nhử dụ về cây gãy, phá chắn, cả đàn vào Thủy Liêm Động.
 - 2026-10-11: Viết chương 6: đàn chia rẽ, bí mật con tai sứt, kế hoạch hai nhóm và mồi nhử, thử gờ thác.
 - 2026-10-11: Viết chương 5: vượt sườn cây cào, nhảy thác sai suýt chết đuối, vào Thủy Liêm Động theo chim én, bia khắc xác nhận Hoa Quả Sơn.
@@ -26,10 +28,10 @@ Theo yêu cầu người dùng ngày 2026-10-11: đàn khỉ không có tên ri�
 - 2026-10-11: Viết chương 2, khoảng 4.000 tiếng; đủ bible → outline → characters → art → draft → edit → continuity → approve.
 - 2026-10-11: Viết lại toàn bộ chương 1 theo phản hồi văn tiếng Việt (bản v2).
 
-## Trạng thái cuối chương 7
+## Trạng thái cuối chương 8
 
-Đêm ngày 15. Cả đàn đã vào Thủy Liêm Động qua gờ có dây leo, không ai chết; khỉ già vẫn dẫn đàn. Thạch hầu bị vuốt gấu cào ba đường rách từ giữa lưng lên vai trái (đắp lá), tay phải đã nắm được đá. Con tai sứt trẹo cổ chân sau; đã quay lại cứu thạch hầu thay vì chạy. Con gấu bị đá đập vào mũi, vẫn giữ chỗ chắn và sườn cây cào.
+Rạng sáng ngày 30, kết arc đầu. Đàn sống ở Thủy Liêm Động, kiếm ăn ở thung lũng phía tây; luật không qua sườn cây cào. Thạch hầu là đầu đàn (uống sau cùng, đi đầu khi có nguy, đàn được nói khi hắn sai); sẹo ba vệt trên lưng, vai trái còn cứng. Khỉ già yếu, ho, biết hắn từ nơi rất xa và muốn học để không chết. S04 kích hoạt: hắn quyết không chờ ba đến năm trăm năm như sách, sẽ đi tìm thầy bên kia biển sau khi đàn tự đứng được. Con gấu vẫn ở sườn cây cào.
 
 ## Bước tiếp
 
-Chương 8 — Một nơi gọi là nhà. Đọc resume/canon và references/vietnamese-prose-guide.md trước khi soạn. Manga dừng vì phiên hiện tại không có công cụ tạo ảnh. Mỗi lần viết hoặc sửa, cập nhật chương, canon/audit, tiến độ và đẩy Git.
+Chương 9 — (arc mới — Đường cầu đạo, chưa đặt tên chương). Đọc resume/canon và references/vietnamese-prose-guide.md trước khi soạn. Manga dừng vì phiên hiện tại không có công cụ tạo ảnh. Mỗi lần viết hoặc sửa, cập nhật chương, canon/audit, tiến độ và đẩy Git.
