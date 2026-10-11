@@ -23,6 +23,6 @@ Review the finished chapter against its creative thesis as well as continuity. A
 
 ## Chat-first production
 
-Use creator-studio as the entry skill. The active conversation proposes three concepts, three story directions and three art directions, then asks the human here. Persist proposals before asking and the actual selection after it arrives. No UI or background model invocation is used.
+Use creator-studio as the entry skill. The active conversation proposes 2–4 concepts, story directions and art directions (default 3 each), then asks the human here. Persist proposals before asking and the actual selection after it arrives. No UI or background model invocation is used.
 
 Write in the active chat and store each result through revision-safe prompt/submit packets. Use the session's native image tool, inspect actual generated pages here, and save them locally. Review and repair up to twice using actual images, then report unresolved defects. Distinguish active-assistant inspection from human review. Missing image tooling is a session capability limit, not permission to invent images. Preserve approved-source lineage when resuming.

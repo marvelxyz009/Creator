@@ -48,9 +48,20 @@ class ChatWorkshopTests(unittest.TestCase):
         row=self.chat.start();options=[{"title":str(i),"summary":str(i),"tradeoff":"Cost","genres":["Hài"]} for i in range(3)]
         old=self.chat.offer(row["id"],options);self.chat.offer(row["id"],options)
         with self.assertRaises(ValueError):self.chat.choose(row["id"],0,old["proposal_revision"])
-    def test_exactly_three_distinct_options_required(self):
+    def test_two_to_four_distinct_options_required(self):
         row=self.chat.start()
         with self.assertRaises(ValueError):self.chat.offer(row["id"],[])
+    def test_variable_option_counts_and_fourth_selection(self):
+        for count in (2,3,4):
+            row=self.chat.start()
+            options=[{"title":str(i),"summary":str(i),"tradeoff":"Cost","genres":["Hài"]} for i in range(count)]
+            offered=self.chat.offer(row["id"],options)
+            with self.assertRaises(ValueError):self.chat.choose(row["id"],count,offered["proposal_revision"])
+            selected=self.chat.choose(row["id"],count-1,offered["proposal_revision"])
+            self.assertEqual(selected["choices"]["concept"]["title"],str(count-1))
+        for count in (1,5):
+            row=self.chat.start()
+            with self.assertRaises(ValueError):self.chat.offer(row["id"],[{"title":str(i),"summary":str(i),"tradeoff":"Cost","genres":["Hài"]} for i in range(count)])
     def test_resume_checkpoints_and_read_only_helpers(self):
         state=self.chat.checkpoint(self.p);self.assertEqual(state["next"],"bible")
         self.write(end="characters")

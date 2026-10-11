@@ -6,9 +6,9 @@
 
 Mở repo trong Codex/Claude hoặc dùng skill **creator-studio**. Nói ý tưởng, hoặc yêu cầu AI đề xuất. Trợ lý hỏi lựa chọn trực tiếp trong chat:
 
-1. Ba concept → bạn chọn.
-2. Ba hướng truyện dựa trên concept → bạn chọn.
-3. Ba hướng mỹ thuật phù hợp → bạn chọn.
+1. 2–4 concept (mặc định 3) → bạn chọn.
+2. 2–4 hướng truyện (mặc định 3) dựa trên concept → bạn chọn.
+3. 2–4 hướng mỹ thuật (mặc định 3) phù hợp → bạn chọn.
 4. AI viết, biên tập, audit và lưu chương; chuyển thể, vẽ bằng công cụ của phiên chat, xem ảnh thật rồi sửa nếu cần.
 
 Không cần nhập form title/style/direction/mode hay cấu hình model CLI. Trợ lý suy ra các thông số, lưu đúng câu trả lời và đọc lại chúng khi tiếp tục. Bạn có thể đổi yêu cầu hoặc tự đưa hướng cụ thể. Chỉ hỏi ở điểm lựa chọn có ý nghĩa; các bước kỹ thuật do trợ lý xử lý.
@@ -64,7 +64,7 @@ python -m story_studio export <project>
 python -m story_studio cbz <project> 1
 ```
 
-`offer` nhận JSON array đúng ba đề xuất. Concept cần title/summary/tradeoff/genres; hướng truyện thêm length; hướng mỹ thuật thêm direction. Lệnh choose dùng index 0–2 và revision của bộ lựa chọn hiện hành. Submit từ chối packet có nguồn đã thay đổi. Progress cập nhật sau lưu, chốt hoặc import; resume luôn tính lại từ dữ liệu hiện tại.
+`offer` nhận JSON array 2–4 đề xuất, mặc định 3. Concept cần title/summary/tradeoff/genres; hướng truyện thêm length; hướng mỹ thuật thêm direction. Lệnh choose dùng index từ 0 tới số lựa chọn trừ 1 và revision của bộ lựa chọn hiện hành. Submit từ chối packet có nguồn đã thay đổi. Progress cập nhật sau lưu, chốt hoặc import; resume luôn tính lại từ dữ liệu hiện tại.
 
 ## Skill và kiểm tra
 
@@ -77,3 +77,7 @@ python -m unittest discover -s tests -v
 ```
 
 Bản 0.4 giữ lõi canon/revision và xuất Markdown/CBZ. Chưa có EPUB/PDF hay truy hồi embedding cho hàng nghìn chương; context quá lớn cần biên tập hồ sơ. Framework trước nằm trong `legacy/`; các phiên bản UI/worker đã bỏ khỏi đường chạy hiện hành, vẫn có lịch sử Git.
+
+## Chất lượng và nhất quán hình ảnh
+
+Trước một chương manga, trợ lý tạo và xem bộ ảnh tham chiếu nhân vật, biểu cảm, phục trang và trang mẫu. Lưu ảnh thật cùng sổ continuity hình ảnh trong folder references của dự án. Dùng lại các ảnh đã chốt khi gọi công cụ cho từng trang; so sánh trang mới với reference và trang cảnh trước. Phân biệt nhận dạng cố định với trạng thái thay đổi (vết thương, quần áo, đạo cụ, hướng di chuyển). Sửa cục bộ khi nhân vật bị lệch nét và xem lại kết quả. Đây là quy trình giảm sai lệch, chưa phải khóa nhận dạng tự động hoặc bảo đảm chất lượng model.

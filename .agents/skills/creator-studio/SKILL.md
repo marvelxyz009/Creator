@@ -9,9 +9,9 @@ Work inside the current conversation. Use its text reasoning and image tools; do
 
 ## Start and choose
 
-Inspect `python -m story_studio status` first. On a new story use `start --seed "optional preference"`. Compose exactly three distinct concept proposals in the chat using story-architect. Save a UTF-8 JSON array through `offer <session> <file>`: each option has title, summary, tradeoff and genres from the catalog. Present short choices and ask directly in chat using the available question tool. Wait for the human's answer; do not infer approval from silence. Convert user options 1–3 to indices 0–2 in `choose <session> <index> <proposal_revision>`.
+Inspect `python -m story_studio status` first. On a new story use `start --seed "optional preference"`. Compose 2–4 distinct concept proposals (default 3; use 2 for a narrow decision or 4 only when four genuinely different directions help) in the chat using story-architect. Save a UTF-8 JSON array through `offer <session> <file>`: each option has title, summary, tradeoff and genres from the catalog. Present short choices and ask directly in chat using the available question tool. Wait for the human's answer; do not infer approval from silence. Convert numbered user options to zero-based indices within the saved set in `choose <session> <index> <proposal_revision>`.
 
-Repeat with three story directions (also length: short/novella/novel/series), then three art directions (also direction: rtl/ltr/vertical). Condition each round on saved earlier choices. Regeneration uses offer and gets a new revision; do not apply an answer to obsolete options. Let the assistant infer title, settings, style and format, respecting stated constraints. After three choices the project is saved automatically. User corrections override defaults; avoid re-asking already settled choices.
+Repeat with 2–4 story directions (default 3) (also length: short/novella/novel/series), then 2–4 art directions (default 3) (also direction: rtl/ltr/vertical). Condition each round on saved earlier choices. Regeneration uses offer and gets a new revision; do not apply an answer to obsolete options. Let the assistant infer title, settings, style and format, respecting stated constraints. After three choices the project is saved automatically. User corrections override defaults; avoid re-asking already settled choices.
 
 ## Write and resume
 
@@ -30,3 +30,11 @@ Read the actual generated image, not just its prompt. Review composition, acting
 ## Finish
 
 Use export for approved prose and cbz for reviewed manga. Link actual local files and show actual images in chat. Keep project content local and ignored by Git; commit/push code or skills when requested. At the end record progress, pending choices, last approved source and next step. Do not promise background work after the chat stops.
+
+## Multi-page image consistency
+
+Before drawing pages, create and visually inspect a canonical reference pack: character turnaround or portrait sheet, expression sheet, signature costume/props and one art-style proof. Save actual images and a visual continuity ledger under the project's local references folder. Record character ID, file path, what was inspected, identity invariants, scene-dependent appearance and the current approved reference revision. A planned sheet is not a reference image.
+
+Use the same approved identity images in every generation/edit call where that character appears; prepare an anchor page to validate acting, face and lettering before producing a chapter. Do not regenerate a character's face from prose descriptions each page. Keep permanent traits separate from costumes, injuries, dirt and lighting. Attach the preceding approved scene/page when it helps spatial and state continuity, while clearly requesting a new composition.
+
+Review a new page beside canonical references and the preceding accepted page. Track face proportions, age, silhouette, hair, distinguishing marks, body build, costume closures, injury side, prop hand and screen direction. Record which actual reference files were viewed, observed differences and whether each is intentional. If identity drifts, edit the affected panel using the canonical references rather than regenerating the whole chapter. Preserve already successful acting, layout and dialogue. Stop to resolve conflicting references instead of averaging different faces. Never describe this process as a guarantee that an image model cannot drift.

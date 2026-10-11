@@ -39,8 +39,8 @@ class ChatWorkflow:
             row = self.get(id)
             if row["status"] not in ("awaiting_proposals", "awaiting_choice"):
                 raise ValueError("This session is already complete")
-            if not isinstance(options, list) or len(options) != 3:
-                raise ValueError("Exactly three alternatives are required")
+            if not isinstance(options, list) or not 2 <= len(options) <= 4:
+                raise ValueError("Offer 2–4 alternatives (default 3)")
             for option in options:
                 if not isinstance(option, dict) or any(not isinstance(option.get(k), str) or not option[k].strip() for k in ("title", "summary", "tradeoff")):
                     raise ValueError("Each proposal needs title, summary and tradeoff")
@@ -50,7 +50,7 @@ class ChatWorkflow:
                     raise ValueError("Story direction needs a length")
                 if row["step"] == "art" and option.get("direction") not in ("rtl", "ltr", "vertical"):
                     raise ValueError("Art direction needs reading direction")
-            if len({o["summary"].strip() for o in options}) != 3:
+            if len({o["summary"].strip() for o in options}) != len(options):
                 raise ValueError("Alternatives must differ")
             row.update(status="awaiting_choice", options=options, proposal_revision=uid())
             return self.put(row)
@@ -58,7 +58,7 @@ class ChatWorkflow:
     def choose(self, id, index, revision):
         with self.studio.lock:
             row = self.get(id)
-            if row["status"] != "awaiting_choice" or revision != row.get("proposal_revision") or type(index) is not int or not 0 <= index < 3:
+            if row["status"] != "awaiting_choice" or revision != row.get("proposal_revision") or type(index) is not int or not 0 <= index < len(row["options"]):
                 raise ValueError("Choice refers to outdated/missing proposals")
             row["choices"][row["step"]] = row["options"][index]
             row["history"].append({"step":row["step"], "revision":revision, "options":row["options"], "selected":index})
