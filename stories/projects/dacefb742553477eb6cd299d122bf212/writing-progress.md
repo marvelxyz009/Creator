@@ -12,7 +12,8 @@
 - Chương 8 — Một nơi gọi là nhà: chapter-08.md, edit 7ea0d53d7da046e98779e9c73b5f06a7, continuity d5ac28acc89e4c8f838c92e2ff352d04 (pass, audit của trợ lý), đã chốt.
 - Chương 9 — Mùa mưa: chapter-09.md, edit 25167c4bafc44c55a3f424fba6f9e6b6, continuity 760248e721ce4aaab6b6ad01069c2877 (pass, audit của trợ lý), đã chốt.
 - Chương 10 — Lá rụng: chapter-10.md, edit a21930b9f35d4d808dc243ed44209c7b, continuity 22d7f38573354da4ae2bc4add0128484 (pass, audit của trợ lý), đã chốt.
-- book.zip đã export lại gồm chương 1–10.
+- Chương 11 — Biển: chapter-11.md, edit d86b5c10f7e14100b109508ce7734a1a, continuity 86fc20c9de1449418d75babc37b02873 (pass, audit của trợ lý), đã chốt.
+- book.zip đã export lại gồm chương 1–11.
 
 ## Quy ước gọi tên
 
@@ -20,6 +21,7 @@ Theo yêu cầu người dùng ngày 2026-10-11: đàn khỉ không có tên ri�
 
 ## Nhật ký
 
+- 2026-10-11: Viết chương 11: chín ngày trên biển, giông, nút của con tai sứt giữ bè, cập bờ châu phía nam, gặp người, lấy áo.
 - 2026-10-11: Viết chương 10: ranh giới vết cào, khỉ già mất, đàn chọn người dẫn, con tai sứt giữ vạch ngày, làm bè ra khơi.
 - 2026-10-11: Viết chương 9 (mở arc 2): mưa đầu mùa, chuỗi tay cứu khỉ nhỏ, lũ cuốn chỗ chắn, khí chạm giới hạn.
 - 2026-10-11: Viết chương 8, kết arc đầu: dựng nhà ở Thủy Liêm Động, khỉ già trao quyền đi trước, quyết định đi sớm tìm thầy (S04).
@@ -32,10 +34,10 @@ Theo yêu cầu người dùng ngày 2026-10-11: đàn khỉ không có tên ri�
 - 2026-10-11: Viết chương 2, khoảng 4.000 tiếng; đủ bible → outline → characters → art → draft → edit → continuity → approve.
 - 2026-10-11: Viết lại toàn bộ chương 1 theo phản hồi văn tiếng Việt (bản v2).
 
-## Trạng thái cuối chương 10
+## Trạng thái cuối chương 11
 
-Khoảng ngày 120. Thạch hầu đã rời Hoa Quả Sơn trên bè cành thông, sào tre, mang quả và ống nước. Khỉ già đã mất vì tuổi già, vùi dưới đá ở thung lũng. Khỉ đực to con giữ gờ, con tai sứt dẫn đường và vạch ngày trên vách. Ranh giới vết cào với con gấu (không phải thỏa thuận). Khí của thạch hầu ở giới hạn.
+Khoảng ngày 129. Thạch hầu đã vượt biển chín ngày, cập bờ một châu phía nam (theo sách là Nam Thiệm Bộ Châu). Xóm chài bỏ chạy, gọi hắn là yêu quái; hắn lấy một bộ áo vải thô, để lại con cá to, giấu đuôi trong vạt áo. Không hiểu tiếng người. Gầy, kiệt sức; khí ở giới hạn.
 
 ## Bước tiếp
 
-Chương 11 — Biển. Đọc resume/canon và references/vietnamese-prose-guide.md trước khi soạn. Manga dừng vì phiên hiện tại không có công cụ tạo ảnh. Mỗi lần viết hoặc sửa, cập nhật chương, canon/audit, tiến độ và đẩy Git.
+Chương 12 — Tiếng người. Đọc resume/canon và references/vietnamese-prose-guide.md trước khi soạn. Manga dừng vì phiên hiện tại không có công cụ tạo ảnh. Mỗi lần viết hoặc sửa, cập nhật chương, canon/audit, tiến độ và đẩy Git.
