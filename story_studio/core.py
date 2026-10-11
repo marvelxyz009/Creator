@@ -17,6 +17,7 @@ import zipfile
 from contextlib import contextmanager
 from datetime import datetime, timezone
 from pathlib import Path
+from .png import validate_png
 
 PACKAGE_ROOT = Path(__file__).resolve().parent
 ROOT = PACKAGE_ROOT.parent
@@ -58,10 +59,15 @@ def request_json(url, payload, key=""):
             raise ValueError("Provider response too large")
         return json.loads(raw)
 
+def cli_failure(mode, stderr):
+    if "not supported when using Codex" in stderr or "model is not supported" in stderr.lower():
+        return "Model Codex hiện hành chưa được CLI/tài khoản hỗ trợ. Chọn model CLI khả dụng trong Tùy chọn trợ lý (hoặc STUDIO_MODEL); model của chat có thể khác."
+    return f"{mode} CLI thất bại. Kiểm tra đăng nhập, quota và cấu hình CLI."
+
 class TextProvider:
-    def __init__(self, mode=None):
+    def __init__(self, mode=None, model=None):
         self.mode = mode or os.environ.get("STUDIO_PROVIDER", "codex")
-        self.model = os.environ.get("STUDIO_MODEL", "")
+        self.model = os.environ.get("STUDIO_MODEL", model or "")
 
     def generate(self, prompt):
         if self.mode in ("codex", "claude"):
@@ -83,7 +89,7 @@ class TextProvider:
                     raise ValueError("Agent timeout sau 15 phút; tác vụ có thể thử lại.") from None
                 if result.returncode:
                     # Keep credentials and provider diagnostics out of the browser.
-                    raise ValueError(f"{self.mode} CLI thất bại (exit {result.returncode}). Kiểm tra đăng nhập/quota bằng CLI.")
+                    raise ValueError(cli_failure(self.mode, result.stderr))
                 text = output.read_text(encoding="utf-8") if self.mode == "codex" and output.exists() else result.stdout if self.mode == "claude" else ""
                 if len(text.strip()) < 20:
                     raise ValueError("Agent returned empty/invalid output")
@@ -115,7 +121,7 @@ class Studio:
         self.db = self.root / "studio.sqlite3"
         settings = self.root / "settings.json"
         saved = json.loads(settings.read_text(encoding="utf-8")) if settings.exists() else {}
-        self.provider = provider or TextProvider(os.environ.get("STUDIO_PROVIDER") or saved.get("provider"))
+        self.provider = provider or TextProvider(os.environ.get("STUDIO_PROVIDER") or saved.get("provider"), saved.get("model"))
         self.lock = threading.RLock()
         with self.connect() as db:
             db.executescript('''
@@ -158,7 +164,7 @@ class Studio:
         mode = data.get("mode", "semi")
         if mode not in ("manual", "semi", "auto"):
             raise ValueError("Invalid execution mode")
-        body = {"id": uid(), "title": title, "idea": idea, "genres": data.get("genres", []), "length": data.get("length", "short"), "mode": mode, "language": data.get("language", "Tiếng Việt"), "direction": data.get("direction", "rtl"), "style": data.get("style", "Nét mực manga đen trắng, diễn xuất rõ"), "created": now()}
+        body = {"id": uid(), "title": title, "idea": idea, "genres": data.get("genres", []), "length": data.get("length", "short"), "mode": mode, "language": data.get("language", "Tiếng Việt"), "direction": data.get("direction", "rtl"), "style": data.get("style", "Nét mực manga đen trắng, diễn xuất rõ"), "created": now(), "creative_choices": data.get("creative_choices", {}), "manga_auto": bool(data.get("manga_auto", False))}
         if body["direction"] not in ("rtl", "ltr", "vertical"):
             raise ValueError("Invalid reading direction")
         with self.connect() as db:
@@ -337,11 +343,14 @@ class Studio:
                 db.execute("UPDATE jobs SET status='failed',error=? WHERE id=?", (str(exc)[:800], job["id"]))
         return True
 
-    def select_provider(self, mode):
+    def select_provider(self, mode, model=None):
         if mode not in ("codex", "claude"):
             raise ValueError("Chọn codex hoặc claude")
-        self.provider = TextProvider(mode)
-        (self.root / "settings.json").write_text(encode({"provider": mode}), encoding="utf-8")
+        selected = model if model is not None else getattr(self.provider, "model", "")
+        if not isinstance(selected, str) or len(selected) > 100 or any(c.isspace() for c in selected):
+            raise ValueError("Invalid model name")
+        self.provider = TextProvider(mode, selected)
+        (self.root / "settings.json").write_text(encode({"provider": mode, "model": selected}), encoding="utf-8")
         return {"mode": mode, "available": bool(shutil.which(mode))}
 
     def pause(self, project, paused):
@@ -397,11 +406,9 @@ class Studio:
         brief = self.latest(project, chapter, "image_prompt")
         if not source or not brief:
             raise ValueError("Cần bản gốc đã chốt và brief vẽ hợp lệ")
-        if len(raw) > 12_000_000 or raw[:8] != b"\x89PNG\r\n\x1a\n" or len(raw) < 33:
-            raise ValueError("Upload a PNG under 12MB")
-        w, h = struct.unpack(">II", raw[16:24])
-        if not (0 < w <= 10000 and 0 < h <= 20000) or number < 1:
-            raise ValueError("Invalid image dimensions/page number")
+        validate_png(raw)
+        if number < 1:
+            raise ValueError("Invalid page number")
         id = self.save(project, chapter, "page", encode({"number": number, "source_revision": source["id"], "review": "needs_visual_review"}), [source["id"], brief["id"]])
         folder = self.root / "projects" / project / "pages"
         folder.mkdir(exist_ok=True)

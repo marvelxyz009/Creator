@@ -11,6 +11,8 @@ import time
 import urllib.parse
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
+from .discovery import Discovery
+from .manga_worker import MangaWorker
 from .core import PACKAGE_ROOT, DEFAULT_DATA, GENRES, STAGES, Studio, encode
 
 class Server(ThreadingHTTPServer):
@@ -18,6 +20,8 @@ class Server(ThreadingHTTPServer):
     def __init__(self, address, studio):
         super().__init__(address, Handler)
         self.studio = studio
+        self.discovery = Discovery(studio)
+        self.manga = MangaWorker(studio)
         self.token = secrets.token_urlsafe(32)
 
 class Handler(BaseHTTPRequestHandler):
@@ -56,9 +60,11 @@ class Handler(BaseHTTPRequestHandler):
                 self.send(page.encode(), content_type="text/html; charset=utf-8")
             elif u.path == "/api/state":
                 self.send({"projects": studio.projects(), "jobs": studio.jobs(), "references": studio.references(), "genres": GENRES, "stages": STAGES, "provider": {"mode": getattr(studio.provider, "mode", "test"), "model": getattr(studio.provider, "model", "")}, "skills": sorted(p.name for p in (PACKAGE_ROOT / "skills").iterdir() if p.is_dir())})
+            elif u.path == "/api/discovery":
+                self.send(self.server.discovery.get(q["id"][0]))
             elif u.path == "/api/project":
                 id = q["id"][0]
-                self.send({"project": studio.project(id), "artifacts": studio.artifacts(id), "jobs": studio.jobs(id)})
+                self.send({"project": studio.project(id), "artifacts": studio.artifacts(id), "jobs": studio.jobs(id), "media_jobs": self.server.manga.jobs(id)})
             elif u.path == "/api/export":
                 file = studio.export(q["id"][0])
                 self.send(file.read_bytes(), content_type="application/zip")
@@ -87,12 +93,22 @@ class Handler(BaseHTTPRequestHandler):
             studio = self.server.studio
             if self.path == "/api/projects":
                 result = studio.create(data)
+            elif self.path == "/api/discovery/start":
+                result = self.server.discovery.start(str(data.get("seed", "")))
+            elif self.path == "/api/discovery/choose":
+                result = self.server.discovery.choose(data["id"], data["index"])
+            elif self.path == "/api/discovery/retry":
+                result = self.server.discovery.retry(data["id"])
+            elif self.path == "/api/manga":
+                result = self.server.manga.enqueue(data["project"], int(data.get("chapter", 1)))
+            elif self.path == "/api/manga/retry":
+                result = self.server.manga.retry(data["id"])
             elif self.path == "/api/enqueue":
                 result = studio.enqueue(data["project"], int(data.get("chapter", 1)), data.get("stage", "bible"))
             elif self.path == "/api/retry":
                 result = studio.retry(data["id"])
             elif self.path == "/api/provider":
-                result = studio.select_provider(data["mode"])
+                result = studio.select_provider(data["mode"], data.get("model"))
             elif self.path == "/api/pause":
                 result = studio.pause(data["project"], data["paused"])
             elif self.path == "/api/approve-page":
@@ -138,10 +154,20 @@ def main():
             raise SystemExit("Studio data directory is already in use")
     server = Server(("127.0.0.1", args.port), studio)
     studio.recover()
+    server.discovery.recover()
+    server.manga.recover()
     stop = threading.Event()
     def worker():
         while not stop.is_set():
-            if not studio.run_one():
+            for project in studio.projects():
+                if project.get("manga_auto"):
+                    for artifact in studio.artifacts(project["id"]):
+                        if artifact["kind"] == "image_prompt" and not artifact["stale"] and not any(j["brief"] == artifact["id"] for j in server.manga.jobs(project["id"])):
+                            try:
+                                server.manga.enqueue(project["id"], artifact["chapter"])
+                            except ValueError:
+                                pass
+            if not (server.discovery.run_one() or server.manga.run_one() or studio.run_one()):
                 stop.wait(1)
     threading.Thread(target=worker, daemon=True).start()
     print(f"Creator Story Studio: http://127.0.0.1:{args.port}", flush=True)

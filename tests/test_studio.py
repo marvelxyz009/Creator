@@ -166,7 +166,7 @@ class StudioTests(unittest.TestCase):
             self.s.run_one()
         # A real tiny PNG fixture, not generated artwork.
         import base64
-        raw = base64.b64decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+a6XsAAAAASUVORK5CYII=')
+        raw = base64.b64decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII=')
         id = self.s.import_page(self.p, 1, 1, raw)
         with self.assertRaises(ValueError):
             self.s.export_cbz(self.p, 1)

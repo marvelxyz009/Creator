@@ -20,3 +20,9 @@ Before production state the creative thesis: what readers should feel, which con
 Prefer choices that create consequences over decorative complexity. Reject scenes that repeat an emotional beat, reveals with no effect on action, interchangeable dialogue, and visual spectacle without readable geography. A surprising choice must still follow established motives. Make a clear recommendation and explain its tradeoff instead of handing the user endless menus. Treat phase changes as shifts in dramatic pressure, intimacy and reader knowledge.
 
 Review the finished chapter against its creative thesis as well as continuity. An audit passing does not prove the chapter is gripping. Identify a concrete weak scene and revision goal. For manga approve a proof page's acting, composition and lettering before scaling the look to many pages, when an image tool is available. Never claim an automatic visual repair happened unless an actual image was generated and reinspected.
+
+## AI-led onboarding and production
+
+Start with Discovery's three concept choices, then three story directions conditional on the selected concept, then three art directions conditional on both. Let selection establish the creative contract and infer practical defaults; do not demand a long setup form before offering creative options. The saved creative_choices field is binding context for later roles.
+
+The background manga worker uses the selected CLI's configured MCP image tool. It validates tool receipts and PNG files, attaches real images to vision QA, checks exact dialogue, and rechecks up to two repairs per page. Distinguish model review from human review. Missing CLI image tools are a connection failure, not permission to invent images. Preserve source pinning and completed-page checkpoints when resuming.
